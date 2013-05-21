@@ -12,3 +12,7 @@
 #import <GW2Client.h>
 #import <GW2ItemDetail.h>
 #import <GW2EventStatus.h>
+#import <GW2MapDetail.h>
+#import <GW2WorldDetail.h>
+#import <GW2EventDetail.h>
+#import <GW2WvWMatchDetail.h>
