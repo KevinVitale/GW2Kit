@@ -90,7 +90,6 @@ Output:
 	                        for(GW2EventStatus *status in states) {
 	                            printf("%s", [status description].UTF8String);
 	                        }
-	                        STAssertNotNil(states, @"ERROR: event states returned 'nil'");
 	                    }];
 	
 ### Output:
