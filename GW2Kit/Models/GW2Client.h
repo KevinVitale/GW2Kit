@@ -17,26 +17,22 @@
 
 @interface GW2Client : AFHTTPClient
 
+- (void)namesForResource:(NSString *)resource
+              parameters:(NSDictionary *)parameters
+              completion:(void (^)(NSError *error, NSArray *names))completion;
+
 - (void)itemsWithCompletion:(void (^)(NSError *error, NSArray *items))completion;
 
 - (void)itemDetailForID:(NSString *)itemID
              completion:(void (^)(NSError *error, GW2ItemDetail *itemDetail))completion;
 
-- (void)mapsWithParameters:(NSDictionary *)parameters
-                completion:(void (^)(NSError *error, NSArray *maps))completion;
-
-- (void)worldsWithParameters:(NSDictionary *)parameters
-                  completion:(void (^)(NSError *error, NSArray *worlds))completion;
-
-- (void)eventsWithParameters:(NSDictionary *)parameters
-                  completion:(void (^)(NSError *error, NSArray *events))completion;
-
 - (void)eventStatesWithParameters:(NSDictionary *)parameters
                        completion:(void (^)(NSError *error, NSArray *states))completion;
 
 - (void)wvwMatchesWithCompletion:(void (^)(NSError *error, NSArray *matches))completion;
-- (void)wvwMatchDetailForID:(NSString *)matchID completion:(void (^)(NSError *error, GW2WvWMatchDetail *matchDetail))completion;
-- (void)wvwObjectivesWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, NSArray *))completion;
+
+- (void)wvwMatchDetailForID:(NSString *)matchID
+                 completion:(void (^)(NSError *error, GW2WvWMatchDetail *matchDetail))completion;
 
 - (void)recipesWithCompletion:(void (^)(NSError *error, NSArray *recipes))completion;
 

@@ -1,15 +1,15 @@
 //
-//  GW2EventName.m
+//  GW2ResourceName.m
 //  GW2Kit
 //
-//  Created by Kevin Vitale on 5/21/13.
+//  Created by Kevin Vitale on 5/22/13.
 //
 //
 
-#import "GW2EventName.h"
+#import "GW2ResourceName.h"
 #import <RestKit/RestKit.h>
 
-@implementation GW2EventName
+@implementation GW2ResourceName
 - (NSString *)description {
     NSUInteger stringLength = 0;
     NSMutableString *description = [NSMutableString stringWithString:@"\n"];
@@ -28,7 +28,7 @@
 + (NSDictionary *)mappingAttributes {
     return @{
              @"name": @"name",
-             @"id" : @"eventID"
+             @"id" : @"id"
              };
 }
 + (RKObjectMapping *)mappingObject {

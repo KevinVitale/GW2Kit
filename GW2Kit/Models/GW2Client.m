@@ -19,6 +19,35 @@
     return self;
 }
 
+- (void)namesForResource:(NSString *)resource
+              parameters:(NSDictionary *)parameters
+              completion:(void (^)(NSError *, NSArray *))completion {
+    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
+        if(completion)
+            completion(error, states);
+    };
+    
+    NSURLRequest *request = [self requestWithMethod:@"GET"
+                                               path:[NSString stringWithFormat:@"/v1/%@_names.json", resource]
+                                         parameters:parameters];
+    
+    RKMapping *eventsMapping = [GW2ResourceName mappingObject];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:eventsMapping
+                                                                                       pathPattern:nil
+                                                                                           keyPath:nil
+                                                                                       statusCodes:nil];
+    
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
+                                                                        responseDescriptors:@[responseDescriptor]];
+    
+    
+#warning FIX ME: Requests should not be done synchronously
+    [operation start];
+    [operation waitUntilFinished];
+    
+    finalCompletion(operation.error, operation.mappingResult.array);
+}
+
 - (void)itemsWithCompletion:(void (^)(NSError *, NSArray *))completion {
     void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
         if(completion)
@@ -85,90 +114,6 @@
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:eventsMapping
                                                                                        pathPattern:nil
                                                                                            keyPath:@"events"
-                                                                                       statusCodes:nil];
-    
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
-                                                                        responseDescriptors:@[responseDescriptor]];
-    
-    
-#warning FIX ME: Requests should not be done synchronously
-    [operation start];
-    [operation waitUntilFinished];
-    
-    finalCompletion(operation.error, operation.mappingResult.array);
-}
-
-- (void)eventsWithParameters:(NSDictionary *)parameters
-                  completion:(void (^)(NSError *, NSArray *))completion {
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
-        if(completion)
-            completion(error, states);
-    };
-    
-    NSURLRequest *request = [self requestWithMethod:@"GET"
-                                               path:@"/v1/event_names.json"
-                                         parameters:parameters];
-    
-    RKMapping *eventsMapping = [GW2EventName mappingObject];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:eventsMapping
-                                                                                       pathPattern:nil
-                                                                                           keyPath:nil
-                                                                                       statusCodes:nil];
-    
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
-                                                                        responseDescriptors:@[responseDescriptor]];
-    
-    
-#warning FIX ME: Requests should not be done synchronously
-    [operation start];
-    [operation waitUntilFinished];
-    
-    finalCompletion(operation.error, operation.mappingResult.array);
-}
-
-- (void)mapsWithParameters:(NSDictionary *)parameters
-                completion:(void (^)(NSError *, NSArray *))completion {
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
-        if(completion)
-            completion(error, states);
-    };
-    
-    NSURLRequest *request = [self requestWithMethod:@"GET"
-                                               path:@"/v1/map_names.json"
-                                         parameters:parameters];
-    
-    RKMapping *eventsMapping = [GW2MapName mappingObject];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:eventsMapping
-                                                                                       pathPattern:nil
-                                                                                           keyPath:nil
-                                                                                       statusCodes:nil];
-    
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
-                                                                        responseDescriptors:@[responseDescriptor]];
-    
-    
-#warning FIX ME: Requests should not be done synchronously
-    [operation start];
-    [operation waitUntilFinished];
-    
-    finalCompletion(operation.error, operation.mappingResult.array);
-}
-
-- (void)worldsWithParameters:(NSDictionary *)parameters
-                  completion:(void (^)(NSError *, NSArray *))completion {
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
-        if(completion)
-            completion(error, states);
-    };
-    
-    NSURLRequest *request = [self requestWithMethod:@"GET"
-                                               path:@"/v1/world_names.json"
-                                         parameters:parameters];
-    
-    RKMapping *eventsMapping = [GW2WorldName mappingObject];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:eventsMapping
-                                                                                       pathPattern:nil
-                                                                                           keyPath:nil
                                                                                        statusCodes:nil];
     
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
@@ -294,33 +239,6 @@
     [operation waitUntilFinished];
     
     finalCompletion(operation.error, operation.mappingResult.array.lastObject);
-}
-
-- (void)wvwObjectivesWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, NSArray *))completion {
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *objectives) {
-        if(completion)
-            completion(error, objectives);
-    };
-    
-    NSURLRequest *request = [self requestWithMethod:@"GET"
-                                               path:@"/v1/wvw/objective_names.json"
-                                         parameters:parameters];
-    
-    RKMapping *objectiveMappings = [GW2WvWObjectiveName mappingObject];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:objectiveMappings
-                                                                                       pathPattern:nil
-                                                                                           keyPath:nil
-                                                                                       statusCodes:nil];
-    
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
-                                                                        responseDescriptors:@[responseDescriptor]];
-    
-    
-#warning FIX ME: Requests should not be done synchronously
-    [operation start];
-    [operation waitUntilFinished];
-    
-    finalCompletion(operation.error, operation.mappingResult.array);
 }
 
 + (GW2Client *)sharedClient {
