@@ -1,5 +1,5 @@
 //
-//  GW2EventDetail.h
+//  GW2EventName.h
 //  GW2Kit
 //
 //  Created by Kevin Vitale on 5/21/13.
@@ -10,7 +10,7 @@
 
 @class RKObjectMapping;
 
-@interface GW2EventDetail : NSObject
+@interface GW2EventName : NSObject
 @property (copy, nonatomic) NSString *eventID;
 @property (copy, nonatomic) NSString *name;
 

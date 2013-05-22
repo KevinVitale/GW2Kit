@@ -9,10 +9,13 @@
 
 #import <RestKit/RestKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <GW2Client.h>
-#import <GW2ItemDetail.h>
-#import <GW2EventStatus.h>
-#import <GW2MapDetail.h>
-#import <GW2WorldDetail.h>
-#import <GW2EventDetail.h>
-#import <GW2WvWMatchDetail.h>
+#import "GW2Client.h"
+#import "GW2MapName.h"
+#import "GW2WorldName.h"
+#import "GW2EventName.h"
+#import "GW2EventStatus.h"
+#import "GW2ItemDetail.h"
+#import "GW2WvWMatch.h"
+#import "GW2WvWMatchDetail.h"
+#import "GW2RecipeDetail.h"
+#import "GW2WvWObjectiveName.h"

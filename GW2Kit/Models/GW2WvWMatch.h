@@ -1,5 +1,5 @@
 //
-//  GW2WvWMatchDetail
+//  GW2WvWMatch.h
 //  GW2Kit
 //
 //  Created by Kevin Vitale on 5/21/13.
@@ -10,10 +10,12 @@
 
 @class RKObjectMapping;
 
-@interface GW2WvWMatchDetail : NSObject
+@interface GW2WvWMatch : NSObject
+
 @property (copy, nonatomic) NSString *matchID;
-@property (copy, nonatomic) NSArray *scores;
-@property (copy, nonatomic) NSDictionary *maps;
+@property (copy, nonatomic) NSString *redWorldID;
+@property (copy, nonatomic) NSString *blueWorldID;
+@property (copy, nonatomic) NSString *greenWorldID;
 
 + (RKObjectMapping *)mappingObject;
 

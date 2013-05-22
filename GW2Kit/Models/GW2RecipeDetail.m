@@ -1,15 +1,15 @@
 //
-//  GW2EventDetail.m
+//  GW2RecipeDetail.m
 //  GW2Kit
 //
 //  Created by Kevin Vitale on 5/21/13.
 //
 //
 
-#import "GW2EventDetail.h"
+#import "GW2RecipeDetail.h"
 #import <RestKit/RestKit.h>
 
-@implementation GW2EventDetail
+@implementation GW2RecipeDetail
 - (NSString *)description {
     NSUInteger stringLength = 0;
     NSMutableString *description = [NSMutableString stringWithString:@"\n"];
@@ -27,8 +27,13 @@
 
 + (NSDictionary *)mappingAttributes {
     return @{
-             @"name": @"name",
-             @"id" : @"eventID"
+             @"recipe_id"           : @"recipeID",
+             @"type"                : @"type",
+             @"output_item_id"      : @"outputItemID",
+             @"output_item_count"   : @"outputItemCount",
+             @"min_rating"          : @"minimumRating",
+             @"time_to_craft_ms"    : @"timeToCraft",
+             @"ingredients"         : @"ingredients"
              };
 }
 + (RKObjectMapping *)mappingObject {

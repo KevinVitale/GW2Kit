@@ -11,15 +11,13 @@
 
 @implementation GW2KitTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
     
     // Set-up code here.
 }
 
-- (void)tearDown
-{
+- (void)tearDown {
     // Tear-down code here.
     
     [super tearDown];
@@ -29,7 +27,7 @@
     NSString *itemID = @"29175";
     [GW2 itemDetailForID:itemID completion:^(NSError *error, GW2ItemDetail *itemDetail) {
         printf("\n\n\n%s\n\n\n", [itemDetail description].UTF8String);
-        STAssertEqualObjects(itemID, itemDetail.itemID, @"ERROR: Item ID's do not match");
+        STAssertEqualObjects(itemID, itemDetail.itemID, @"ERROR: Item IDs do not match");
     }];
 }
 
@@ -45,11 +43,20 @@
 }
 
 - (void)testEventStates_Synchronously {
+    NSArray *__block eventNames = nil;
+    
+    [GW2 eventsWithParameters:nil
+                   completion:^(NSError *error, NSArray *events) {
+                       eventNames = events;
+                   }];
+    
     // Find event states in 'Kessex Hills' on 'Maguuma'
-    [GW2 eventStatesWithParameters:@{@"world_id" : @"1005", @"map_id" : @"23"}
+    [GW2 eventStatesWithParameters:@{@"world_id" : @"1005", @"map_id" : @"62"}
                         completion:^(NSError *error, id states) {
                             for(GW2EventStatus *status in states) {
+                                GW2EventName *eventName = [eventNames objectAtIndex:[[eventNames valueForKey:@"eventID"] indexOfObject:[status eventID]]];
                                 printf("%s", [status description].UTF8String);
+                                printf("  %s\n", eventName.name.UTF8String);
                             }
                             STAssertNotNil(states, @"ERROR: event states returned 'nil'");
                         }];
@@ -57,7 +64,7 @@
 
 - (void)testMaps_Synchronously {
     [GW2 mapsWithParameters:nil completion:^(NSError *error, NSArray *maps) {
-        for(GW2MapDetail *map in maps) {
+        for(GW2MapName *map in maps) {
             printf("%s", [map description].UTF8String);
         }
         STAssertNotNil(maps, @"ERROR: maps returned 'nil'");
@@ -66,7 +73,7 @@
 
 - (void)testWorlds_Synchronously {
     [GW2 worldsWithParameters:nil completion:^(NSError *error, NSArray *worlds) {
-        for(GW2WorldDetail *world in worlds) {
+        for(GW2WorldName *world in worlds) {
             printf("%s", [world description].UTF8String);
         }
         STAssertNotNil(worlds, @"ERROR: worlds returned 'nil'");
@@ -81,4 +88,43 @@
         STAssertNotNil(matches, @"ERROR: WvW matches returned 'nil'");
     }];
 }
+
+- (void)testWvWMatchDetail_Synchronously {
+    [GW2 wvwMatchDetailForID:@"1-1"
+                  completion:^(NSError *error, GW2WvWMatchDetail *matchDetail) {
+                      printf("%s", matchDetail.description.UTF8String);
+                      STAssertNotNil(matchDetail, @"ERROR: match detail returned 'nil'");
+                  }];
+}
+
+- (void)testWvWObjects_Synchronously {
+    [GW2 wvwObjectivesWithParameters:nil completion:^(NSError *error, NSArray *objectives) {
+        for(GW2WvWObjectiveName *objective in objectives) {
+            printf("%s", objective.description.UTF8String);
+        }
+        STAssertNotNil(objectives, @"ERROR: items returned 'nil'");
+    }];
+}
+
+- (void)testRecipeDetail_Synchronously {
+    NSString *recipeID = @"1";
+    [GW2 recipeDetailForID:recipeID
+                parameters:nil
+                completion:^(NSError *error, GW2RecipeDetail *recipeDetail) {
+                    printf("\n%s\n", [recipeDetail description].UTF8String);
+                    STAssertEqualObjects(recipeID, recipeDetail.recipeID, @"ERROR: Recipe IDs do not match");
+                }];
+}
+
+- (void)testRecipes_Synchronously {
+    [GW2 recipesWithCompletion:^(NSError *error, NSArray *recipes) {
+        if(recipes.count > 5) {
+            NSArray *firstFiveRecipes = [recipes objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 5)]];
+            printf("%s\n", firstFiveRecipes.description.UTF8String);
+            printf("5 items out of %li\n\n", (unsigned long)recipes.count);
+        }
+        STAssertNotNil(recipes, @"ERROR: recipes returned 'nil'");
+    }];
+}
+
 @end

@@ -10,7 +10,7 @@
 		0ADA22F6174AD63E007F1173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA22F5174AD63E007F1173 /* Foundation.framework */; };
 		0ADA2322174AD673007F1173 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2321174AD673007F1173 /* Cocoa.framework */; };
 		0ADA232C174AD673007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA232A174AD673007F1173 /* InfoPlist.strings */; };
-		0ADA2336174AD722007F1173 /* GW2Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2335174AD722007F1173 /* GW2Kit.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0ADA2336174AD722007F1173 /* GW2Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2335174AD722007F1173 /* GW2Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0ADA233A174AD7A5007F1173 /* GW2EventStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2338174AD7A5007F1173 /* GW2EventStatus.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0ADA233B174AD7A5007F1173 /* GW2EventStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2339174AD7A5007F1173 /* GW2EventStatus.m */; };
 		0ADA233C174AD7A5007F1173 /* GW2EventStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2339174AD7A5007F1173 /* GW2EventStatus.m */; };
@@ -29,24 +29,30 @@
 		0ADA23E1174AECBC007F1173 /* GW2ItemDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23DF174AECBC007F1173 /* GW2ItemDetail.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0ADA23E2174AECBC007F1173 /* GW2ItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23E0174AECBC007F1173 /* GW2ItemDetail.m */; };
 		0ADA23E3174AECBC007F1173 /* GW2ItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23E0174AECBC007F1173 /* GW2ItemDetail.m */; };
-		0ADA23E7174B119E007F1173 /* GW2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23E5174B119E007F1173 /* GW2Client.h */; };
+		0ADA23E7174B119E007F1173 /* GW2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23E5174B119E007F1173 /* GW2Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0ADA23E8174B119E007F1173 /* GW2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23E6174B119E007F1173 /* GW2Client.m */; };
 		0ADA23E9174B119E007F1173 /* GW2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23E6174B119E007F1173 /* GW2Client.m */; };
-		0ADA23EE174BB664007F1173 /* GW2MapDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23EC174BB663007F1173 /* GW2MapDetail.h */; };
-		0ADA23EF174BB664007F1173 /* GW2MapDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23ED174BB664007F1173 /* GW2MapDetail.m */; };
-		0ADA23F0174BB664007F1173 /* GW2MapDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23ED174BB664007F1173 /* GW2MapDetail.m */; };
-		0ADA23F3174BBAA9007F1173 /* GW2WorldDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23F1174BBAA9007F1173 /* GW2WorldDetail.h */; };
-		0ADA23F4174BBAA9007F1173 /* GW2WorldDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F2174BBAA9007F1173 /* GW2WorldDetail.m */; };
-		0ADA23F5174BBAA9007F1173 /* GW2WorldDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F2174BBAA9007F1173 /* GW2WorldDetail.m */; };
-		0ADA23F8174BBDA5007F1173 /* GW2EventDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23F6174BBDA5007F1173 /* GW2EventDetail.h */; };
-		0ADA23F9174BBDA5007F1173 /* GW2EventDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F7174BBDA5007F1173 /* GW2EventDetail.m */; };
-		0ADA23FA174BBDA5007F1173 /* GW2EventDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F7174BBDA5007F1173 /* GW2EventDetail.m */; };
-		0ADA23FE174BD058007F1173 /* GW2WvWMatchDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23FC174BD057007F1173 /* GW2WvWMatchDetail.h */; };
+		0ADA23EE174BB664007F1173 /* GW2MapName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23EC174BB663007F1173 /* GW2MapName.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0ADA23EF174BB664007F1173 /* GW2MapName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23ED174BB664007F1173 /* GW2MapName.m */; };
+		0ADA23F0174BB664007F1173 /* GW2MapName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23ED174BB664007F1173 /* GW2MapName.m */; };
+		0ADA23F3174BBAA9007F1173 /* GW2WorldName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23F1174BBAA9007F1173 /* GW2WorldName.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0ADA23F4174BBAA9007F1173 /* GW2WorldName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F2174BBAA9007F1173 /* GW2WorldName.m */; };
+		0ADA23F5174BBAA9007F1173 /* GW2WorldName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F2174BBAA9007F1173 /* GW2WorldName.m */; };
+		0ADA23F8174BBDA5007F1173 /* GW2EventName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23F6174BBDA5007F1173 /* GW2EventName.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0ADA23F9174BBDA5007F1173 /* GW2EventName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F7174BBDA5007F1173 /* GW2EventName.m */; };
+		0ADA23FA174BBDA5007F1173 /* GW2EventName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23F7174BBDA5007F1173 /* GW2EventName.m */; };
+		0ADA23FE174BD058007F1173 /* GW2WvWMatchDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23FC174BD057007F1173 /* GW2WvWMatchDetail.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0ADA23FF174BD058007F1173 /* GW2WvWMatchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23FD174BD057007F1173 /* GW2WvWMatchDetail.m */; };
 		0ADA2400174BD058007F1173 /* GW2WvWMatchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23FD174BD057007F1173 /* GW2WvWMatchDetail.m */; };
-		0ADA2403174BD385007F1173 /* GW2WvWMatchStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2401174BD384007F1173 /* GW2WvWMatchStatus.h */; };
-		0ADA2404174BD385007F1173 /* GW2WvWMatchStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2402174BD384007F1173 /* GW2WvWMatchStatus.m */; };
-		0ADA2405174BD385007F1173 /* GW2WvWMatchStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2402174BD384007F1173 /* GW2WvWMatchStatus.m */; };
+		0ADA2403174BD385007F1173 /* GW2WvWMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2401174BD384007F1173 /* GW2WvWMatch.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0ADA2404174BD385007F1173 /* GW2WvWMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2402174BD384007F1173 /* GW2WvWMatch.m */; };
+		0ADA2405174BD385007F1173 /* GW2WvWMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2402174BD384007F1173 /* GW2WvWMatch.m */; };
+		0ADA2408174BE627007F1173 /* GW2RecipeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2406174BE626007F1173 /* GW2RecipeDetail.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0ADA2409174BE627007F1173 /* GW2RecipeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2407174BE626007F1173 /* GW2RecipeDetail.m */; };
+		0ADA240A174BE627007F1173 /* GW2RecipeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2407174BE626007F1173 /* GW2RecipeDetail.m */; };
+		0AF0F7E6174C7027005EB48D /* GW2WvWObjectiveName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF0F7E4174C7027005EB48D /* GW2WvWObjectiveName.h */; };
+		0AF0F7E7174C7027005EB48D /* GW2WvWObjectiveName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0F7E5174C7027005EB48D /* GW2WvWObjectiveName.m */; };
+		0AF0F7E8174C7027005EB48D /* GW2WvWObjectiveName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0F7E5174C7027005EB48D /* GW2WvWObjectiveName.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,16 +196,20 @@
 		0ADA23E0174AECBC007F1173 /* GW2ItemDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ItemDetail.m; sourceTree = "<group>"; };
 		0ADA23E5174B119E007F1173 /* GW2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Client.h; sourceTree = "<group>"; };
 		0ADA23E6174B119E007F1173 /* GW2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Client.m; sourceTree = "<group>"; };
-		0ADA23EC174BB663007F1173 /* GW2MapDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapDetail.h; sourceTree = "<group>"; };
-		0ADA23ED174BB664007F1173 /* GW2MapDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapDetail.m; sourceTree = "<group>"; };
-		0ADA23F1174BBAA9007F1173 /* GW2WorldDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WorldDetail.h; sourceTree = "<group>"; };
-		0ADA23F2174BBAA9007F1173 /* GW2WorldDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WorldDetail.m; sourceTree = "<group>"; };
-		0ADA23F6174BBDA5007F1173 /* GW2EventDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2EventDetail.h; sourceTree = "<group>"; };
-		0ADA23F7174BBDA5007F1173 /* GW2EventDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventDetail.m; sourceTree = "<group>"; };
+		0ADA23EC174BB663007F1173 /* GW2MapName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapName.h; sourceTree = "<group>"; };
+		0ADA23ED174BB664007F1173 /* GW2MapName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapName.m; sourceTree = "<group>"; };
+		0ADA23F1174BBAA9007F1173 /* GW2WorldName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WorldName.h; sourceTree = "<group>"; };
+		0ADA23F2174BBAA9007F1173 /* GW2WorldName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WorldName.m; sourceTree = "<group>"; };
+		0ADA23F6174BBDA5007F1173 /* GW2EventName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2EventName.h; sourceTree = "<group>"; };
+		0ADA23F7174BBDA5007F1173 /* GW2EventName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventName.m; sourceTree = "<group>"; };
 		0ADA23FC174BD057007F1173 /* GW2WvWMatchDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWMatchDetail.h; sourceTree = "<group>"; };
 		0ADA23FD174BD057007F1173 /* GW2WvWMatchDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatchDetail.m; sourceTree = "<group>"; };
-		0ADA2401174BD384007F1173 /* GW2WvWMatchStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWMatchStatus.h; sourceTree = "<group>"; };
-		0ADA2402174BD384007F1173 /* GW2WvWMatchStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatchStatus.m; sourceTree = "<group>"; };
+		0ADA2401174BD384007F1173 /* GW2WvWMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWMatch.h; sourceTree = "<group>"; };
+		0ADA2402174BD384007F1173 /* GW2WvWMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatch.m; sourceTree = "<group>"; };
+		0ADA2406174BE626007F1173 /* GW2RecipeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2RecipeDetail.h; sourceTree = "<group>"; };
+		0ADA2407174BE626007F1173 /* GW2RecipeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2RecipeDetail.m; sourceTree = "<group>"; };
+		0AF0F7E4174C7027005EB48D /* GW2WvWObjectiveName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWObjectiveName.h; sourceTree = "<group>"; };
+		0AF0F7E5174C7027005EB48D /* GW2WvWObjectiveName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWObjectiveName.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,20 +315,24 @@
 		0ADA2337174AD77A007F1173 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0ADA23EC174BB663007F1173 /* GW2MapDetail.h */,
-				0ADA23ED174BB664007F1173 /* GW2MapDetail.m */,
-				0ADA23F1174BBAA9007F1173 /* GW2WorldDetail.h */,
-				0ADA23F2174BBAA9007F1173 /* GW2WorldDetail.m */,
-				0ADA23F6174BBDA5007F1173 /* GW2EventDetail.h */,
-				0ADA23F7174BBDA5007F1173 /* GW2EventDetail.m */,
+				0ADA23EC174BB663007F1173 /* GW2MapName.h */,
+				0ADA23ED174BB664007F1173 /* GW2MapName.m */,
+				0ADA23F1174BBAA9007F1173 /* GW2WorldName.h */,
+				0ADA23F2174BBAA9007F1173 /* GW2WorldName.m */,
+				0ADA23F6174BBDA5007F1173 /* GW2EventName.h */,
+				0ADA23F7174BBDA5007F1173 /* GW2EventName.m */,
 				0ADA2338174AD7A5007F1173 /* GW2EventStatus.h */,
 				0ADA2339174AD7A5007F1173 /* GW2EventStatus.m */,
 				0ADA23DF174AECBC007F1173 /* GW2ItemDetail.h */,
 				0ADA23E0174AECBC007F1173 /* GW2ItemDetail.m */,
 				0ADA23FC174BD057007F1173 /* GW2WvWMatchDetail.h */,
 				0ADA23FD174BD057007F1173 /* GW2WvWMatchDetail.m */,
-				0ADA2401174BD384007F1173 /* GW2WvWMatchStatus.h */,
-				0ADA2402174BD384007F1173 /* GW2WvWMatchStatus.m */,
+				0ADA2401174BD384007F1173 /* GW2WvWMatch.h */,
+				0ADA2402174BD384007F1173 /* GW2WvWMatch.m */,
+				0ADA2406174BE626007F1173 /* GW2RecipeDetail.h */,
+				0ADA2407174BE626007F1173 /* GW2RecipeDetail.m */,
+				0AF0F7E4174C7027005EB48D /* GW2WvWObjectiveName.h */,
+				0AF0F7E5174C7027005EB48D /* GW2WvWObjectiveName.m */,
 				0ADA23E5174B119E007F1173 /* GW2Client.h */,
 				0ADA23E6174B119E007F1173 /* GW2Client.m */,
 			);
@@ -370,14 +384,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADA2336174AD722007F1173 /* GW2Kit.h in Headers */,
+				0ADA23E7174B119E007F1173 /* GW2Client.h in Headers */,
 				0ADA233A174AD7A5007F1173 /* GW2EventStatus.h in Headers */,
 				0ADA23E1174AECBC007F1173 /* GW2ItemDetail.h in Headers */,
-				0ADA23E7174B119E007F1173 /* GW2Client.h in Headers */,
-				0ADA23EE174BB664007F1173 /* GW2MapDetail.h in Headers */,
-				0ADA23F3174BBAA9007F1173 /* GW2WorldDetail.h in Headers */,
-				0ADA23F8174BBDA5007F1173 /* GW2EventDetail.h in Headers */,
+				0ADA23EE174BB664007F1173 /* GW2MapName.h in Headers */,
+				0ADA23F3174BBAA9007F1173 /* GW2WorldName.h in Headers */,
+				0ADA23F8174BBDA5007F1173 /* GW2EventName.h in Headers */,
 				0ADA23FE174BD058007F1173 /* GW2WvWMatchDetail.h in Headers */,
-				0ADA2403174BD385007F1173 /* GW2WvWMatchStatus.h in Headers */,
+				0ADA2403174BD385007F1173 /* GW2WvWMatch.h in Headers */,
+				0ADA2408174BE627007F1173 /* GW2RecipeDetail.h in Headers */,
+				0AF0F7E6174C7027005EB48D /* GW2WvWObjectiveName.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,11 +558,13 @@
 				0ADA233B174AD7A5007F1173 /* GW2EventStatus.m in Sources */,
 				0ADA23E2174AECBC007F1173 /* GW2ItemDetail.m in Sources */,
 				0ADA23E8174B119E007F1173 /* GW2Client.m in Sources */,
-				0ADA23EF174BB664007F1173 /* GW2MapDetail.m in Sources */,
-				0ADA23F4174BBAA9007F1173 /* GW2WorldDetail.m in Sources */,
-				0ADA23F9174BBDA5007F1173 /* GW2EventDetail.m in Sources */,
+				0ADA23EF174BB664007F1173 /* GW2MapName.m in Sources */,
+				0ADA23F4174BBAA9007F1173 /* GW2WorldName.m in Sources */,
+				0ADA23F9174BBDA5007F1173 /* GW2EventName.m in Sources */,
 				0ADA23FF174BD058007F1173 /* GW2WvWMatchDetail.m in Sources */,
-				0ADA2404174BD385007F1173 /* GW2WvWMatchStatus.m in Sources */,
+				0ADA2404174BD385007F1173 /* GW2WvWMatch.m in Sources */,
+				0ADA2409174BE627007F1173 /* GW2RecipeDetail.m in Sources */,
+				0AF0F7E7174C7027005EB48D /* GW2WvWObjectiveName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,11 +575,13 @@
 				0ADA233C174AD7A5007F1173 /* GW2EventStatus.m in Sources */,
 				0ADA23E3174AECBC007F1173 /* GW2ItemDetail.m in Sources */,
 				0ADA23E9174B119E007F1173 /* GW2Client.m in Sources */,
-				0ADA23F0174BB664007F1173 /* GW2MapDetail.m in Sources */,
-				0ADA23F5174BBAA9007F1173 /* GW2WorldDetail.m in Sources */,
-				0ADA23FA174BBDA5007F1173 /* GW2EventDetail.m in Sources */,
+				0ADA23F0174BB664007F1173 /* GW2MapName.m in Sources */,
+				0ADA23F5174BBAA9007F1173 /* GW2WorldName.m in Sources */,
+				0ADA23FA174BBDA5007F1173 /* GW2EventName.m in Sources */,
 				0ADA2400174BD058007F1173 /* GW2WvWMatchDetail.m in Sources */,
-				0ADA2405174BD385007F1173 /* GW2WvWMatchStatus.m in Sources */,
+				0ADA2405174BD385007F1173 /* GW2WvWMatch.m in Sources */,
+				0ADA240A174BE627007F1173 /* GW2RecipeDetail.m in Sources */,
+				0AF0F7E8174C7027005EB48D /* GW2WvWObjectiveName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,6 +807,7 @@
 				0ADA2316174AD63F007F1173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ADA2331174AD673007F1173 /* Build configuration list for PBXNativeTarget "GW2Kit" */ = {
 			isa = XCConfigurationList;
@@ -795,6 +816,7 @@
 				0ADA2333174AD673007F1173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

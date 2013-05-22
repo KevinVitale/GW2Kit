@@ -1,15 +1,15 @@
 //
-//  GW2WvWMatchDetail.m
+//  GW2WorldName.m
 //  GW2Kit
 //
 //  Created by Kevin Vitale on 5/21/13.
 //
 //
 
-#import "GW2WvWMatchDetail.h"
+#import "GW2WorldName.h"
 #import <RestKit/RestKit.h>
 
-@implementation GW2WvWMatchDetail
+@implementation GW2WorldName
 - (NSString *)description {
     NSUInteger stringLength = 0;
     NSMutableString *description = [NSMutableString stringWithString:@"\n"];
@@ -27,9 +27,8 @@
 
 + (NSDictionary *)mappingAttributes {
     return @{
-             @"match_id" : @"matchID",
-             @"scores" : @"scores",
-             @"maps" : @"maps"
+             @"name": @"name",
+             @"id" : @"worldID"
              };
 }
 + (RKObjectMapping *)mappingObject {
