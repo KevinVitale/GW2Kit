@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0ADA23BA174ADDE3007F1173"
+               BuildableName = "GW2KitTests.octest"
+               BlueprintName = "GW2KitTests"
+               ReferencedContainer = "container:GW2KitTests/GW2KitTests/GW2KitTests.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
