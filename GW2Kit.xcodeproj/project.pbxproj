@@ -28,7 +28,7 @@
 		0ADA2374174ADB85007F1173 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2373174ADB85007F1173 /* Security.framework */; };
 		0ADA2376174ADB8D007F1173 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2375174ADB8D007F1173 /* SystemConfiguration.framework */; };
 		0ADA2385174ADC7B007F1173 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2382174ADC39007F1173 /* libReactiveCocoa-iOS.a */; };
-		0ADA2386174ADC8E007F1173 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
+		0ADA2386174ADC8E007F1173 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
 		0ADA23E1174AECBC007F1173 /* GW2ItemDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23DF174AECBC007F1173 /* GW2ItemDetail.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0ADA23E2174AECBC007F1173 /* GW2ItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23E0174AECBC007F1173 /* GW2ItemDetail.m */; };
 		0ADA23E3174AECBC007F1173 /* GW2ItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23E0174AECBC007F1173 /* GW2ItemDetail.m */; };
@@ -47,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A3302DE174DC542007571CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ADA23B3174ADDD3007F1173 /* GW2KitTests.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A7B9F97174DB97E0041D341;
+			remoteInfo = GW2TestOSXApp;
+		};
 		0ADA2359174ADA7D007F1173 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
@@ -149,7 +156,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0ADA2386174ADC8E007F1173 /* ReactiveCocoa.framework in Copy Frameworks */,
 				0ADA2363174ADAFA007F1173 /* RestKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -221,6 +227,7 @@
 				0ADA2372174ADB7C007F1173 /* CoreServices.framework in Frameworks */,
 				0ADA2362174ADAE6007F1173 /* RestKit.framework in Frameworks */,
 				0ADA2322174AD673007F1173 /* Cocoa.framework in Frameworks */,
+				0ADA2386174ADC8E007F1173 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADA23D5174ADE35007F1173 /* GW2KitTests.octest */,
+				0A3302DF174DC542007571CF /* GW2TestOSXApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -457,6 +465,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0A3302DF174DC542007571CF /* GW2TestOSXApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GW2TestOSXApp.app;
+			remoteRef = 0A3302DE174DC542007571CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		0ADA235A174ADA7D007F1173 /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;

@@ -37,6 +37,35 @@
                BlueprintName = "GW2KitTests"
                ReferencedContainer = "container:GW2KitTests/GW2KitTests/GW2KitTests.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "GW2KitTests/testEventStates_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testItemDetail_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testItems_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testRecipeDetail_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testRecipes_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testWorlds_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testWvWMatchDetail_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testWvwMatches_Synchronously">
+               </Test>
+               <Test
+                  Identifier = "GW2KitTests/testWvWObjects_Synchronously">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

@@ -14,12 +14,15 @@
 @class GW2ItemDetail;
 @class GW2RecipeDetail;
 @class GW2WvWMatchDetail;
+@class RACSignal;
+@class RACCommand;
 
-@interface GW2Client : AFHTTPClient
+@interface GW2Client : RKObjectManager
+@property (strong, readonly, nonatomic) RACCommand *resourceNameCommand;
 
-- (void)namesForResource:(NSString *)resource
-              parameters:(NSDictionary *)parameters
-              completion:(void (^)(NSError *error, NSArray *names))completion;
+- (RACSignal *)namesForResource:(NSString *)resource
+                     parameters:(NSDictionary *)parameters
+                     completion:(void (^)(NSError *error, NSArray *names))completion;
 
 - (void)itemsWithCompletion:(void (^)(NSError *error, NSArray *items))completion;
 

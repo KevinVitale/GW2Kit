@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'GW2TestOSXApp' target in the 'GW2TestOSXApp' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <Security/Security.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+#endif
