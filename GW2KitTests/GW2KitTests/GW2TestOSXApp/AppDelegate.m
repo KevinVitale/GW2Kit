@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <GW2Kit/GW2Kit.h>
 
 @implementation AppDelegate
 

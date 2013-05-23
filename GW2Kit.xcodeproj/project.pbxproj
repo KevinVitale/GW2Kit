@@ -21,10 +21,6 @@
 		0ADA2362174ADAE6007F1173 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA235E174ADA7D007F1173 /* RestKit.framework */; };
 		0ADA2363174ADAFA007F1173 /* RestKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA235E174ADA7D007F1173 /* RestKit.framework */; };
 		0ADA2364174ADB07007F1173 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA235A174ADA7D007F1173 /* libRestKit.a */; };
-		0ADA236A174ADB3E007F1173 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2369174ADB3E007F1173 /* CFNetwork.framework */; };
-		0ADA236C174ADB55007F1173 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA236B174ADB55007F1173 /* MobileCoreServices.framework */; };
-		0ADA236E174ADB5F007F1173 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA236D174ADB5F007F1173 /* Security.framework */; };
-		0ADA2370174ADB6F007F1173 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA236F174ADB6F007F1173 /* SystemConfiguration.framework */; };
 		0ADA2372174ADB7C007F1173 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2371174ADB7C007F1173 /* CoreServices.framework */; };
 		0ADA2374174ADB85007F1173 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2373174ADB85007F1173 /* Security.framework */; };
 		0ADA2376174ADB8D007F1173 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2375174ADB8D007F1173 /* SystemConfiguration.framework */; };
@@ -196,10 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADA2385174ADC7B007F1173 /* libReactiveCocoa-iOS.a in Frameworks */,
-				0ADA2370174ADB6F007F1173 /* SystemConfiguration.framework in Frameworks */,
-				0ADA236E174ADB5F007F1173 /* Security.framework in Frameworks */,
-				0ADA236C174ADB55007F1173 /* MobileCoreServices.framework in Frameworks */,
-				0ADA236A174ADB3E007F1173 /* CFNetwork.framework in Frameworks */,
 				0ADA2364174ADB07007F1173 /* libRestKit.a in Frameworks */,
 				0ADA22F6174AD63E007F1173 /* Foundation.framework in Frameworks */,
 			);

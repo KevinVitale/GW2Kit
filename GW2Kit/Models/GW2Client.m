@@ -7,7 +7,7 @@
 //
 
 #import "GW2Client.h"
-#import <GW2Kit.h>
+#import "GW2Kit.h"
 
 #pragma mark - Private Methods
 @interface GW2Client ()

@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <GW2Kit/GW2Kit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
