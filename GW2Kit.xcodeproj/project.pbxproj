@@ -10,6 +10,7 @@
 		0A3D55EA174D79CA000E8147 /* GW2ResourceName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */; };
 		0A3D55EB174D79CA000E8147 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */; };
 		0A3D55EC174D79CA000E8147 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */; };
+		0A6D673F174EA188001CCB7F /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
 		0ADA22F6174AD63E007F1173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA22F5174AD63E007F1173 /* Foundation.framework */; };
 		0ADA2322174AD673007F1173 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2321174AD673007F1173 /* Cocoa.framework */; };
 		0ADA232C174AD673007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA232A174AD673007F1173 /* InfoPlist.strings */; };
@@ -47,13 +48,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A3302DE174DC542007571CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA23B3174ADDD3007F1173 /* GW2KitTests.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A7B9F97174DB97E0041D341;
-			remoteInfo = GW2TestOSXApp;
-		};
 		0ADA2359174ADA7D007F1173 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
@@ -131,13 +125,6 @@
 			remoteGlobalIDString = 88037F8215056328001A5B19;
 			remoteInfo = ReactiveCocoa;
 		};
-		0ADA23D4174ADE35007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA23B3174ADDD3007F1173 /* GW2KitTests.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0ADA23BB174ADDE3007F1173;
-			remoteInfo = GW2KitTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -156,6 +143,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0A6D673F174EA188001CCB7F /* ReactiveCocoa.framework in Copy Frameworks */,
 				0ADA2363174ADAFA007F1173 /* RestKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -190,7 +178,6 @@
 		0ADA2373174ADB85007F1173 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		0ADA2375174ADB8D007F1173 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Vendor/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
-		0ADA23B3174ADDD3007F1173 /* GW2KitTests.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GW2KitTests.xcodeproj; path = GW2KitTests/GW2KitTests.xcodeproj; sourceTree = "<group>"; };
 		0ADA23DF174AECBC007F1173 /* GW2ItemDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ItemDetail.h; sourceTree = "<group>"; };
 		0ADA23E0174AECBC007F1173 /* GW2ItemDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ItemDetail.m; sourceTree = "<group>"; };
 		0ADA23E5174B119E007F1173 /* GW2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Client.h; sourceTree = "<group>"; };
@@ -240,7 +227,6 @@
 				0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */,
 				0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */,
 				0ADA2327174AD673007F1173 /* GW2Kit */,
-				0ADA238C174ADD37007F1173 /* GW2KitTests */,
 				0ADA22F4174AD63E007F1173 /* Frameworks */,
 				0ADA22F3174AD63E007F1173 /* Products */,
 			);
@@ -346,23 +332,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0ADA238C174ADD37007F1173 /* GW2KitTests */ = {
-			isa = PBXGroup;
-			children = (
-				0ADA23B3174ADDD3007F1173 /* GW2KitTests.xcodeproj */,
-			);
-			path = GW2KitTests;
-			sourceTree = "<group>";
-		};
-		0ADA23B4174ADDD3007F1173 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0ADA23D5174ADE35007F1173 /* GW2KitTests.octest */,
-				0A3302DF174DC542007571CF /* GW2TestOSXApp.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -444,10 +413,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0ADA23B4174ADDD3007F1173 /* Products */;
-					ProjectRef = 0ADA23B3174ADDD3007F1173 /* GW2KitTests.xcodeproj */;
-				},
-				{
 					ProductGroup = 0ADA2378174ADC39007F1173 /* Products */;
 					ProjectRef = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
 				},
@@ -465,13 +430,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0A3302DF174DC542007571CF /* GW2TestOSXApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = GW2TestOSXApp.app;
-			remoteRef = 0A3302DE174DC542007571CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		0ADA235A174ADA7D007F1173 /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -519,13 +477,6 @@
 			fileType = wrapper.cfbundle;
 			path = ReactiveCocoaTests.octest;
 			remoteRef = 0ADA2383174ADC39007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA23D5174ADE35007F1173 /* GW2KitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GW2KitTests.octest;
-			remoteRef = 0ADA23D4174ADE35007F1173 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -725,6 +676,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "GW2Kit/GW2Kit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -766,6 +718,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "GW2Kit/GW2Kit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

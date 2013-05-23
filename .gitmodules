@@ -1,6 +1,6 @@
 [submodule "Vendor/RestKit"]
 	path = Vendor/RestKit
-	url = git://github.com/RestKit/RestKit.git
+	url = git://github.com/KevinVitale/RestKit.git
 [submodule "Vendor/ReactiveCocoa"]
 	path = Vendor/ReactiveCocoa
 	url = git://github.com/ReactiveCocoa/ReactiveCocoa.git
