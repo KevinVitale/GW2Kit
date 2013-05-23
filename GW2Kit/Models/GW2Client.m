@@ -11,7 +11,6 @@
 
 #pragma mark - Private Methods
 @interface GW2Client ()
-@property (strong, readwrite, nonatomic) RACCommand *resourceNameCommand;
 @end
 
 
@@ -23,7 +22,6 @@
 - (id)initWithHTTPClient:(AFHTTPClient *)client {
     self = [super initWithHTTPClient:client];
     if(self) {
-        self.resourceNameCommand = [RACCommand command];
         [self addResponseDescriptorsFromArray:@[
 
          
@@ -62,22 +60,12 @@
 }
 
 #pragma mark - Resource Names
-- (RACSignal *)namesForResource:(NSString *)resource
+- (void)namesForResource:(NSString *)resource
               parameters:(NSDictionary *)parameters
               completion:(void (^)(NSError *, NSArray *))completion {
-    RACSubject *subject = [RACSubject subject];
     void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *names) {
         if(completion)
             completion(error, names);
-        
-        if(!error) {
-            [subject sendNext:names];
-            [subject sendCompleted];
-        }
-        
-        else {
-            [subject sendError:error];
-        }
     };
     
     [self getObjectsAtPath:[NSString stringWithFormat:@"/v1/%@_names.json", resource]
@@ -88,7 +76,6 @@
                    failure:^(RKObjectRequestOperation *operation, NSError *error) {
                        finalCompletion(error, nil);
                    }];
-    return subject;
 }
 
 - (void)itemsWithCompletion:(void (^)(NSError *, NSArray *))completion {
@@ -250,5 +237,31 @@
         instance = [[GW2Client alloc] initWithHTTPClient:[AFHTTPClient clientWithBaseURL:[NSURL URLWithString:@"https://api.guildwars2.com"]]];
     });
     return instance;
+}
+@end
+
+@implementation GW2Client (Reactive)
+- (RACSignal *)signalOfNamesForResource:(NSString *)resource parameters:(NSDictionary *)parameters {
+    RACSubject *subject = [RACSubject subject];
+    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *names) {
+        if(error) {
+            [subject sendError:error];
+        }
+        
+        else {
+            [subject sendNext:names];
+            [subject sendCompleted];
+        }
+    };
+    
+    [self getObjectsAtPath:[NSString stringWithFormat:@"/v1/%@_names.json", resource]
+                parameters:parameters
+                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                       finalCompletion(nil, mappingResult.array);
+                   }
+                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                       finalCompletion(error, nil);
+                   }];
+    return subject;
 }
 @end
