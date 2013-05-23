@@ -1,38 +1,93 @@
 # GW2Kit
 
-GW2Kit is a Objective-C framework for clients of the Guild Wars 2 API, meant for iOS and Mac OS X. It relies on [RestKit](https://github.com/RestKit/RestKit) and [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa).
+GW2Kit is a Objective-C framework for the Guild Wars 2 API. GW2Kit allows iOS and OS X applications to natively use the GW2 API. It relies on two frameworks:
 
 ## Overview
 
-Guild Wars 2 API documentation is provided [here](https://forum-en.guildwars2.com/forum/community/api/API-Documentation/first#post2028044).
+The Official Guild Wars 2 API was released on May 20th, posted by ArenaNet Lead Programmer [Cliff Spradlin](https://forum-en.guildwars2.com/forum/community/api/API-Documentation/first#post2028044). It provides third-party application the ability to query in-game data in real-time. 
 
-## Getting Started
+- [The API documentation](https://forum-en.guildwars2.com/forum/community/api/API-Documentation/first#post2028044) (Guild Wars 2 Forums)
+- [API wiki page](http://wiki.guildwars2.com/wiki/API) (wiki.guildwars2.com)
 
-**Getting the code:**
+### Available Information
 
-	$ cd /path/to/MyApplication
-	# If this is a new project, initialize git...
-	$ git init
-	$ git submodule add git@github.com:KevinVitale/GW2Kit.git
+The following endpoints all assume `GET`. For full details, refer to the API's documentation.
+
+#### Locations
+
+- `v1/event_names.json`
+- `v1/map_names.json`
+- `v1/world_names.json`
+
+#### Items
+
+- `v1/items.json`
+- `v1/item_details.json`
+
+#### Recipes
+
+- `v1/recipes.json`
+- `v1/recipe_details.json`
+
+#### Events
+
+- `v1/events.json`
+
+#### WvW
+
+- `v1/wvw/matches.json`
+- `v1/wvw/matche_details.json`
+
+<hr/>
+
+## Using GW2Kit
+
+You can add the `GW2Kit` framework to your mobile and/or desktop Cocoa applications which meet these requirements:
+
+- **OS X**: 10.7
+- **iOS**: 5.0
+- **Xcode.app**: 4.6
+
+*Note: Is written using the ARC (automatic reference counting) memory model.*
+
+### Getting the code ###
+
+Open your **Terminal.app**  
+  *Located: /Applications/Utilities/Terminal.app*
+
+	$ cd /path/to/some_directory
+	$ git clone git://github.com/KevinVitale/GW2Kit.git
+	$ cd GW2Kit
 	$ git submodule update --init --recursive
-	$ open GW2Kit
+	$ open GW2Kit.xcworkspace
 	
-**Running the tests:**
+	
+### Framework dependencies
 
-Only the frameworks are provided (no app provided, at the moment). Run the test by selecting `GW2KitTests` scheme, and hitting **⌘+U**.
+You might notice that there are a lot of schemes in Xcode's scheme list. This will be fixed soon, but part of the reason is that `GW2Kit` relies on two other frameworks:
 
-## Example
+- [RestKit](https://github.com/RestKit/RestKit) - network communication and parsing
+- [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) - functional extensions for Objective-C
+
+### Running the iOS example
+
+In Xcode's scheme picker, select **GW2KitTestiOSApp** Build & Run the app by pressing the giant play button or hitting **⌘+R**.
+
+<hr/>
+
+## SDK Examples
 
 ### Item detail
 
 Looking up __The Hunter__:
 
 	NSString *itemID = @"29175";
-	[GW2 itemDetailForID:itemID completion:^(NSError *error, GW2ItemDetail *itemDetail) {
+	[GW2 itemDetailForID:itemID
+	          completion:^(NSError *error, GW2ItemDetail *itemDetail) {
 	    printf("%s", [itemDetail description].UTF8String);
 	}];
 
-Output:
+##### Output:
 
 	----------------------------------------------------------------------------------------------------
 	[#29175] The Hunter
@@ -82,9 +137,10 @@ Output:
 	    type = Rifle;
 	}
 	
-### Event States:
+### Polling Event States
 
-	// Find event states in 'Kessex Hills' on 'Maguuma'
+Find event states in 'Kessex Hills' on 'Maguuma'
+
 	[GW2 eventStatesWithParameters:@{@"world_id" : @"1005", @"map_id" : @"23"}
 	                    completion:^(NSError *error, id states) {
 	                        for(GW2EventStatus *status in states) {
@@ -92,7 +148,7 @@ Output:
 	                        }
 	                    }];
 	
-### Output:
+##### Output:
 
 	mapID                                   : 23
 	state                                   : Success
@@ -116,10 +172,28 @@ Output:
 
 	... *many, many more...*
 
+<hr/>
+
 ## License
 
-GW2Kit is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](LICENSE) file for full details.
+Copyright 2013 Kevin Vitale
 
-## Credits
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+#### API Terms
+
+These API’s are wholly owned by ArenaNet, LLC (“ArenaNet”). Any use of the API’s must comply with the Website Terms of Use and Content Terms of Use , however you may use the API’s to make commercial products so long as they are otherwise compliant and do not compete with ArenaNet. ArenaNet may revoke your right to use the API’s at any time. In addition, ArenaNet may create and/or amend any terms or conditions applicable to the API’s or their use at any time and from time to time. You understand and agree that ArenaNet is in the process of developing a full license agreement for these API’s and ArenaNet will publikitten when it is complete. Your continued use of the API’s constitutes acceptance of the full license agreement and any related terms or conditions when they are posted.
+
+#### Credits
 
 GW2Kit is brought to you by [Kevin Vitale](https://github.com/KevinVitale).
