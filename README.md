@@ -78,15 +78,15 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 - Back in Xcode, Drag the `GW2Kit.xcodeproj` file into your app's project navigation
 - Select your project's target's own build settings, and then click on "Build Settings"
 - Set *Header Search Paths* to be (including quotes):  
-> "$(BUILT_PRODUCTS_DIR)/../../Headers"  
-> "$(SRCROOT)/GW2Kit"  
-> "$(SRCROOT)/../GW2Kit/GW2Kit/Models"
+-- *"$(BUILT_PRODUCTS_DIR)/../../Headers"*  
+-- *"$(SRCROOT)/GW2Kit"*  
+-- *"$(SRCROOT)/../GW2Kit/GW2Kit/Models"*  
 - Now for the other build settings, click on "Build Phases"  
-> In "Link Binary With Libraries" section, add the following libraries:  
-> libGW2Kit-iOS.a
-> CoreData.framework  
-> SystemConfiguration.framework  
-> MobileCoreServices.framework  
+- In "Link Binary With Libraries" section, add the following libraries:  
+-- *libGW2Kit-iOS.a*  
+-- *CoreData.framework*  
+-- *SystemConfiguration.framework*  
+-- *MobileCoreServices.framework*  
 - (Optional) To get rid of the warnings from AFNetworking, change your app's .pch file to look like this:
 
 		#import <Availability.h>
@@ -101,8 +101,8 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 		    #import <SystemConfiguration/SystemConfiguration.h>
 		    #import <MobileCoreServices/MobileCoreServices.h>
 		#endif
-- Finally, make sure it works:
-> Add `#import <GW2Kit/GW2Kit.h>` to your app delegate's `.m` (implementation) file
+- Finally, make sure it works:  
+-- Add `#import <GW2Kit/GW2Kit.h>` to your app delegate's `.m` (implementation) file
 - Start coding!
 	
 ### Framework dependencies
