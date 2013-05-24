@@ -1,6 +1,6 @@
 # GW2Kit
 
-GW2Kit is a Objective-C framework for the Guild Wars 2 API. GW2Kit allows iOS and OS X applications to natively use the GW2 API. It relies on two frameworks:
+GW2Kit is a Objective-C framework for the Guild Wars 2 API. GW2Kit allows iOS and OS X applications to natively use the GW2 API.
 
 ## Overview
 
@@ -48,7 +48,7 @@ You can add the `GW2Kit` framework to your mobile and/or desktop Cocoa applicati
 - **iOS**: 5.0
 - **Xcode.app**: 4.6
 
-*Note: Is written using the ARC (automatic reference counting) memory model.*
+*Note: GW2Kit is written using the ARC (automatic reference counting) memory model.*
 
 ### Getting the code ###
 
