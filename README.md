@@ -11,7 +11,7 @@ The Official Guild Wars 2 API was released on May 20th, posted by ArenaNet Lead 
 
 ### Available Information
 
-The following endpoints all assume `GET`. For full details, refer to the API's documentation.
+The GW2Kit SDK supports all the following endpoints (which is the entirety of the GW2 API at the time of writing):
 
 #### Locations
 
