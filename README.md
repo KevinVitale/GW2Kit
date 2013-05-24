@@ -52,6 +52,10 @@ You can add the `GW2Kit` framework to your mobile and/or desktop Cocoa applicati
 
 ### Getting the code ###
 
+#### Exploring the source
+
+If you want to explore the GW2Kit project and try out the test apps, do the following:
+
 Open your **Terminal.app**  
   *Located: /Applications/Utilities/Terminal.app*
 
@@ -61,6 +65,45 @@ Open your **Terminal.app**
 	$ git submodule update --init --recursive
 	$ open GW2Kit.xcworkspace
 	
+#### Adding GW2Kit to a new or existing app
+
+If all you want is to add GW2Kit to a new or existing project, you can do the following:
+
+##### For iOS apps:
+
+1. Open Xcode and start a new iOS project (skip if you already have a project)
+> Select the project template you prefer (I usually prefer an empty project)
+- From outside Xcode, follow the instructions above to clone the project into a `GW2Kit` folder inside your project's root directory 
+> Really make sure you've updated GW2Kit's submodules
+- Back in Xcode, Drag the `GW2Kit.xcodeproj` file into your app's project navigation
+- Select your project's target's own build settings, and then click on "Build Settings"
+- Set *Header Search Paths* to be (including quotes):  
+> "$(BUILT_PRODUCTS_DIR)/../../Headers"  
+> "$(SRCROOT)/GW2Kit"  
+> "$(SRCROOT)/../GW2Kit/GW2Kit/Models"
+- Now for the other build settings, click on "Build Phases"  
+> In "Link Binary With Libraries" section, add the following libraries:  
+> libGW2Kit-iOS.a
+> CoreData.framework  
+> SystemConfiguration.framework  
+> MobileCoreServices.framework  
+- (Optional) To get rid of the warnings from AFNetworking, change your app's .pch file to look like this:
+
+		#import <Availability.h>
+
+		#ifndef __IPHONE_3_0
+		#warning "This project uses features only available in iOS SDK 3.0 and later."
+		#endif
+
+		#ifdef __OBJC__
+		    #import <UIKit/UIKit.h>
+		    #import <Foundation/Foundation.h>
+		    #import <SystemConfiguration/SystemConfiguration.h>
+		    #import <MobileCoreServices/MobileCoreServices.h>
+		#endif
+- Finally, make sure it works:
+> Add `#import <GW2Kit/GW2Kit.h>` to your app delegate's `.m` (implementation) file
+- Start coding!
 	
 ### Framework dependencies
 
