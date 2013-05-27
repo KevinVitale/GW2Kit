@@ -82,7 +82,7 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 -- *"$(SRCROOT)/GW2Kit"*  
 -- *"$(SRCROOT)/GW2Kit/GW2Kit/Models"*  
 - Set *Other Linker Flags* to be:  
--- *"-ObjC"*  
+-- *-ObjC*  
 - Now for the other build settings, click on "Build Phases"  
 - In "Link Binary With Libraries" section, add the following libraries:  
 -- *libGW2Kit-iOS.a*  
