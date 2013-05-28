@@ -261,8 +261,8 @@
 		0A7E9C7D175515870017A1FB /* Spidy */ = {
 			isa = PBXGroup;
 			children = (
-				0A7E9C7E175515870017A1FB /* Models */,
 				0A7E9C83175515870017A1FB /* Spidy.h */,
+				0A7E9C7E175515870017A1FB /* Models */,
 			);
 			name = Spidy;
 			path = GW2Kit/Spidy;

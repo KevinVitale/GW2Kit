@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0FAB4117556789005AE292 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6907F4174E9F5500D49543 /* ReactiveCocoa.framework */; };
+		0A0FAB4217556789005AE292 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6907F5174E9F5500D49543 /* RestKit.framework */; };
+		0A0FAB43175567F1005AE292 /* GW2Kit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE9B6A8174E9EE50001DB09 /* GW2Kit.framework */; };
 		0A521C85174EA7A2006AE946 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A521C84174EA7A2006AE946 /* CoreData.framework */; };
 		0A521C87174EA7C1006AE946 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A521C86174EA7C1006AE946 /* Security.framework */; };
 		0A521C89174EA7C7006AE946 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A521C88174EA7C6006AE946 /* SystemConfiguration.framework */; };
@@ -37,7 +40,6 @@
 		0ADA23CB174ADDE3007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA23C9174ADDE3007F1173 /* InfoPlist.strings */; };
 		0ADA23CE174ADDE3007F1173 /* GW2KitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23CD174ADDE3007F1173 /* GW2KitTests.m */; };
 		0ADA23D7174ADEF3007F1173 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23D6174ADEF3007F1173 /* GW2Kit.framework */; };
-		0ADA23D9174ADF2A007F1173 /* GW2Kit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23D6174ADEF3007F1173 /* GW2Kit.framework */; };
 		0ADA23EB174B13DB007F1173 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23EA174B13DB007F1173 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0ADA23D9174ADF2A007F1173 /* GW2Kit.framework in Copy Frameworks */,
+				0A0FAB43175567F1005AE292 /* GW2Kit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +166,8 @@
 			files = (
 				0ADA23EB174B13DB007F1173 /* SystemConfiguration.framework in Frameworks */,
 				0ADA23D7174ADEF3007F1173 /* GW2Kit.framework in Frameworks */,
+				0A0FAB4117556789005AE292 /* ReactiveCocoa.framework in Frameworks */,
+				0A0FAB4217556789005AE292 /* RestKit.framework in Frameworks */,
 				0ADA23BF174ADDE3007F1173 /* SenTestingKit.framework in Frameworks */,
 				0ADA23C1174ADDE3007F1173 /* Cocoa.framework in Frameworks */,
 			);
@@ -751,7 +755,7 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/GW2Kit-dhqionbjdwesebdrwqqcxcyrpqtw/Build/Products/Debug\"",
+					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -795,7 +799,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/GW2Kit-dhqionbjdwesebdrwqqcxcyrpqtw/Build/Products/Debug\"",
+					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
