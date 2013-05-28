@@ -72,7 +72,7 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 ##### For iOS apps:
 
 1. Open Xcode and start a new iOS project (skip if you already have a project)  
--- *Select the project template you prefer (I usually prefer an empty project)*
+-- *Select the project template you prefer (I usually prefer 'Empty Application' project)*
 - From outside Xcode, follow the instructions above to clone the project into a `GW2Kit` folder inside your project's root directory  
 -- *Really make sure you've updated GW2Kit's submodules*
 - Back in Xcode, Drag the `GW2Kit.xcodeproj` file into your app's project navigation
@@ -80,7 +80,9 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 - Set *Header Search Paths* to be (including quotes):  
 -- *"$(BUILT_PRODUCTS_DIR)/../../Headers"*  
 -- *"$(SRCROOT)/GW2Kit"*  
--- *"$(SRCROOT)/../GW2Kit/GW2Kit/Models"*  
+-- *"$(SRCROOT)/GW2Kit/GW2Kit/Models"*  
+- Set *Other Linker Flags* to be:  
+-- *-ObjC*  
 - Now for the other build settings, click on "Build Phases"  
 - In "Link Binary With Libraries" section, add the following libraries:  
 -- *libGW2Kit-iOS.a*  
