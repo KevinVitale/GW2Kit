@@ -16,4 +16,4 @@
 #import "GW2WvWMatch.h"
 #import "GW2WvWMatchDetail.h"
 #import "GW2RecipeDetail.h"
-#import "Spidy/Spidy.h"
+#import "Spidy.h"

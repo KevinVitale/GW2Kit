@@ -6,5 +6,5 @@
 //
 //
 
-#import "Models/SPYClient.h"
-#import "Models/SPYItem.h"
+#import "SPYClient.h"
+#import "SPYItem.h"
