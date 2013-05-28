@@ -79,14 +79,14 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 - Select your project's target's own build settings, and then click on "Build Settings"
 - Set *Header Search Paths* to be (including quotes):  
 -- *"$(BUILT_PRODUCTS_DIR)/../../Headers"*  
--- *"$(SRCROOT)/GW2Kit"*  
--- *"$(SRCROOT)/GW2Kit/GW2Kit/Models"*  
+-- *"$(BUILT_PRODUCTS_DIR)"*  
 - Set *Other Linker Flags* to be:  
 -- *-ObjC*  
 - Now for the other build settings, click on "Build Phases"  
 - In "Link Binary With Libraries" section, add the following libraries:  
 -- *libGW2Kit-iOS.a*  
 -- *CoreData.framework*  
+-- *Security.framework*  
 -- *SystemConfiguration.framework*  
 -- *MobileCoreServices.framework*  
 - (Optional) To get rid of the warnings from AFNetworking, change your app's .pch file to look like this:
