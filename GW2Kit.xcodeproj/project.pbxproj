@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A3D55EA174D79CA000E8147 /* GW2ResourceName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */; };
+		0A3D55EA174D79CA000E8147 /* GW2ResourceName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0A3D55EB174D79CA000E8147 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */; };
 		0A3D55EC174D79CA000E8147 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */; };
 		0A6D673F174EA188001CCB7F /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
+		0A7E9C421754F97B0017A1FB /* SPYClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C401754F97B0017A1FB /* SPYClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0A7E9C431754F97B0017A1FB /* SPYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C411754F97B0017A1FB /* SPYClient.m */; };
+		0A7E9C441754F97B0017A1FB /* SPYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C411754F97B0017A1FB /* SPYClient.m */; };
+		0A7E9C461754F9D10017A1FB /* Spidy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C451754F9D10017A1FB /* Spidy.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0A7E9C4A1754FBA20017A1FB /* SPYItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C481754FBA20017A1FB /* SPYItem.h */; };
+		0A7E9C4B1754FBA20017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C491754FBA20017A1FB /* SPYItem.m */; };
+		0A7E9C4C1754FBA20017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C491754FBA20017A1FB /* SPYItem.m */; };
 		0ADA22F6174AD63E007F1173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA22F5174AD63E007F1173 /* Foundation.framework */; };
 		0ADA2322174AD673007F1173 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2321174AD673007F1173 /* Cocoa.framework */; };
 		0ADA232C174AD673007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA232A174AD673007F1173 /* InfoPlist.strings */; };
@@ -150,6 +157,11 @@
 /* Begin PBXFileReference section */
 		0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ResourceName.h; sourceTree = "<group>"; };
 		0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ResourceName.m; sourceTree = "<group>"; };
+		0A7E9C401754F97B0017A1FB /* SPYClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYClient.h; sourceTree = "<group>"; };
+		0A7E9C411754F97B0017A1FB /* SPYClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYClient.m; sourceTree = "<group>"; };
+		0A7E9C451754F9D10017A1FB /* Spidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spidy.h; sourceTree = "<group>"; };
+		0A7E9C481754FBA20017A1FB /* SPYItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYItem.h; sourceTree = "<group>"; };
+		0A7E9C491754FBA20017A1FB /* SPYItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYItem.m; sourceTree = "<group>"; };
 		0ADA22F2174AD63E007F1173 /* libGW2Kit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libGW2Kit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADA22F5174AD63E007F1173 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0ADA2304174AD63F007F1173 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -213,12 +225,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7E9C361754F9320017A1FB /* Spidy */ = {
+			isa = PBXGroup;
+			children = (
+				0A7E9C451754F9D10017A1FB /* Spidy.h */,
+				0A7E9C3F1754F97B0017A1FB /* Models */,
+			);
+			path = Spidy;
+			sourceTree = "<group>";
+		};
+		0A7E9C3F1754F97B0017A1FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A7E9C401754F97B0017A1FB /* SPYClient.h */,
+				0A7E9C411754F97B0017A1FB /* SPYClient.m */,
+				0A7E9C481754FBA20017A1FB /* SPYItem.h */,
+				0A7E9C491754FBA20017A1FB /* SPYItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0ADA22E7174AD539007F1173 = {
 			isa = PBXGroup;
 			children = (
 				0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */,
 				0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */,
 				0ADA2327174AD673007F1173 /* GW2Kit */,
+				0A7E9C361754F9320017A1FB /* Spidy */,
 				0ADA22F4174AD63E007F1173 /* Frameworks */,
 				0ADA22F3174AD63E007F1173 /* Products */,
 			);
@@ -339,6 +372,9 @@
 				0ADA2403174BD385007F1173 /* GW2WvWMatch.h in Headers */,
 				0ADA2408174BE627007F1173 /* GW2RecipeDetail.h in Headers */,
 				0A3D55EA174D79CA000E8147 /* GW2ResourceName.h in Headers */,
+				0A7E9C461754F9D10017A1FB /* Spidy.h in Headers */,
+				0A7E9C421754F97B0017A1FB /* SPYClient.h in Headers */,
+				0A7E9C4A1754FBA20017A1FB /* SPYItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +532,8 @@
 				0ADA2404174BD385007F1173 /* GW2WvWMatch.m in Sources */,
 				0ADA2409174BE627007F1173 /* GW2RecipeDetail.m in Sources */,
 				0A3D55EB174D79CA000E8147 /* GW2ResourceName.m in Sources */,
+				0A7E9C431754F97B0017A1FB /* SPYClient.m in Sources */,
+				0A7E9C4B1754FBA20017A1FB /* SPYItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +548,8 @@
 				0ADA2405174BD385007F1173 /* GW2WvWMatch.m in Sources */,
 				0ADA240A174BE627007F1173 /* GW2RecipeDetail.m in Sources */,
 				0A3D55EC174D79CA000E8147 /* GW2ResourceName.m in Sources */,
+				0A7E9C441754F97B0017A1FB /* SPYClient.m in Sources */,
+				0A7E9C4C1754FBA20017A1FB /* SPYItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

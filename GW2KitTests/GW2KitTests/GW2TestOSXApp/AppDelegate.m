@@ -14,6 +14,11 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     RKLogConfigureByName("RestKit/Network", RKLogLevelOff);
     RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
+    
+    [Spidy itemDetailForID:@"12345"
+                completion:^(NSError *error, SPYItem *item) {
+                    printf("%s\n", item.description.UTF8String);
+                }];
 
     [GW2 namesForResource:@"event"
                parameters:nil
