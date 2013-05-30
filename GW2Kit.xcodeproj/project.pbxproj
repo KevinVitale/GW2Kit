@@ -7,18 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A0FAAFF17555F59005AE292 /* GW2ResourceName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB0017555F59005AE292 /* GW2EventStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2338174AD7A5007F1173 /* GW2EventStatus.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB0117555F59005AE292 /* GW2ItemDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23DF174AECBC007F1173 /* GW2ItemDetail.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB0217555F59005AE292 /* GW2WvWMatchDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23FC174BD057007F1173 /* GW2WvWMatchDetail.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB0317555F59005AE292 /* GW2WvWMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2401174BD384007F1173 /* GW2WvWMatch.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB0417555F59005AE292 /* GW2RecipeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2406174BE626007F1173 /* GW2RecipeDetail.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB0517555F59005AE292 /* GW2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA23E5174B119E007F1173 /* GW2Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB0917555F62005AE292 /* GW2Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2335174AD722007F1173 /* GW2Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A0FAB1417556132005AE292 /* GW2Kit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ADA2335174AD722007F1173 /* GW2Kit.h */; };
-		0A0FAB151755616A005AE292 /* SPYClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C7F175515870017A1FB /* SPYClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB161755616A005AE292 /* SPYItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C81175515870017A1FB /* SPYItem.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A0FAB1717556176005AE292 /* Spidy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C83175515870017A1FB /* Spidy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0A0FAB19175563C9005AE292 /* GW2ResourceName.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */; };
 		0A0FAB1A175563C9005AE292 /* GW2EventStatus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ADA2338174AD7A5007F1173 /* GW2EventStatus.h */; };
 		0A0FAB1B175563C9005AE292 /* GW2ItemDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ADA23DF174AECBC007F1173 /* GW2ItemDetail.h */; };
@@ -394,24 +383,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0A7E9CC817555CF30017A1FB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A0FAB0917555F62005AE292 /* GW2Kit.h in Headers */,
-				0A0FAAFF17555F59005AE292 /* GW2ResourceName.h in Headers */,
-				0A0FAB0017555F59005AE292 /* GW2EventStatus.h in Headers */,
-				0A0FAB0117555F59005AE292 /* GW2ItemDetail.h in Headers */,
-				0A0FAB0217555F59005AE292 /* GW2WvWMatchDetail.h in Headers */,
-				0A0FAB0317555F59005AE292 /* GW2WvWMatch.h in Headers */,
-				0A0FAB0417555F59005AE292 /* GW2RecipeDetail.h in Headers */,
-				0A0FAB0517555F59005AE292 /* GW2Client.h in Headers */,
-				0A0FAB1717556176005AE292 /* Spidy.h in Headers */,
-				0A0FAB151755616A005AE292 /* SPYClient.h in Headers */,
-				0A0FAB161755616A005AE292 /* SPYItem.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0ADA231D174AD673007F1173 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,7 +410,6 @@
 			buildPhases = (
 				0ADA22EE174AD63E007F1173 /* Sources */,
 				0ADA22EF174AD63E007F1173 /* Frameworks */,
-				0A7E9CC817555CF30017A1FB /* Headers */,
 				0ADA22F0174AD63E007F1173 /* CopyFiles */,
 			);
 			buildRules = (
