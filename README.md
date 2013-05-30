@@ -63,7 +63,7 @@ Open your **Terminal.app**
 	$ git clone git://github.com/KevinVitale/GW2Kit.git
 	$ cd GW2Kit
 	$ git submodule update --init --recursive
-	$ open GW2Kit.xcworkspace
+	$ open GW2KitTests/GW2KitTests/GW2KitTests.xcodeproj/
 	
 #### Adding GW2Kit to a new or existing app
 
