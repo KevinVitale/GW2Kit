@@ -29,9 +29,6 @@
     
     [GW2 colorsWithCompletion:^(NSError *error, NSArray *colors) {
         self.colors = colors;
-        for(GW2Color *color in colors) {
-            NSLog(@"(#%@) %@", color.id, color.name);
-        }
         
         UITableViewController *tableViewController = [UITableViewController new];
         tableViewController.tableView.delegate = self;
@@ -39,6 +36,12 @@
         self.window.rootViewController = tableViewController;
         [tableViewController.tableView reloadData];
     }];
+    
+    [GW2 recipeDetailForID:@"1"
+                parameters:nil
+                completion:^(NSError *error, GW2RecipeDetail *recipeDetail) {
+                    printf("%s\n", recipeDetail.description.UTF8String);
+                }];
     
     /*
     [Spidy itemDetailForID:@"29175"

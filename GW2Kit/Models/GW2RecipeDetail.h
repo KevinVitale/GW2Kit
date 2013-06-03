@@ -19,6 +19,8 @@
 @property (copy, nonatomic) NSString *minimumRating;
 @property (copy, nonatomic) NSNumber *timeToCraft;
 @property (copy, nonatomic) NSArray  *ingredients;
+@property (copy, nonatomic) NSArray  *flags;
+@property (copy, nonatomic) NSArray  *disciplines;
 
 + (RKObjectMapping *)mappingObject;
 @end

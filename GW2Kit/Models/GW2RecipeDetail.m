@@ -33,7 +33,9 @@
              @"output_item_count"   : @"outputItemCount",
              @"min_rating"          : @"minimumRating",
              @"time_to_craft_ms"    : @"timeToCraft",
-             @"ingredients"         : @"ingredients"
+             @"ingredients"         : @"ingredients",
+             @"flags"               : @"flags",
+             @"disciplines"         : @"disciplines",
              };
 }
 
