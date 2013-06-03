@@ -16,6 +16,8 @@
 @property (copy, nonatomic) NSString *redWorldID;
 @property (copy, nonatomic) NSString *blueWorldID;
 @property (copy, nonatomic) NSString *greenWorldID;
+@property (copy, nonatomic) NSDate   *startTime;
+@property (copy, nonatomic) NSDate   *endTime;
 
 + (RKObjectMapping *)mappingObject;
 

@@ -27,7 +27,7 @@
 
 + (NSDictionary *)mappingAttributes {
     return @{
-             @"name": @"name",
+             @"name" : @"name",
              @"id" : @"id"
              };
 }

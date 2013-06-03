@@ -24,7 +24,6 @@
 		0A56F671174EA4F6000F983D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A56F670174EA4F6000F983D /* Default@2x.png */; };
 		0A56F673174EA4F6000F983D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A56F672174EA4F6000F983D /* Default-568h@2x.png */; };
 		0A56F679174EA508000F983D /* libGW2Kit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE9B6A6174E9EE50001DB09 /* libGW2Kit-iOS.a */; };
-		0A6907F3174E9F4B00D49543 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE9B6A8174E9EE50001DB09 /* GW2Kit.framework */; };
 		0A6907F6174E9F5500D49543 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6907F4174E9F5500D49543 /* ReactiveCocoa.framework */; };
 		0A6907F7174E9F5500D49543 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6907F5174E9F5500D49543 /* RestKit.framework */; };
 		0A6907F8174E9F6600D49543 /* GW2Kit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE9B6A8174E9EE50001DB09 /* GW2Kit.framework */; };
@@ -41,6 +40,7 @@
 		0ADA23CE174ADDE3007F1173 /* GW2KitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23CD174ADDE3007F1173 /* GW2KitTests.m */; };
 		0ADA23D7174ADEF3007F1173 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23D6174ADEF3007F1173 /* GW2Kit.framework */; };
 		0ADA23EB174B13DB007F1173 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23EA174B13DB007F1173 /* SystemConfiguration.framework */; };
+		0ADC7639175AE5D5001847CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADC7638175AE5D5001847CA /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +129,7 @@
 		0ADA23CF174ADDE3007F1173 /* GW2KitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GW2KitTests-Prefix.pch"; sourceTree = "<group>"; };
 		0ADA23D6174ADEF3007F1173 /* GW2Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GW2Kit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/GW2Kit-dhqionbjdwesebdrwqqcxcyrpqtw/Build/Products/Debug/GW2Kit.framework"; sourceTree = "<group>"; };
 		0ADA23EA174B13DB007F1173 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		0ADC7638175AE5D5001847CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		0AE9B6A0174E9EE50001DB09 /* GW2Kit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GW2Kit.xcodeproj; path = /Users/kevin/Development/Misc/GW2Kit/GW2Kit.xcodeproj; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADC7639175AE5D5001847CA /* QuartzCore.framework in Frameworks */,
 				0A521C8B174EA7CB006AE946 /* MobileCoreServices.framework in Frameworks */,
 				0A521C89174EA7C7006AE946 /* SystemConfiguration.framework in Frameworks */,
 				0A521C87174EA7C1006AE946 /* Security.framework in Frameworks */,
@@ -152,7 +154,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A6907F3174E9F4B00D49543 /* GW2Kit.framework in Frameworks */,
 				0A6907F6174E9F5500D49543 /* ReactiveCocoa.framework in Frameworks */,
 				0A6907F7174E9F5500D49543 /* RestKit.framework in Frameworks */,
 				0A7B9F98174DB97E0041D341 /* Cocoa.framework in Frameworks */,
@@ -264,6 +265,7 @@
 		0ADA23BD174ADDE3007F1173 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ADC7638175AE5D5001847CA /* QuartzCore.framework */,
 				0A521C8A174EA7CB006AE946 /* MobileCoreServices.framework */,
 				0A521C88174EA7C6006AE946 /* SystemConfiguration.framework */,
 				0A521C86174EA7C1006AE946 /* Security.framework */,
@@ -594,6 +596,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
+				iOS = 1;
 			};
 			name = Debug;
 		};
@@ -634,6 +637,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
+				iOS = 1;
 			};
 			name = Release;
 		};

@@ -16,4 +16,7 @@
 #import "GW2WvWMatch.h"
 #import "GW2WvWMatchDetail.h"
 #import "GW2RecipeDetail.h"
+#import "GW2GuildDetail.h"
+#import "GW2Build.h"
+#import "GW2Color.h"
 #import "Spidy.h"

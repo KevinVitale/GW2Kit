@@ -52,7 +52,24 @@
          [RKResponseDescriptor responseDescriptorWithMapping:[GW2RecipeDetail mappingObject]
                                                  pathPattern:@"/v1/recipe_details.json"
                                                      keyPath:nil
-                                                 statusCodes:nil]
+                                                 statusCodes:nil],
+         // Build details: build.json
+         [RKResponseDescriptor responseDescriptorWithMapping:[GW2Build mappingObject]
+                                                 pathPattern:@"/v1/build.json"
+                                                     keyPath:nil
+                                                 statusCodes:nil],
+         
+         // Color details: colors.json
+         [RKResponseDescriptor responseDescriptorWithMapping:[GW2Color mappingObject]
+                                                 pathPattern:@"/v1/colors.json"
+                                                     keyPath:@"colors"
+                                                 statusCodes:nil],
+         
+         // Guild details: guild_details.json
+         [RKResponseDescriptor responseDescriptorWithMapping:[GW2GuildDetail mappingObject]
+                                                 pathPattern:@"/v1/guild_details.json"
+                                                     keyPath:nil
+                                                 statusCodes:nil],
          ]];
         
     }
@@ -222,6 +239,56 @@
     
     [self getObjectsAtPath:@"/v1/recipe_details.json"
                 parameters:params
+                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                       finalCompletion(nil, mappingResult.array.lastObject);
+                   }
+                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                       finalCompletion(error, nil);
+                   }];
+}
+
+- (void)buildWithCompletion:(void (^)(NSError *, GW2Build *))completion {
+    void (^finalCompletion)(NSError *, GW2Build *) = ^ (NSError *error, GW2Build *build) {
+        if(completion)
+            completion(error, build);
+    };
+    
+    [self getObjectsAtPath:@"/v1/build.json"
+                parameters:nil
+                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                       finalCompletion(nil, mappingResult.array.lastObject);
+                   }
+                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                       finalCompletion(error, nil);
+                   }];
+}
+
+- (void)colorsWithCompletion:(void (^)(NSError *, NSArray *))completion {
+    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *colors) {
+        if(completion)
+            completion(error, colors);
+    };
+    
+    [self getObjectsAtPath:@"/v1/colors.json"
+                parameters:nil
+                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                       finalCompletion(nil, [mappingResult.array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+                           return (([[obj1 id] integerValue] < [[obj2 id] integerValue]) ? NSOrderedAscending : NSOrderedDescending);
+                       }]);
+                   }
+                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                       finalCompletion(error, nil);
+                   }];
+}
+
+- (void)guildDetailWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, GW2GuildDetail *))completion {
+    void (^finalCompletion)(NSError *, GW2GuildDetail *) = ^ (NSError *error, GW2GuildDetail *guildDetail) {
+        if(completion)
+            completion(error, guildDetail);
+    };
+    
+    [self getObjectsAtPath:@"/v1/guild_details.json"
+                parameters:parameters
                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                        finalCompletion(nil, mappingResult.array.lastObject);
                    }

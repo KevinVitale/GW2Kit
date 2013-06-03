@@ -36,6 +36,7 @@
              @"ingredients"         : @"ingredients"
              };
 }
+
 + (RKObjectMapping *)mappingObject {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[self class]];
     [mapping addAttributeMappingsFromDictionary:[[self class] mappingAttributes]];

@@ -21,6 +21,13 @@
 		0A3D55EA174D79CA000E8147 /* GW2ResourceName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A3D55EB174D79CA000E8147 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */; };
 		0A3D55EC174D79CA000E8147 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */; };
+		0A47C907175A6D9300401DD4 /* GW2Build.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47C905175A6D9300401DD4 /* GW2Build.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A47C908175A6D9300401DD4 /* GW2Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47C906175A6D9300401DD4 /* GW2Build.m */; };
+		0A47C909175A6D9300401DD4 /* GW2Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47C906175A6D9300401DD4 /* GW2Build.m */; };
+		0A47C915175A6F5400401DD4 /* GW2Build.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A47C905175A6D9300401DD4 /* GW2Build.h */; };
+		0A47C91D175A730800401DD4 /* GW2Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47C91B175A730800401DD4 /* GW2Color.m */; };
+		0A47C91E175A730800401DD4 /* GW2Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47C91B175A730800401DD4 /* GW2Color.m */; };
+		0A47C91F175A756B00401DD4 /* GW2Color.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A47C91A175A730800401DD4 /* GW2Color.h */; };
 		0A6D673F174EA188001CCB7F /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
 		0A7E9C84175515870017A1FB /* SPYClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C7F175515870017A1FB /* SPYClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A7E9C85175515870017A1FB /* SPYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C80175515870017A1FB /* SPYClient.m */; };
@@ -29,6 +36,12 @@
 		0A7E9C88175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
 		0A7E9C89175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
 		0A7E9C8A175515870017A1FB /* Spidy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C83175515870017A1FB /* Spidy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AB16E05175CF491007CED44 /* GW2GuildDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB16E03175CF491007CED44 /* GW2GuildDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AB16E06175CF491007CED44 /* GW2GuildDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB16E04175CF491007CED44 /* GW2GuildDetail.m */; };
+		0AB16E07175CF491007CED44 /* GW2GuildDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB16E04175CF491007CED44 /* GW2GuildDetail.m */; };
+		0AB16E0C175CF4A4007CED44 /* GW2GuildDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AB16E03175CF491007CED44 /* GW2GuildDetail.h */; };
+		0AB16E0F175CFC84007CED44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADC7632175AD378001847CA /* UIKit.framework */; };
+		0AB16E11175D0234007CED44 /* GW2Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47C91A175A730800401DD4 /* GW2Color.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0ADA22F6174AD63E007F1173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA22F5174AD63E007F1173 /* Foundation.framework */; };
 		0ADA2322174AD673007F1173 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2321174AD673007F1173 /* Cocoa.framework */; };
 		0ADA232C174AD673007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA232A174AD673007F1173 /* InfoPlist.strings */; };
@@ -62,6 +75,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A47C90C175A6D9400401DD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5FAF5223174D4C2000CAC810;
+			remoteInfo = "ReactiveCocoaTests-iOS";
+		};
 		0ADA2359174ADA7D007F1173 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
@@ -148,6 +168,9 @@
 			dstPath = include/GW2Kit;
 			dstSubfolderSpec = 16;
 			files = (
+				0AB16E0C175CF4A4007CED44 /* GW2GuildDetail.h in CopyFiles */,
+				0A47C91F175A756B00401DD4 /* GW2Color.h in CopyFiles */,
+				0A47C915175A6F5400401DD4 /* GW2Build.h in CopyFiles */,
 				0A0FAB20175563DC005AE292 /* SPYClient.h in CopyFiles */,
 				0A0FAB21175563DC005AE292 /* SPYItem.h in CopyFiles */,
 				0A0FAB22175563DC005AE292 /* Spidy.h in CopyFiles */,
@@ -179,11 +202,17 @@
 /* Begin PBXFileReference section */
 		0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ResourceName.h; sourceTree = "<group>"; };
 		0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ResourceName.m; sourceTree = "<group>"; };
+		0A47C905175A6D9300401DD4 /* GW2Build.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Build.h; sourceTree = "<group>"; };
+		0A47C906175A6D9300401DD4 /* GW2Build.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Build.m; sourceTree = "<group>"; };
+		0A47C91A175A730800401DD4 /* GW2Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Color.h; sourceTree = "<group>"; };
+		0A47C91B175A730800401DD4 /* GW2Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Color.m; sourceTree = "<group>"; };
 		0A7E9C7F175515870017A1FB /* SPYClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYClient.h; sourceTree = "<group>"; };
 		0A7E9C80175515870017A1FB /* SPYClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYClient.m; sourceTree = "<group>"; };
 		0A7E9C81175515870017A1FB /* SPYItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYItem.h; sourceTree = "<group>"; };
 		0A7E9C82175515870017A1FB /* SPYItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYItem.m; sourceTree = "<group>"; };
 		0A7E9C83175515870017A1FB /* Spidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spidy.h; sourceTree = "<group>"; };
+		0AB16E03175CF491007CED44 /* GW2GuildDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2GuildDetail.h; sourceTree = "<group>"; };
+		0AB16E04175CF491007CED44 /* GW2GuildDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2GuildDetail.m; sourceTree = "<group>"; };
 		0ADA22F2174AD63E007F1173 /* libGW2Kit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libGW2Kit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADA22F5174AD63E007F1173 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0ADA2304174AD63F007F1173 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -218,6 +247,7 @@
 		0ADA2402174BD384007F1173 /* GW2WvWMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatch.m; sourceTree = "<group>"; };
 		0ADA2406174BE626007F1173 /* GW2RecipeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2RecipeDetail.h; sourceTree = "<group>"; };
 		0ADA2407174BE626007F1173 /* GW2RecipeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2RecipeDetail.m; sourceTree = "<group>"; };
+		0ADC7632175AD378001847CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +258,7 @@
 				0ADA2385174ADC7B007F1173 /* libReactiveCocoa-iOS.a in Frameworks */,
 				0ADA2364174ADB07007F1173 /* libRestKit.a in Frameworks */,
 				0ADA22F6174AD63E007F1173 /* Foundation.framework in Frameworks */,
+				0AB16E0F175CFC84007CED44 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +323,7 @@
 		0ADA22F4174AD63E007F1173 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ADC7632175AD378001847CA /* UIKit.framework */,
 				0ADA22F5174AD63E007F1173 /* Foundation.framework */,
 				0ADA2304174AD63F007F1173 /* SenTestingKit.framework */,
 				0ADA2306174AD63F007F1173 /* UIKit.framework */,
@@ -341,6 +373,10 @@
 		0ADA2337174AD77A007F1173 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A47C905175A6D9300401DD4 /* GW2Build.h */,
+				0A47C906175A6D9300401DD4 /* GW2Build.m */,
+				0A47C91A175A730800401DD4 /* GW2Color.h */,
+				0A47C91B175A730800401DD4 /* GW2Color.m */,
 				0A3D55E8174D79CA000E8147 /* GW2ResourceName.h */,
 				0A3D55E9174D79CA000E8147 /* GW2ResourceName.m */,
 				0ADA2338174AD7A5007F1173 /* GW2EventStatus.h */,
@@ -353,6 +389,8 @@
 				0ADA2402174BD384007F1173 /* GW2WvWMatch.m */,
 				0ADA2406174BE626007F1173 /* GW2RecipeDetail.h */,
 				0ADA2407174BE626007F1173 /* GW2RecipeDetail.m */,
+				0AB16E03175CF491007CED44 /* GW2GuildDetail.h */,
+				0AB16E04175CF491007CED44 /* GW2GuildDetail.m */,
 				0ADA23E5174B119E007F1173 /* GW2Client.h */,
 				0ADA23E6174B119E007F1173 /* GW2Client.m */,
 			);
@@ -376,6 +414,7 @@
 				0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */,
 				0ADA2382174ADC39007F1173 /* libReactiveCocoa-iOS.a */,
 				0ADA2384174ADC39007F1173 /* ReactiveCocoaTests.octest */,
+				0A47C90D175A6D9400401DD4 /* ReactiveCocoaTests-iOS.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -395,6 +434,9 @@
 				0ADA2403174BD385007F1173 /* GW2WvWMatch.h in Headers */,
 				0ADA2408174BE627007F1173 /* GW2RecipeDetail.h in Headers */,
 				0A3D55EA174D79CA000E8147 /* GW2ResourceName.h in Headers */,
+				0A47C907175A6D9300401DD4 /* GW2Build.h in Headers */,
+				0AB16E05175CF491007CED44 /* GW2GuildDetail.h in Headers */,
+				0AB16E11175D0234007CED44 /* GW2Color.h in Headers */,
 				0A7E9C8A175515870017A1FB /* Spidy.h in Headers */,
 				0A7E9C84175515870017A1FB /* SPYClient.h in Headers */,
 				0A7E9C87175515870017A1FB /* SPYItem.h in Headers */,
@@ -481,6 +523,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0A47C90D175A6D9400401DD4 /* ReactiveCocoaTests-iOS.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoaTests-iOS.octest";
+			remoteRef = 0A47C90C175A6D9400401DD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		0ADA235A174ADA7D007F1173 /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -557,6 +606,9 @@
 				0A3D55EB174D79CA000E8147 /* GW2ResourceName.m in Sources */,
 				0A7E9C85175515870017A1FB /* SPYClient.m in Sources */,
 				0A7E9C88175515870017A1FB /* SPYItem.m in Sources */,
+				0A47C908175A6D9300401DD4 /* GW2Build.m in Sources */,
+				0A47C91D175A730800401DD4 /* GW2Color.m in Sources */,
+				0AB16E06175CF491007CED44 /* GW2GuildDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +625,9 @@
 				0A3D55EC174D79CA000E8147 /* GW2ResourceName.m in Sources */,
 				0A7E9C86175515870017A1FB /* SPYClient.m in Sources */,
 				0A7E9C89175515870017A1FB /* SPYItem.m in Sources */,
+				0A47C909175A6D9300401DD4 /* GW2Build.m in Sources */,
+				0A47C91E175A730800401DD4 /* GW2Color.m in Sources */,
+				0AB16E07175CF491007CED44 /* GW2GuildDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

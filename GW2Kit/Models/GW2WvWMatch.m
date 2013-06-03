@@ -30,7 +30,9 @@
              @"wvw_match_id" : @"matchID",
              @"red_world_id" : @"redWorldID",
              @"blue_world_id" : @"blueWorldID",
-             @"green_world_id" : @"greenWorldID"
+             @"green_world_id" : @"greenWorldID",
+             @"start_time" : @"startTime",
+             @"end_time" : @"endTime"
              };
 }
 + (RKObjectMapping *)mappingObject {
