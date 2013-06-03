@@ -37,11 +37,13 @@
         [tableViewController.tableView reloadData];
     }];
     
+    /*
     [GW2 recipeDetailForID:@"1"
                 parameters:nil
                 completion:^(NSError *error, GW2RecipeDetail *recipeDetail) {
                     printf("%s\n", recipeDetail.description.UTF8String);
                 }];
+     */
     
     /*
     [Spidy itemDetailForID:@"29175"
@@ -121,26 +123,24 @@
     GW2Color *color = self.colors[indexPath.row];
     UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100.f, rowHeight)];
 
-    UIView *defaultColor = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25.f, rowHeight)];
-    defaultColor.backgroundColor = color.defaultColor;
-    [colorView addSubview:defaultColor];
     
-    UIView *clothColor = [[UIView alloc] initWithFrame:CGRectMake(25.f, 0.f, 25.f, rowHeight)];
-    clothColor.backgroundColor = color.clothColor;
+    UIView *clothColor = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, 33.33f, rowHeight)];
+    clothColor.backgroundColor = color.clothMaterial.color;
     [colorView addSubview:clothColor];
     
-    UIView *leatherColor = [[UIView alloc] initWithFrame:CGRectMake(50.f, 0.f, 25.f, rowHeight)];
-    leatherColor.backgroundColor = color.leatherColor;
+    UIView *leatherColor = [[UIView alloc] initWithFrame:CGRectMake(33.f, 0.f, 33.33f, rowHeight)];
+    leatherColor.backgroundColor = color.leatherMaterial.color;
     [colorView addSubview:leatherColor];
     
-    UIView *metalColor = [[UIView alloc] initWithFrame:CGRectMake(75.f, 0.f, 25.f, rowHeight)];
-    metalColor.backgroundColor = color.metalColor;
+    UIView *metalColor = [[UIView alloc] initWithFrame:CGRectMake(66.f, 0.f, 33.33f, rowHeight)];
+    metalColor.backgroundColor = color.metalMaterial.color;
     [colorView addSubview:metalColor];
     
     cell.clipsToBounds = YES;
     cell.accessoryView = colorView;
-    colorView.backgroundColor = color.metalColor;
+    colorView.backgroundColor = color.metalMaterial.color;
     cell.textLabel.text = color.name;
+    
     cell.detailTextLabel.text = color.id;
     
     return cell;

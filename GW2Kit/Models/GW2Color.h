@@ -10,13 +10,27 @@
 
 @class RKMapping;
 
-@interface GW2Color : NSObject
-@property (copy, nonatomic) NSString *id;
+@interface GW2ColorMaterial : NSObject
 @property (copy, nonatomic) NSString *name;
-@property (strong, readonly, nonatomic) id defaultColor;
-@property (strong, readonly, nonatomic) id clothColor;
-@property (strong, readonly, nonatomic) id leatherColor;
-@property (strong, readonly, nonatomic) id metalColor;
+@property (copy, nonatomic) NSNumber *brightness;
+@property (copy, nonatomic) NSNumber *contrast;
+@property (copy, nonatomic) NSNumber *hue;
+@property (copy, nonatomic) NSNumber *saturation;
+@property (copy, nonatomic) NSNumber *lightness;
+@property (copy, nonatomic) NSArray  *rgb;
+
+- (id)color;
++ (RKMapping *)mappingObject;
+@end
+
+
+@interface GW2Color : NSObject
+@property (copy, readonly, nonatomic) NSString *id;
+@property (copy, readonly, nonatomic) NSString *name;
+@property (copy, readonly, nonatomic) NSArray  *base_rgb;
+@property (strong, readonly, nonatomic) GW2ColorMaterial *clothMaterial;
+@property (strong, readonly, nonatomic) GW2ColorMaterial *leatherMaterial;
+@property (strong, readonly, nonatomic) GW2ColorMaterial *metalMaterial;
 
 + (RKMapping *)mappingObject;
 @end

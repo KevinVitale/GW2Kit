@@ -10,6 +10,28 @@
 #import <RestKit/RestKit.h>
 #import <UIKit/UIKit.h>
 
+@implementation GW2ColorMaterial
+- (NSString *)description {
+    return [self.rgb description];
+}
+- (id)color {
+    return [UIColor colorWithRed:
+            ([self.rgb[0] floatValue] / 255.f)
+                           green:
+            ([self.rgb[1] floatValue] / 255.f)
+                            blue:
+            ([self.rgb[2] floatValue] / 255.f)
+                           alpha:1.f];
+}
++ (RKMapping *)mappingObject {
+    RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class]];
+    [mapping addAttributeMappingsFromArray:@[@"brightness", @"contrast", @"hue", @"saturation", @"lightness", @"rgb"]];
+    return mapping;
+}
+@end
+
+
+
 void hsl_to_hsv(float hh, float ss, float ll,
                 float* h, float* s, float *v)
 {
@@ -31,33 +53,38 @@ void hsv_to_hsl(float h, float s, float v,
 }
 
 @interface GW2Color ()
-@property (copy, nonatomic) NSDictionary *defaultColorDict;
-@property (copy, nonatomic) NSDictionary *clothColorDict;
-@property (copy, nonatomic) NSDictionary *leatherColorDict;
-@property (copy, nonatomic) NSDictionary *metalColorDict;
+@property (copy, readwrite, nonatomic) NSString *id;
+@property (copy, readwrite, nonatomic) NSString *name;
+@property (copy, readwrite, nonatomic) NSArray  *base_rgb;
+@property (strong, readwrite, nonatomic) GW2ColorMaterial *clothMaterial;
+@property (strong, readwrite, nonatomic) GW2ColorMaterial *leatherMaterial;
+@property (strong, readwrite, nonatomic) GW2ColorMaterial *metalMaterial;
 - (id)colorForComponents:(NSDictionary *)components;
 @end
 
 @implementation GW2Color
-@dynamic defaultColor;
-@dynamic clothColor;
-@dynamic leatherColor;
-@dynamic metalColor;
 
 + (NSDictionary *)mappingAttributes {
     return @{
              @"(id).name"    : @"name",
-             @"(id).default" : @"defaultColorDict",
-             @"(id).cloth"   : @"clothColorDict",
-             @"(id).leather" : @"leatherColorDict",
-             @"(id).metal"   : @"metalColorDict",
+             @"(id).base_rgb": @"base_rgb",
              };
 }
 + (RKMapping *)mappingObject {
-    RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class] ];
+    RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class]];
     mapping.forceCollectionMapping = YES;
     [mapping addAttributeMappingFromKeyOfRepresentationToAttribute:@"id"];
     [mapping addAttributeMappingsFromDictionary:[[self class] mappingAttributes]];
+    [mapping addPropertyMappingsFromArray:@[
+     [RKRelationshipMapping relationshipMappingFromKeyPath:@"(id).cloth"
+                                                 toKeyPath:@"clothMaterial"
+                                               withMapping:[GW2ColorMaterial mappingObject]],
+     [RKRelationshipMapping relationshipMappingFromKeyPath:@"(id).leather"
+                                                 toKeyPath:@"leatherMaterial"
+                                               withMapping:[GW2ColorMaterial mappingObject]],
+     [RKRelationshipMapping relationshipMappingFromKeyPath:@"(id).cloth"
+                                                 toKeyPath:@"metalMaterial"
+                                               withMapping:[GW2ColorMaterial mappingObject]]]];
     
     return mapping;
 }
@@ -124,21 +151,9 @@ void hsv_to_hsl(float h, float s, float v,
                                      alpha:1.f];
     return color;
 }
-- (id)defaultColor {
-    return [self colorForComponents:self.defaultColorDict];
-}
-- (id)clothColor {
-    return [self colorForComponents:self.clothColorDict];
-}
-- (id)leatherColor {
-    return [self colorForComponents:self.leatherColorDict];
-}
-- (id)metalColor {
-    return [self colorForComponents:self.metalColorDict];
-}
 
 - (NSString *)description {
     
-    return [@{@"Name": self.name, @"ID:" : self.id, @"Default" : self.defaultColor, @"Cloth" : self.clothColor, @"Leather" : self.leatherColor, @"Metal" : self.metalColor} description];
+    return [@{@"Name": self.name, @"ID:" : self.id, @"Cloth" : self.clothMaterial, @"Leather" : self.leatherMaterial, @"Metal" : self.metalMaterial} description];
 }
 @end
