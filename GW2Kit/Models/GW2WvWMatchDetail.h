@@ -13,7 +13,7 @@
 @interface GW2WvWMatchDetail : NSObject
 @property (copy, nonatomic) NSString *matchID;
 @property (copy, nonatomic) NSArray *scores;
-@property (copy, nonatomic) NSDictionary *maps;
+@property (copy, nonatomic) NSArray *maps;
 
 + (RKObjectMapping *)mappingObject;
 
