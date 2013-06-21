@@ -38,6 +38,15 @@ The GW2Kit SDK supports all the following endpoints (which is the entirety of th
 - `v1/wvw/matches.json`
 - `v1/wvw/matche_details.json`
 
+#### Misc
+
+- `colors.json`
+- `build.json`
+
+#### Prices
+
+- `gw2spidy.com` price look-up
+
 <hr/>
 
 ## Using GW2Kit
