@@ -43,7 +43,7 @@
                                                                                 keyPath:@"events"
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2EventDetail mappingObject]
-                                                                            pathPattern:@"/v1/event_detailss.json"
+                                                                            pathPattern:@"/v1/event_details.json"
                                                                                 keyPath:@"events"
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         
@@ -53,42 +53,36 @@
 }
 
 #pragma mark - Requests
-- (void)detailsWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
+- (void)statusWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
     [self fetchRequestAtPath:@"/v1/events.json"
+                  parameters:parameters
+                  completion:completion];
+}
+
+- (void)detailsWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
+    [self fetchRequestAtPath:@"/v1/event_details.json"
                   parameters:parameters
                   completion:completion];
 }
 
 #pragma mark - Private Fetch Methods
 - (void)worldNamesWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
-    void (^finalCompletion)(NSError *, id) = ^(NSError *error, id result) {
-        if(completion)
-            completion(error, result);
-    };
     
     [self namesForResource:@"world"
                 parameters:parameters
-                completion:finalCompletion];
+                completion:completion];
 }
 - (void)mapNamesWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
-    void (^finalCompletion)(NSError *, id) = ^(NSError *error, id result) {
-        if(completion)
-            completion(error, result);
-    };
     
     [self namesForResource:@"map"
                 parameters:parameters
-                completion:finalCompletion];
+                completion:completion];
 }
 - (void)eventNamesWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
-    void (^finalCompletion)(NSError *, id) = ^(NSError *error, id result) {
-        if(completion)
-            completion(error, result);
-    };
     
     [self namesForResource:@"event"
                 parameters:parameters
-                completion:finalCompletion];
+                completion:completion];
 }
 
 #pragma mark - Application Notifications
@@ -125,7 +119,7 @@
                             completion:^(NSError *error, id result) {
                                 self.eventNames = result;
                                 DLog(@"Event names fetched...");
-                                [self detailsWithParameters:@{@"world_id" : @1010, @"map_id" : @50}
+                                [self statusWithParameters:@{@"world_id" : @1010, @"map_id" : @50}
                                                  completion:^(NSError *error, id result) {
                                                      DLog(@"Event statuses fetched...");
                                                      DLog(@"Event status:\n");
@@ -135,6 +129,15 @@
                                                  }];
                             }];
     }
+    
+    [self detailsWithParameters:@{@"event_id" : @"BAD81BA0-60CF-4F3B-A341-57C426085D48"}
+                     completion:^(NSError *error, id result) {
+                         DLog(@"Event details fetched...");
+                         DLog(@"Event details:\n");
+                         for(id object in result) {
+                             printf("%s\n", [object description].UTF8String);
+                         }
+                     }];
 }
 
 + (instancetype)daemon {

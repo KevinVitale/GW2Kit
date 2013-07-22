@@ -27,7 +27,7 @@
  
  @detail As an example, to fetch all active events in the Wayfarer Foothills (#28) on Maguuma (#1005) (and in English localization) looks like this:
  
-    [GW2 eventStatesWithParameters:@{
+    [Events statusWithParameters:@{
                     @"world_id" : @"1005",
                     @"map_id"   : @"28",
                     @"lang"     : @"en",
@@ -46,5 +46,12 @@
     eventID    : 67C17850-AC4C-4258-A03F-373021ECD10B
     worldID    : 1005
  */
-- (void)detailsWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion;
+- (void)statusWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *error, id result))completion;
+
+/**
+ Returns detailed information about events. This includes their static starting location in the world. This location is not updated dynamically, so it’s only accurate for events that don’t move.
+ 
+ Optional parameters: event_id, lang
+ */
+- (void)detailsWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *error, id result))completion;
 @end

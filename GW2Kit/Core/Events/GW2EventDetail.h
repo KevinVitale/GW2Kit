@@ -16,6 +16,8 @@
 @property (copy, nonatomic) NSArray     *centerPosition;
 @property (copy, nonatomic) NSNumber    *radius;
 @property (copy, nonatomic) NSNumber    *rotation;
+@property (copy, nonatomic) NSArray     *z_range;
+@property (copy, nonatomic) NSArray     *points;
 
 + (RKObjectMapping *)mappingObject;
 @end

@@ -28,12 +28,15 @@
     return @{@"type"     : @"type",
              @"center"   : @"centerPosition",
              @"radius"   : @"radius",
-             @"rotation" : @"rotation"};
+             @"rotation" : @"rotation",
+             @"z_range"  : @"z_range",
+             @"points"   : @"points",};
 }
 
 + (RKMapping *)mappingObject {
     RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class]];
     [mapping addAttributeMappingsFromDictionary:[[self class] mappingAttributes]];
+    [mapping setSetDefaultValueForMissingAttributes:YES];
     return mapping;
 }
 
@@ -58,7 +61,7 @@
     RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class] ];
     [mapping addAttributeMappingFromKeyOfRepresentationToAttribute:@"id"];
     [mapping addAttributeMappingsFromDictionary:[[self class] mappingAttributes]];
-    
+    mapping.forceCollectionMapping = YES;
     [mapping addPropertyMappingsFromArray:@[
                                             [RKRelationshipMapping relationshipMappingFromKeyPath:@"(id).location"
                                                                                         toKeyPath:@"location"
