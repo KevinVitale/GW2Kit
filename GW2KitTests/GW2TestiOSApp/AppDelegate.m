@@ -18,16 +18,27 @@
 
 
 @implementation AppDelegate
+- (id)init {
+    self = [super init];
+    if(self) {
+        [GW2EventDaemon daemon];
+        [GW2WvWDaemon daemon];
+        [GW2ItemsDaemon daemon];
+    }
+    return self;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     
-    RKLogConfigureByName("RestKit/Network", RKLogLevelOff);
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
-    
+    return YES;
+
+    /*
     [GW2 colorsWithCompletion:^(NSError *error, NSArray *colors) {
+        printf("Done downloading colors...");
         self.colors = colors;
         
         UITableViewController *tableViewController = [UITableViewController new];
@@ -36,6 +47,13 @@
         self.window.rootViewController = tableViewController;
         [tableViewController.tableView reloadData];
     }];
+     */
+    
+    /*
+    [GW2 eventDetailsWithParameters:nil completion: ^(NSError *error, NSArray *events) {
+        printf("%s\n", events.description.UTF8String);
+    }];
+     */
     
     /*
     [GW2 recipeDetailForID:@"1"
@@ -62,7 +80,13 @@
     /*
     [GW2 wvwMatchesWithCompletion:^(NSError *error, NSArray *matches) {
         for(GW2WvWMatch *match in matches) {
-            printf("%s\n", match.description.UTF8String);
+            
+            printf("%s\n- - - - - -\n", match.description.UTF8String);
+            
+            [GW2 wvwMatchDetailForID:match.matchID
+                          completion:^(NSError *error, GW2WvWMatchDetail *matchDetail) {
+                              printf("%s\n= = = = = =\n", matchDetail.description.UTF8String);
+            }];
         }
     }];
      */
@@ -142,7 +166,7 @@
     cell.textLabel.text = color.name;
     
     cell.detailTextLabel.text = color.id;
-    
+
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

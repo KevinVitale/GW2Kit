@@ -20,6 +20,7 @@
 @property (copy, nonatomic) NSArray  *rgb;
 
 - (id)color;
+//- (id)shiftColor:(id)color;
 + (RKMapping *)mappingObject;
 @end
 

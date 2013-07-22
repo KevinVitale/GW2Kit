@@ -30,6 +30,14 @@
                                                  pathPattern:nil
                                                      keyPath:@"events"
                                                  statusCodes:nil],
+         
+         // Events: evenets.json
+         [RKResponseDescriptor responseDescriptorWithMapping:[GW2EventDetail mappingObject]
+                                                 pathPattern:@"/v1/event_details.json"
+                                                     keyPath:@"events"
+                                                 statusCodes:nil],
+         
+         
          // Resource Name: {resource}_names.json
          [RKResponseDescriptor responseDescriptorWithMapping:[GW2ResourceName mappingObject]
                                                  pathPattern:nil
@@ -77,23 +85,7 @@
 }
 
 #pragma mark - Resource Names
-- (void)namesForResource:(NSString *)resource
-              parameters:(NSDictionary *)parameters
-              completion:(void (^)(NSError *, NSArray *))completion {
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *names) {
-        if(completion)
-            completion(error, names);
-    };
-    
-    [self getObjectsAtPath:[NSString stringWithFormat:@"/v1/%@_names.json", resource]
-                parameters:parameters
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
-}
+
 
 - (void)itemsWithCompletion:(void (^)(NSError *, NSArray *))completion {
     void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
@@ -148,56 +140,8 @@
     [self enqueueObjectRequestOperation:operation];
 }
 
-- (void)eventStatesWithParameters:(NSDictionary *)parameters
-                       completion:(void (^)(NSError *, NSArray *))completion {
-    
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *events) {
-        if(completion)
-            completion(error, events);
-    };
-    
-    [self getObjectsAtPath:@"/v1/events.json"
-                parameters:parameters
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
-}
 
-- (void)wvwMatchesWithCompletion:(void (^)(NSError *, NSArray *))completion {
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
-        if(completion)
-            completion(error, states);
-    };
-    
-    [self getObjectsAtPath:@"/v1/wvw/matches.json"
-                parameters:nil
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
-}
 
-- (void)wvwMatchDetailForID:(NSString *)matchID
-                 completion:(void (^)(NSError *, GW2WvWMatchDetail *))completion {
-    void (^finalCompletion)(NSError *, GW2WvWMatchDetail *) = ^ (NSError *error, GW2WvWMatchDetail *matchDetail) {
-        if(completion)
-            completion(error, matchDetail);
-    };
-    
-    [self getObjectsAtPath:@"/v1/wvw/match_details.json"
-                parameters:@{ @"match_id" : matchID }
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array.lastObject);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
-}
 
 - (void)recipesWithCompletion:(void (^)(NSError *, NSArray *))completion {
     void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {

@@ -8,20 +8,35 @@
 
 #import "GW2Color.h"
 #import <RestKit/RestKit.h>
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#endif
+
+#import <Accelerate/Accelerate.h>
 
 @implementation GW2ColorMaterial
 - (NSString *)description {
     return [self.rgb description];
 }
 - (id)color {
-    return [UIColor colorWithRed:
-            ([self.rgb[0] floatValue] / 255.f)
-                           green:
-            ([self.rgb[1] floatValue] / 255.f)
-                            blue:
-            ([self.rgb[2] floatValue] / 255.f)
+    float red   = ([self.rgb[0] floatValue] / 255.f);
+    float green = ([self.rgb[1] floatValue] / 255.f);
+    float blue  = ([self.rgb[2] floatValue] / 255.f);
+#if TARGET_OS_IPHONE
+    return [UIColor colorWithRed:red
+                           green:green
+                            blue:blue
                            alpha:1.f];
+#else
+    return [NSColor colorWithRed:red
+                           green:green
+                            blue:blue
+                           alpha:1.f];
+#endif
+}
+- (id)shiftColor:(id)color {
+    @throw [NSException new];
+    return nil;
 }
 + (RKMapping *)mappingObject {
     RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class]];
@@ -109,17 +124,28 @@ void hsv_to_hsl(float h, float s, float v,
     base_BlueComponent += brightness;
     
     // 1c. Apply contrast
-    base_RedComponent = (base_RedComponent - 128.f) * contrast + 128.f;
+    base_RedComponent   = (base_RedComponent - 128.f) * contrast + 128.f;
     base_GreenComponent = (base_GreenComponent - 128.f) * contrast + 128.f;
-    base_BlueComponent = (base_BlueComponent - 128.f) * contrast + 128.f;
+    base_BlueComponent  = (base_BlueComponent - 128.f) * contrast + 128.f;
     
+#if TARGET_OS_IPHONE
     UIColor *baseColor = [UIColor colorWithRed:(base_RedComponent / 255.f)
                                          green:(base_GreenComponent / 255.f)
                                           blue:(base_BlueComponent / 255.f)
                                          alpha:1.f];
+#else
+    NSColor *baseColor = [NSColor colorWithRed:(base_RedComponent / 255.f)
+                                         green:(base_GreenComponent / 255.f)
+                                          blue:(base_BlueComponent / 255.f)
+                                         alpha:1.f];
+#endif
     
     // 2a. Convert from RGB to HSV
+#if TARGET_OS_IPHONE
     float hsv_Hue, hsv_Sat, hsv_Bright;
+#else
+    CGFloat hsv_Hue, hsv_Sat, hsv_Bright;
+#endif
     [baseColor getHue:&hsv_Hue
            saturation:&hsv_Sat
            brightness:&hsv_Bright
@@ -142,13 +168,20 @@ void hsv_to_hsl(float h, float s, float v,
     hsl_Sat     *= saturation;
     hsl_Light   *= lightness;
     
-    hsl_to_hsv(hsl_Hue, hsl_Sat, hsl_Light,
+    hsl_to_hsv( hsl_Hue,  hsl_Sat,  hsl_Light,
                &hsv_Hue, &hsv_Sat, &hsv_Bright);
     
+#if TARGET_OS_IPHONE
     UIColor *color = [UIColor colorWithHue:hsv_Hue
                                 saturation:hsv_Sat
                                 brightness:hsv_Bright
                                      alpha:1.f];
+#else
+    NSColor *color = [NSColor colorWithHue:hsv_Hue
+                                saturation:hsv_Sat
+                                brightness:hsv_Bright
+                                     alpha:1.f];
+#endif
     return color;
 }
 

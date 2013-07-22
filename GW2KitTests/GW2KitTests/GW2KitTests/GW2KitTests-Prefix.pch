@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'GW2KitTests' target in the 'GW2KitTests' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-    #import <SystemConfiguration/SystemConfiguration.h>
-#endif
