@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GW2DefaultDaemon.h"
 
+#define WvW [GW2WvWDaemon daemon]
+
 @class GW2WvWMatchDetail;
 
 @interface GW2WvWDaemon : GW2DefaultDaemon

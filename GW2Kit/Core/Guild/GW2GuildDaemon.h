@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GW2DefaultDaemon.h"
 
+#define Guilds [GW2GuildDaemon daemon]
+
 @class GW2GuildDetail;
 
 @interface GW2GuildDaemon : GW2DefaultDaemon

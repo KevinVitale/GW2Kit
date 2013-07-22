@@ -8,6 +8,8 @@
 
 #import <GW2Kit/GW2Kit.h>
 
+#define Maps [GW2MapsDaemon daemon]
+
 @interface GW2MapsDaemon : GW2DefaultDaemon
 
 @property (copy, readonly, nonatomic) NSArray *southWest;

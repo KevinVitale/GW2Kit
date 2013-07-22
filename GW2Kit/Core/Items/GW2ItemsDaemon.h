@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GW2DefaultDaemon.h"
 
+#define Items [GW2ItemsDaemon daemon]
+
 @class GW2ItemDetail;
 @class GW2RecipeDetail;
 

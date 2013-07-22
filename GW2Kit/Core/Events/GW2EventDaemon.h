@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GW2DefaultDaemon.h"
 
+#define Events [GW2EventDaemon daemon]
+
 #pragma mark - GW2EventDaemon
 @interface GW2EventDaemon : GW2DefaultDaemon
 
