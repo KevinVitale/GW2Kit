@@ -34,10 +34,7 @@
  */
 - (void)colorsWithCompletion:(void (^)(NSError *error, NSArray *colors))completion;
 
-/**
- Returns guild details for a specified guild_id or guild_name.
- */
-- (void)guildDetailWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *error, GW2GuildDetail *guildDetail))completion;
+
 
 /**
  Singleton object.

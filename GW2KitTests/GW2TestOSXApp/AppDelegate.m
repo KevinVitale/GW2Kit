@@ -17,6 +17,7 @@
         [GW2EventDaemon daemon];
         [GW2WvWDaemon daemon];
         [GW2ItemsDaemon daemon];
+        [GW2GuildDaemon daemon];
     }
     return self;
 }

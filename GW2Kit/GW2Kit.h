@@ -30,12 +30,15 @@
 #import "GW2ItemDetail.h"
 #import "GW2RecipeDetail.h"
 
+// Guild
+#import "GW2GuildDaemon.h"
+#import "GW2GuildDetail.h"
 
 #import "GW2Client.h"
 
 
 
-#import "GW2GuildDetail.h"
+
 #import "GW2Build.h"
 #import "GW2Color.h"
 #import "Spidy.h"

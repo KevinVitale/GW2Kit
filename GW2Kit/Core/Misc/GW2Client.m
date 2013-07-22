@@ -23,44 +23,6 @@
     self = [super initWithHTTPClient:client];
     if(self) {
         [self addResponseDescriptorsFromArray:@[
-
-         
-         // Events: events.json
-         [RKResponseDescriptor responseDescriptorWithMapping:[GW2EventStatus mappingObject]
-                                                 pathPattern:nil
-                                                     keyPath:@"events"
-                                                 statusCodes:nil],
-         
-         // Events: evenets.json
-         [RKResponseDescriptor responseDescriptorWithMapping:[GW2EventDetail mappingObject]
-                                                 pathPattern:@"/v1/event_details.json"
-                                                     keyPath:@"events"
-                                                 statusCodes:nil],
-         
-         
-         // Resource Name: {resource}_names.json
-         [RKResponseDescriptor responseDescriptorWithMapping:[GW2ResourceName mappingObject]
-                                                 pathPattern:nil
-                                                     keyPath:nil
-                                                 statusCodes:nil],
-         
-         // WvW Matche Details: wvw/matches.json
-         [RKResponseDescriptor responseDescriptorWithMapping:[GW2WvWMatch mappingObject]
-                                                 pathPattern:nil
-                                                     keyPath:@"wvw_matches"
-                                                 statusCodes:nil],
-         
-         // WvW Matche Details: wvw/match_details.json
-         [RKResponseDescriptor responseDescriptorWithMapping:[GW2WvWMatchDetail mappingObject]
-                                                 pathPattern:@"/v1/wvw/match_details.json"
-                                                     keyPath:nil
-                                                 statusCodes:nil],
-
-         // Recipe Details: recipe_details.json
-         [RKResponseDescriptor responseDescriptorWithMapping:[GW2RecipeDetail mappingObject]
-                                                 pathPattern:@"/v1/recipe_details.json"
-                                                     keyPath:nil
-                                                 statusCodes:nil],
          // Build details: build.json
          [RKResponseDescriptor responseDescriptorWithMapping:[GW2Build mappingObject]
                                                  pathPattern:@"/v1/build.json"
@@ -71,13 +33,7 @@
          [RKResponseDescriptor responseDescriptorWithMapping:[GW2Color mappingObject]
                                                  pathPattern:@"/v1/colors.json"
                                                      keyPath:@"colors"
-                                                 statusCodes:nil],
-         
-         // Guild details: guild_details.json
-         [RKResponseDescriptor responseDescriptorWithMapping:[GW2GuildDetail mappingObject]
-                                                 pathPattern:@"/v1/guild_details.json"
-                                                     keyPath:nil
-                                                 statusCodes:nil],
+                                                 statusCodes:nil]
          ]];
         
     }
@@ -119,21 +75,7 @@
                    }];
 }
 
-- (void)guildDetailWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, GW2GuildDetail *))completion {
-    void (^finalCompletion)(NSError *, GW2GuildDetail *) = ^ (NSError *error, GW2GuildDetail *guildDetail) {
-        if(completion)
-            completion(error, guildDetail);
-    };
-    
-    [self getObjectsAtPath:@"/v1/guild_details.json"
-                parameters:parameters
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array.lastObject);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
-}
+
 
 #pragma mark - Singleton
 + (GW2Client *)sharedClient {
