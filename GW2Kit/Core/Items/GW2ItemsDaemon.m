@@ -12,6 +12,7 @@
 
 @implementation GW2ItemsDaemon
 
+#pragma mark - Initialization
 - (id)init {
     self = [super init];
     if(self) {
@@ -27,6 +28,8 @@
     }
     return self;
 }
+
+#pragma mark - Fetch Items
 - (void)itemsWithCompletion:(void (^)(NSError *, NSArray *))completion {
     void (^finalCompletion)(NSError *, id) = ^(NSError *error, id result) {
         if(completion)
@@ -79,8 +82,7 @@
 }
 
 
-
-
+#pragma mark - Fetch Recipes
 - (void)recipesWithCompletion:(void (^)(NSError *, NSArray *))completion {
     void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
         if(completion)
@@ -109,35 +111,30 @@
 - (void)recipeDetailForID:(NSString *)recipeID
                parameters:(NSDictionary *)parameters
                completion:(void (^)(NSError *, GW2RecipeDetail *))completion {
-    void (^finalCompletion)(NSError *, GW2RecipeDetail *) = ^ (NSError *error, GW2RecipeDetail *recipeDetail) {
-        if(completion)
-            completion(error, recipeDetail);
-    };
     
     NSMutableDictionary *params = [NSMutableDictionary new];
     [params addEntriesFromDictionary:parameters];
     if(recipeID)
         params[@"recipe_id"] = recipeID;
     
-    [self getObjectsAtPath:@"/v1/recipe_details.json"
-                parameters:params
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array.lastObject);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
+    [self fetchRequestAtPath:@"/v1/recipe_details.json"
+                  parameters:params
+                  completion:^(NSError *error, id result) {
+                      if(completion) {
+                          completion(error, [result lastObject]);
+                      }
+                  }];
 }
 
+
+#pragma mark - App Notifications
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-    /*
     [self recipeDetailForID:@"1"
                  parameters:nil
                  completion:^(NSError *error, GW2RecipeDetail *recipeDetail) {
                      DLog(@"Recipe detail fetched...");
-                     printf("%s\n", recipeDetail.description.UTF8Strindg);
+                     printf("%s\n", recipeDetail.description.UTF8String);
                  }];
-     */
     
     static BOOL pullDetails = YES;
     [self itemsWithCompletion:^(NSError *error, NSArray *items) {

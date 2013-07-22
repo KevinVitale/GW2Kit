@@ -49,36 +49,22 @@
 }
 
 - (void)matchesWithCompletion:(void (^)(NSError *, NSArray *))completion {
-    void (^finalCompletion)(NSError *, NSArray *) = ^ (NSError *error, NSArray *states) {
-        if(completion)
-            completion(error, states);
-    };
     
-    [self getObjectsAtPath:@"/v1/wvw/matches.json"
-                parameters:nil
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
+    [self fetchRequestAtPath:@"/v1/wvw/matches.json"
+                  parameters:nil
+                  completion:completion];
 }
 
 - (void)matchDetailForID:(NSString *)matchID
               completion:(void (^)(NSError *, GW2WvWMatchDetail *))completion {
-    void (^finalCompletion)(NSError *, GW2WvWMatchDetail *) = ^ (NSError *error, GW2WvWMatchDetail *matchDetail) {
-        if(completion)
-            completion(error, matchDetail);
-    };
     
-    [self getObjectsAtPath:@"/v1/wvw/match_details.json"
-                parameters:@{ @"match_id" : matchID }
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array.lastObject);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
+    [self fetchRequestAtPath:@"/v1/wvw/match_details.json"
+                  parameters:@{ @"match_id" : matchID }
+                  completion:^(NSError *error, id result) {
+                      if(completion) {
+                          completion(error, [result lastObject]);
+                      }
+                  }];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {

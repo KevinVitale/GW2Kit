@@ -89,6 +89,22 @@
 		0ADA2385174ADC7B007F1173 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2382174ADC39007F1173 /* libReactiveCocoa-iOS.a */; };
 		0ADA2386174ADC8E007F1173 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
 		0AE215ED1778EC59002CB17C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE215EC1778EC59002CB17C /* Cocoa.framework */; };
+		0AFDE637179D75B700DBF373 /* GW2MapsDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AFDE638179D75B700DBF373 /* GW2MapsDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */; };
+		0AFDE639179D75B700DBF373 /* GW2MapsDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */; };
+		0AFDE640179D7EA500DBF373 /* GW2ContinentDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AFDE641179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */; };
+		0AFDE642179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */; };
+		0AFDE643179D835800DBF373 /* GW2ContinentDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */; };
+		0AFDE644179D836100DBF373 /* GW2MapsDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */; };
+		0AFDE647179D8B0C00DBF373 /* GW2MapResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AFDE648179D8B0C00DBF373 /* GW2MapResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */; };
+		0AFDE649179D8B0C00DBF373 /* GW2MapResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */; };
+		0AFDE650179D9B1000DBF373 /* GW2MapResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */; };
+		0AFDE658179DA09900DBF373 /* GW2MapFloorResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AFDE659179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */; };
+		0AFDE65A179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */; };
+		0AFDE65B179DA26800DBF373 /* GW2MapFloorResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +201,10 @@
 			dstPath = include/GW2Kit;
 			dstSubfolderSpec = 16;
 			files = (
+				0AFDE65B179DA26800DBF373 /* GW2MapFloorResponse.h in CopyFiles */,
+				0AFDE650179D9B1000DBF373 /* GW2MapResource.h in CopyFiles */,
+				0AFDE644179D836100DBF373 /* GW2MapsDaemon.h in CopyFiles */,
+				0AFDE643179D835800DBF373 /* GW2ContinentDetail.h in CopyFiles */,
 				0A440073179CEDBA00EF0A04 /* GW2Client.h in CopyFiles */,
 				0A44006D179CED1500EF0A04 /* GW2GuildDaemon.h in CopyFiles */,
 				0A440066179CEC4A00EF0A04 /* GW2GuildDetail.h in CopyFiles */,
@@ -267,6 +287,14 @@
 		0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Vendor/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Vendor/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		0AE215EC1778EC59002CB17C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapsDaemon.h; sourceTree = "<group>"; };
+		0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapsDaemon.m; sourceTree = "<group>"; };
+		0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ContinentDetail.h; sourceTree = "<group>"; };
+		0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ContinentDetail.m; sourceTree = "<group>"; };
+		0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapResource.h; sourceTree = "<group>"; };
+		0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapResource.m; sourceTree = "<group>"; };
+		0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapFloorResponse.h; sourceTree = "<group>"; };
+		0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapFloorResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +360,14 @@
 		0A440060179CEAD400EF0A04 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */,
+				0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */,
+				0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */,
+				0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */,
+				0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */,
+				0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */,
+				0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */,
+				0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -492,7 +528,11 @@
 				0A440043179CB81E00EF0A04 /* GW2EventStatus.h in Headers */,
 				0A440063179CEC3200EF0A04 /* GW2GuildDetail.h in Headers */,
 				0A440069179CEC6600EF0A04 /* GW2GuildDaemon.h in Headers */,
+				0AFDE647179D8B0C00DBF373 /* GW2MapResource.h in Headers */,
 				0A44005B179CDDD200EF0A04 /* GW2RecipeDetail.h in Headers */,
+				0AFDE637179D75B700DBF373 /* GW2MapsDaemon.h in Headers */,
+				0AFDE658179DA09900DBF373 /* GW2MapFloorResponse.h in Headers */,
+				0AFDE640179D7EA500DBF373 /* GW2ContinentDetail.h in Headers */,
 				0A440070179CED9F00EF0A04 /* GW2Client.h in Headers */,
 				0ADA2336174AD722007F1173 /* GW2Kit.h in Headers */,
 				0A7E9C8A175515870017A1FB /* Spidy.h in Headers */,
@@ -655,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFDE641179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */,
 				0A440055179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */,
 				0A440071179CED9F00EF0A04 /* GW2Client.m in Sources */,
 				0A440044179CB81E00EF0A04 /* GW2EventStatus.m in Sources */,
@@ -662,10 +703,12 @@
 				0A440049179CD00500EF0A04 /* GW2WvWDaemon.m in Sources */,
 				0A44005C179CDDD200EF0A04 /* GW2RecipeDetail.m in Sources */,
 				0A440064179CEC3200EF0A04 /* GW2GuildDetail.m in Sources */,
+				0AFDE638179D75B700DBF373 /* GW2MapsDaemon.m in Sources */,
 				0AD3D0D91778C1D900A32397 /* GW2ResourceName.m in Sources */,
 				0A440050179CDC4F00EF0A04 /* GW2ItemsDaemon.m in Sources */,
 				0AD3D0C11778C1D900A32397 /* GW2Color.m in Sources */,
 				0A440024179C9AAC00EF0A04 /* GW2EventDaemon.m in Sources */,
+				0AFDE648179D8B0C00DBF373 /* GW2MapResource.m in Sources */,
 				0A7E9C85175515870017A1FB /* SPYClient.m in Sources */,
 				0A7E9C88175515870017A1FB /* SPYItem.m in Sources */,
 				0A440041179CB81E00EF0A04 /* GW2EventDetail.m in Sources */,
@@ -673,6 +716,7 @@
 				0AD3D0C71778C1D900A32397 /* GW2WvWMatchDetail.m in Sources */,
 				0A440029179C9D9500EF0A04 /* GW2DefaultDaemon.m in Sources */,
 				0AD3D0C41778C1D900A32397 /* GW2WvWMatch.m in Sources */,
+				0AFDE659179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFDE642179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */,
 				0A440056179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */,
 				0A440072179CED9F00EF0A04 /* GW2Client.m in Sources */,
 				0A440045179CB81E00EF0A04 /* GW2EventStatus.m in Sources */,
@@ -687,10 +732,12 @@
 				0A44004A179CD00500EF0A04 /* GW2WvWDaemon.m in Sources */,
 				0A44005D179CDDD200EF0A04 /* GW2RecipeDetail.m in Sources */,
 				0A440065179CEC3200EF0A04 /* GW2GuildDetail.m in Sources */,
+				0AFDE639179D75B700DBF373 /* GW2MapsDaemon.m in Sources */,
 				0AD3D0DA1778C1D900A32397 /* GW2ResourceName.m in Sources */,
 				0A440051179CDC4F00EF0A04 /* GW2ItemsDaemon.m in Sources */,
 				0AD3D0C21778C1D900A32397 /* GW2Color.m in Sources */,
 				0A440025179C9AAC00EF0A04 /* GW2EventDaemon.m in Sources */,
+				0AFDE649179D8B0C00DBF373 /* GW2MapResource.m in Sources */,
 				0A7E9C86175515870017A1FB /* SPYClient.m in Sources */,
 				0A7E9C89175515870017A1FB /* SPYItem.m in Sources */,
 				0A440042179CB81E00EF0A04 /* GW2EventDetail.m in Sources */,
@@ -698,6 +745,7 @@
 				0AD3D0C81778C1D900A32397 /* GW2WvWMatchDetail.m in Sources */,
 				0A44002A179C9D9500EF0A04 /* GW2DefaultDaemon.m in Sources */,
 				0AD3D0C51778C1D900A32397 /* GW2WvWMatch.m in Sources */,
+				0AFDE65A179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

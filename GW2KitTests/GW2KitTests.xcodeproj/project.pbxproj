@@ -37,8 +37,6 @@
 		0A7B9FB4174DBA7E0041D341 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23EA174B13DB007F1173 /* SystemConfiguration.framework */; };
 		0ADA23BF174ADDE3007F1173 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23BE174ADDE3007F1173 /* SenTestingKit.framework */; };
 		0ADA23C1174ADDE3007F1173 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23C0174ADDE3007F1173 /* Cocoa.framework */; };
-		0ADA23CB174ADDE3007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA23C9174ADDE3007F1173 /* InfoPlist.strings */; };
-		0ADA23CE174ADDE3007F1173 /* GW2KitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA23CD174ADDE3007F1173 /* GW2KitTests.m */; };
 		0ADA23D7174ADEF3007F1173 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23D6174ADEF3007F1173 /* GW2Kit.framework */; };
 		0ADA23EB174B13DB007F1173 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23EA174B13DB007F1173 /* SystemConfiguration.framework */; };
 		0ADC7639175AE5D5001847CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADC7638175AE5D5001847CA /* QuartzCore.framework */; };
@@ -126,11 +124,6 @@
 		0ADA23C3174ADDE3007F1173 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0ADA23C4174ADDE3007F1173 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0ADA23C5174ADDE3007F1173 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0ADA23C8174ADDE3007F1173 /* GW2KitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GW2KitTests-Info.plist"; sourceTree = "<group>"; };
-		0ADA23CA174ADDE3007F1173 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0ADA23CC174ADDE3007F1173 /* GW2KitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2KitTests.h; sourceTree = "<group>"; };
-		0ADA23CD174ADDE3007F1173 /* GW2KitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2KitTests.m; sourceTree = "<group>"; };
-		0ADA23CF174ADDE3007F1173 /* GW2KitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GW2KitTests-Prefix.pch"; sourceTree = "<group>"; };
 		0ADA23D6174ADEF3007F1173 /* GW2Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GW2Kit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/GW2Kit-dhqionbjdwesebdrwqqcxcyrpqtw/Build/Products/Debug/GW2Kit.framework"; sourceTree = "<group>"; };
 		0ADA23EA174B13DB007F1173 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		0ADC7638175AE5D5001847CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -251,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				0AE9B6A0174E9EE50001DB09 /* GW2Kit.xcodeproj */,
-				0ADA23C6174ADDE3007F1173 /* GW2KitTests */,
 				0A7B9F99174DB97E0041D341 /* GW2TestOSXApp */,
 				0A56F662174EA4F6000F983D /* GW2TestiOSApp */,
 				0ADA23BD174ADDE3007F1173 /* Frameworks */,
@@ -304,26 +296,6 @@
 				0ADA23C5174ADDE3007F1173 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		0ADA23C6174ADDE3007F1173 /* GW2KitTests */ = {
-			isa = PBXGroup;
-			children = (
-				0ADA23CC174ADDE3007F1173 /* GW2KitTests.h */,
-				0ADA23CD174ADDE3007F1173 /* GW2KitTests.m */,
-				0ADA23C7174ADDE3007F1173 /* Supporting Files */,
-			);
-			path = GW2KitTests;
-			sourceTree = "<group>";
-		};
-		0ADA23C7174ADDE3007F1173 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0ADA23C8174ADDE3007F1173 /* GW2KitTests-Info.plist */,
-				0ADA23C9174ADDE3007F1173 /* InfoPlist.strings */,
-				0ADA23CF174ADDE3007F1173 /* GW2KitTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0AE9B6A1174E9EE50001DB09 /* Products */ = {
@@ -468,7 +440,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADA23CB174ADDE3007F1173 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +484,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADA23CE174ADDE3007F1173 /* GW2KitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,14 +520,6 @@
 				0A7B9FA9174DB97F0041D341 /* en */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		0ADA23C9174ADDE3007F1173 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0ADA23CA174ADDE3007F1173 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

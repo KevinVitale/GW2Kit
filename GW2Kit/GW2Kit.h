@@ -34,6 +34,12 @@
 #import "GW2GuildDaemon.h"
 #import "GW2GuildDetail.h"
 
+// Maps
+#import "GW2MapsDaemon.h"
+#import "GW2MapResource.h"
+#import "GW2MapFloorResponse.h"
+#import "GW2ContinentDetail.h"
+
 #import "GW2Client.h"
 
 

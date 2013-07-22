@@ -20,20 +20,14 @@
     }
     return self;
 }
-- (void)guildDetailWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, GW2GuildDetail *))completion {
-    void (^finalCompletion)(NSError *, GW2GuildDetail *) = ^ (NSError *error, GW2GuildDetail *guildDetail) {
-        if(completion)
-            completion(error, guildDetail);
-    };
-    
-    [self getObjectsAtPath:@"/v1/guild_details.json"
-                parameters:parameters
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array.lastObject);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       finalCompletion(error, nil);
-                   }];
+- (void)guildDetailWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
+    [self fetchRequestAtPath:@"/v1/guild_details.json"
+                  parameters:parameters
+                  completion:^ (NSError *error, id result) {
+                      if(completion) {
+                          completion(error, [result lastObject]);
+                      }
+                  }];
 }
 
 #pragma mark - Daemon

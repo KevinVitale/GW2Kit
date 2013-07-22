@@ -50,6 +50,8 @@
 #if !DEBUG
         RKLogConfigureByName("RestKit/Network", RKLogLevelOff);
         RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
+#else
+        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelError);
 #endif
         
         DLog(@"%@ initialized...", [self class]);
@@ -57,6 +59,7 @@
     return self;
 }
 
+#pragma mark - Fetch Requests
 - (void)namesForResource:(NSString *)resource
               parameters:(NSDictionary *)parameters
               completion:(void (^)(NSError *, NSArray *))completion {
@@ -71,6 +74,24 @@
                        finalCompletion(nil, mappingResult.array);
                    }
                    failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                       finalCompletion(error, nil);
+                   }];
+}
+
+- (void)fetchRequestAtPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
+    void (^finalCompletion)(NSError *, id) = ^(NSError *error, id result) {
+        if(completion)
+            completion(error, result);
+    };
+    
+    // Fetch the event names
+    [self getObjectsAtPath:path
+                parameters:parameters
+                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                       finalCompletion(nil, mappingResult.array);
+                   }
+                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                       DLog(@"%@", error);
                        finalCompletion(error, nil);
                    }];
 }

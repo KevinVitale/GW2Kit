@@ -25,6 +25,7 @@
         [GW2WvWDaemon daemon];
         [GW2ItemsDaemon daemon];
         [GW2GuildDaemon daemon];
+        [GW2MapsDaemon daemon];
     }
     return self;
 }

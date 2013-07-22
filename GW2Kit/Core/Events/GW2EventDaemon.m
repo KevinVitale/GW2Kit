@@ -54,29 +54,9 @@
 
 #pragma mark - Requests
 - (void)detailsWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
-    void (^finalCompletion)(NSError *, id) = ^(NSError *error, id result) {
-        if(completion)
-            completion(error, result);
-    };
-    
-    /*
-    // If we don't have the 'eventNames' yet, kick out
-    if(self.eventNames == nil) {
-        finalCompletion(nil, nil);
-        return;
-    }
-     */
-    
-    // Fetch the event names
-    [self getObjectsAtPath:@"/v1/events.json"
-                parameters:parameters
-                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                       finalCompletion(nil, mappingResult.array);
-                   }
-                   failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                       DLog(@"%@", error);
-                       finalCompletion(error, nil);
-                   }];
+    [self fetchRequestAtPath:@"/v1/events.json"
+                  parameters:parameters
+                  completion:completion];
 }
 
 #pragma mark - Private Fetch Methods

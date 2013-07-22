@@ -17,13 +17,12 @@
 @property (copy, nonatomic) NSNumber    *radius;
 @property (copy, nonatomic) NSNumber    *rotation;
 
-
 + (RKObjectMapping *)mappingObject;
 @end
 
 
 
-
+#pragma mark - Event Detail
 @interface GW2EventDetail : NSObject
 
 @property (copy, nonatomic) NSString *id;
@@ -35,28 +34,3 @@
 
 + (RKObjectMapping *)mappingObject;
 @end
-
-
-/* 
-- Example response:
-{
-    "events": {
-        "EED8A79F-B374-4AE6-BA6F-B7B98D9D7142": {
-            "name": "Defeat the renegade charr.",
-            "level": 42,
-            "map_id": 20,
-            "flags": [],
-            "location": {
-                "type": "sphere",
-                "center": [
-                    -9463.6,
-                    -40310.2,
-                    -785.799
-                ],
-                "radius": 2500,
-                "rotation": 0
-            }
-        }
-    }
-}
- */

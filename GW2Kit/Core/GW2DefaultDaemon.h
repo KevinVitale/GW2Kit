@@ -43,6 +43,8 @@
               parameters:(NSDictionary *)parameters
               completion:(void (^)(NSError *error, NSArray *names))completion;
 
+- (void)fetchRequestAtPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(void (^)(NSError *error, id result))completion;
+
 #pragma mark - Shared daemon object
 + (instancetype)daemon;
 @end
