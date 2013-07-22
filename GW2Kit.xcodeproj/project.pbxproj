@@ -311,6 +311,20 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		0A44005F179CEAD400EF0A04 /* Guild */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guild;
+			sourceTree = "<group>";
+		};
+		0A440060179CEAD400EF0A04 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 		0A7E9C7D175515870017A1FB /* Spidy */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,8 +353,10 @@
 				0A440027179C9D9500EF0A04 /* GW2DefaultDaemon.m */,
 				0A44001C179C9A9600EF0A04 /* Events */,
 				0A44004C179CDC3800EF0A04 /* Items */,
-				0AD3D0A71778C1D900A32397 /* Misc */,
 				0AD3D0AC1778C1D900A32397 /* WvW */,
+				0A44005F179CEAD400EF0A04 /* Guild */,
+				0A440060179CEAD400EF0A04 /* Maps */,
+				0AD3D0A71778C1D900A32397 /* Misc */,
 				0AD3D0B11778C1D900A32397 /* GW2Client.h */,
 				0AD3D0B21778C1D900A32397 /* GW2Client.m */,
 				0AD3D0B51778C1D900A32397 /* GW2GuildDetail.h */,
