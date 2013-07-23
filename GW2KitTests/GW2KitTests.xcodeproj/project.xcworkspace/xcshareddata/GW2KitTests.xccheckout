@@ -3,56 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>EBCF957D-C07F-4871-ABE5-A116B51027A6</string>
+	<string>DFB80432-D9A8-4239-9264-978FA0BB3786</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GW2KitTests</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>082B763F-0257-4CB0-BA52-B8C4209B4D99</key>
-		<string>git://github.com/rentzsch/jrswizzle.git</string>
-		<key>0F7C8C32-0C77-4DA5-91D3-AC820E4A7BB4</key>
-		<string>git://github.com/ReactiveCocoa/ReactiveCocoa.git</string>
-		<key>35537ABA-655A-4B8F-82A5-0C68AA97CE9F</key>
-		<string>https://github.com/AFNetworking/AFNetworking.git</string>
-		<key>598F07F3-28C6-4E1F-8045-4224EED02DF8</key>
-		<string>git://github.com/github/expecta.git</string>
-		<key>9E8350BD-C21F-4B28-A202-735A09A5CCE6</key>
-		<string>git://github.com/github/specta.git</string>
-		<key>C1419D73-6F75-476D-9A27-FB206479980C</key>
-		<string>git://github.com/jspahrsummers/xcconfigs.git</string>
 		<key>C65C6C63-8C65-46A3-B4FD-D1C537040D6F</key>
 		<string>https://github.com/KevinVitale/GW2Kit.git</string>
-		<key>F4FE1F58-9A5C-4594-AAB3-5372B8E7010A</key>
-		<string>git://github.com/KevinVitale/RestKit.git</string>
-		<key>F89CA23B-8B6D-48B3-8B5E-3974E80411B1</key>
-		<string>https://github.com/blakewatters/TransitionKit.git</string>
-		<key>FB6F0D23-F3E0-4F59-B948-8B0C1A2E2BDF</key>
-		<string>git://github.com/jspahrsummers/libextobjc.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GW2KitTests/GW2KitTests/GW2KitTests.xcodeproj/project.xcworkspace</string>
+	<string>GW2KitTests/GW2KitTests.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>082B763F-0257-4CB0-BA52-B8C4209B4D99</key>
-		<string>../../../../Vendor/ReactiveCocoa/external/jrswizzle</string>
-		<key>0F7C8C32-0C77-4DA5-91D3-AC820E4A7BB4</key>
-		<string>../../../../Vendor/ReactiveCocoa</string>
-		<key>35537ABA-655A-4B8F-82A5-0C68AA97CE9F</key>
-		<string>../../../../Vendor/RestKit/Vendor/AFNetworking</string>
-		<key>598F07F3-28C6-4E1F-8045-4224EED02DF8</key>
-		<string>../../../../Vendor/ReactiveCocoa/external/expecta</string>
-		<key>9E8350BD-C21F-4B28-A202-735A09A5CCE6</key>
-		<string>../../../../Vendor/ReactiveCocoa/external/specta</string>
-		<key>C1419D73-6F75-476D-9A27-FB206479980C</key>
-		<string>../../../../Vendor/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/libextobjc/Configuration</string>
 		<key>C65C6C63-8C65-46A3-B4FD-D1C537040D6F</key>
-		<string>../../../..</string>
-		<key>F4FE1F58-9A5C-4594-AAB3-5372B8E7010A</key>
-		<string>../../../../Vendor/RestKit</string>
-		<key>F89CA23B-8B6D-48B3-8B5E-3974E80411B1</key>
-		<string>../../../../Vendor/RestKit/Vendor/TransitionKit</string>
-		<key>FB6F0D23-F3E0-4F59-B948-8B0C1A2E2BDF</key>
-		<string>../../../../Vendor/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/libextobjc</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/KevinVitale/GW2Kit.git</string>
@@ -66,81 +30,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F4FE1F58-9A5C-4594-AAB3-5372B8E7010A</string>
-			<key>IDESourceControlWCCName</key>
-			<string>RestKit</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>598F07F3-28C6-4E1F-8045-4224EED02DF8</string>
-			<key>IDESourceControlWCCName</key>
-			<string>expecta</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9E8350BD-C21F-4B28-A202-735A09A5CCE6</string>
-			<key>IDESourceControlWCCName</key>
-			<string>specta</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0F7C8C32-0C77-4DA5-91D3-AC820E4A7BB4</string>
-			<key>IDESourceControlWCCName</key>
-			<string>ReactiveCocoa</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>35537ABA-655A-4B8F-82A5-0C68AA97CE9F</string>
-			<key>IDESourceControlWCCName</key>
-			<string>AFNetworking</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>C65C6C63-8C65-46A3-B4FD-D1C537040D6F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GW2Kit</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>082B763F-0257-4CB0-BA52-B8C4209B4D99</string>
-			<key>IDESourceControlWCCName</key>
-			<string>jrswizzle</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FB6F0D23-F3E0-4F59-B948-8B0C1A2E2BDF</string>
-			<key>IDESourceControlWCCName</key>
-			<string>libextobjc</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C1419D73-6F75-476D-9A27-FB206479980C</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Configuration</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F89CA23B-8B6D-48B3-8B5E-3974E80411B1</string>
-			<key>IDESourceControlWCCName</key>
-			<string>TransitionKit</string>
 		</dict>
 	</array>
 </dict>
