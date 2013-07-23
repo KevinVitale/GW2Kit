@@ -27,14 +27,17 @@
         self.northEast = @[@32768, @0];
         
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2ContinentDetail mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/continents.json"
                                                                                 keyPath:@"continents"
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2MapResource mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/maps.json"
                                                                                 keyPath:@"maps"
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2MapFloorResponse mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/map_floor.json"
                                                                                 keyPath:nil
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];

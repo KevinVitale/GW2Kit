@@ -25,12 +25,14 @@
         [self addResponseDescriptorsFromArray:@[
          // Build details: build.json
          [RKResponseDescriptor responseDescriptorWithMapping:[GW2Build mappingObject]
+                                                      method:RKRequestMethodGET
                                                  pathPattern:@"/v1/build.json"
                                                      keyPath:nil
                                                  statusCodes:nil],
          
          // Color details: colors.json
          [RKResponseDescriptor responseDescriptorWithMapping:[GW2Color mappingObject]
+                                                      method:RKRequestMethodGET
                                                  pathPattern:@"/v1/colors.json"
                                                      keyPath:@"colors"
                                                  statusCodes:nil]

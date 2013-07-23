@@ -14,6 +14,7 @@
     self = [super init];
     if(self) {
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2GuildDetail mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/guild_details.json"
                                                                                 keyPath:nil
                                                                             statusCodes:nil]];

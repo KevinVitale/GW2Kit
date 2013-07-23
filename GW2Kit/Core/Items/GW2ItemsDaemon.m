@@ -17,10 +17,12 @@
     self = [super init];
     if(self) {
         [self addResponseDescriptorsFromArray:@[[RKResponseDescriptor responseDescriptorWithMapping:[GW2ItemDetail mappingObject]
+                                                                                             method:RKRequestMethodGET
                                                                                         pathPattern:@"/v1/item_details.json"
                                                                                             keyPath:nil
                                                                                         statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                                 [RKResponseDescriptor responseDescriptorWithMapping:[GW2RecipeDetail mappingObject]
+                                                                                             method:RKRequestMethodGET
                                                                                         pathPattern:@"/v1/recipe_details.json"
                                                                                             keyPath:nil
                                                                                         statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]
@@ -39,6 +41,7 @@
     RKObjectMapping *itemMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
     [itemMapping addAttributeMappingsFromArray:@[@"items"]];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:itemMapping
+                                                                                            method:RKRequestMethodGET
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:nil];
@@ -92,6 +95,7 @@
     RKObjectMapping *itemMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
     [itemMapping addAttributeMappingsFromArray:@[@"recipes"]];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:itemMapping
+                                                                                            method:RKRequestMethodGET
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:nil];

@@ -18,18 +18,21 @@
     if(self) {
         [self addResponseDescriptorsFromArray:@[// WvW Matche Details: wvw/matches.json
                                                 [RKResponseDescriptor responseDescriptorWithMapping:[GW2WvWMatch mappingObject]
+                                                                                             method:RKRequestMethodGET
                                                                                         pathPattern:@"/v1/wvw/matches.json"
                                                                                             keyPath:@"wvw_matches"
                                                                                         statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                                 
                                                 // WvW Matche Details: wvw/match_details.json
                                                 [RKResponseDescriptor responseDescriptorWithMapping:[GW2WvWMatchDetail mappingObject]
+                                                                                             method:RKRequestMethodGET
                                                                                         pathPattern:@"/v1/wvw/match_details.json"
                                                                                             keyPath:nil
                                                                                         statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)],
                                                 
                                                 // WvW Matche Details: wvw/objective_names.json
                                                 [RKResponseDescriptor responseDescriptorWithMapping:[GW2ResourceName mappingObject]
+                                                                                             method:RKRequestMethodGET
                                                                                         pathPattern:@"/v1/wvw/objective_names.json"
                                                                                             keyPath:nil
                                                                                         statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]]];

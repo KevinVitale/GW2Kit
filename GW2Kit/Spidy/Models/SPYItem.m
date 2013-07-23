@@ -52,6 +52,7 @@
 
 + (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[[self class] mappingObject]
+                                                        method:RKRequestMethodGET
                                                    pathPattern:@"api/v0.9/json/item/:id"
                                                        keyPath:@"result"
                                                    statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];

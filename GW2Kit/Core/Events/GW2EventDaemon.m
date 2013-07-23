@@ -27,22 +27,27 @@
     self = [super init];
     if(self) {
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2ResourceName mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/world_names.json"
                                                                                 keyPath:nil
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2ResourceName mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/map_names.json"
                                                                                 keyPath:nil
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2ResourceName mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/event_names.json"
                                                                                 keyPath:nil
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2EventStatus mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/events.json"
                                                                                 keyPath:@"events"
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2EventDetail mappingObject]
+                                                                                 method:RKRequestMethodGET
                                                                             pathPattern:@"/v1/event_details.json"
                                                                                 keyPath:@"events"
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
