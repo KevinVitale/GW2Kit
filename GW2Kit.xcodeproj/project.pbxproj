@@ -66,6 +66,8 @@
 		0A7E9C88175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
 		0A7E9C89175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
 		0A7E9C8A175515870017A1FB /* Spidy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C83175515870017A1FB /* Spidy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ACFED3617A2C93500E7B2C2 /* GW2EventStatus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A44003E179CB81E00EF0A04 /* GW2EventStatus.h */; };
+		0ACFED3B17A2C95500E7B2C2 /* GW2EventDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A44003C179CB81E00EF0A04 /* GW2EventDetail.h */; };
 		0AD3D0BD1778C1D900A32397 /* GW2Build.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD3D0A81778C1D900A32397 /* GW2Build.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AD3D0BE1778C1D900A32397 /* GW2Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0A91778C1D900A32397 /* GW2Build.m */; };
 		0AD3D0BF1778C1D900A32397 /* GW2Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0A91778C1D900A32397 /* GW2Build.m */; };
@@ -201,6 +203,8 @@
 			dstPath = include/GW2Kit;
 			dstSubfolderSpec = 16;
 			files = (
+				0ACFED3B17A2C95500E7B2C2 /* GW2EventDetail.h in CopyFiles */,
+				0ACFED3617A2C93500E7B2C2 /* GW2EventStatus.h in CopyFiles */,
 				0AFDE65B179DA26800DBF373 /* GW2MapFloorResponse.h in CopyFiles */,
 				0AFDE650179D9B1000DBF373 /* GW2MapResource.h in CopyFiles */,
 				0AFDE644179D836100DBF373 /* GW2MapsDaemon.h in CopyFiles */,

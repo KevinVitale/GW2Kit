@@ -31,6 +31,9 @@
 		0A7B9FA7174DB97E0041D341 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B9FA6174DB97E0041D341 /* AppDelegate.m */; };
 		0A7B9FAA174DB97F0041D341 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7B9FA8174DB97F0041D341 /* MainMenu.xib */; };
 		0A7B9FB4174DBA7E0041D341 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23EA174B13DB007F1173 /* SystemConfiguration.framework */; };
+		0ACFED3317A2C76800E7B2C2 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACFED3217A2C75000E7B2C2 /* GW2Kit.framework */; };
+		0ACFED3417A2C7A900E7B2C2 /* GW2Kit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACFED3217A2C75000E7B2C2 /* GW2Kit.framework */; };
+		0ACFED3517A2C91000E7B2C2 /* libGW2Kit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACFED3017A2C75000E7B2C2 /* libGW2Kit-iOS.a */; };
 		0ADA23BF174ADDE3007F1173 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23BE174ADDE3007F1173 /* SenTestingKit.framework */; };
 		0ADA23C1174ADDE3007F1173 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23C0174ADDE3007F1173 /* Cocoa.framework */; };
 		0ADA23D7174ADEF3007F1173 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA23D6174ADEF3007F1173 /* GW2Kit.framework */; };
@@ -39,6 +42,23 @@
 		0AF61FC6175E4C2800CD3648 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF61FC5175E4C2800CD3648 /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0ACFED2F17A2C75000E7B2C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ACFED2617A2C74F00E7B2C2 /* GW2Kit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0ADA22F2174AD63E007F1173;
+			remoteInfo = "GW2Kit-iOS";
+		};
+		0ACFED3117A2C75000E7B2C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ACFED2617A2C74F00E7B2C2 /* GW2Kit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0ADA2320174AD673007F1173;
+			remoteInfo = GW2Kit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		0A7B9FAE174DB9C30041D341 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -46,6 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0ACFED3417A2C7A900E7B2C2 /* GW2Kit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +116,7 @@
 		0A7B9FA5174DB97E0041D341 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A7B9FA6174DB97E0041D341 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0A7B9FA9174DB97F0041D341 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0ACFED2617A2C74F00E7B2C2 /* GW2Kit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GW2Kit.xcodeproj; path = ../GW2Kit.xcodeproj; sourceTree = "<group>"; };
 		0ADA23BB174ADDE3007F1173 /* GW2KitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2KitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADA23BE174ADDE3007F1173 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0ADA23C0174ADDE3007F1173 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACFED3517A2C91000E7B2C2 /* libGW2Kit-iOS.a in Frameworks */,
 				0AF61FC6175E4C2800CD3648 /* GLKit.framework in Frameworks */,
 				0ADC7639175AE5D5001847CA /* QuartzCore.framework in Frameworks */,
 				0A521C8B174EA7CB006AE946 /* MobileCoreServices.framework in Frameworks */,
@@ -128,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACFED3317A2C76800E7B2C2 /* GW2Kit.framework in Frameworks */,
 				0A2BC0D01774B4FB00F3894E /* ReactiveCocoa.framework in Frameworks */,
 				0A2BC0D11774B4FB00F3894E /* RestKit.framework in Frameworks */,
 				0A7B9F98174DB97E0041D341 /* Cocoa.framework in Frameworks */,
@@ -214,9 +238,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0ACFED2717A2C74F00E7B2C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0ACFED3017A2C75000E7B2C2 /* libGW2Kit-iOS.a */,
+				0ACFED3217A2C75000E7B2C2 /* GW2Kit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0ADA23AC174ADDD3007F1173 = {
 			isa = PBXGroup;
 			children = (
+				0ACFED2617A2C74F00E7B2C2 /* GW2Kit.xcodeproj */,
 				0A7B9F99174DB97E0041D341 /* GW2TestOSXApp */,
 				0A56F662174EA4F6000F983D /* GW2TestiOSApp */,
 				0ADA23BD174ADDE3007F1173 /* Frameworks */,
@@ -346,6 +380,12 @@
 			mainGroup = 0ADA23AC174ADDD3007F1173;
 			productRefGroup = 0ADA23BC174ADDE3007F1173 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0ACFED2717A2C74F00E7B2C2 /* Products */;
+					ProjectRef = 0ACFED2617A2C74F00E7B2C2 /* GW2Kit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0ADA23BA174ADDE3007F1173 /* GW2KitTests */,
@@ -354,6 +394,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0ACFED3017A2C75000E7B2C2 /* libGW2Kit-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libGW2Kit-iOS.a";
+			remoteRef = 0ACFED2F17A2C75000E7B2C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0ACFED3217A2C75000E7B2C2 /* GW2Kit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GW2Kit.framework;
+			remoteRef = 0ACFED3117A2C75000E7B2C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0A56F659174EA4F6000F983D /* Resources */ = {
@@ -572,7 +629,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/GW2KitTests-dgrgfyistltgnihgereayizrqskn/Build/Products/Debug\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -622,7 +678,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/GW2KitTests-dgrgfyistltgnihgereayizrqskn/Build/Products/Debug\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
