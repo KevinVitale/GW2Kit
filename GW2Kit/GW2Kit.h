@@ -44,7 +44,7 @@
 #import "GW2StatusDaemon.h"
 #import "GW2StatusDetail.h"
 #import "GW2StatusWvWMatches.h"
-#import "GW2StatusWvWObjectives.h"
+#import "GW2StatusWvWRankings.h"
 
 // Misc...
 #import "GW2Client.h"

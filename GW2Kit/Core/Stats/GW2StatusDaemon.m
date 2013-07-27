@@ -8,7 +8,6 @@
 
 #import "GW2StatusDaemon.h"
 #import "GW2StatusWvWMatches.h"
-#import "GW2StatusWvWObjectives.h"
 
 #pragma mark -
 #pragma mark Status Daemon
@@ -28,19 +27,25 @@
                                                                                 keyPath:@"status_codes"
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         
+        /*
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2StatusWvWObjectives mapping]
                                                                                  method:RKRequestMethodGET
                                                                             pathPattern:@"/api/objectives.json"
                                                                                 keyPath:@""
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
+         */
         
         [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2StatusWvWMatches mapping]
                                                                                  method:RKRequestMethodGET
                                                                             pathPattern:@"/api/matches.json"
-                                                                                keyPath:@""
+                                                                                keyPath:nil
                                                                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         
-        
+        [self addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:[GW2StatusWvWRankings mapping]
+                                                                                 method:RKRequestMethodGET
+                                                                            pathPattern:@"/api/ratings.json"
+                                                                                keyPath:nil
+                                                                            statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]];
         
     }
     return self;

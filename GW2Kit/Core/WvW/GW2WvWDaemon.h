@@ -42,4 +42,6 @@
 
 - (void)objectiveStatusesWithParameters:(NSDictionary *)parameters
                              completion:(void (^)(NSError *, id))completion;
+
+- (void)rankWithCompletion:(void (^)(NSError *error, id results))completion;
 @end

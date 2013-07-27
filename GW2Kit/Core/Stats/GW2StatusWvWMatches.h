@@ -33,7 +33,7 @@
 + (RKObjectMapping *)mapping;
 @end
 
-@interface GW2StatusWvwRegion : NSObject
+@interface GW2StatusWvwRegionMatches : NSObject
 @property (copy, nonatomic) NSString *prefix;
 @property (copy, nonatomic) NSArray *matches;
 @property (copy, readonly, nonatomic) NSString *name;

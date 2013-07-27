@@ -69,7 +69,7 @@
 @end
 
 
-@implementation GW2StatusWvwRegion
+@implementation GW2StatusWvwRegionMatches
 @dynamic name;
 
 - (NSString *)name {
@@ -95,7 +95,7 @@
                                                   }];
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"region"
                                                                             toKeyPath:@"regions"
-                                                                          withMapping:[GW2StatusWvwRegion mapping]]];
+                                                                          withMapping:[GW2StatusWvwRegionMatches mapping]]];
     
     return mapping;
 }

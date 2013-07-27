@@ -68,6 +68,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
+
     /*
     static BOOL pullDetails = YES;
     [self matchesWithCompletion:^(NSError *error, NSArray *matches) {
@@ -93,8 +94,8 @@
                                 }
                             }];
      */
-    
-    [self matchStatusesWithParameters:@{@"ratings" : @"true"}
+
+    [self matchStatusesWithParameters:nil
                            completion:^(NSError *error, id results) {
                                DLog(@"Match statuses fetched...");
                                DLog(@"Map statuses:");
@@ -111,6 +112,27 @@
                                    }
                                }
                            }];
+    
+    [self rankWithCompletion:^(NSError *error, id results) {
+        DLog(@"Rank statuses fetched...");
+        DLog(@"\n\nNorth American Ranks:");
+        printf("---------------------------\n");
+        for(id rank in [results valueForKey:@"northAmericanRankings"]) {
+            printf("%s: #%s (%.0f pts.)\n",
+                   [rank name].UTF8String,
+                   [[rank valueForKeyPath:@"rating.current_rank"] description].UTF8String,
+                   [[rank valueForKeyPath:@"rating.current_rating"] floatValue]);
+        }
+        
+        DLog(@"\n\nEuropean Ranks:");
+        printf("---------------------------\n");
+        for(id rank in [results valueForKey:@"europeanRankings"]) {
+            printf("%s: #%s (%.0f pts.)\n",
+                   [rank name].UTF8String,
+                   [[rank valueForKeyPath:@"rating.current_rank"] description].UTF8String,
+                   [[rank valueForKeyPath:@"rating.current_rating"] floatValue]);
+        }
+    }];
 }
 
 + (instancetype)daemon {
@@ -148,5 +170,15 @@
     [Stats fetchRequestAtPath:@"/api/objectives.json"
                    parameters:parameters
                    completion:completion];
+}
+
+- (void)rankWithCompletion:(void (^)(NSError *, id))completion {
+    [Stats fetchRequestAtPath:@"/api/ratings.json"
+                   parameters:nil
+                   completion:^(NSError *error, id result) {
+                       if(completion) {
+                           completion(error, [result lastObject]);
+                       }
+                   }];
 }
 @end

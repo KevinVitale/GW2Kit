@@ -51,7 +51,7 @@
         RKLogConfigureByName("RestKit/Network", RKLogLevelOff);
         RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
 #else
-        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
+        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelError);
 #endif
         
         DLog(@"%@ initialized...", [self class]);
