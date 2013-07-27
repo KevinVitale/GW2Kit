@@ -40,11 +40,14 @@
 #import "GW2MapFloorResponse.h"
 #import "GW2ContinentDetail.h"
 
+// Status
+#import "GW2StatusDaemon.h"
+#import "GW2StatusDetail.h"
+#import "GW2StatusWvWMatches.h"
+#import "GW2StatusWvWObjectives.h"
+
+// Misc...
 #import "GW2Client.h"
-
-
-
-
 #import "GW2Build.h"
 #import "GW2Color.h"
 #import "Spidy.h"

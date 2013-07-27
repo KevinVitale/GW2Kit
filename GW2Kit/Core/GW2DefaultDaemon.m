@@ -51,7 +51,7 @@
         RKLogConfigureByName("RestKit/Network", RKLogLevelOff);
         RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
 #else
-        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelError);
+        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
 #endif
         
         DLog(@"%@ initialized...", [self class]);
@@ -84,7 +84,6 @@
             completion(error, result);
     };
     
-    // Fetch the event names
     [self getObjectsAtPath:path
                 parameters:parameters
                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {

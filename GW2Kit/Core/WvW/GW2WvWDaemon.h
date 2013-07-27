@@ -13,6 +13,8 @@
 
 @class GW2WvWMatchDetail;
 
+#pragma mark -
+#pragma mark WvW Daemon
 @interface GW2WvWDaemon : GW2DefaultDaemon
 /**
  Fetches the current list of WvW matches.
@@ -31,4 +33,13 @@
 
 - (void)objectiveNamesWithParameters:(NSDictionary *)parameters
                           completion:(void (^)(NSError *error, id result))completion;
+@end
+
+#pragma mark - http://gw2stats.net
+@interface GW2WvWDaemon (GW2StatsDotNet)
+- (void)matchStatusesWithParameters:(NSDictionary *)parameters
+                         completion:(void (^)(NSError *, id))completion;
+
+- (void)objectiveStatusesWithParameters:(NSDictionary *)parameters
+                             completion:(void (^)(NSError *, id))completion;
 @end

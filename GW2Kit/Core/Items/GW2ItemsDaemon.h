@@ -41,18 +41,20 @@
 - (void)recipesWithCompletion:(void (^)(NSError *error, NSArray *recipes))completion;
 
 /**
- Fetches the recipe detail for a given recipe ID.
+ @brief Fetches the recipe detail for a given recipe ID.
  
  @param recipeID The ID of the recipe being detailed.
  @param parameters Optional parameters, most likely language, sent in the request.
  @param completion The completion handler invoked once the request completes. It provides an error (if any) and the item detail on success.
  
  @detail As an example, let's fetch the recipe detil for `id` equal to `1`:
+ 
     [GW2 recipeDetailForID:@"1"
                 parameters:nil
                 completion:^(NSError *error, GW2RecipeDetail *recipeDetail) {
                     printf("%s", recipeDetail.description.UTF8String);
                 }];
+ 
  
  An example out of this is:
     recipeID                                : 1

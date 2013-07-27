@@ -1,4 +1,4 @@
-//
+    //
 //  GW2WvWDaemon.m
 //  GW2Kit
 //
@@ -10,6 +10,7 @@
 #import "GW2WvWMatch.h"
 #import "GW2WvWMatchDetail.h"
 #import "GW2ResourceName.h"
+#import "GW2StatusDaemon.h"
 #import <RestKit/RestKit.h>
 
 @implementation GW2WvWDaemon
@@ -41,14 +42,10 @@
 }
 
 - (void)objectiveNamesWithParameters:(NSDictionary *)parameters completion:(void (^)(NSError *, id))completion {
-    void (^finalCompletion)(NSError *, id) = ^(NSError *error, id result) {
-        if(completion)
-            completion(error, result);
-    };
     
     [self namesForResource:@"wvw/objective"
                 parameters:parameters
-                completion:finalCompletion];
+                completion:completion];
 }
 
 - (void)matchesWithCompletion:(void (^)(NSError *, NSArray *))completion {
@@ -71,6 +68,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
+    /*
     static BOOL pullDetails = YES;
     [self matchesWithCompletion:^(NSError *error, NSArray *matches) {
         DLog(@"WvW Matches fetched...");
@@ -94,6 +92,25 @@
                                     printf("%s\n", [object description].UTF8String);
                                 }
                             }];
+     */
+    
+    [self matchStatusesWithParameters:@{@"ratings" : @"true"}
+                           completion:^(NSError *error, id results) {
+                               DLog(@"Match statuses fetched...");
+                               DLog(@"Map statuses:");
+                               for(id region in [results valueForKey:@"regions"]) {
+                                   printf("WvW Region: %s\n", [region name].UTF8String);
+                                   printf("---------------------------\n");
+                                   for(id match in [region matches]) {
+                                       printf("---------------------------\n");
+                                       printf("WvW Match: %s\n", [match matchID].UTF8String);
+                                       for(id world in [match worlds]) {
+                                           printf("---------------------------\n");
+                                           printf("%s\n", [world description].UTF8String);
+                                       }
+                                   }
+                               }
+                           }];
 }
 
 + (instancetype)daemon {
@@ -103,5 +120,33 @@
         instance = [[self class] new];
     });
     return instance;
+}
+@end
+
+
+@implementation GW2WvWDaemon (GW2StatsDotNet)
+- (void)matchStatusesWithParameters:(NSDictionary *)parameters
+                         completion:(void (^)(NSError *, id))completion {
+    if(parameters) {
+        parameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+        [parameters setValue:@"true" forKey:@"objectives"];
+    }
+    else {
+        parameters = @{@"objectives" : @"true"};
+    }
+    [Stats fetchRequestAtPath:@"/api/matches.json"
+                   parameters:parameters
+                   completion:^(NSError *error, id result) {
+                       if(completion) {
+                           completion(error, [result lastObject]);
+                       }
+                   }];
+}
+
+- (void)objectiveStatusesWithParameters:(NSDictionary *)parameters
+                             completion:(void (^)(NSError *, id))completion {
+    [Stats fetchRequestAtPath:@"/api/objectives.json"
+                   parameters:parameters
+                   completion:completion];
 }
 @end

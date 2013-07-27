@@ -58,7 +58,7 @@
     return description;
 }
 + (RKObjectMapping *)mappingObject {
-    RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class] ];
+    RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class]];
     [mapping addAttributeMappingFromKeyOfRepresentationToAttribute:@"id"];
     [mapping addAttributeMappingsFromDictionary:[[self class] mappingAttributes]];
     mapping.forceCollectionMapping = YES;

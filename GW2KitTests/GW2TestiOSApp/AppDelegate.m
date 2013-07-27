@@ -21,11 +21,12 @@
 - (id)init {
     self = [super init];
     if(self) {
-        Events;
+//        Events;
         WvW;
-        Items;
-        Guilds;
-        Maps;
+//        Items;
+//        Guilds;
+//        Maps;
+//        Stats;
     }
     return self;
 }

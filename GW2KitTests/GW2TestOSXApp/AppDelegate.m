@@ -19,6 +19,7 @@
         Items;
         Guilds;
         Maps;
+        Stats;
     }
     return self;
 }
