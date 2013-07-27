@@ -1,51 +1,38 @@
 # GW2Kit
 
-GW2Kit is a Objective-C framework for the Guild Wars 2 API. GW2Kit allows iOS and OS X applications to natively use the GW2 API.
+GW2Kit is a Objective-C framework that provides access to the offical Guild Wars 2 API (`api.guildwars2.com`). It is has support for both iOS and OS X.
 
-## Overview
+### Introduction
 
 The Official Guild Wars 2 API was released on May 20th, posted by ArenaNet Lead Programmer [Cliff Spradlin](https://forum-en.guildwars2.com/forum/community/api/API-Documentation/first#post2028044). It provides third-party application the ability to query in-game data in real-time. 
 
 - [The API documentation](https://forum-en.guildwars2.com/forum/community/api/API-Documentation/first#post2028044) (Guild Wars 2 Forums)
-- [API wiki page](http://wiki.guildwars2.com/wiki/API) (wiki.guildwars2.com)
+- [Guild Wars 2 API wiki page](http://wiki.guildwars2.com/wiki/API) (wiki.guildwars2.com)
 
-### Available Information
+### API Availablility
 
-The GW2Kit SDK supports all the following endpoints (which is the entirety of the GW2 API at the time of writing):
+GW2Kit provides functionality through separate *daemons*, each implemented as a subclass of [`GW2DefaultDaemon`](https://github.com/KevinVitale/GW2Kit/blob/master/GW2Kit/Core/GW2DefaultDaemon.h) in code. GW2Kit's core daemons are:
 
-#### Locations
-
-- `v1/event_names.json`
-- `v1/map_names.json`
-- `v1/world_names.json`
-
-#### Items
-
-- `v1/items.json`
-- `v1/item_details.json`
-
-#### Recipes
-
-- `v1/recipes.json`
-- `v1/recipe_details.json`
-
-#### Events
-
-- `v1/events.json`
-
-#### WvW
-
-- `v1/wvw/matches.json`
-- `v1/wvw/matche_details.json`
-
-#### Misc
-
-- `colors.json`
-- `build.json`
-
-#### Prices
-
-- `gw2spidy.com` price look-up
+- **Events**
+    - Names of events, maps, and PvE worlds.
+    - Event statuses and details.
+- **Items**
+    - Item IDs and names.
+    - Recipe IDs and details.
+- **WvW**
+    - Currently running matches
+    - Details of a given match ID
+    - Names of objectives in WvW
+    - Match statuses and world rankings from *[gw2stats.net](http://gw2stats.net)*
+- **Guilds**
+    - Guild details
+- **Stats**
+    - API status from *[gw2stats.net](http://gw2stats.net)*
+- **Spidy**
+    - Trading post prices from *[gw2spidy.com](http://www.gw2spidy.com)*
+- **Misc**
+    - In-game dye colors
+    - API build version
 
 <hr/>
 
@@ -53,9 +40,9 @@ The GW2Kit SDK supports all the following endpoints (which is the entirety of th
 
 You can add the `GW2Kit` framework to your mobile and/or desktop Cocoa applications which meet these requirements:
 
-- **OS X**: 10.7
-- **iOS**: 5.0
-- **Xcode.app**: 4.6
+- **OS X**: 10.7+
+- **iOS**: 5.0+
+- **Xcode.app**: 4.6+
 
 *Note: GW2Kit is written using the ARC (automatic reference counting) memory model.*
 
@@ -81,23 +68,23 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 ##### For iOS apps:
 
 1. Open Xcode and start a new iOS project (skip if you already have a project)  
--- *Select the project template you prefer (I usually prefer 'Empty Application' project)*
+    - *Select the project template you prefer (I usually prefer 'Empty Application' project)*
 - From outside Xcode, follow the instructions above to clone the project into a `GW2Kit` folder inside your project's root directory  
--- *Really make sure you've updated GW2Kit's submodules*
+    - *Really make sure you've updated GW2Kit's submodules*
 - Back in Xcode, Drag the `GW2Kit.xcodeproj` file into your app's project navigation
 - Select your project's target's own build settings, and then click on "Build Settings"
 - Set *Header Search Paths* to be (including quotes):  
--- *"$(BUILT_PRODUCTS_DIR)/../../Headers"*  
--- *"$(BUILT_PRODUCTS_DIR)"*  
+    - *"$(BUILT_PRODUCTS_DIR)/../../Headers"*  
+    - *"$(BUILT_PRODUCTS_DIR)"*  
 - Set *Other Linker Flags* to be:  
--- *-ObjC*  
+    - *-ObjC*  
 - Now for the other build settings, click on "Build Phases"  
 - In "Link Binary With Libraries" section, add the following libraries:  
--- *libGW2Kit-iOS.a*  
--- *CoreData.framework*  
--- *Security.framework*  
--- *SystemConfiguration.framework*  
--- *MobileCoreServices.framework*  
+    - *libGW2Kit-iOS.a*  
+    - *CoreData.framework*  
+    - *Security.framework*  
+    - *SystemConfiguration.framework*  
+    - *MobileCoreServices.framework*  
 - (Optional) To get rid of the warnings from AFNetworking, change your app's .pch file to look like this:
 
 		#import <Availability.h>
@@ -113,7 +100,7 @@ If all you want is to add GW2Kit to a new or existing project, you can do the fo
 		    #import <MobileCoreServices/MobileCoreServices.h>
 		#endif
 - Finally, make sure it works:  
--- Add `#import <GW2Kit/GW2Kit.h>` to your app delegate's `.m` (implementation) file
+    - Add `#import <GW2Kit/GW2Kit.h>` to your app delegate's `.m` (implementation) file
 - Start coding!
 	
 ### Framework dependencies
@@ -127,106 +114,7 @@ You might notice that there are a lot of schemes in Xcode's scheme list. This wi
 
 In Xcode's scheme picker, select **GW2KitTestiOSApp** Build & Run the app by pressing the giant play button or hitting **⌘+R**.
 
-<hr/>
-
-## SDK Examples
-
-### Item detail
-
-Looking up __The Hunter__:
-
-	NSString *itemID = @"29175";
-	[GW2 itemDetailForID:itemID
-	          completion:^(NSError *error, GW2ItemDetail *itemDetail) {
-	    printf("%s", [itemDetail description].UTF8String);
-	}];
-
-##### Output:
-
-	----------------------------------------------------------------------------------------------------
-	[#29175] The Hunter
-	----------------------------------------------------------------------------------------------------
-	| rarity                                  : Exotic
-	| vendorValue                             : 396
-	| gameTypes                               : (
-	    Activity,
-	    Dungeon,
-	    Pve,
-	    Wvw
-	)
-	| flags                                   : (
-	    HideSuffix
-	)
-	| restrictions                            : (
-	)
-	| text                                    : <c=@flavor>This weapon is used to craft the legendary rifle The Predator</c>
-	| type                                    : Weapon
-	| itemID                                  : 29175
-	| name                                    : The Hunter
-	| info                                    : {
-	    "damage_type" = Physical;
-	    defense = 0;
-	    "infix_upgrade" =     {
-	        attributes =         (
-	                        {
-	                attribute = Power;
-	                modifier = 179;
-	            },
-	                        {
-	                attribute = Precision;
-	                modifier = 128;
-	            },
-	                        {
-	                attribute = CritDamage;
-	                modifier = 9;
-	            }
-	        );
-	        buff = "";
-	    };
-	    "infusion_slots" =     (
-	    );
-	    "max_power" = 1205;
-	    "min_power" = 986;
-	    "suffix_item_id" = 24561;
-	    type = Rifle;
-	}
-	
-### Polling Event States
-
-Find event states in 'Kessex Hills' on 'Maguuma'
-
-	[GW2 eventStatesWithParameters:@{@"world_id" : @"1005", @"map_id" : @"23"}
-	                    completion:^(NSError *error, id states) {
-	                        for(GW2EventStatus *status in states) {
-	                            printf("%s", [status description].UTF8String);
-	                        }
-	                    }];
-	
-##### Output:
-
-	mapID                                   : 23
-	state                                   : Success
-	eventID                                 : F090E0ED-AFC3-4AEE-A90C-91A57FB27F6D
-	worldID                                 : 1005
-
-	mapID                                   : 23
-	state                                   : Warmup
-	eventID                                 : 3CE76F6D-A926-4BB2-9124-D5AA85B1E68A
-	worldID                                 : 1005
-
-	mapID                                   : 23
-	state                                   : Warmup
-	eventID                                 : F5841085-D765-4CBF-8E22-EF3521C6813D
-	worldID                                 : 1005
-
-	mapID                                   : 23
-	state                                   : Warmup
-	eventID                                 : E7D9AD09-44CE-42E0-BB85-9E62D59928A6
-	worldID                                 : 1005
-
-	... *many, many more...*
-
-<hr/>
+<hr/> 
 
 ## License
 
