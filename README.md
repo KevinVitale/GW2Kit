@@ -11,7 +11,9 @@ The Official Guild Wars 2 API was released on May 20th, posted by ArenaNet Lead 
 
 ### API Availablility
 
-GW2Kit provides functionality through separate *daemons*, each implemented as a subclass of [`GW2DefaultDaemon`](https://github.com/KevinVitale/GW2Kit/blob/master/GW2Kit/Core/GW2DefaultDaemon.h) in code. GW2Kit's core daemons are:
+GW2Kit provides functionality through separate *daemons*, each implemented as a subclass of [`GW2DefaultDaemon`](https://github.com/KevinVitale/GW2Kit/blob/master/GW2Kit/Core/GW2DefaultDaemon.h) in code. Daemons provide modularization of API components, and allows developers to include the minimum components necessary for their app.
+
+GW2Kit's core daemons are:
 
 - **Events**
     - Names of events, maps, and PvE worlds.
