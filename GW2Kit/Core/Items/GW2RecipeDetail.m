@@ -27,7 +27,7 @@
 
 + (NSDictionary *)mappingAttributes {
     return @{
-             @"recipe_id"           : @"recipeID",
+             @"recipe_id"           : @"id",
              @"type"                : @"type",
              @"output_item_id"      : @"outputItemID",
              @"output_item_count"   : @"outputItemCount",

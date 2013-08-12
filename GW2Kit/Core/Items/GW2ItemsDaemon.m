@@ -133,6 +133,9 @@
 
 #pragma mark - App Notifications
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
+    
+    
+    /*
     [self recipeDetailForID:@"1"
                  parameters:nil
                  completion:^(NSError *error, GW2RecipeDetail *recipeDetail) {
@@ -156,6 +159,7 @@
             }
         }
     }];
+     */
 }
 
 #pragma mark - Daemon

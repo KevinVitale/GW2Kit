@@ -12,7 +12,7 @@
 @class RKMapping;
 
 @interface GW2ItemDetail : NSObject
-@property (copy, nonatomic) NSString *itemID;
+@property (copy, nonatomic) NSNumber *id;
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *text;
 @property (copy, nonatomic) NSString *type;

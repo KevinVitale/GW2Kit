@@ -12,11 +12,11 @@
 
 @interface GW2RecipeDetail : NSObject
 
-@property (copy, nonatomic) NSString *recipeID;
+@property (copy, nonatomic) NSNumber *id;
 @property (copy, nonatomic) NSString *type;
-@property (copy, nonatomic) NSString *outputItemID;
-@property (copy, nonatomic) NSString *outputItemCount;
-@property (copy, nonatomic) NSString *minimumRating;
+@property (copy, nonatomic) NSNumber *outputItemID;
+@property (copy, nonatomic) NSNumber *outputItemCount;
+@property (copy, nonatomic) NSNumber *minimumRating;
 @property (copy, nonatomic) NSNumber *timeToCraft;
 @property (copy, nonatomic) NSArray  *ingredients;
 @property (copy, nonatomic) NSArray  *flags;

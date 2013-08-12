@@ -12,7 +12,7 @@
 @class RKObjectMapping;
 
 @interface GW2ResourceName : NSObject
-@property (copy, nonatomic) NSString *id;
+@property (copy, nonatomic) NSNumber *id;
 @property (copy, nonatomic) NSString *name;
 
 + (RKObjectMapping *)mappingObject;

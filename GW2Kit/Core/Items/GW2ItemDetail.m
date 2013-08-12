@@ -27,7 +27,7 @@
                                                    withString:@"-"
                                               startingAtIndex:0];
     
-    [description insertString:[NSString stringWithFormat:@"\n%@\n[#%@] %@\n%@\n", dashedLineString, self.itemID, self.name, dashedLineString] atIndex:0];
+    [description insertString:[NSString stringWithFormat:@"\n%@\n[#%@] %@\n%@\n", dashedLineString, self.id, self.name, dashedLineString] atIndex:0];
     [description appendString:dashedLineString];
     
     return description;
@@ -35,7 +35,7 @@
 
 + (NSDictionary *)mappingAttributes {
     return @{
-             @"item_id":        @"itemID",
+             @"item_id":        @"id",
              @"name":           @"name",
              @"description":    @"text",
              @"type":           @"type",
