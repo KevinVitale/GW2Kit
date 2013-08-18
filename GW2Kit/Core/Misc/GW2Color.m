@@ -10,6 +10,7 @@
 #import <RestKit/RestKit.h>
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#else
 #endif
 
 #import <Accelerate/Accelerate.h>
@@ -28,10 +29,10 @@
                             blue:blue
                            alpha:1.f];
 #else
-    return [NSColor colorWithRed:red
-                           green:green
-                            blue:blue
-                           alpha:1.f];
+    return [NSColor colorWithDeviceRed:red
+                                 green:green
+                                  blue:blue
+                                 alpha:1.f];
 #endif
 }
 - (id)shiftColor:(id)color {
@@ -134,10 +135,10 @@ void hsv_to_hsl(float h, float s, float v,
                                           blue:(base_BlueComponent / 255.f)
                                          alpha:1.f];
 #else
-    NSColor *baseColor = [NSColor colorWithRed:(base_RedComponent / 255.f)
-                                         green:(base_GreenComponent / 255.f)
-                                          blue:(base_BlueComponent / 255.f)
-                                         alpha:1.f];
+    NSColor *baseColor = [NSColor colorWithDeviceRed:(base_RedComponent / 255.f)
+                                               green:(base_GreenComponent / 255.f)
+                                                blue:(base_BlueComponent / 255.f)
+                                               alpha:1.f];
 #endif
     
     // 2a. Convert from RGB to HSV
@@ -177,10 +178,10 @@ void hsv_to_hsl(float h, float s, float v,
                                 brightness:hsv_Bright
                                      alpha:1.f];
 #else
-    NSColor *color = [NSColor colorWithHue:hsv_Hue
-                                saturation:hsv_Sat
-                                brightness:hsv_Bright
-                                     alpha:1.f];
+    NSColor *color = [NSColor colorWithDeviceHue:hsv_Hue
+                                      saturation:hsv_Sat
+                                      brightness:hsv_Bright
+                                           alpha:1.f];
 #endif
     return color;
 }
