@@ -12,6 +12,23 @@
 #define Events [GW2EventDaemon daemon]
 
 #pragma mark - GW2EventDaemon
+/*!
+ Dynamic events:
+    - events: "/v1/events.json"
+        Returns the current status of events for a specific world.
+ 
+    - event_names: "/v1/event_names.json"
+        Returns a list of localized event names.
+ 
+    - map_names: "/v1/map_names.json"
+        Returns a list of localized map names.
+ 
+    - world_names: "/v1/world_names.json"
+        Returns a list of localized world names.
+ 
+    - event_details: "/v1/event_details.json"
+        Returns detailed information about events.
+ */
 @interface GW2EventDaemon : GW2DefaultDaemon
 
 #pragma mark - Requests

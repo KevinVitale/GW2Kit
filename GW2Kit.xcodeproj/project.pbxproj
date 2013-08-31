@@ -66,6 +66,9 @@
 		0A7E9C88175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
 		0A7E9C89175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
 		0A7E9C8A175515870017A1FB /* Spidy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C83175515870017A1FB /* Spidy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AAC964D17D24041005743EE /* GW2FilesDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AAC964B17D24041005743EE /* GW2FilesDaemon.h */; };
+		0AAC964E17D24041005743EE /* GW2FilesDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC964C17D24041005743EE /* GW2FilesDaemon.m */; };
+		0AAC964F17D24041005743EE /* GW2FilesDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC964C17D24041005743EE /* GW2FilesDaemon.m */; };
 		0AB2001617A36FFA0034035D /* GW2StatusWvWRankings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB2001417A36FFA0034035D /* GW2StatusWvWRankings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AB2001717A36FFA0034035D /* GW2StatusWvWRankings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2001517A36FFA0034035D /* GW2StatusWvWRankings.m */; };
 		0AB2001817A36FFA0034035D /* GW2StatusWvWRankings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2001517A36FFA0034035D /* GW2StatusWvWRankings.m */; };
@@ -132,6 +135,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 5FAF5223174D4C2000CAC810;
 			remoteInfo = "ReactiveCocoaTests-iOS";
+		};
+		0AAC965417D24042005743EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1860F412177C91B500C7B3C9;
+			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHost";
+		};
+		0AAC965617D24042005743EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1860F430177C91B500C7B3C9;
+			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHostTests";
 		};
 		0ADA2359174ADA7D007F1173 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -292,6 +309,8 @@
 		0A7E9C81175515870017A1FB /* SPYItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYItem.h; sourceTree = "<group>"; };
 		0A7E9C82175515870017A1FB /* SPYItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYItem.m; sourceTree = "<group>"; };
 		0A7E9C83175515870017A1FB /* Spidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spidy.h; sourceTree = "<group>"; };
+		0AAC964B17D24041005743EE /* GW2FilesDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2FilesDaemon.h; sourceTree = "<group>"; };
+		0AAC964C17D24041005743EE /* GW2FilesDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2FilesDaemon.m; sourceTree = "<group>"; };
 		0AB2001417A36FFA0034035D /* GW2StatusWvWRankings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2StatusWvWRankings.h; sourceTree = "<group>"; };
 		0AB2001517A36FFA0034035D /* GW2StatusWvWRankings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2StatusWvWRankings.m; sourceTree = "<group>"; };
 		0AB2FFE917A2D4E80034035D /* GW2StatusDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2StatusDaemon.h; sourceTree = "<group>"; };
@@ -467,6 +486,8 @@
 				0AD3D0A91778C1D900A32397 /* GW2Build.m */,
 				0AD3D0AA1778C1D900A32397 /* GW2Color.h */,
 				0AD3D0AB1778C1D900A32397 /* GW2Color.m */,
+				0AAC964B17D24041005743EE /* GW2FilesDaemon.h */,
+				0AAC964C17D24041005743EE /* GW2FilesDaemon.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -551,6 +572,8 @@
 				0ADA2382174ADC39007F1173 /* libReactiveCocoa-iOS.a */,
 				0ADA2384174ADC39007F1173 /* ReactiveCocoaTests.octest */,
 				0A47C90D175A6D9400401DD4 /* ReactiveCocoaTests-iOS.octest */,
+				0AAC965517D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHost.app */,
+				0AAC965717D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -576,6 +599,7 @@
 				0A440040179CB81E00EF0A04 /* GW2EventDetail.h in Headers */,
 				0A44004F179CDC4F00EF0A04 /* GW2ItemsDaemon.h in Headers */,
 				0A440054179CDD1000EF0A04 /* GW2ItemDetail.h in Headers */,
+				0AAC964D17D24041005743EE /* GW2FilesDaemon.h in Headers */,
 				0A440048179CD00500EF0A04 /* GW2WvWDaemon.h in Headers */,
 				0A440043179CB81E00EF0A04 /* GW2EventStatus.h in Headers */,
 				0A440063179CEC3200EF0A04 /* GW2GuildDetail.h in Headers */,
@@ -680,6 +704,20 @@
 			remoteRef = 0A47C90C175A6D9400401DD4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		0AAC965517D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "ReactiveCocoa-iOS-UIKitTestHost.app";
+			remoteRef = 0AAC965417D24042005743EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AAC965717D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ReactiveCocoa-iOS-UIKitTestHostTests.octest";
+			remoteRef = 0AAC965617D24042005743EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		0ADA235A174ADA7D007F1173 /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -749,6 +787,7 @@
 			files = (
 				0AFDE641179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */,
 				0A440055179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */,
+				0AAC964E17D24041005743EE /* GW2FilesDaemon.m in Sources */,
 				0A440071179CED9F00EF0A04 /* GW2Client.m in Sources */,
 				0AB2FFF617A2E0020034035D /* GW2StatusDetail.m in Sources */,
 				0A440044179CB81E00EF0A04 /* GW2EventStatus.m in Sources */,
@@ -782,6 +821,7 @@
 			files = (
 				0AFDE642179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */,
 				0A440056179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */,
+				0AAC964F17D24041005743EE /* GW2FilesDaemon.m in Sources */,
 				0A440072179CED9F00EF0A04 /* GW2Client.m in Sources */,
 				0AB2FFF717A2E0020034035D /* GW2StatusDetail.m in Sources */,
 				0A440045179CB81E00EF0A04 /* GW2EventStatus.m in Sources */,
