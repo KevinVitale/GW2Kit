@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3174BA187675AE009A34BA /* libMantle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B618767529009A34BA /* libMantle-iOS.a */; };
+		0A3174DE187678A2009A34BA /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DD18767896009A34BA /* libExpecta.a */; };
+		0A3174DF187678A6009A34BA /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DC18767896009A34BA /* libExpecta-iOS.a */; };
+		0A3174F318767B28009A34BA /* libSpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174E118767A42009A34BA /* libSpecta-iOS.a */; };
+		0A3174F418767B71009A34BA /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174E218767A42009A34BA /* libSpecta-OSX.a */; };
+		0A3174FE18767E0B009A34BA /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2320174AD673007F1173 /* GW2Kit.framework */; };
+		0A317504187682EE009A34BA /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B718767529009A34BA /* Mantle.framework */; };
+		0A317506187683F9009A34BA /* Mantle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A3174B718767529009A34BA /* Mantle.framework */; };
+		0A317507187684BD009A34BA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A31750218768158009A34BA /* XCTest.framework */; };
+		0A317509187685BD009A34BA /* Mantle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B718767529009A34BA /* Mantle.framework */; };
+		0A31750A187685C5009A34BA /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B718767529009A34BA /* Mantle.framework */; };
 		0A53008C1873513900D55261 /* GW2Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A53008A1873513900D55261 /* GW2Object.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A53008D1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
 		0A53008E1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
 		0A5300A518735B2300D55261 /* GW2ObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300A418735B2300D55261 /* GW2ObjectSpec.m */; };
 		0A5300A618735B2300D55261 /* GW2ObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300A418735B2300D55261 /* GW2ObjectSpec.m */; };
-		0A5300EB18735E9C00D55261 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2320174AD673007F1173 /* GW2Kit.framework */; };
 		0A5300EC18735EA000D55261 /* libGW2Kit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA22F2174AD63E007F1173 /* libGW2Kit-iOS.a */; };
 		0A5300F41873A1FB00D55261 /* GW2MapContinent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5300F21873A1FB00D55261 /* GW2MapContinent.h */; };
 		0A5300F51873A1FB00D55261 /* GW2MapContinent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300F31873A1FB00D55261 /* GW2MapContinent.m */; };
@@ -88,6 +98,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0A317505187683F0009A34BA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0A317506187683F9009A34BA /* Mantle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0ADA22F0174AD63E007F1173 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,6 +123,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0A317509187685BD009A34BA /* Mantle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +147,13 @@
 		0A3174841876683F009A34BA /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		0A3174851876683F009A34BA /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		0A3174861876683F009A34BA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0A3174B618767529009A34BA /* libMantle-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMantle-iOS.a"; path = "Vendor/Mantle/libMantle-iOS.a"; sourceTree = SOURCE_ROOT; };
+		0A3174B718767529009A34BA /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = Vendor/Mantle/Mantle.framework; sourceTree = SOURCE_ROOT; };
+		0A3174DC18767896009A34BA /* libExpecta-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libExpecta-iOS.a"; path = "Vendor/Expecta/libExpecta-iOS.a"; sourceTree = SOURCE_ROOT; };
+		0A3174DD18767896009A34BA /* libExpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libExpecta.a; path = Vendor/Expecta/libExpecta.a; sourceTree = SOURCE_ROOT; };
+		0A3174E118767A42009A34BA /* libSpecta-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-iOS.a"; path = "Vendor/Specta/libSpecta-iOS.a"; sourceTree = SOURCE_ROOT; };
+		0A3174E218767A42009A34BA /* libSpecta-OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-OSX.a"; path = "Vendor/Specta/libSpecta-OSX.a"; sourceTree = SOURCE_ROOT; };
+		0A31750218768158009A34BA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0A3FFD561871FFB600A4D2A6 /* OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FFD711871FFCA00A4D2A6 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FFD85187204EB00A4D2A6 /* GW2MapTilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapTilePath.h; sourceTree = "<group>"; };
@@ -174,7 +202,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5300EB18735E9C00D55261 /* GW2Kit.framework in Frameworks */,
+				0A317507187684BD009A34BA /* XCTest.framework in Frameworks */,
+				0A3174FE18767E0B009A34BA /* GW2Kit.framework in Frameworks */,
+				0A317504187682EE009A34BA /* Mantle.framework in Frameworks */,
+				0A3174DE187678A2009A34BA /* libExpecta.a in Frameworks */,
+				0A3174F418767B71009A34BA /* libSpecta-OSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5300EC18735EA000D55261 /* libGW2Kit-iOS.a in Frameworks */,
+				0A3174DF187678A6009A34BA /* libExpecta-iOS.a in Frameworks */,
+				0A3174F318767B28009A34BA /* libSpecta-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3174BA187675AE009A34BA /* libMantle-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A31750A187685C5009A34BA /* Mantle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +300,36 @@
 				0A3174851876683F009A34BA /* Mac-StaticLibrary.xcconfig */,
 			);
 			path = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		0A3174A718767529009A34BA /* Mantle */ = {
+			isa = PBXGroup;
+			children = (
+				0A3174B618767529009A34BA /* libMantle-iOS.a */,
+				0A3174B718767529009A34BA /* Mantle.framework */,
+			);
+			name = Mantle;
+			path = Vendor/Mantle;
+			sourceTree = SOURCE_ROOT;
+		};
+		0A3174BB18767896009A34BA /* Expecta */ = {
+			isa = PBXGroup;
+			children = (
+				0A3174DC18767896009A34BA /* libExpecta-iOS.a */,
+				0A3174DD18767896009A34BA /* libExpecta.a */,
+			);
+			name = Expecta;
+			path = Vendor/Expecta;
+			sourceTree = "<group>";
+		};
+		0A3174E018767A42009A34BA /* Specta */ = {
+			isa = PBXGroup;
+			children = (
+				0A3174E118767A42009A34BA /* libSpecta-iOS.a */,
+				0A3174E218767A42009A34BA /* libSpecta-OSX.a */,
+			);
+			name = Specta;
+			path = Vendor/Specta;
 			sourceTree = "<group>";
 		};
 		0A44001C179C9A9600EF0A04 /* Events */ = {
@@ -355,6 +421,10 @@
 		0ADA22F4174AD63E007F1173 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A31750218768158009A34BA /* XCTest.framework */,
+				0A3174E018767A42009A34BA /* Specta */,
+				0A3174BB18767896009A34BA /* Expecta */,
+				0A3174A718767529009A34BA /* Mantle */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -458,6 +528,7 @@
 				0A3FFD521871FFB600A4D2A6 /* Sources */,
 				0A3FFD531871FFB600A4D2A6 /* Frameworks */,
 				0A3FFD541871FFB600A4D2A6 /* Resources */,
+				0A317505187683F0009A34BA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -705,6 +776,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
@@ -728,6 +800,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Profile;
@@ -744,6 +822,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
 				FRAMEWORK_VERSION = A;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -777,6 +856,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -794,7 +877,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -826,6 +920,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -842,8 +941,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -852,6 +962,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Profile;
@@ -867,6 +978,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
@@ -890,6 +1002,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Test;
@@ -906,6 +1024,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
 				FRAMEWORK_VERSION = A;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -939,6 +1058,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -956,7 +1079,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -988,6 +1122,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1004,8 +1143,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1014,6 +1164,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Test;
@@ -1036,6 +1187,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1053,7 +1208,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1087,6 +1253,10 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1097,7 +1267,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1128,6 +1309,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1144,8 +1330,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1154,6 +1351,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -1177,6 +1375,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
@@ -1186,8 +1389,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
 				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
+					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1196,6 +1410,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -1211,6 +1426,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
@@ -1224,6 +1440,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
@@ -1247,6 +1464,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1263,6 +1486,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OBJROOT)/UninstalledProducts/include",
+					"$(SRCROOT)/Vendor/Mantle",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -1279,6 +1508,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
 				FRAMEWORK_VERSION = A;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1306,6 +1536,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Vendor/Mantle";
 				FRAMEWORK_VERSION = A;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

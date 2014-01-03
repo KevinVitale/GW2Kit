@@ -7,13 +7,8 @@
 //
 
 #define EXP_SHORTHAND
-#import "Expecta.h"
-#import "Specta.h"
-#if TARGET_OS_IPHONE
-#import "OCMock.h"
-#else
-#import <OCMock/OCMock.h>
-#endif
+#import <Expecta/Expecta.h>
+#import <Specta/Specta.h>
 
 #import "GW2MapContinent.h"
 
