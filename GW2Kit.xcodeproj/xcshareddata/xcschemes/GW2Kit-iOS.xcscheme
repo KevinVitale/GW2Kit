@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ADA2302174AD63F007F1173"
-               BuildableName = "GW2Kit-iOSTests.octest"
-               BlueprintName = "GW2Kit-iOSTests"
+               BlueprintIdentifier = "0A3FFD701871FFCA00A4D2A6"
+               BuildableName = "iOS Tests.xctest"
+               BlueprintName = "iOS Tests"
                ReferencedContainer = "container:GW2Kit.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -7,187 +7,123 @@
 //
 
 #import "GW2Color.h"
-#import <RestKit/RestKit.h>
 #if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
+@import UIKit.UIColor;
 #else
+@import AppKit;
 #endif
-
-#import <Accelerate/Accelerate.h>
-
-@implementation GW2ColorMaterial
-- (NSString *)description {
-    return [self.rgb description];
-}
-- (id)color {
-    float red   = ([self.rgb[0] floatValue] / 255.f);
-    float green = ([self.rgb[1] floatValue] / 255.f);
-    float blue  = ([self.rgb[2] floatValue] / 255.f);
-#if TARGET_OS_IPHONE
-    return [UIColor colorWithRed:red
-                           green:green
-                            blue:blue
-                           alpha:1.f];
-#else
-    return [NSColor colorWithDeviceRed:red
-                                 green:green
-                                  blue:blue
-                                 alpha:1.f];
-#endif
-}
-- (id)shiftColor:(id)color {
-    @throw [NSException new];
-    return nil;
-}
-+ (RKMapping *)mappingObject {
-    RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class]];
-    [mapping addAttributeMappingsFromArray:@[@"brightness", @"contrast", @"hue", @"saturation", @"lightness", @"rgb"]];
-    return mapping;
-}
-@end
-
-
-
-void hsl_to_hsv(float hh, float ss, float ll,
-                float* h, float* s, float *v)
-{
-    *h = hh;
-    ll *= 2;
-    ss *= (ll <= 1) ? ll : 2 - ll;
-    *v = (ll + ss) / 2;
-    *s = (2 * ss) / (ll + ss);
-}
-
-void hsv_to_hsl(float h, float s, float v,
-                float* hh, float* ss, float *ll)
-{
-    *hh = h;
-    *ll = (2 - s) * v;
-    *ss = s * v;
-    *ss /= (*ll <= 1) ? (*ll) : 2 - (*ll);
-    *ll /= 2;
-}
 
 @interface GW2Color ()
-@property (copy, readwrite, nonatomic) NSString *id;
-@property (copy, readwrite, nonatomic) NSString *name;
-@property (copy, readwrite, nonatomic) NSArray  *base_rgb;
-@property (strong, readwrite, nonatomic) GW2ColorMaterial *clothMaterial;
-@property (strong, readwrite, nonatomic) GW2ColorMaterial *leatherMaterial;
-@property (strong, readwrite, nonatomic) GW2ColorMaterial *metalMaterial;
-- (id)colorForComponents:(NSDictionary *)components;
+
 @end
 
 @implementation GW2Color
-
-+ (NSDictionary *)mappingAttributes {
-    return @{
-             @"(id).name"    : @"name",
-             @"(id).base_rgb": @"base_rgb",
-             };
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @
+    {
+        @"color"    : @"base_rgb",
+        @"objectID" : NSNull.null,
+    };
 }
-+ (RKMapping *)mappingObject {
-    RKObjectMapping* mapping = [RKObjectMapping mappingForClass:[self class]];
-    mapping.forceCollectionMapping = YES;
-    [mapping addAttributeMappingFromKeyOfRepresentationToAttribute:@"id"];
-    [mapping addAttributeMappingsFromDictionary:[[self class] mappingAttributes]];
-    [mapping addPropertyMappingsFromArray:@[
-     [RKRelationshipMapping relationshipMappingFromKeyPath:@"(id).cloth"
-                                                 toKeyPath:@"clothMaterial"
-                                               withMapping:[GW2ColorMaterial mappingObject]],
-     [RKRelationshipMapping relationshipMappingFromKeyPath:@"(id).leather"
-                                                 toKeyPath:@"leatherMaterial"
-                                               withMapping:[GW2ColorMaterial mappingObject]],
-     [RKRelationshipMapping relationshipMappingFromKeyPath:@"(id).cloth"
-                                                 toKeyPath:@"metalMaterial"
-                                               withMapping:[GW2ColorMaterial mappingObject]]]];
-    
-    return mapping;
++ (NSValueTransformer *)clothJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2ColorMaterial.class];
 }
-
-- (id)colorForComponents:(NSDictionary *)components {
-    if(!components) {
-        return nil;
++ (NSValueTransformer *)leatherJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2ColorMaterial.class];
+}
++ (NSValueTransformer *)metalJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2ColorMaterial.class];
+}
++ (NSValueTransformer *)colorJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSArray *rgbArray) {
+        id color;
+        if(rgbArray.count == 3) {
+            CGFloat red     = [rgbArray[0] floatValue] / 255.f;
+            CGFloat green   = [rgbArray[1] floatValue] / 255.f;
+            CGFloat blue    = [rgbArray[2] floatValue] / 255.f;
+#if TARGET_OS_IPHONE
+            color = [UIColor colorWithRed:red
+                                    green:green
+                                     blue:blue
+                                    alpha:1.f];
+#else
+            color = [NSColor colorWithRed:red
+                                    green:green
+                                     blue:blue
+                                    alpha:1.f];
+#endif
+        }
+        return color;
     }
-    
-    // 0. Get the brightness  & contrast values (normalizing values...we assume 255.f)
-    float brightness = [components[@"brightness"] floatValue];
-    float contrast = [components[@"contrast"] floatValue];
-    
-    // 1a. Take the base color (RGB normalized in 255.f)
-    float base_RedComponent     = 128.f;
-    float base_GreenComponent   = 26.f;
-    float base_BlueComponent    = 26.f;
-    
-    // 1b. Apply brightness
-    base_RedComponent += brightness;
-    base_GreenComponent += brightness;
-    base_BlueComponent += brightness;
-    
-    // 1c. Apply contrast
-    base_RedComponent   = (base_RedComponent - 128.f) * contrast + 128.f;
-    base_GreenComponent = (base_GreenComponent - 128.f) * contrast + 128.f;
-    base_BlueComponent  = (base_BlueComponent - 128.f) * contrast + 128.f;
-    
+                                                         reverseBlock:^id (id color) {
 #if TARGET_OS_IPHONE
-    UIColor *baseColor = [UIColor colorWithRed:(base_RedComponent / 255.f)
-                                         green:(base_GreenComponent / 255.f)
-                                          blue:(base_BlueComponent / 255.f)
-                                         alpha:1.f];
+                                                             CGFloat red, green, blue;
+                                                             [color getRed:&red
+                                                                     green:&green
+                                                                      blue:&blue
+                                                                     alpha:NULL];
 #else
-    NSColor *baseColor = [NSColor colorWithDeviceRed:(base_RedComponent / 255.f)
-                                               green:(base_GreenComponent / 255.f)
-                                                blue:(base_BlueComponent / 255.f)
-                                               alpha:1.f];
+                                                             CGFloat red     = [color redComponent];
+                                                             CGFloat green   = [color greenComponent];
+                                                             CGFloat blue    = [color blueComponent];
 #endif
-    
-    // 2a. Convert from RGB to HSV
-#if TARGET_OS_IPHONE
-    float hsv_Hue, hsv_Sat, hsv_Bright;
-#else
-    CGFloat hsv_Hue, hsv_Sat, hsv_Bright;
-#endif
-    [baseColor getHue:&hsv_Hue
-           saturation:&hsv_Sat
-           brightness:&hsv_Bright
-                alpha:NULL];
-    
-    // 2b. Convert form HSV to HSL
-    float hsl_Hue, hsl_Sat, hsl_Light;
-    hsv_to_hsl(hsv_Hue, hsv_Sat, hsv_Bright,
-               &hsl_Hue,
-               &hsl_Sat,
-               &hsl_Light);
-    
-    // 3a. Normalize HSL values from response
-    float hue           = [components[@"hue"] floatValue] / 360.f;
-    float saturation    = [components[@"saturation"] floatValue];
-    float lightness     = [components[@"lightness"] floatValue];
-    
-    // 3b. Apply HSL shifts
-    hsl_Hue     *= hue;
-    hsl_Sat     *= saturation;
-    hsl_Light   *= lightness;
-    
-    hsl_to_hsv( hsl_Hue,  hsl_Sat,  hsl_Light,
-               &hsv_Hue, &hsv_Sat, &hsv_Bright);
-    
-#if TARGET_OS_IPHONE
-    UIColor *color = [UIColor colorWithHue:hsv_Hue
-                                saturation:hsv_Sat
-                                brightness:hsv_Bright
-                                     alpha:1.f];
-#else
-    NSColor *color = [NSColor colorWithDeviceHue:hsv_Hue
-                                      saturation:hsv_Sat
-                                      brightness:hsv_Bright
-                                           alpha:1.f];
-#endif
-    return color;
+                                                             return @[
+                                                                      @((NSUInteger)(red * 255.f)),
+                                                                      @((NSUInteger)(green * 255.f)),
+                                                                      @((NSUInteger)(blue * 255.f))
+                                                                      ];
+                                                         }];
 }
+@end
 
-- (NSString *)description {
-    
-    return [@{@"Name": self.name, @"ID:" : self.id, @"Cloth" : self.clothMaterial, @"Leather" : self.leatherMaterial, @"Metal" : self.metalMaterial} description];
+
+@implementation GW2ColorMaterial
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @
+    {
+        @"color"    : @"rgb",
+        @"objectID" : NSNull.null,
+        @"name"     : NSNull.null
+    };
+}
++ (NSValueTransformer *)colorJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSArray *rgbArray) {
+        id color;
+        if(rgbArray.count == 3) {
+            CGFloat red     = [rgbArray[0] floatValue] / 255.f;
+            CGFloat green   = [rgbArray[1] floatValue] / 255.f;
+            CGFloat blue    = [rgbArray[2] floatValue] / 255.f;
+#if TARGET_OS_IPHONE
+            color = [UIColor colorWithRed:red
+                                    green:green
+                                     blue:blue
+                                    alpha:1.f];
+#else
+            color = [NSColor colorWithRed:red
+                                    green:green
+                                     blue:blue
+                                    alpha:1.f];
+#endif
+        }
+        return color;
+    }
+                                                         reverseBlock:^id (id color) {
+#if TARGET_OS_IPHONE
+                                                             CGFloat red, green, blue;
+                                                             [color getRed:&red
+                                                                     green:&green
+                                                                      blue:&blue
+                                                                     alpha:NULL];
+#else
+                                                             CGFloat red     = [color redComponent];
+                                                             CGFloat green   = [color greenComponent];
+                                                             CGFloat blue    = [color blueComponent];
+#endif
+                                                             return @[
+                                                                      @((NSUInteger)(red * 255.f)),
+                                                                      @((NSUInteger)(green * 255.f)),
+                                                                      @((NSUInteger)(blue * 255.f))
+                                                                      ];
+                                                         }];
 }
 @end

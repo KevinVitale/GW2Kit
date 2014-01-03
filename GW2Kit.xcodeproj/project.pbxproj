@@ -7,225 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A0FAB1417556132005AE292 /* GW2Kit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ADA2335174AD722007F1173 /* GW2Kit.h */; };
-		0A0FAB20175563DC005AE292 /* SPYClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A7E9C7F175515870017A1FB /* SPYClient.h */; };
-		0A0FAB21175563DC005AE292 /* SPYItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A7E9C81175515870017A1FB /* SPYItem.h */; };
-		0A0FAB22175563DC005AE292 /* Spidy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A7E9C83175515870017A1FB /* Spidy.h */; };
-		0A440023179C9AAC00EF0A04 /* GW2EventDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A440021179C9AAC00EF0A04 /* GW2EventDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440024179C9AAC00EF0A04 /* GW2EventDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440022179C9AAC00EF0A04 /* GW2EventDaemon.m */; };
-		0A440025179C9AAC00EF0A04 /* GW2EventDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440022179C9AAC00EF0A04 /* GW2EventDaemon.m */; };
-		0A440028179C9D9500EF0A04 /* GW2DefaultDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A440026179C9D9500EF0A04 /* GW2DefaultDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440029179C9D9500EF0A04 /* GW2DefaultDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440027179C9D9500EF0A04 /* GW2DefaultDaemon.m */; };
-		0A44002A179C9D9500EF0A04 /* GW2DefaultDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440027179C9D9500EF0A04 /* GW2DefaultDaemon.m */; };
-		0A440030179CA17500EF0A04 /* GW2EventDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A440021179C9AAC00EF0A04 /* GW2EventDaemon.h */; };
-		0A440031179CA1AB00EF0A04 /* GW2DefaultDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A440026179C9D9500EF0A04 /* GW2DefaultDaemon.h */; };
-		0A440040179CB81E00EF0A04 /* GW2EventDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A44003C179CB81E00EF0A04 /* GW2EventDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440041179CB81E00EF0A04 /* GW2EventDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44003D179CB81E00EF0A04 /* GW2EventDetail.m */; };
-		0A440042179CB81E00EF0A04 /* GW2EventDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44003D179CB81E00EF0A04 /* GW2EventDetail.m */; };
-		0A440043179CB81E00EF0A04 /* GW2EventStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A44003E179CB81E00EF0A04 /* GW2EventStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440044179CB81E00EF0A04 /* GW2EventStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44003F179CB81E00EF0A04 /* GW2EventStatus.m */; };
-		0A440045179CB81E00EF0A04 /* GW2EventStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44003F179CB81E00EF0A04 /* GW2EventStatus.m */; };
-		0A440048179CD00500EF0A04 /* GW2WvWDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A440046179CD00500EF0A04 /* GW2WvWDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440049179CD00500EF0A04 /* GW2WvWDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440047179CD00500EF0A04 /* GW2WvWDaemon.m */; };
-		0A44004A179CD00500EF0A04 /* GW2WvWDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440047179CD00500EF0A04 /* GW2WvWDaemon.m */; };
-		0A44004B179CD0F100EF0A04 /* GW2WvWDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A440046179CD00500EF0A04 /* GW2WvWDaemon.h */; };
-		0A44004F179CDC4F00EF0A04 /* GW2ItemsDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A44004D179CDC4F00EF0A04 /* GW2ItemsDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440050179CDC4F00EF0A04 /* GW2ItemsDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44004E179CDC4F00EF0A04 /* GW2ItemsDaemon.m */; };
-		0A440051179CDC4F00EF0A04 /* GW2ItemsDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44004E179CDC4F00EF0A04 /* GW2ItemsDaemon.m */; };
-		0A440054179CDD1000EF0A04 /* GW2ItemDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A440052179CDD1000EF0A04 /* GW2ItemDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440055179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440053179CDD1000EF0A04 /* GW2ItemDetail.m */; };
-		0A440056179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440053179CDD1000EF0A04 /* GW2ItemDetail.m */; };
-		0A440057179CDD3F00EF0A04 /* GW2ItemDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A440052179CDD1000EF0A04 /* GW2ItemDetail.h */; };
-		0A440058179CDD3F00EF0A04 /* GW2ItemsDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A44004D179CDC4F00EF0A04 /* GW2ItemsDaemon.h */; };
-		0A44005B179CDDD200EF0A04 /* GW2RecipeDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A440059179CDDD200EF0A04 /* GW2RecipeDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A44005C179CDDD200EF0A04 /* GW2RecipeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44005A179CDDD200EF0A04 /* GW2RecipeDetail.m */; };
-		0A44005D179CDDD200EF0A04 /* GW2RecipeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44005A179CDDD200EF0A04 /* GW2RecipeDetail.m */; };
-		0A44005E179CDDDF00EF0A04 /* GW2RecipeDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A440059179CDDD200EF0A04 /* GW2RecipeDetail.h */; };
-		0A440063179CEC3200EF0A04 /* GW2GuildDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A440061179CEC3200EF0A04 /* GW2GuildDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440064179CEC3200EF0A04 /* GW2GuildDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440062179CEC3200EF0A04 /* GW2GuildDetail.m */; };
-		0A440065179CEC3200EF0A04 /* GW2GuildDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440062179CEC3200EF0A04 /* GW2GuildDetail.m */; };
-		0A440066179CEC4A00EF0A04 /* GW2GuildDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A440061179CEC3200EF0A04 /* GW2GuildDetail.h */; };
-		0A440069179CEC6600EF0A04 /* GW2GuildDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A440067179CEC6600EF0A04 /* GW2GuildDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A44006A179CEC6600EF0A04 /* GW2GuildDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440068179CEC6600EF0A04 /* GW2GuildDaemon.m */; };
-		0A44006B179CEC6600EF0A04 /* GW2GuildDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A440068179CEC6600EF0A04 /* GW2GuildDaemon.m */; };
-		0A44006D179CED1500EF0A04 /* GW2GuildDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A440067179CEC6600EF0A04 /* GW2GuildDaemon.h */; };
-		0A440070179CED9F00EF0A04 /* GW2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A44006E179CED9F00EF0A04 /* GW2Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A440071179CED9F00EF0A04 /* GW2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44006F179CED9F00EF0A04 /* GW2Client.m */; };
-		0A440072179CED9F00EF0A04 /* GW2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44006F179CED9F00EF0A04 /* GW2Client.m */; };
-		0A440073179CEDBA00EF0A04 /* GW2Client.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A44006E179CED9F00EF0A04 /* GW2Client.h */; };
-		0A62B6801778C2AF001C1E56 /* GW2ResourceName.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AD3D0BB1778C1D900A32397 /* GW2ResourceName.h */; };
-		0A62B6831778C2C7001C1E56 /* GW2WvWMatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AD3D0AD1778C1D900A32397 /* GW2WvWMatch.h */; };
-		0A62B6841778C2E0001C1E56 /* GW2WvWMatchDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AD3D0AF1778C1D900A32397 /* GW2WvWMatchDetail.h */; };
-		0A62B6871778C311001C1E56 /* GW2Build.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AD3D0A81778C1D900A32397 /* GW2Build.h */; };
-		0A62B6881778C311001C1E56 /* GW2Color.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AD3D0AA1778C1D900A32397 /* GW2Color.h */; };
-		0A6D673F174EA188001CCB7F /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
-		0A7E9C84175515870017A1FB /* SPYClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C7F175515870017A1FB /* SPYClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A7E9C85175515870017A1FB /* SPYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C80175515870017A1FB /* SPYClient.m */; };
-		0A7E9C86175515870017A1FB /* SPYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C80175515870017A1FB /* SPYClient.m */; };
-		0A7E9C87175515870017A1FB /* SPYItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C81175515870017A1FB /* SPYItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A7E9C88175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
-		0A7E9C89175515870017A1FB /* SPYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E9C82175515870017A1FB /* SPYItem.m */; };
-		0A7E9C8A175515870017A1FB /* Spidy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E9C83175515870017A1FB /* Spidy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AAC964D17D24041005743EE /* GW2FilesDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AAC964B17D24041005743EE /* GW2FilesDaemon.h */; };
-		0AAC964E17D24041005743EE /* GW2FilesDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC964C17D24041005743EE /* GW2FilesDaemon.m */; };
-		0AAC964F17D24041005743EE /* GW2FilesDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC964C17D24041005743EE /* GW2FilesDaemon.m */; };
-		0AB2001617A36FFA0034035D /* GW2StatusWvWRankings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB2001417A36FFA0034035D /* GW2StatusWvWRankings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AB2001717A36FFA0034035D /* GW2StatusWvWRankings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2001517A36FFA0034035D /* GW2StatusWvWRankings.m */; };
-		0AB2001817A36FFA0034035D /* GW2StatusWvWRankings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2001517A36FFA0034035D /* GW2StatusWvWRankings.m */; };
-		0AB2001917A370250034035D /* GW2StatusWvWRankings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AB2001417A36FFA0034035D /* GW2StatusWvWRankings.h */; };
-		0AB2FFEB17A2D4E80034035D /* GW2StatusDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB2FFE917A2D4E80034035D /* GW2StatusDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AB2FFEC17A2D4E80034035D /* GW2StatusDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2FFEA17A2D4E80034035D /* GW2StatusDaemon.m */; };
-		0AB2FFED17A2D4E80034035D /* GW2StatusDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2FFEA17A2D4E80034035D /* GW2StatusDaemon.m */; };
-		0AB2FFF217A2DA0F0034035D /* GW2StatusDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AB2FFE917A2D4E80034035D /* GW2StatusDaemon.h */; };
-		0AB2FFF517A2E0020034035D /* GW2StatusDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB2FFF317A2E0020034035D /* GW2StatusDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AB2FFF617A2E0020034035D /* GW2StatusDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2FFF417A2E0020034035D /* GW2StatusDetail.m */; };
-		0AB2FFF717A2E0020034035D /* GW2StatusDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2FFF417A2E0020034035D /* GW2StatusDetail.m */; };
-		0AB2FFF817A2E4010034035D /* GW2StatusDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AB2FFF317A2E0020034035D /* GW2StatusDetail.h */; };
-		0AB2FFFB17A310CA0034035D /* GW2StatusWvWMatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB2FFF917A310CA0034035D /* GW2StatusWvWMatches.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AB2FFFC17A310CA0034035D /* GW2StatusWvWMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2FFFA17A310CA0034035D /* GW2StatusWvWMatches.m */; };
-		0AB2FFFD17A310CA0034035D /* GW2StatusWvWMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2FFFA17A310CA0034035D /* GW2StatusWvWMatches.m */; };
-		0AB2FFFE17A313AE0034035D /* GW2StatusWvWMatches.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AB2FFF917A310CA0034035D /* GW2StatusWvWMatches.h */; };
-		0ACFED3617A2C93500E7B2C2 /* GW2EventStatus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A44003E179CB81E00EF0A04 /* GW2EventStatus.h */; };
-		0ACFED3B17A2C95500E7B2C2 /* GW2EventDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A44003C179CB81E00EF0A04 /* GW2EventDetail.h */; };
-		0AD3D0BD1778C1D900A32397 /* GW2Build.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD3D0A81778C1D900A32397 /* GW2Build.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AD3D0BE1778C1D900A32397 /* GW2Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0A91778C1D900A32397 /* GW2Build.m */; };
-		0AD3D0BF1778C1D900A32397 /* GW2Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0A91778C1D900A32397 /* GW2Build.m */; };
-		0AD3D0C01778C1D900A32397 /* GW2Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD3D0AA1778C1D900A32397 /* GW2Color.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AD3D0C11778C1D900A32397 /* GW2Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0AB1778C1D900A32397 /* GW2Color.m */; };
-		0AD3D0C21778C1D900A32397 /* GW2Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0AB1778C1D900A32397 /* GW2Color.m */; };
-		0AD3D0C31778C1D900A32397 /* GW2WvWMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD3D0AD1778C1D900A32397 /* GW2WvWMatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AD3D0C41778C1D900A32397 /* GW2WvWMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0AE1778C1D900A32397 /* GW2WvWMatch.m */; };
-		0AD3D0C51778C1D900A32397 /* GW2WvWMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0AE1778C1D900A32397 /* GW2WvWMatch.m */; };
-		0AD3D0C61778C1D900A32397 /* GW2WvWMatchDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD3D0AF1778C1D900A32397 /* GW2WvWMatchDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AD3D0C71778C1D900A32397 /* GW2WvWMatchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0B01778C1D900A32397 /* GW2WvWMatchDetail.m */; };
-		0AD3D0C81778C1D900A32397 /* GW2WvWMatchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0B01778C1D900A32397 /* GW2WvWMatchDetail.m */; };
-		0AD3D0D81778C1D900A32397 /* GW2ResourceName.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD3D0BB1778C1D900A32397 /* GW2ResourceName.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AD3D0D91778C1D900A32397 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0BC1778C1D900A32397 /* GW2ResourceName.m */; };
-		0AD3D0DA1778C1D900A32397 /* GW2ResourceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3D0BC1778C1D900A32397 /* GW2ResourceName.m */; };
+		0A53008C1873513900D55261 /* GW2Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A53008A1873513900D55261 /* GW2Object.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A53008D1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
+		0A53008E1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
+		0A5300A518735B2300D55261 /* GW2ObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300A418735B2300D55261 /* GW2ObjectSpec.m */; };
+		0A5300A618735B2300D55261 /* GW2ObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300A418735B2300D55261 /* GW2ObjectSpec.m */; };
+		0A5300EB18735E9C00D55261 /* GW2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2320174AD673007F1173 /* GW2Kit.framework */; };
+		0A5300EC18735EA000D55261 /* libGW2Kit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA22F2174AD63E007F1173 /* libGW2Kit-iOS.a */; };
+		0A5300F41873A1FB00D55261 /* GW2MapContinent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5300F21873A1FB00D55261 /* GW2MapContinent.h */; };
+		0A5300F51873A1FB00D55261 /* GW2MapContinent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300F31873A1FB00D55261 /* GW2MapContinent.m */; };
+		0A5300F61873A1FB00D55261 /* GW2MapContinent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300F31873A1FB00D55261 /* GW2MapContinent.m */; };
+		0A5300F81873A82700D55261 /* GW2MapContinentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300F71873A82700D55261 /* GW2MapContinentSpec.m */; };
+		0A5300F91873A82700D55261 /* GW2MapContinentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300F71873A82700D55261 /* GW2MapContinentSpec.m */; };
+		0A5300FC187604A100D55261 /* GW2EventState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5300FA187604A100D55261 /* GW2EventState.h */; };
+		0A5300FD187604A100D55261 /* GW2EventState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300FB187604A100D55261 /* GW2EventState.m */; };
+		0A5300FE187604A100D55261 /* GW2EventState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300FB187604A100D55261 /* GW2EventState.m */; };
+		0A5301001876079600D55261 /* GW2EventStateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300FF1876079600D55261 /* GW2EventStateSpec.m */; };
+		0A5301011876079600D55261 /* GW2EventStateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5300FF1876079600D55261 /* GW2EventStateSpec.m */; };
+		0A53010418760F8A00D55261 /* GW2Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A53010218760F8A00D55261 /* GW2Color.h */; };
+		0A53010518760F8A00D55261 /* GW2Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53010318760F8A00D55261 /* GW2Color.m */; };
+		0A53010618760F8A00D55261 /* GW2Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53010318760F8A00D55261 /* GW2Color.m */; };
+		0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5301071876130500D55261 /* GW2ColorSpec.m */; };
+		0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5301071876130500D55261 /* GW2ColorSpec.m */; };
 		0ADA232C174AD673007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA232A174AD673007F1173 /* InfoPlist.strings */; };
-		0ADA2336174AD722007F1173 /* GW2Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADA2335174AD722007F1173 /* GW2Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0ADA2362174ADAE6007F1173 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA235E174ADA7D007F1173 /* RestKit.framework */; };
-		0ADA2363174ADAFA007F1173 /* RestKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA235E174ADA7D007F1173 /* RestKit.framework */; };
-		0ADA2364174ADB07007F1173 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA235A174ADA7D007F1173 /* libRestKit.a */; };
-		0ADA2385174ADC7B007F1173 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2382174ADC39007F1173 /* libReactiveCocoa-iOS.a */; };
-		0ADA2386174ADC8E007F1173 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */; };
-		0AE215ED1778EC59002CB17C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE215EC1778EC59002CB17C /* Cocoa.framework */; };
-		0AFDE637179D75B700DBF373 /* GW2MapsDaemon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AFDE638179D75B700DBF373 /* GW2MapsDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */; };
-		0AFDE639179D75B700DBF373 /* GW2MapsDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */; };
-		0AFDE640179D7EA500DBF373 /* GW2ContinentDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AFDE641179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */; };
-		0AFDE642179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */; };
-		0AFDE643179D835800DBF373 /* GW2ContinentDetail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */; };
-		0AFDE644179D836100DBF373 /* GW2MapsDaemon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */; };
-		0AFDE647179D8B0C00DBF373 /* GW2MapResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AFDE648179D8B0C00DBF373 /* GW2MapResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */; };
-		0AFDE649179D8B0C00DBF373 /* GW2MapResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */; };
-		0AFDE650179D9B1000DBF373 /* GW2MapResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */; };
-		0AFDE658179DA09900DBF373 /* GW2MapFloorResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AFDE659179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */; };
-		0AFDE65A179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */; };
-		0AFDE65B179DA26800DBF373 /* GW2MapFloorResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */; };
+		0AEEDEB018721A0F00D0319E /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEAF18721A0F00D0319E /* events.json */; };
+		0AEEDEB118721A0F00D0319E /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEAF18721A0F00D0319E /* events.json */; };
+		0AEEDEB318721A3000D0319E /* event_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEB218721A3000D0319E /* event_names.json */; };
+		0AEEDEB418721A3000D0319E /* event_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEB218721A3000D0319E /* event_names.json */; };
+		0AEEDEB618721ADF00D0319E /* map_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEB518721ADF00D0319E /* map_names.json */; };
+		0AEEDEB718721ADF00D0319E /* map_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEB518721ADF00D0319E /* map_names.json */; };
+		0AEEDEB918721B2600D0319E /* world_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEB818721B2600D0319E /* world_names.json */; };
+		0AEEDEBA18721B2600D0319E /* world_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEB818721B2600D0319E /* world_names.json */; };
+		0AEEDEBC18721BA800D0319E /* event_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEBB18721BA800D0319E /* event_details.json */; };
+		0AEEDEBD18721BA800D0319E /* event_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEBB18721BA800D0319E /* event_details.json */; };
+		0AEEDEBF18721D1800D0319E /* guild_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEBE18721D1800D0319E /* guild_details.json */; };
+		0AEEDEC018721D1800D0319E /* guild_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEBE18721D1800D0319E /* guild_details.json */; };
+		0AEEDEC218721E0900D0319E /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEC118721E0900D0319E /* items.json */; };
+		0AEEDEC318721E0900D0319E /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEC118721E0900D0319E /* items.json */; };
+		0AEEDEC518721E4E00D0319E /* item_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEC418721E4E00D0319E /* item_details.json */; };
+		0AEEDEC618721E4E00D0319E /* item_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEC418721E4E00D0319E /* item_details.json */; };
+		0AEEDEC818721EF700D0319E /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEC718721EF700D0319E /* recipes.json */; };
+		0AEEDEC918721EF700D0319E /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEC718721EF700D0319E /* recipes.json */; };
+		0AEEDECB18721F0400D0319E /* recipe_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDECA18721F0400D0319E /* recipe_details.json */; };
+		0AEEDECC18721F0400D0319E /* recipe_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDECA18721F0400D0319E /* recipe_details.json */; };
+		0AEEDECE18721F1500D0319E /* continents.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDECD18721F1500D0319E /* continents.json */; };
+		0AEEDECF18721F1500D0319E /* continents.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDECD18721F1500D0319E /* continents.json */; };
+		0AEEDED118721F2000D0319E /* maps.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED018721F2000D0319E /* maps.json */; };
+		0AEEDED218721F2000D0319E /* maps.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED018721F2000D0319E /* maps.json */; };
+		0AEEDED418721F2A00D0319E /* map_floor.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED318721F2A00D0319E /* map_floor.json */; };
+		0AEEDED518721F2A00D0319E /* map_floor.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED318721F2A00D0319E /* map_floor.json */; };
+		0AEEDED718721F4100D0319E /* matches.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED618721F4100D0319E /* matches.json */; };
+		0AEEDED818721F4100D0319E /* matches.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED618721F4100D0319E /* matches.json */; };
+		0AEEDEDA18721F7B00D0319E /* match_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED918721F7B00D0319E /* match_details.json */; };
+		0AEEDEDB18721F7B00D0319E /* match_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDED918721F7B00D0319E /* match_details.json */; };
+		0AEEDEDD18721F8B00D0319E /* objective_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEDC18721F8B00D0319E /* objective_names.json */; };
+		0AEEDEDE18721F8B00D0319E /* objective_names.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEDC18721F8B00D0319E /* objective_names.json */; };
+		0AEEDEE018721F9600D0319E /* build.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEDF18721F9600D0319E /* build.json */; };
+		0AEEDEE118721F9600D0319E /* build.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEDF18721F9600D0319E /* build.json */; };
+		0AEEDEE318721F9F00D0319E /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEE218721F9F00D0319E /* colors.json */; };
+		0AEEDEE418721F9F00D0319E /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEE218721F9F00D0319E /* colors.json */; };
+		0AEEDEE618721FA700D0319E /* files.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEE518721FA700D0319E /* files.json */; };
+		0AEEDEE718721FA700D0319E /* files.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEE518721FA700D0319E /* files.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A47C90C175A6D9400401DD4 /* PBXContainerItemProxy */ = {
+		0A3FFD621871FFB600A4D2A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5FAF5223174D4C2000CAC810;
-			remoteInfo = "ReactiveCocoaTests-iOS";
-		};
-		0AAC965417D24042005743EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1860F412177C91B500C7B3C9;
-			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHost";
-		};
-		0AAC965617D24042005743EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1860F430177C91B500C7B3C9;
-			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHostTests";
-		};
-		0ADA2359174ADA7D007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D1614564E810060A5C5;
-			remoteInfo = RestKit;
-		};
-		0ADA235B174ADA7D007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D2614564E820060A5C5;
-			remoteInfo = RestKitTests;
-		};
-		0ADA235D174ADA7D007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E62145651060060A5C5;
-			remoteInfo = RestKitFramework;
-		};
-		0ADA235F174ADA7D007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E78145651060060A5C5;
-			remoteInfo = RestKitFrameworkTests;
-		};
-		0ADA2365174ADB1B007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
+			containerPortal = 0ADA22E8174AD539007F1173 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 25160D1514564E810060A5C5;
-			remoteInfo = RestKit;
+			remoteGlobalIDString = 0ADA231F174AD673007F1173;
+			remoteInfo = GW2Kit;
 		};
-		0ADA2367174ADB20007F1173 /* PBXContainerItemProxy */ = {
+		0A3FFD801871FFCA00A4D2A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
+			containerPortal = 0ADA22E8174AD539007F1173 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 25160E61145651060060A5C5;
-			remoteInfo = RestKitFramework;
-		};
-		0ADA237F174ADC39007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88037F8315056328001A5B19;
-			remoteInfo = ReactiveCocoa;
-		};
-		0ADA2381174ADC39007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88F440AB153DAC820097B4C3;
-			remoteInfo = "ReactiveCocoa-iOS";
-		};
-		0ADA2383174ADC39007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88CDF7DC15000FCF00163A9F;
-			remoteInfo = ReactiveCocoaTests;
-		};
-		0ADA2387174ADCC3007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 88F440AA153DAC820097B4C3;
-			remoteInfo = "ReactiveCocoa-iOS";
-		};
-		0ADA2389174ADCCB007F1173 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 88037F8215056328001A5B19;
-			remoteInfo = ReactiveCocoa;
+			remoteGlobalIDString = 0ADA22F1174AD63E007F1173;
+			remoteInfo = "GW2Kit-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -236,34 +94,6 @@
 			dstPath = include/GW2Kit;
 			dstSubfolderSpec = 16;
 			files = (
-				0AB2001917A370250034035D /* GW2StatusWvWRankings.h in CopyFiles */,
-				0AB2FFFE17A313AE0034035D /* GW2StatusWvWMatches.h in CopyFiles */,
-				0AB2FFF817A2E4010034035D /* GW2StatusDetail.h in CopyFiles */,
-				0AB2FFF217A2DA0F0034035D /* GW2StatusDaemon.h in CopyFiles */,
-				0ACFED3B17A2C95500E7B2C2 /* GW2EventDetail.h in CopyFiles */,
-				0ACFED3617A2C93500E7B2C2 /* GW2EventStatus.h in CopyFiles */,
-				0AFDE65B179DA26800DBF373 /* GW2MapFloorResponse.h in CopyFiles */,
-				0AFDE650179D9B1000DBF373 /* GW2MapResource.h in CopyFiles */,
-				0AFDE644179D836100DBF373 /* GW2MapsDaemon.h in CopyFiles */,
-				0AFDE643179D835800DBF373 /* GW2ContinentDetail.h in CopyFiles */,
-				0A440073179CEDBA00EF0A04 /* GW2Client.h in CopyFiles */,
-				0A44006D179CED1500EF0A04 /* GW2GuildDaemon.h in CopyFiles */,
-				0A440066179CEC4A00EF0A04 /* GW2GuildDetail.h in CopyFiles */,
-				0A44005E179CDDDF00EF0A04 /* GW2RecipeDetail.h in CopyFiles */,
-				0A440057179CDD3F00EF0A04 /* GW2ItemDetail.h in CopyFiles */,
-				0A440058179CDD3F00EF0A04 /* GW2ItemsDaemon.h in CopyFiles */,
-				0A44004B179CD0F100EF0A04 /* GW2WvWDaemon.h in CopyFiles */,
-				0A440031179CA1AB00EF0A04 /* GW2DefaultDaemon.h in CopyFiles */,
-				0A440030179CA17500EF0A04 /* GW2EventDaemon.h in CopyFiles */,
-				0A62B6871778C311001C1E56 /* GW2Build.h in CopyFiles */,
-				0A62B6881778C311001C1E56 /* GW2Color.h in CopyFiles */,
-				0A62B6841778C2E0001C1E56 /* GW2WvWMatchDetail.h in CopyFiles */,
-				0A62B6831778C2C7001C1E56 /* GW2WvWMatch.h in CopyFiles */,
-				0A62B6801778C2AF001C1E56 /* GW2ResourceName.h in CopyFiles */,
-				0A0FAB20175563DC005AE292 /* SPYClient.h in CopyFiles */,
-				0A0FAB21175563DC005AE292 /* SPYItem.h in CopyFiles */,
-				0A0FAB22175563DC005AE292 /* Spidy.h in CopyFiles */,
-				0A0FAB1417556132005AE292 /* GW2Kit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +103,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0A6D673F174EA188001CCB7F /* ReactiveCocoa.framework in Copy Frameworks */,
-				0ADA2363174ADAFA007F1173 /* RestKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,79 +110,86 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A440021179C9AAC00EF0A04 /* GW2EventDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2EventDaemon.h; sourceTree = "<group>"; };
-		0A440022179C9AAC00EF0A04 /* GW2EventDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventDaemon.m; sourceTree = "<group>"; };
-		0A440026179C9D9500EF0A04 /* GW2DefaultDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2DefaultDaemon.h; sourceTree = "<group>"; };
-		0A440027179C9D9500EF0A04 /* GW2DefaultDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2DefaultDaemon.m; sourceTree = "<group>"; };
-		0A44003C179CB81E00EF0A04 /* GW2EventDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2EventDetail.h; sourceTree = "<group>"; };
-		0A44003D179CB81E00EF0A04 /* GW2EventDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventDetail.m; sourceTree = "<group>"; };
-		0A44003E179CB81E00EF0A04 /* GW2EventStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2EventStatus.h; sourceTree = "<group>"; };
-		0A44003F179CB81E00EF0A04 /* GW2EventStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventStatus.m; sourceTree = "<group>"; };
-		0A440046179CD00500EF0A04 /* GW2WvWDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWDaemon.h; sourceTree = "<group>"; };
-		0A440047179CD00500EF0A04 /* GW2WvWDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWDaemon.m; sourceTree = "<group>"; };
-		0A44004D179CDC4F00EF0A04 /* GW2ItemsDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ItemsDaemon.h; sourceTree = "<group>"; };
-		0A44004E179CDC4F00EF0A04 /* GW2ItemsDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ItemsDaemon.m; sourceTree = "<group>"; };
-		0A440052179CDD1000EF0A04 /* GW2ItemDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ItemDetail.h; sourceTree = "<group>"; };
-		0A440053179CDD1000EF0A04 /* GW2ItemDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ItemDetail.m; sourceTree = "<group>"; };
-		0A440059179CDDD200EF0A04 /* GW2RecipeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2RecipeDetail.h; sourceTree = "<group>"; };
-		0A44005A179CDDD200EF0A04 /* GW2RecipeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2RecipeDetail.m; sourceTree = "<group>"; };
-		0A440061179CEC3200EF0A04 /* GW2GuildDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2GuildDetail.h; sourceTree = "<group>"; };
-		0A440062179CEC3200EF0A04 /* GW2GuildDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2GuildDetail.m; sourceTree = "<group>"; };
-		0A440067179CEC6600EF0A04 /* GW2GuildDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2GuildDaemon.h; sourceTree = "<group>"; };
-		0A440068179CEC6600EF0A04 /* GW2GuildDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2GuildDaemon.m; sourceTree = "<group>"; };
-		0A44006E179CED9F00EF0A04 /* GW2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Client.h; sourceTree = "<group>"; };
-		0A44006F179CED9F00EF0A04 /* GW2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Client.m; sourceTree = "<group>"; };
-		0A7E9C7F175515870017A1FB /* SPYClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYClient.h; sourceTree = "<group>"; };
-		0A7E9C80175515870017A1FB /* SPYClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYClient.m; sourceTree = "<group>"; };
-		0A7E9C81175515870017A1FB /* SPYItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYItem.h; sourceTree = "<group>"; };
-		0A7E9C82175515870017A1FB /* SPYItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYItem.m; sourceTree = "<group>"; };
-		0A7E9C83175515870017A1FB /* Spidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spidy.h; sourceTree = "<group>"; };
-		0AAC964B17D24041005743EE /* GW2FilesDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2FilesDaemon.h; sourceTree = "<group>"; };
-		0AAC964C17D24041005743EE /* GW2FilesDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2FilesDaemon.m; sourceTree = "<group>"; };
-		0AB2001417A36FFA0034035D /* GW2StatusWvWRankings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2StatusWvWRankings.h; sourceTree = "<group>"; };
-		0AB2001517A36FFA0034035D /* GW2StatusWvWRankings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2StatusWvWRankings.m; sourceTree = "<group>"; };
-		0AB2FFE917A2D4E80034035D /* GW2StatusDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2StatusDaemon.h; sourceTree = "<group>"; };
-		0AB2FFEA17A2D4E80034035D /* GW2StatusDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2StatusDaemon.m; sourceTree = "<group>"; };
-		0AB2FFF317A2E0020034035D /* GW2StatusDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2StatusDetail.h; sourceTree = "<group>"; };
-		0AB2FFF417A2E0020034035D /* GW2StatusDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2StatusDetail.m; sourceTree = "<group>"; };
-		0AB2FFF917A310CA0034035D /* GW2StatusWvWMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2StatusWvWMatches.h; sourceTree = "<group>"; };
-		0AB2FFFA17A310CA0034035D /* GW2StatusWvWMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2StatusWvWMatches.m; sourceTree = "<group>"; };
-		0AD3D0A81778C1D900A32397 /* GW2Build.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Build.h; sourceTree = "<group>"; };
-		0AD3D0A91778C1D900A32397 /* GW2Build.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Build.m; sourceTree = "<group>"; };
-		0AD3D0AA1778C1D900A32397 /* GW2Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Color.h; sourceTree = "<group>"; };
-		0AD3D0AB1778C1D900A32397 /* GW2Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Color.m; sourceTree = "<group>"; };
-		0AD3D0AD1778C1D900A32397 /* GW2WvWMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWMatch.h; sourceTree = "<group>"; };
-		0AD3D0AE1778C1D900A32397 /* GW2WvWMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatch.m; sourceTree = "<group>"; };
-		0AD3D0AF1778C1D900A32397 /* GW2WvWMatchDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWMatchDetail.h; sourceTree = "<group>"; };
-		0AD3D0B01778C1D900A32397 /* GW2WvWMatchDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatchDetail.m; sourceTree = "<group>"; };
-		0AD3D0BB1778C1D900A32397 /* GW2ResourceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ResourceName.h; sourceTree = "<group>"; };
-		0AD3D0BC1778C1D900A32397 /* GW2ResourceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ResourceName.m; sourceTree = "<group>"; };
+		0A3174731876683F009A34BA /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		0A3174751876683F009A34BA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		0A3174761876683F009A34BA /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
+		0A3174771876683F009A34BA /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		0A3174781876683F009A34BA /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		0A31747A1876683F009A34BA /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		0A31747B1876683F009A34BA /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
+		0A31747D1876683F009A34BA /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		0A31747E1876683F009A34BA /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		0A31747F1876683F009A34BA /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		0A3174811876683F009A34BA /* Mac-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Application.xcconfig"; sourceTree = "<group>"; };
+		0A3174821876683F009A34BA /* Mac-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Base.xcconfig"; sourceTree = "<group>"; };
+		0A3174831876683F009A34BA /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
+		0A3174841876683F009A34BA /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
+		0A3174851876683F009A34BA /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		0A3174861876683F009A34BA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0A3FFD561871FFB600A4D2A6 /* OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3FFD711871FFCA00A4D2A6 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3FFD85187204EB00A4D2A6 /* GW2MapTilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapTilePath.h; sourceTree = "<group>"; };
+		0A3FFD86187204EB00A4D2A6 /* GW2MapTilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapTilePath.m; sourceTree = "<group>"; };
+		0A53008A1873513900D55261 /* GW2Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Object.h; sourceTree = "<group>"; };
+		0A53008B1873513900D55261 /* GW2Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Object.m; sourceTree = "<group>"; };
+		0A5300A418735B2300D55261 /* GW2ObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2ObjectSpec.m; path = Tests/GW2ObjectSpec.m; sourceTree = SOURCE_ROOT; };
+		0A5300F21873A1FB00D55261 /* GW2MapContinent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapContinent.h; sourceTree = "<group>"; };
+		0A5300F31873A1FB00D55261 /* GW2MapContinent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapContinent.m; sourceTree = "<group>"; };
+		0A5300F71873A82700D55261 /* GW2MapContinentSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapContinentSpec.m; path = Tests/GW2MapContinentSpec.m; sourceTree = SOURCE_ROOT; };
+		0A5300FA187604A100D55261 /* GW2EventState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2EventState.h; sourceTree = "<group>"; };
+		0A5300FB187604A100D55261 /* GW2EventState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventState.m; sourceTree = "<group>"; };
+		0A5300FF1876079600D55261 /* GW2EventStateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2EventStateSpec.m; path = Tests/GW2EventStateSpec.m; sourceTree = SOURCE_ROOT; };
+		0A53010218760F8A00D55261 /* GW2Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Color.h; sourceTree = "<group>"; };
+		0A53010318760F8A00D55261 /* GW2Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Color.m; sourceTree = "<group>"; };
+		0A5301071876130500D55261 /* GW2ColorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2ColorSpec.m; path = Tests/GW2ColorSpec.m; sourceTree = SOURCE_ROOT; };
 		0ADA22F2174AD63E007F1173 /* libGW2Kit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libGW2Kit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADA2320174AD673007F1173 /* GW2Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADA2329174AD673007F1173 /* GW2Kit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GW2Kit-Info.plist"; sourceTree = "<group>"; };
 		0ADA232B174AD673007F1173 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0ADA232D174AD673007F1173 /* GW2Kit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GW2Kit-Prefix.pch"; sourceTree = "<group>"; };
 		0ADA2335174AD722007F1173 /* GW2Kit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Kit.h; sourceTree = "<group>"; };
-		0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Vendor/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
-		0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Vendor/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
-		0AE215EC1778EC59002CB17C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapsDaemon.h; sourceTree = "<group>"; };
-		0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapsDaemon.m; sourceTree = "<group>"; };
-		0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ContinentDetail.h; sourceTree = "<group>"; };
-		0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ContinentDetail.m; sourceTree = "<group>"; };
-		0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapResource.h; sourceTree = "<group>"; };
-		0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapResource.m; sourceTree = "<group>"; };
-		0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapFloorResponse.h; sourceTree = "<group>"; };
-		0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapFloorResponse.m; sourceTree = "<group>"; };
+		0AEEDEAF18721A0F00D0319E /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
+		0AEEDEB218721A3000D0319E /* event_names.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = event_names.json; sourceTree = "<group>"; };
+		0AEEDEB518721ADF00D0319E /* map_names.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = map_names.json; sourceTree = "<group>"; };
+		0AEEDEB818721B2600D0319E /* world_names.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world_names.json; sourceTree = "<group>"; };
+		0AEEDEBB18721BA800D0319E /* event_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = event_details.json; sourceTree = "<group>"; };
+		0AEEDEBE18721D1800D0319E /* guild_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guild_details.json; sourceTree = "<group>"; };
+		0AEEDEC118721E0900D0319E /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		0AEEDEC418721E4E00D0319E /* item_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = item_details.json; sourceTree = "<group>"; };
+		0AEEDEC718721EF700D0319E /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
+		0AEEDECA18721F0400D0319E /* recipe_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipe_details.json; sourceTree = "<group>"; };
+		0AEEDECD18721F1500D0319E /* continents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = continents.json; sourceTree = "<group>"; };
+		0AEEDED018721F2000D0319E /* maps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = maps.json; sourceTree = "<group>"; };
+		0AEEDED318721F2A00D0319E /* map_floor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = map_floor.json; sourceTree = "<group>"; };
+		0AEEDED618721F4100D0319E /* matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = matches.json; path = wvw/matches.json; sourceTree = "<group>"; };
+		0AEEDED918721F7B00D0319E /* match_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = match_details.json; path = wvw/match_details.json; sourceTree = "<group>"; };
+		0AEEDEDC18721F8B00D0319E /* objective_names.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = objective_names.json; path = wvw/objective_names.json; sourceTree = "<group>"; };
+		0AEEDEDF18721F9600D0319E /* build.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = build.json; sourceTree = "<group>"; };
+		0AEEDEE218721F9F00D0319E /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		0AEEDEE518721FA700D0319E /* files.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = files.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A3FFD531871FFB600A4D2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5300EB18735E9C00D55261 /* GW2Kit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A3FFD6E1871FFCA00A4D2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5300EC18735EA000D55261 /* libGW2Kit-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0ADA22EF174AD63E007F1173 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADA2385174ADC7B007F1173 /* libReactiveCocoa-iOS.a in Frameworks */,
-				0ADA2364174ADB07007F1173 /* libRestKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,24 +197,80 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE215ED1778EC59002CB17C /* Cocoa.framework in Frameworks */,
-				0ADA2362174ADAE6007F1173 /* RestKit.framework in Frameworks */,
-				0ADA2386174ADC8E007F1173 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3174711876683F009A34BA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				0A3174721876683F009A34BA /* Base */,
+				0A31747C1876683F009A34BA /* iOS */,
+				0A3174801876683F009A34BA /* Mac OS X */,
+				0A3174861876683F009A34BA /* README.md */,
+			);
+			path = Configuration;
+			sourceTree = SOURCE_ROOT;
+		};
+		0A3174721876683F009A34BA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0A3174731876683F009A34BA /* Common.xcconfig */,
+				0A3174741876683F009A34BA /* Configurations */,
+				0A3174791876683F009A34BA /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0A3174741876683F009A34BA /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				0A3174751876683F009A34BA /* Debug.xcconfig */,
+				0A3174761876683F009A34BA /* Profile.xcconfig */,
+				0A3174771876683F009A34BA /* Release.xcconfig */,
+				0A3174781876683F009A34BA /* Test.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		0A3174791876683F009A34BA /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				0A31747A1876683F009A34BA /* Application.xcconfig */,
+				0A31747B1876683F009A34BA /* StaticLibrary.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		0A31747C1876683F009A34BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0A31747D1876683F009A34BA /* iOS-Application.xcconfig */,
+				0A31747E1876683F009A34BA /* iOS-Base.xcconfig */,
+				0A31747F1876683F009A34BA /* iOS-StaticLibrary.xcconfig */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		0A3174801876683F009A34BA /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				0A3174811876683F009A34BA /* Mac-Application.xcconfig */,
+				0A3174821876683F009A34BA /* Mac-Base.xcconfig */,
+				0A3174831876683F009A34BA /* Mac-DynamicLibrary.xcconfig */,
+				0A3174841876683F009A34BA /* Mac-Framework.xcconfig */,
+				0A3174851876683F009A34BA /* Mac-StaticLibrary.xcconfig */,
+			);
+			path = "Mac OS X";
+			sourceTree = "<group>";
+		};
 		0A44001C179C9A9600EF0A04 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				0A44003C179CB81E00EF0A04 /* GW2EventDetail.h */,
-				0A44003D179CB81E00EF0A04 /* GW2EventDetail.m */,
-				0A44003E179CB81E00EF0A04 /* GW2EventStatus.h */,
-				0A44003F179CB81E00EF0A04 /* GW2EventStatus.m */,
-				0A440021179C9AAC00EF0A04 /* GW2EventDaemon.h */,
-				0A440022179C9AAC00EF0A04 /* GW2EventDaemon.m */,
+				0A5300FA187604A100D55261 /* GW2EventState.h */,
+				0A5300FB187604A100D55261 /* GW2EventState.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -387,12 +278,6 @@
 		0A44004C179CDC3800EF0A04 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				0A440059179CDDD200EF0A04 /* GW2RecipeDetail.h */,
-				0A44005A179CDDD200EF0A04 /* GW2RecipeDetail.m */,
-				0A440052179CDD1000EF0A04 /* GW2ItemDetail.h */,
-				0A440053179CDD1000EF0A04 /* GW2ItemDetail.m */,
-				0A44004D179CDC4F00EF0A04 /* GW2ItemsDaemon.h */,
-				0A44004E179CDC4F00EF0A04 /* GW2ItemsDaemon.m */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -400,10 +285,6 @@
 		0A44005F179CEAD400EF0A04 /* Guild */ = {
 			isa = PBXGroup;
 			children = (
-				0A440061179CEC3200EF0A04 /* GW2GuildDetail.h */,
-				0A440062179CEC3200EF0A04 /* GW2GuildDetail.m */,
-				0A440067179CEC6600EF0A04 /* GW2GuildDaemon.h */,
-				0A440068179CEC6600EF0A04 /* GW2GuildDaemon.m */,
 			);
 			path = Guild;
 			sourceTree = "<group>";
@@ -411,83 +292,34 @@
 		0A440060179CEAD400EF0A04 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				0AFDE656179DA09900DBF373 /* GW2MapFloorResponse.h */,
-				0AFDE657179DA09900DBF373 /* GW2MapFloorResponse.m */,
-				0AFDE645179D8B0C00DBF373 /* GW2MapResource.h */,
-				0AFDE646179D8B0C00DBF373 /* GW2MapResource.m */,
-				0AFDE63E179D7EA500DBF373 /* GW2ContinentDetail.h */,
-				0AFDE63F179D7EA500DBF373 /* GW2ContinentDetail.m */,
-				0AFDE635179D75B700DBF373 /* GW2MapsDaemon.h */,
-				0AFDE636179D75B700DBF373 /* GW2MapsDaemon.m */,
+				0A3FFD85187204EB00A4D2A6 /* GW2MapTilePath.h */,
+				0A3FFD86187204EB00A4D2A6 /* GW2MapTilePath.m */,
+				0A5300F21873A1FB00D55261 /* GW2MapContinent.h */,
+				0A5300F31873A1FB00D55261 /* GW2MapContinent.m */,
 			);
 			path = Maps;
-			sourceTree = "<group>";
-		};
-		0A7E9C7D175515870017A1FB /* Spidy */ = {
-			isa = PBXGroup;
-			children = (
-				0A7E9C83175515870017A1FB /* Spidy.h */,
-				0A7E9C7E175515870017A1FB /* Models */,
-			);
-			name = Spidy;
-			path = GW2Kit/Spidy;
-			sourceTree = "<group>";
-		};
-		0A7E9C7E175515870017A1FB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0A7E9C7F175515870017A1FB /* SPYClient.h */,
-				0A7E9C80175515870017A1FB /* SPYClient.m */,
-				0A7E9C81175515870017A1FB /* SPYItem.h */,
-				0A7E9C82175515870017A1FB /* SPYItem.m */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		0AA612351778BCF500ED31F6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0A440026179C9D9500EF0A04 /* GW2DefaultDaemon.h */,
-				0A440027179C9D9500EF0A04 /* GW2DefaultDaemon.m */,
+				0A53008A1873513900D55261 /* GW2Object.h */,
+				0A53008B1873513900D55261 /* GW2Object.m */,
 				0A44001C179C9A9600EF0A04 /* Events */,
 				0A44004C179CDC3800EF0A04 /* Items */,
 				0AD3D0AC1778C1D900A32397 /* WvW */,
 				0A44005F179CEAD400EF0A04 /* Guild */,
 				0A440060179CEAD400EF0A04 /* Maps */,
-				0AB2FFE417A2D4C60034035D /* Stats */,
 				0AD3D0A71778C1D900A32397 /* Misc */,
-				0AD3D0BB1778C1D900A32397 /* GW2ResourceName.h */,
-				0AD3D0BC1778C1D900A32397 /* GW2ResourceName.m */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		0AB2FFE417A2D4C60034035D /* Stats */ = {
-			isa = PBXGroup;
-			children = (
-				0AB2001417A36FFA0034035D /* GW2StatusWvWRankings.h */,
-				0AB2001517A36FFA0034035D /* GW2StatusWvWRankings.m */,
-				0AB2FFF917A310CA0034035D /* GW2StatusWvWMatches.h */,
-				0AB2FFFA17A310CA0034035D /* GW2StatusWvWMatches.m */,
-				0AB2FFF317A2E0020034035D /* GW2StatusDetail.h */,
-				0AB2FFF417A2E0020034035D /* GW2StatusDetail.m */,
-				0AB2FFE917A2D4E80034035D /* GW2StatusDaemon.h */,
-				0AB2FFEA17A2D4E80034035D /* GW2StatusDaemon.m */,
-			);
-			path = Stats;
 			sourceTree = "<group>";
 		};
 		0AD3D0A71778C1D900A32397 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				0A44006E179CED9F00EF0A04 /* GW2Client.h */,
-				0A44006F179CED9F00EF0A04 /* GW2Client.m */,
-				0AD3D0A81778C1D900A32397 /* GW2Build.h */,
-				0AD3D0A91778C1D900A32397 /* GW2Build.m */,
-				0AD3D0AA1778C1D900A32397 /* GW2Color.h */,
-				0AD3D0AB1778C1D900A32397 /* GW2Color.m */,
-				0AAC964B17D24041005743EE /* GW2FilesDaemon.h */,
-				0AAC964C17D24041005743EE /* GW2FilesDaemon.m */,
+				0A53010218760F8A00D55261 /* GW2Color.h */,
+				0A53010318760F8A00D55261 /* GW2Color.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -495,12 +327,6 @@
 		0AD3D0AC1778C1D900A32397 /* WvW */ = {
 			isa = PBXGroup;
 			children = (
-				0AD3D0AD1778C1D900A32397 /* GW2WvWMatch.h */,
-				0AD3D0AE1778C1D900A32397 /* GW2WvWMatch.m */,
-				0AD3D0AF1778C1D900A32397 /* GW2WvWMatchDetail.h */,
-				0AD3D0B01778C1D900A32397 /* GW2WvWMatchDetail.m */,
-				0A440046179CD00500EF0A04 /* GW2WvWDaemon.h */,
-				0A440047179CD00500EF0A04 /* GW2WvWDaemon.m */,
 			);
 			path = WvW;
 			sourceTree = "<group>";
@@ -508,10 +334,8 @@
 		0ADA22E7174AD539007F1173 = {
 			isa = PBXGroup;
 			children = (
-				0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */,
-				0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */,
 				0ADA2327174AD673007F1173 /* GW2Kit */,
-				0A7E9C7D175515870017A1FB /* Spidy */,
+				0AEEDEA21872167800D0319E /* Tests */,
 				0ADA22F4174AD63E007F1173 /* Frameworks */,
 				0ADA22F3174AD63E007F1173 /* Products */,
 			);
@@ -522,6 +346,8 @@
 			children = (
 				0ADA22F2174AD63E007F1173 /* libGW2Kit-iOS.a */,
 				0ADA2320174AD673007F1173 /* GW2Kit.framework */,
+				0A3FFD561871FFB600A4D2A6 /* OSX Tests.xctest */,
+				0A3FFD711871FFCA00A4D2A6 /* iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -529,7 +355,6 @@
 		0ADA22F4174AD63E007F1173 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AE215EC1778EC59002CB17C /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -547,6 +372,7 @@
 		0ADA2328174AD673007F1173 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A3174711876683F009A34BA /* Configuration */,
 				0ADA2329174AD673007F1173 /* GW2Kit-Info.plist */,
 				0ADA232A174AD673007F1173 /* InfoPlist.strings */,
 				0ADA232D174AD673007F1173 /* GW2Kit-Prefix.pch */,
@@ -554,28 +380,58 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0ADA2353174ADA7D007F1173 /* Products */ = {
+		0AEEDEA21872167800D0319E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0ADA235A174ADA7D007F1173 /* libRestKit.a */,
-				0ADA235C174ADA7D007F1173 /* RestKitTests.octest */,
-				0ADA235E174ADA7D007F1173 /* RestKit.framework */,
-				0ADA2360174ADA7D007F1173 /* RestKitFrameworkTests.octest */,
+				0AEEDEAC1872169700D0319E /* Fixtures */,
+				0AEEDEAD1872169700D0319E /* Specs */,
 			);
-			name = Products;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		0ADA2378174ADC39007F1173 /* Products */ = {
+		0AEEDEAC1872169700D0319E /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */,
-				0ADA2382174ADC39007F1173 /* libReactiveCocoa-iOS.a */,
-				0ADA2384174ADC39007F1173 /* ReactiveCocoaTests.octest */,
-				0A47C90D175A6D9400401DD4 /* ReactiveCocoaTests-iOS.octest */,
-				0AAC965517D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHost.app */,
-				0AAC965717D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */,
+				0AEEDEAE187219E600D0319E /* v1 */,
 			);
-			name = Products;
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		0AEEDEAD1872169700D0319E /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				0A5300A418735B2300D55261 /* GW2ObjectSpec.m */,
+				0A5300F71873A82700D55261 /* GW2MapContinentSpec.m */,
+				0A5300FF1876079600D55261 /* GW2EventStateSpec.m */,
+				0A5301071876130500D55261 /* GW2ColorSpec.m */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		0AEEDEAE187219E600D0319E /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				0AEEDEAF18721A0F00D0319E /* events.json */,
+				0AEEDEBB18721BA800D0319E /* event_details.json */,
+				0AEEDEB218721A3000D0319E /* event_names.json */,
+				0AEEDEB518721ADF00D0319E /* map_names.json */,
+				0AEEDEB818721B2600D0319E /* world_names.json */,
+				0AEEDEBE18721D1800D0319E /* guild_details.json */,
+				0AEEDEC118721E0900D0319E /* items.json */,
+				0AEEDEC418721E4E00D0319E /* item_details.json */,
+				0AEEDEC718721EF700D0319E /* recipes.json */,
+				0AEEDECA18721F0400D0319E /* recipe_details.json */,
+				0AEEDECD18721F1500D0319E /* continents.json */,
+				0AEEDED018721F2000D0319E /* maps.json */,
+				0AEEDED318721F2A00D0319E /* map_floor.json */,
+				0AEEDED618721F4100D0319E /* matches.json */,
+				0AEEDED918721F7B00D0319E /* match_details.json */,
+				0AEEDEDC18721F8B00D0319E /* objective_names.json */,
+				0AEEDEDF18721F9600D0319E /* build.json */,
+				0AEEDEE218721F9F00D0319E /* colors.json */,
+				0AEEDEE518721FA700D0319E /* files.json */,
+			);
+			path = v1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,41 +441,52 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB2001617A36FFA0034035D /* GW2StatusWvWRankings.h in Headers */,
-				0AB2FFFB17A310CA0034035D /* GW2StatusWvWMatches.h in Headers */,
-				0AB2FFF517A2E0020034035D /* GW2StatusDetail.h in Headers */,
-				0AB2FFEB17A2D4E80034035D /* GW2StatusDaemon.h in Headers */,
-				0AD3D0C31778C1D900A32397 /* GW2WvWMatch.h in Headers */,
-				0AD3D0D81778C1D900A32397 /* GW2ResourceName.h in Headers */,
-				0AD3D0BD1778C1D900A32397 /* GW2Build.h in Headers */,
-				0AD3D0C61778C1D900A32397 /* GW2WvWMatchDetail.h in Headers */,
-				0AD3D0C01778C1D900A32397 /* GW2Color.h in Headers */,
-				0A440023179C9AAC00EF0A04 /* GW2EventDaemon.h in Headers */,
-				0A440028179C9D9500EF0A04 /* GW2DefaultDaemon.h in Headers */,
-				0A440040179CB81E00EF0A04 /* GW2EventDetail.h in Headers */,
-				0A44004F179CDC4F00EF0A04 /* GW2ItemsDaemon.h in Headers */,
-				0A440054179CDD1000EF0A04 /* GW2ItemDetail.h in Headers */,
-				0AAC964D17D24041005743EE /* GW2FilesDaemon.h in Headers */,
-				0A440048179CD00500EF0A04 /* GW2WvWDaemon.h in Headers */,
-				0A440043179CB81E00EF0A04 /* GW2EventStatus.h in Headers */,
-				0A440063179CEC3200EF0A04 /* GW2GuildDetail.h in Headers */,
-				0A440069179CEC6600EF0A04 /* GW2GuildDaemon.h in Headers */,
-				0AFDE647179D8B0C00DBF373 /* GW2MapResource.h in Headers */,
-				0A44005B179CDDD200EF0A04 /* GW2RecipeDetail.h in Headers */,
-				0AFDE637179D75B700DBF373 /* GW2MapsDaemon.h in Headers */,
-				0AFDE658179DA09900DBF373 /* GW2MapFloorResponse.h in Headers */,
-				0AFDE640179D7EA500DBF373 /* GW2ContinentDetail.h in Headers */,
-				0A440070179CED9F00EF0A04 /* GW2Client.h in Headers */,
-				0ADA2336174AD722007F1173 /* GW2Kit.h in Headers */,
-				0A7E9C8A175515870017A1FB /* Spidy.h in Headers */,
-				0A7E9C84175515870017A1FB /* SPYClient.h in Headers */,
-				0A7E9C87175515870017A1FB /* SPYItem.h in Headers */,
+				0A53008C1873513900D55261 /* GW2Object.h in Headers */,
+				0A5300F41873A1FB00D55261 /* GW2MapContinent.h in Headers */,
+				0A5300FC187604A100D55261 /* GW2EventState.h in Headers */,
+				0A53010418760F8A00D55261 /* GW2Color.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0A3FFD551871FFB600A4D2A6 /* OSX Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A3FFD6C1871FFB600A4D2A6 /* Build configuration list for PBXNativeTarget "OSX Tests" */;
+			buildPhases = (
+				0A3FFD521871FFB600A4D2A6 /* Sources */,
+				0A3FFD531871FFB600A4D2A6 /* Frameworks */,
+				0A3FFD541871FFB600A4D2A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A3FFD631871FFB600A4D2A6 /* PBXTargetDependency */,
+			);
+			name = "OSX Tests";
+			productName = "OSX Tests";
+			productReference = 0A3FFD561871FFB600A4D2A6 /* OSX Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A3FFD701871FFCA00A4D2A6 /* iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A3FFD821871FFCA00A4D2A6 /* Build configuration list for PBXNativeTarget "iOS Tests" */;
+			buildPhases = (
+				0A3FFD6D1871FFCA00A4D2A6 /* Sources */,
+				0A3FFD6E1871FFCA00A4D2A6 /* Frameworks */,
+				0A3FFD6F1871FFCA00A4D2A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A3FFD811871FFCA00A4D2A6 /* PBXTargetDependency */,
+			);
+			name = "iOS Tests";
+			productName = "iOS Tests";
+			productReference = 0A3FFD711871FFCA00A4D2A6 /* iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0ADA22F1174AD63E007F1173 /* GW2Kit-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ADA2319174AD63F007F1173 /* Build configuration list for PBXNativeTarget "GW2Kit-iOS" */;
@@ -631,8 +498,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0ADA2388174ADCC3007F1173 /* PBXTargetDependency */,
-				0ADA2366174ADB1B007F1173 /* PBXTargetDependency */,
 			);
 			name = "GW2Kit-iOS";
 			productName = "GW2Kit-iOS";
@@ -652,8 +517,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0ADA238A174ADCCB007F1173 /* PBXTargetDependency */,
-				0ADA2368174ADB20007F1173 /* PBXTargetDependency */,
 			);
 			name = GW2Kit;
 			productName = GW2Kit;
@@ -666,7 +529,15 @@
 		0ADA22E8174AD539007F1173 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					0A3FFD551871FFB600A4D2A6 = {
+						TestTargetID = 0ADA231F174AD673007F1173;
+					};
+					0A3FFD701871FFCA00A4D2A6 = {
+						TestTargetID = 0ADA22F1174AD63E007F1173;
+					};
+				};
 			};
 			buildConfigurationList = 0ADA22EB174AD539007F1173 /* Build configuration list for PBXProject "GW2Kit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -678,98 +549,69 @@
 			mainGroup = 0ADA22E7174AD539007F1173;
 			productRefGroup = 0ADA22F3174AD63E007F1173 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0ADA2378174ADC39007F1173 /* Products */;
-					ProjectRef = 0ADA2377174ADC39007F1173 /* ReactiveCocoa.xcodeproj */;
-				},
-				{
-					ProductGroup = 0ADA2353174ADA7D007F1173 /* Products */;
-					ProjectRef = 0ADA2352174ADA7D007F1173 /* RestKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0ADA22F1174AD63E007F1173 /* GW2Kit-iOS */,
 				0ADA231F174AD673007F1173 /* GW2Kit */,
+				0A3FFD551871FFB600A4D2A6 /* OSX Tests */,
+				0A3FFD701871FFCA00A4D2A6 /* iOS Tests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		0A47C90D175A6D9400401DD4 /* ReactiveCocoaTests-iOS.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ReactiveCocoaTests-iOS.octest";
-			remoteRef = 0A47C90C175A6D9400401DD4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0AAC965517D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHost.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "ReactiveCocoa-iOS-UIKitTestHost.app";
-			remoteRef = 0AAC965417D24042005743EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0AAC965717D24042005743EE /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ReactiveCocoa-iOS-UIKitTestHostTests.octest";
-			remoteRef = 0AAC965617D24042005743EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA235A174ADA7D007F1173 /* libRestKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRestKit.a;
-			remoteRef = 0ADA2359174ADA7D007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA235C174ADA7D007F1173 /* RestKitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitTests.octest;
-			remoteRef = 0ADA235B174ADA7D007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA235E174ADA7D007F1173 /* RestKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RestKit.framework;
-			remoteRef = 0ADA235D174ADA7D007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA2360174ADA7D007F1173 /* RestKitFrameworkTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitFrameworkTests.octest;
-			remoteRef = 0ADA235F174ADA7D007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA2380174ADC39007F1173 /* ReactiveCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveCocoa.framework;
-			remoteRef = 0ADA237F174ADC39007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA2382174ADC39007F1173 /* libReactiveCocoa-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libReactiveCocoa-iOS.a";
-			remoteRef = 0ADA2381174ADC39007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0ADA2384174ADC39007F1173 /* ReactiveCocoaTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveCocoaTests.octest;
-			remoteRef = 0ADA2383174ADC39007F1173 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
+		0A3FFD541871FFB600A4D2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AEEDEE618721FA700D0319E /* files.json in Resources */,
+				0AEEDEBC18721BA800D0319E /* event_details.json in Resources */,
+				0AEEDECE18721F1500D0319E /* continents.json in Resources */,
+				0AEEDEB018721A0F00D0319E /* events.json in Resources */,
+				0AEEDEDA18721F7B00D0319E /* match_details.json in Resources */,
+				0AEEDEC218721E0900D0319E /* items.json in Resources */,
+				0AEEDEB618721ADF00D0319E /* map_names.json in Resources */,
+				0AEEDED718721F4100D0319E /* matches.json in Resources */,
+				0AEEDEC818721EF700D0319E /* recipes.json in Resources */,
+				0AEEDED118721F2000D0319E /* maps.json in Resources */,
+				0AEEDEE318721F9F00D0319E /* colors.json in Resources */,
+				0AEEDEB318721A3000D0319E /* event_names.json in Resources */,
+				0AEEDEDD18721F8B00D0319E /* objective_names.json in Resources */,
+				0AEEDED418721F2A00D0319E /* map_floor.json in Resources */,
+				0AEEDEE018721F9600D0319E /* build.json in Resources */,
+				0AEEDEC518721E4E00D0319E /* item_details.json in Resources */,
+				0AEEDEBF18721D1800D0319E /* guild_details.json in Resources */,
+				0AEEDECB18721F0400D0319E /* recipe_details.json in Resources */,
+				0AEEDEB918721B2600D0319E /* world_names.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A3FFD6F1871FFCA00A4D2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AEEDEE718721FA700D0319E /* files.json in Resources */,
+				0AEEDEBD18721BA800D0319E /* event_details.json in Resources */,
+				0AEEDECF18721F1500D0319E /* continents.json in Resources */,
+				0AEEDEB118721A0F00D0319E /* events.json in Resources */,
+				0AEEDEDB18721F7B00D0319E /* match_details.json in Resources */,
+				0AEEDEC318721E0900D0319E /* items.json in Resources */,
+				0AEEDEB718721ADF00D0319E /* map_names.json in Resources */,
+				0AEEDED818721F4100D0319E /* matches.json in Resources */,
+				0AEEDEC918721EF700D0319E /* recipes.json in Resources */,
+				0AEEDED218721F2000D0319E /* maps.json in Resources */,
+				0AEEDEE418721F9F00D0319E /* colors.json in Resources */,
+				0AEEDEB418721A3000D0319E /* event_names.json in Resources */,
+				0AEEDEDE18721F8B00D0319E /* objective_names.json in Resources */,
+				0AEEDED518721F2A00D0319E /* map_floor.json in Resources */,
+				0AEEDEE118721F9600D0319E /* build.json in Resources */,
+				0AEEDEC618721E4E00D0319E /* item_details.json in Resources */,
+				0AEEDEC018721D1800D0319E /* guild_details.json in Resources */,
+				0AEEDECC18721F0400D0319E /* recipe_details.json in Resources */,
+				0AEEDEBA18721B2600D0319E /* world_names.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0ADA231E174AD673007F1173 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -781,37 +623,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A3FFD521871FFB600A4D2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5301001876079600D55261 /* GW2EventStateSpec.m in Sources */,
+				0A5300A518735B2300D55261 /* GW2ObjectSpec.m in Sources */,
+				0A5300F81873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
+				0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A3FFD6D1871FFCA00A4D2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5301011876079600D55261 /* GW2EventStateSpec.m in Sources */,
+				0A5300A618735B2300D55261 /* GW2ObjectSpec.m in Sources */,
+				0A5300F91873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
+				0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0ADA22EE174AD63E007F1173 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFDE641179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */,
-				0A440055179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */,
-				0AAC964E17D24041005743EE /* GW2FilesDaemon.m in Sources */,
-				0A440071179CED9F00EF0A04 /* GW2Client.m in Sources */,
-				0AB2FFF617A2E0020034035D /* GW2StatusDetail.m in Sources */,
-				0A440044179CB81E00EF0A04 /* GW2EventStatus.m in Sources */,
-				0A44006A179CEC6600EF0A04 /* GW2GuildDaemon.m in Sources */,
-				0AB2001717A36FFA0034035D /* GW2StatusWvWRankings.m in Sources */,
-				0A440049179CD00500EF0A04 /* GW2WvWDaemon.m in Sources */,
-				0A44005C179CDDD200EF0A04 /* GW2RecipeDetail.m in Sources */,
-				0A440064179CEC3200EF0A04 /* GW2GuildDetail.m in Sources */,
-				0AB2FFFC17A310CA0034035D /* GW2StatusWvWMatches.m in Sources */,
-				0AB2FFEC17A2D4E80034035D /* GW2StatusDaemon.m in Sources */,
-				0AFDE638179D75B700DBF373 /* GW2MapsDaemon.m in Sources */,
-				0AD3D0D91778C1D900A32397 /* GW2ResourceName.m in Sources */,
-				0A440050179CDC4F00EF0A04 /* GW2ItemsDaemon.m in Sources */,
-				0AD3D0C11778C1D900A32397 /* GW2Color.m in Sources */,
-				0A440024179C9AAC00EF0A04 /* GW2EventDaemon.m in Sources */,
-				0AFDE648179D8B0C00DBF373 /* GW2MapResource.m in Sources */,
-				0A7E9C85175515870017A1FB /* SPYClient.m in Sources */,
-				0A7E9C88175515870017A1FB /* SPYItem.m in Sources */,
-				0A440041179CB81E00EF0A04 /* GW2EventDetail.m in Sources */,
-				0AD3D0BE1778C1D900A32397 /* GW2Build.m in Sources */,
-				0AD3D0C71778C1D900A32397 /* GW2WvWMatchDetail.m in Sources */,
-				0A440029179C9D9500EF0A04 /* GW2DefaultDaemon.m in Sources */,
-				0AD3D0C41778C1D900A32397 /* GW2WvWMatch.m in Sources */,
-				0AFDE659179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */,
+				0A53010518760F8A00D55261 /* GW2Color.m in Sources */,
+				0A5300F51873A1FB00D55261 /* GW2MapContinent.m in Sources */,
+				0A53008D1873513900D55261 /* GW2Object.m in Sources */,
+				0A5300FD187604A100D55261 /* GW2EventState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,58 +660,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFDE642179D7EA500DBF373 /* GW2ContinentDetail.m in Sources */,
-				0A440056179CDD1000EF0A04 /* GW2ItemDetail.m in Sources */,
-				0AAC964F17D24041005743EE /* GW2FilesDaemon.m in Sources */,
-				0A440072179CED9F00EF0A04 /* GW2Client.m in Sources */,
-				0AB2FFF717A2E0020034035D /* GW2StatusDetail.m in Sources */,
-				0A440045179CB81E00EF0A04 /* GW2EventStatus.m in Sources */,
-				0A44006B179CEC6600EF0A04 /* GW2GuildDaemon.m in Sources */,
-				0AB2001817A36FFA0034035D /* GW2StatusWvWRankings.m in Sources */,
-				0A44004A179CD00500EF0A04 /* GW2WvWDaemon.m in Sources */,
-				0A44005D179CDDD200EF0A04 /* GW2RecipeDetail.m in Sources */,
-				0A440065179CEC3200EF0A04 /* GW2GuildDetail.m in Sources */,
-				0AB2FFFD17A310CA0034035D /* GW2StatusWvWMatches.m in Sources */,
-				0AB2FFED17A2D4E80034035D /* GW2StatusDaemon.m in Sources */,
-				0AFDE639179D75B700DBF373 /* GW2MapsDaemon.m in Sources */,
-				0AD3D0DA1778C1D900A32397 /* GW2ResourceName.m in Sources */,
-				0A440051179CDC4F00EF0A04 /* GW2ItemsDaemon.m in Sources */,
-				0AD3D0C21778C1D900A32397 /* GW2Color.m in Sources */,
-				0A440025179C9AAC00EF0A04 /* GW2EventDaemon.m in Sources */,
-				0AFDE649179D8B0C00DBF373 /* GW2MapResource.m in Sources */,
-				0A7E9C86175515870017A1FB /* SPYClient.m in Sources */,
-				0A7E9C89175515870017A1FB /* SPYItem.m in Sources */,
-				0A440042179CB81E00EF0A04 /* GW2EventDetail.m in Sources */,
-				0AD3D0BF1778C1D900A32397 /* GW2Build.m in Sources */,
-				0AD3D0C81778C1D900A32397 /* GW2WvWMatchDetail.m in Sources */,
-				0A44002A179C9D9500EF0A04 /* GW2DefaultDaemon.m in Sources */,
-				0AD3D0C51778C1D900A32397 /* GW2WvWMatch.m in Sources */,
-				0AFDE65A179DA09900DBF373 /* GW2MapFloorResponse.m in Sources */,
+				0A53010618760F8A00D55261 /* GW2Color.m in Sources */,
+				0A5300F61873A1FB00D55261 /* GW2MapContinent.m in Sources */,
+				0A53008E1873513900D55261 /* GW2Object.m in Sources */,
+				0A5300FE187604A100D55261 /* GW2EventState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0ADA2366174ADB1B007F1173 /* PBXTargetDependency */ = {
+		0A3FFD631871FFB600A4D2A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RestKit;
-			targetProxy = 0ADA2365174ADB1B007F1173 /* PBXContainerItemProxy */;
+			target = 0ADA231F174AD673007F1173 /* GW2Kit */;
+			targetProxy = 0A3FFD621871FFB600A4D2A6 /* PBXContainerItemProxy */;
 		};
-		0ADA2368174ADB20007F1173 /* PBXTargetDependency */ = {
+		0A3FFD811871FFCA00A4D2A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RestKitFramework;
-			targetProxy = 0ADA2367174ADB20007F1173 /* PBXContainerItemProxy */;
-		};
-		0ADA2388174ADCC3007F1173 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveCocoa-iOS";
-			targetProxy = 0ADA2387174ADCC3007F1173 /* PBXContainerItemProxy */;
-		};
-		0ADA238A174ADCCB007F1173 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ReactiveCocoa;
-			targetProxy = 0ADA2389174ADCCB007F1173 /* PBXContainerItemProxy */;
+			target = 0ADA22F1174AD63E007F1173 /* GW2Kit-iOS */;
+			targetProxy = 0A3FFD801871FFCA00A4D2A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -886,39 +694,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0ADA22EC174AD539007F1173 /* Debug */ = {
+		0A31748D187671CC009A34BA /* Profile */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174761876683F009A34BA /* Profile.xcconfig */;
 			buildSettings = {
-			};
-			name = Debug;
-		};
-		0ADA22ED174AD539007F1173 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		0ADA2315174AD63F007F1173 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Profile;
+		};
+		0A31748E187671CC009A34BA /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747F1876683F009A34BA /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/GW2Kit_iOS.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -927,92 +728,567 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Profile;
 		};
-		0ADA2316174AD63F007F1173 /* Release */ = {
+		0A31748F187671CC009A34BA /* Profile */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174841876683F009A34BA /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/GW2Kit_iOS.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0ADA2332174AD673007F1173 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Profile;
+		};
+		0A317490187671CC009A34BA /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174811876683F009A34BA /* Mac-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Profile;
+		};
+		0A317491187671CC009A34BA /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747D1876683F009A34BA /* iOS-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Profile;
+		};
+		0A317492187671F3009A34BA /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174781876683F009A34BA /* Test.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Test;
+		};
+		0A317493187671F3009A34BA /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747F1876683F009A34BA /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
+				SDKROOT = iphoneos;
+			};
+			name = Test;
+		};
+		0A317494187671F3009A34BA /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174841876683F009A34BA /* Mac-Framework.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "GW2Kit/GW2Kit-Info.plist";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Test;
+		};
+		0A317495187671F3009A34BA /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174811876683F009A34BA /* Mac-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Test;
+		};
+		0A317496187671F3009A34BA /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747D1876683F009A34BA /* iOS-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Test;
+		};
+		0A3FFD641871FFB600A4D2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174811876683F009A34BA /* Mac-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0A3FFD651871FFB600A4D2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174811876683F009A34BA /* Mac-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/OSX Tests/OSX Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		0A3FFD831871FFCA00A4D2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747D1876683F009A34BA /* iOS-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0A3FFD841871FFCA00A4D2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747D1876683F009A34BA /* iOS-Application.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/GW2KitTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		0ADA22EC174AD539007F1173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174751876683F009A34BA /* Debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Debug;
+		};
+		0ADA22ED174AD539007F1173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174771876683F009A34BA /* Release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Release;
+		};
+		0ADA2315174AD63F007F1173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747F1876683F009A34BA /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0ADA2316174AD63F007F1173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A31747F1876683F009A34BA /* iOS-StaticLibrary.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		0ADA2332174AD673007F1173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174841876683F009A34BA /* Mac-Framework.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1020,41 +1296,22 @@
 		};
 		0ADA2333174AD673007F1173 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3174841876683F009A34BA /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GW2Kit/GW2Kit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "GW2Kit/GW2Kit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1063,10 +1320,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A3FFD6C1871FFB600A4D2A6 /* Build configuration list for PBXNativeTarget "OSX Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A3FFD641871FFB600A4D2A6 /* Debug */,
+				0A317495187671F3009A34BA /* Test */,
+				0A317490187671CC009A34BA /* Profile */,
+				0A3FFD651871FFB600A4D2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A3FFD821871FFCA00A4D2A6 /* Build configuration list for PBXNativeTarget "iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A3FFD831871FFCA00A4D2A6 /* Debug */,
+				0A317496187671F3009A34BA /* Test */,
+				0A317491187671CC009A34BA /* Profile */,
+				0A3FFD841871FFCA00A4D2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0ADA22EB174AD539007F1173 /* Build configuration list for PBXProject "GW2Kit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ADA22EC174AD539007F1173 /* Debug */,
+				0A317492187671F3009A34BA /* Test */,
+				0A31748D187671CC009A34BA /* Profile */,
 				0ADA22ED174AD539007F1173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1076,6 +1357,8 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ADA2315174AD63F007F1173 /* Debug */,
+				0A317493187671F3009A34BA /* Test */,
+				0A31748E187671CC009A34BA /* Profile */,
 				0ADA2316174AD63F007F1173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1085,6 +1368,8 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ADA2332174AD673007F1173 /* Debug */,
+				0A317494187671F3009A34BA /* Test */,
+				0A31748F187671CC009A34BA /* Profile */,
 				0ADA2333174AD673007F1173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

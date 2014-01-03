@@ -1,0 +1,42 @@
+{
+    "item_id": "28445",
+    "name": "Strong Bow of Fire",
+    "description": "",
+    "type": "Weapon",
+    "level": "44",
+    "rarity": "Masterwork",
+    "vendor_value": "120",
+    "icon_file_id": "65015",
+    "icon_file_signature": "C6110F52DF5AFE0F00A56F9E143E9732176DDDE9",
+    "game_types": [
+        "Activity",
+        "Dungeon",
+        "Pve",
+        "Wvw"
+    ],
+    "flags": [
+        "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "weapon": {
+        "type": "LongBow",
+        "damage_type": "Physical",
+        "min_power": "385",
+        "max_power": "452",
+        "defense": "0",
+        "infusion_slots": [],
+        "infix_upgrade": {
+            "attributes": [
+                {
+                    "attribute": "Power",
+                    "modifier": "62"
+                },
+                {
+                    "attribute": "Precision",
+                    "modifier": "44"
+                }
+            ]
+        },
+        "suffix_item_id": "24547"
+    }
+}
