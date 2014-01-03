@@ -43,7 +43,7 @@ describe(@"color", ^ {
         // Are we able to construct the original JSON from our object?
         id colorJSON = [MTLJSONAdapter JSONDictionaryFromModel:color];
         NSDictionary *colorToCompare = colorsDictionary[@"1"];
-        expect(colorJSON).equal(colorToCompare);
+        expect([colorJSON hash]).equal(colorToCompare.hash);
     });
     
     it(@"instantiates from color material JSON", ^ {
@@ -57,7 +57,7 @@ describe(@"color", ^ {
         // Are we able to construct the original JSON from our object?
         id colorMaterialJSON = [MTLJSONAdapter JSONDictionaryFromModel:colorMaterial];
         NSDictionary *colorMaterialToCompare = colorsDictionary[@"1"][@"cloth"];
-        expect(colorMaterialJSON).equal(colorMaterialToCompare);
+        expect([colorMaterialJSON hash]).equal(colorMaterialToCompare.hash);
    });
 });
 SpecEnd
