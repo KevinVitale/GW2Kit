@@ -951,8 +951,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1153,8 +1153,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1340,8 +1340,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1399,8 +1399,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Expecta",
-					"/Volumes/objective-c/Projects/GW2Kit/Vendor/Specta",
+					"$(SRCROOT)/Vendor/Expecta",
+					"$(SRCROOT)/Vendor/Specta",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
