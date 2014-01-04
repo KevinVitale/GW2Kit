@@ -27,11 +27,13 @@ describe(@"map continent", ^ {
     
     it(@"works with API response", ^ {
         id TyriaContinent = continentsJSON[@"continents"][@"1"];
-        GW2MapContinent *mapContinent = [MTLJSONAdapter modelOfClass:[GW2MapContinent class]
-                                                  fromJSONDictionary:TyriaContinent
-                                                               error:nil];
+        GW2MapContinent *mapContinent = [GW2MapContinent objectWithID:@1
+                                                                 name:nil
+                                                   fromJSONDictionary:TyriaContinent
+                                                                error:nil];
         // Ensure our object was created from Tyria
         expect(mapContinent).toNot.beNil();
+        expect(mapContinent.objectID).equal(@1);
         expect(mapContinent.name).equal(@"Tyria");
         
         // Make sure the JSON matches the original input
@@ -40,12 +42,14 @@ describe(@"map continent", ^ {
         
         // Let's switch over to Heart of the Mists
         id HoMContinent = continentsJSON[@"continents"][@"2"];
-        mapContinent = [MTLJSONAdapter modelOfClass:[GW2MapContinent class]
-                                 fromJSONDictionary:HoMContinent
-                                              error:nil];
+        mapContinent = [GW2MapContinent objectWithID:@2
+                                                name:nil
+                                  fromJSONDictionary:HoMContinent
+                                               error:nil];
         
         // Ensure our object was created from HoM
         expect(mapContinent).toNot.beNil();
+        expect(mapContinent.objectID).equal(@2);
         expect(mapContinent.name).equal(@"Mists");
         
         // Make sure the JSON matches the original input

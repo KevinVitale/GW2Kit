@@ -15,6 +15,7 @@
 SpecBegin(GW2EventState)
 describe(@"event state", ^ {
     NSArray *__block eventStatesArray;
+    
     beforeAll(^ {
         // Pull the .json file from the bundle
         NSURL *eventsURL = [[NSBundle bundleForClass:self.class] URLForResource:@"events" withExtension:@"json"];
@@ -33,15 +34,17 @@ describe(@"event state", ^ {
     });
     
     it(@"instantiates from JSON", ^ {
-        GW2EventState *eventState = [MTLJSONAdapter modelOfClass:[GW2EventState class]
-                                              fromJSONDictionary:eventStatesArray.firstObject
-                                                           error:nil];
+        GW2EventState *eventState = [GW2EventState objectWithID:nil
+                                                           name:@"Stop the skritt burglar before it escapes with the treasure."
+                                             fromJSONDictionary:eventStatesArray.firstObject
+                                                          error:nil];   
         // Check object integrity
         expect(eventState).toNot.beNil();
         expect(eventState.state).equal(@"Warmup");
         expect(eventState.worldID).equal(@1001);
         expect(eventState.mapID).equal(@39);
         expect(eventState.objectID).equal(@"2875FBFE-668E-438A-8CE7-A4BCF2EF0175");
+        expect(eventState.name).equal(@"Stop the skritt burglar before it escapes with the treasure.");
         
         // Turn back into JSON
         id eventStateJSON = [MTLJSONAdapter JSONDictionaryFromModel:eventState];

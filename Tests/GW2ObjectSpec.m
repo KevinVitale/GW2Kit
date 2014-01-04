@@ -40,9 +40,10 @@ describe(@"named object", ^ {
     });
     
     it(@"works with event names", ^ {
-        GW2Object *nameObject = [MTLJSONAdapter modelOfClass:[GW2Object class]
-                                          fromJSONDictionary:[eventNamesJSON firstObject]
-                                                       error:nil];
+        GW2Object *nameObject = [GW2Object objectWithID:nil
+                                                   name:nil
+                                     fromJSONDictionary:[eventNamesJSON firstObject]
+                                                  error:nil];
         // Ensure our object was created
         expect(nameObject).toNot.beNil();
         
