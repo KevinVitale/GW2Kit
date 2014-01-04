@@ -9,25 +9,13 @@
 #import <Mantle/Mantle.h>
 
 /**
- *  Objects returned by the GW2 API which have an 'id' and a 'name'.
- *
- *  This includes:
- *      - event_names
- *      - world_names
- *      - map_naes
- *
- *  The response looks like:
- *      {
- *          "name"  : " ... ",
- *          "id"    : " ... "
- *      }
- *
- *  The value of 'name' can be a string, in the case of events.
- *  The value of 'name' can be a number, in the case of world and maps.
+ *  GW2Object Protocol
  */
-@interface GW2Object : MTLModel <MTLJSONSerializing>
-@property (nonatomic, copy, readonly) id objectID;
-@property (nonatomic, copy, readonly) NSString *name;
+@protocol GW2Object <NSObject>
+// Required Properties
+@required
+@property (copy, nonatomic, readonly) id objectID;
+@property (copy, nonatomic, readonly) NSString *name;
 
 /**
  *  Wraps calls to the MTLJSONAdapter, but allows the caller to specify the
@@ -51,4 +39,29 @@
                        name:(NSString *)name
          fromJSONDictionary:(NSDictionary *)JSONDictionary
                       error:(NSError **)error;
+@end
+//----------------------------------------------------------------------------//
+/**
+ *  Objects returned by the GW2 API which have an 'id' and a 'name'.
+ *
+ *  This includes:
+ *      - event_names
+ *      - world_names
+ *      - map_naes
+ *
+ *  The response looks like:
+ *      {
+ *          "name"  : " ... ",
+ *          "id"    : " ... "
+ *      }
+ *
+ *  The value of 'name' can be a string, in the case of events.
+ *  The value of 'name' can be a number, in the case of world and maps.
+ */
+@interface GW2Object : MTLModel <MTLJSONSerializing, GW2Object>
+/*
+ *  @property objectID
+ *  @property name;
+ */
+//----------------------------------------------------------------------------//
 @end

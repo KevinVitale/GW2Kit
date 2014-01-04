@@ -21,16 +21,22 @@
                        name:(NSString *)name
          fromJSONDictionary:(NSDictionary *)JSONDictionary
                       error:(NSError *__autoreleasing *)error {
+    
+    // This is the method we intend to wrap around.
     id object = [MTLJSONAdapter modelOfClass:self.class
                           fromJSONDictionary:JSONDictionary
                                        error:error];
     
+    // Check to see if 'objectID' was set via the JSONDictionary
     if(![object valueForKey:@"objectID"]) {
         [object setValue:objectID forKey:@"objectID"];
     }
+    // Check to see if 'name' was set via the JSONDictionary
     if(![object valueForKey:@"name"]) {
         [object setValue:name forKey:@"name"];
     }
+    
+    // Return
     return object;
 }
 @end
