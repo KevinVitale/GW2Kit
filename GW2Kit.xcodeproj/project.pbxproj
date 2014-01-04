@@ -44,6 +44,11 @@
 		0ACBF6271878961D00FD1AA5 /* GW2MapLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF6241878961D00FD1AA5 /* GW2MapLocation.m */; };
 		0ACBF62918789E8800FD1AA5 /* GW2MapLocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF62818789E8800FD1AA5 /* GW2MapLocationSpec.m */; };
 		0ACBF62A18789E8800FD1AA5 /* GW2MapLocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF62818789E8800FD1AA5 /* GW2MapLocationSpec.m */; };
+		0ACBF62C1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF62B1878AD2B00FD1AA5 /* GW2EventDetails.m */; };
+		0ACBF62D1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF62B1878AD2B00FD1AA5 /* GW2EventDetails.m */; };
+		0ACBF6301878AFE300FD1AA5 /* GW2Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ACBF62E1878AFE300FD1AA5 /* GW2Event.h */; };
+		0ACBF6311878AFE300FD1AA5 /* GW2Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF62F1878AFE300FD1AA5 /* GW2Event.m */; };
+		0ACBF6321878AFE300FD1AA5 /* GW2Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF62F1878AFE300FD1AA5 /* GW2Event.m */; };
 		0ADA232C174AD673007F1173 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA232A174AD673007F1173 /* InfoPlist.strings */; };
 		0AEEDEB018721A0F00D0319E /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEAF18721A0F00D0319E /* events.json */; };
 		0AEEDEB118721A0F00D0319E /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEDEAF18721A0F00D0319E /* events.json */; };
@@ -178,6 +183,9 @@
 		0ACBF6231878961D00FD1AA5 /* GW2MapLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapLocation.h; sourceTree = "<group>"; };
 		0ACBF6241878961D00FD1AA5 /* GW2MapLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapLocation.m; sourceTree = "<group>"; };
 		0ACBF62818789E8800FD1AA5 /* GW2MapLocationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapLocationSpec.m; path = Tests/GW2MapLocationSpec.m; sourceTree = SOURCE_ROOT; };
+		0ACBF62B1878AD2B00FD1AA5 /* GW2EventDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2EventDetails.m; path = Tests/GW2EventDetails.m; sourceTree = SOURCE_ROOT; };
+		0ACBF62E1878AFE300FD1AA5 /* GW2Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Event.h; sourceTree = "<group>"; };
+		0ACBF62F1878AFE300FD1AA5 /* GW2Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Event.m; sourceTree = "<group>"; };
 		0ADA22F2174AD63E007F1173 /* libGW2Kit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libGW2Kit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADA2320174AD673007F1173 /* GW2Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADA2329174AD673007F1173 /* GW2Kit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GW2Kit-Info.plist"; sourceTree = "<group>"; };
@@ -345,6 +353,8 @@
 			children = (
 				0A5300FA187604A100D55261 /* GW2EventState.h */,
 				0A5300FB187604A100D55261 /* GW2EventState.m */,
+				0ACBF62E1878AFE300FD1AA5 /* GW2Event.h */,
+				0ACBF62F1878AFE300FD1AA5 /* GW2Event.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -481,9 +491,10 @@
 			isa = PBXGroup;
 			children = (
 				0A5300A418735B2300D55261 /* GW2ObjectSpec.m */,
+				0ACBF62B1878AD2B00FD1AA5 /* GW2EventDetails.m */,
+				0A5300FF1876079600D55261 /* GW2EventStateSpec.m */,
 				0A5300F71873A82700D55261 /* GW2MapContinentSpec.m */,
 				0ACBF62818789E8800FD1AA5 /* GW2MapLocationSpec.m */,
-				0A5300FF1876079600D55261 /* GW2EventStateSpec.m */,
 				0A5301071876130500D55261 /* GW2ColorSpec.m */,
 			);
 			path = Specs;
@@ -526,6 +537,7 @@
 				0A5300F41873A1FB00D55261 /* GW2MapContinent.h in Headers */,
 				0ACBF6251878961D00FD1AA5 /* GW2MapLocation.h in Headers */,
 				0A5300FC187604A100D55261 /* GW2EventState.h in Headers */,
+				0ACBF6301878AFE300FD1AA5 /* GW2Event.h in Headers */,
 				0A53010418760F8A00D55261 /* GW2Color.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +726,7 @@
 				0ACBF62918789E8800FD1AA5 /* GW2MapLocationSpec.m in Sources */,
 				0A5300A518735B2300D55261 /* GW2ObjectSpec.m in Sources */,
 				0A5300F81873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
+				0ACBF62C1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,6 +739,7 @@
 				0ACBF62A18789E8800FD1AA5 /* GW2MapLocationSpec.m in Sources */,
 				0A5300A618735B2300D55261 /* GW2ObjectSpec.m in Sources */,
 				0A5300F91873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
+				0ACBF62D1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,6 +753,7 @@
 				0ACBF6261878961D00FD1AA5 /* GW2MapLocation.m in Sources */,
 				0A53008D1873513900D55261 /* GW2Object.m in Sources */,
 				0A5300FD187604A100D55261 /* GW2EventState.m in Sources */,
+				0ACBF6311878AFE300FD1AA5 /* GW2Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +766,7 @@
 				0ACBF6271878961D00FD1AA5 /* GW2MapLocation.m in Sources */,
 				0A53008E1873513900D55261 /* GW2Object.m in Sources */,
 				0A5300FE187604A100D55261 /* GW2EventState.m in Sources */,
+				0ACBF6321878AFE300FD1AA5 /* GW2Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
