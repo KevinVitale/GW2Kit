@@ -7,26 +7,11 @@
 //
 
 #import "GW2MapContinent.h"
+#import "MTLValueTransformer+CoreGraphics.h"
 
 @implementation GW2MapContinent
 + (NSValueTransformer *)sizeJSONTransformer {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSArray *continentDimensions) {
-        CGSize size = CGSizeMake([[continentDimensions firstObject] integerValue],
-                                 [[continentDimensions lastObject] integerValue]);
-#if TARGET_OS_IPHONE
-        return [NSValue valueWithCGSize:size];
-#else
-        return [NSValue valueWithSize:size];
-#endif
-    }
-                                                         reverseBlock:^id (NSValue *size) {
-#if TARGET_OS_IPHONE
-                                                             CGSize sizeValue = [size CGSizeValue];
-#else
-                                                             CGSize sizeValue = (CGSize)[size sizeValue];
-#endif
-                                                             return @[@(sizeValue.width), @(sizeValue.height)];
-                                                         }];
+    return MTLReversibleSizeTransformer(0);
 }
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {

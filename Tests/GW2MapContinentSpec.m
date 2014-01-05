@@ -35,6 +35,7 @@ describe(@"map continent", ^ {
         expect(mapContinent).toNot.beNil();
         expect(mapContinent.objectID).equal(@1);
         expect(mapContinent.name).equal(@"Tyria");
+        expect(CGSizeEqualToSize(mapContinent.size, CGSizeMake((CGFloat)32768, (CGFloat)32768))).to.beTruthy();
         
         // Make sure the JSON matches the original input
         id TyriaJSON = [MTLJSONAdapter JSONDictionaryFromModel:mapContinent];
