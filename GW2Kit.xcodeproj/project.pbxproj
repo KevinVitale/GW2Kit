@@ -39,6 +39,9 @@
 		0A53010618760F8A00D55261 /* GW2Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53010318760F8A00D55261 /* GW2Color.m */; };
 		0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5301071876130500D55261 /* GW2ColorSpec.m */; };
 		0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5301071876130500D55261 /* GW2ColorSpec.m */; };
+		0A99F18018792A9D0031429A /* NSArray+CoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A99F17E18792A9D0031429A /* NSArray+CoreGraphics.h */; };
+		0A99F18118792A9D0031429A /* NSArray+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99F17F18792A9D0031429A /* NSArray+CoreGraphics.m */; };
+		0A99F18218792A9D0031429A /* NSArray+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99F17F18792A9D0031429A /* NSArray+CoreGraphics.m */; };
 		0ACBF6251878961D00FD1AA5 /* GW2MapLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ACBF6231878961D00FD1AA5 /* GW2MapLocation.h */; };
 		0ACBF6261878961D00FD1AA5 /* GW2MapLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF6241878961D00FD1AA5 /* GW2MapLocation.m */; };
 		0ACBF6271878961D00FD1AA5 /* GW2MapLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF6241878961D00FD1AA5 /* GW2MapLocation.m */; };
@@ -183,6 +186,8 @@
 		0A53010218760F8A00D55261 /* GW2Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Color.h; sourceTree = "<group>"; };
 		0A53010318760F8A00D55261 /* GW2Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Color.m; sourceTree = "<group>"; };
 		0A5301071876130500D55261 /* GW2ColorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2ColorSpec.m; path = Tests/GW2ColorSpec.m; sourceTree = SOURCE_ROOT; };
+		0A99F17E18792A9D0031429A /* NSArray+CoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreGraphics.h"; sourceTree = "<group>"; };
+		0A99F17F18792A9D0031429A /* NSArray+CoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreGraphics.m"; sourceTree = "<group>"; };
 		0ACBF6231878961D00FD1AA5 /* GW2MapLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapLocation.h; sourceTree = "<group>"; };
 		0ACBF6241878961D00FD1AA5 /* GW2MapLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapLocation.m; sourceTree = "<group>"; };
 		0ACBF62818789E8800FD1AA5 /* GW2MapLocationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapLocationSpec.m; path = Tests/GW2MapLocationSpec.m; sourceTree = SOURCE_ROOT; };
@@ -393,6 +398,15 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		0A99F17D18792A670031429A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0A99F17E18792A9D0031429A /* NSArray+CoreGraphics.h */,
+				0A99F17F18792A9D0031429A /* NSArray+CoreGraphics.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		0AA612351778BCF500ED31F6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADA2335174AD722007F1173 /* GW2Kit.h */,
+				0A99F17D18792A670031429A /* Categories */,
 				0AA612351778BCF500ED31F6 /* Core */,
 				0ADA2328174AD673007F1173 /* Supporting Files */,
 			);
@@ -541,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACBF6351878BF3100FD1AA5 /* GW2MapRegion.h in Headers */,
+				0A99F18018792A9D0031429A /* NSArray+CoreGraphics.h in Headers */,
 				0A53008C1873513900D55261 /* GW2Object.h in Headers */,
 				0A5300F41873A1FB00D55261 /* GW2MapContinent.h in Headers */,
 				0ACBF6251878961D00FD1AA5 /* GW2MapLocation.h in Headers */,
@@ -762,6 +778,7 @@
 				0A53008D1873513900D55261 /* GW2Object.m in Sources */,
 				0ACBF6361878BF3100FD1AA5 /* GW2MapRegion.m in Sources */,
 				0A5300FD187604A100D55261 /* GW2EventState.m in Sources */,
+				0A99F18118792A9D0031429A /* NSArray+CoreGraphics.m in Sources */,
 				0ACBF6311878AFE300FD1AA5 /* GW2Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,6 +793,7 @@
 				0A53008E1873513900D55261 /* GW2Object.m in Sources */,
 				0ACBF6371878BF3100FD1AA5 /* GW2MapRegion.m in Sources */,
 				0A5300FE187604A100D55261 /* GW2EventState.m in Sources */,
+				0A99F18218792A9D0031429A /* NSArray+CoreGraphics.m in Sources */,
 				0ACBF6321878AFE300FD1AA5 /* GW2Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
