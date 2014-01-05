@@ -15,7 +15,7 @@
     x = floor([self.firstObject doubleValue] * exponent + .5f) / exponent;
     y = floor([self.lastObject doubleValue] * exponent + .5f) / exponent;
     
-    return CGPointMake(x, y);
+    return CGPointMake((CGFloat)x, (CGFloat)y);
 }
 - (CGSize)size:(NSInteger)precision {
     
@@ -24,7 +24,7 @@
     width = floor([self.firstObject doubleValue] * exponent + .5f) / exponent;
     height = floor([self.lastObject doubleValue] * exponent + .5f) / exponent;
     
-    return CGSizeMake(width, height);
+    return CGSizeMake((CGFloat)width, (CGFloat)height);
 }
 - (CGRect)rect:(NSInteger)precision {
     CGRect rect;
