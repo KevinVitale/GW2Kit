@@ -10,9 +10,9 @@
 #import <Expecta/Expecta.h>
 #import <Specta/Specta.h>
 
-#import "GW2MapLocation.h"
+#import "GW2EventLocation.h"
 
-SpecBegin(GW2MapLocation)
+SpecBegin(GW2EventLocation)
 describe(@"map location", ^ {
     NSDictionary *__block locationDictionary;
     beforeAll(^ {
@@ -57,15 +57,16 @@ describe(@"map location", ^ {
     });
     
     it(@"instantiates from JSON", ^ {
-        GW2MapLocation *location = [GW2MapLocation objectWithID:nil
-                                                           name:nil
-                                             fromJSONDictionary:locationDictionary
-                                                          error:nil];
+        GW2EventLocation *location = [GW2EventLocation objectWithID:nil
+                                                               name:nil
+                                                 fromJSONDictionary:locationDictionary
+                                                              error:nil];
         expect(location).toNot.beNil();
         expect(location.type).equal(@"poly");
         expect(location.points.count).equal(5);
         expect(location.name).equal(nil);
         expect(location.objectID).equal(nil);
+        expect(CGSizeEqualToSize(location.zRange, CGSizeMake((CGFloat)-2389, (CGFloat)163))).to.beTruthy();
         
         id LocationJSON = [MTLJSONAdapter JSONDictionaryFromModel:location];
         expect([LocationJSON hash]).equal(locationDictionary.hash);

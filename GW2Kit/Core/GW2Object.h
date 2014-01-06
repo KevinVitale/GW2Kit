@@ -8,6 +8,10 @@
 
 #import <Mantle/Mantle.h>
 
+#if TARGET_OS_IPHONE
+@import CoreGraphics;
+#endif
+
 /**
  *  GW2Object Protocol
  */
@@ -63,5 +67,16 @@
  *  @property objectID
  *  @property name;
  */
-//----------------------------------------------------------------------------//
 @end
+//----------------------------------------------------------------------------//
+
+//----------------------------------------------------------------------------//
+/**
+ *  A protocol to adopot if the GW2Object subclass is guaranteed to to include
+ *  a location point.
+ */
+@protocol GW2MapObject <GW2Object>
+@required
+@property (nonatomic, readonly) CGPoint coordinate;
+@end
+//----------------------------------------------------------------------------//

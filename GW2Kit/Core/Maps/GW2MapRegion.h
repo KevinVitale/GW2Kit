@@ -99,26 +99,39 @@
 @property (copy, nonatomic, readonly) NSArray   *pointsOfInterest;
 @property (copy, nonatomic, readonly) NSArray   *tasks;
 @property (copy, nonatomic, readonly) NSArray   *skillChallenges;
-@property (nonatomic, readonly) GW2MapSubRegionSector *sector;
+@property (copy, nonatomic, readonly) NSArray   *sectors;
 @end
 
 
-@interface GW2MapSubRegionPointOfInterest : GW2Object
-@property (copy, nonatomic, readonly) NSString  *type;
-@property       (nonatomic, readonly) NSInteger floor;
-@property       (nonatomic, readonly) CGPoint   coordinate;
+/**
+ *  An interface for a point of interest within a subregion.
+ */
+@protocol GW2MapSubRegionPointOfInterest <GW2MapObject>
+@required
+    @property       (nonatomic, readonly) NSInteger floor;
+    @property (copy, nonatomic, readonly) NSString *type;
 @end
 
-@interface GW2MapSubRegionTask : GW2Object
-@property (nonatomic, readonly) NSInteger   level;
-@property (nonatomic, readonly) CGPoint     coordinate;
+/**
+ *  An interface for a task within a subregion.
+ */
+@protocol GW2MapSubRegionTask <GW2MapObject>
+@required
+    @property       (nonatomic, readonly) NSInteger level;
+    @property (copy, nonatomic, readonly) NSString  *objective;
 @end
 
-@interface GW2MapSubRegionSkillChallenge : GW2Object
-@property (nonatomic, readonly) CGPoint     coordinate;
+/**
+ *  An interface for a skill challenge within a subregion
+ */
+@protocol GW2MapSubRegionSkillChallenge <GW2MapObject>
 @end
 
-@interface GW2MapSubRegionSector : GW2Object
-@property (nonatomic, readonly) NSInteger   level;
-@property (nonatomic, readonly) CGPoint     coordinate;
+/**
+ *  An interface for sectors within a subregion.
+ */
+@protocol GW2MapSubRegionSector <GW2MapObject>
+@required
+    @property       (nonatomic, readonly) NSInteger level;
+    @property (copy, nonatomic, readonly) NSString  *name;
 @end

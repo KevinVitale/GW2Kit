@@ -12,12 +12,12 @@
 @import CoreGraphics;
 #endif
 
-@interface GW2MapLocation : GW2Object
+@interface GW2EventLocation : GW2Object
 @property (copy, nonatomic, readonly) NSString *type;
 @property (copy, nonatomic, readonly) NSArray *center;
-@property (nonatomic, readonly) CGSize zRange;
+@property       (nonatomic, readonly) CGSize zRange;
 @property (copy, nonatomic, readonly) NSArray *points;
-@property (nonatomic, readonly) CGFloat height;
-@property (nonatomic, readonly) CGFloat radius;
-@property (nonatomic, readonly) CGFloat rotation;
+@property       (nonatomic, readonly) CGFloat height;
+@property       (nonatomic, readonly) CGFloat radius;
+@property       (nonatomic, readonly) CGFloat rotation;
 @end

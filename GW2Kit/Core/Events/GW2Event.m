@@ -7,7 +7,7 @@
 //
 
 #import "GW2Event.h"
-#import "GW2MapLocation.h"
+#import "GW2EventLocation.h"
 
 @implementation GW2Event
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -18,6 +18,6 @@
     };
 }
 + (NSValueTransformer *)locationJSONTransformer {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2MapLocation.class];
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2EventLocation.class];
 }
 @end

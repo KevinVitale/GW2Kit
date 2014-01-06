@@ -11,7 +11,7 @@
 #import <Specta/Specta.h>
 
 #import "GW2Event.h"
-#import "GW2MapLocation.h"
+#import "GW2EventLocation.h"
 
 SpecBegin(GW2EventDetails)
 describe(@"event details", ^ {
@@ -76,7 +76,7 @@ describe(@"event details", ^ {
         expect(event).toNot.beNil();
         expect(event.objectID).equal(eventID);
         expect(event.location).toNot.beNil();
-        expect(event.location).to.beKindOf([GW2MapLocation class]);
+        expect(event.location).to.beKindOf([GW2EventLocation class]);
         
         id EventJSON = [MTLJSONAdapter JSONDictionaryFromModel:event];
         expect([EventJSON hash]).equal(eventDetailsDictionary.hash);
