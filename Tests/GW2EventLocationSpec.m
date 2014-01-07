@@ -63,7 +63,11 @@ describe(@"map location", ^ {
                                                               error:nil];
         expect(location).toNot.beNil();
         expect(location.type).equal(@"poly");
+        
+        // Hack to ensure that 'points' contains CGPoints wrapped within NSValues
+        expect([location.points valueForKey:@"class"]).to.contain(NSClassFromString(@"NSConcreteValue").class);
         expect(location.points.count).equal(5);
+        
         expect(location.name).equal(nil);
         expect(location.objectID).equal(nil);
         expect(CGSizeEqualToSize(location.zRange, CGSizeMake((CGFloat)-2389, (CGFloat)163))).to.beTruthy();
