@@ -8,9 +8,9 @@
 
 @class MTLValueTransformer;
 
-MTLValueTransformer* MTLReversibleRectTransformer(NSInteger precision);
-MTLValueTransformer* MTLReversibleSizeTransformer(NSInteger precision);
-MTLValueTransformer* MTLReversiblePointTransformer(NSInteger precision);
+extern MTLValueTransformer* MTLReversibleRectTransformer(NSInteger precision);
+extern MTLValueTransformer* MTLReversibleSizeTransformer(NSInteger precision);
+extern MTLValueTransformer* MTLReversiblePointTransformer(NSInteger precision);
 
 /*
  * For some screwy reason, I couldn't get a category on this class to work.
