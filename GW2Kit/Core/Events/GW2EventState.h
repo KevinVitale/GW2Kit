@@ -24,7 +24,19 @@
  */
 
 @interface GW2EventState : GW2Object
+
+/**
+ *  Event state.
+ */
 @property (copy, nonatomic, readonly) NSString *state;
+
+/**
+ *  The map which this event state is associated with.
+ */
 @property (nonatomic, readonly) NSInteger mapID;
+
+/**
+ *  The world which this event state is associated with.
+ */
 @property (nonatomic, readonly) NSInteger worldID;
 @end

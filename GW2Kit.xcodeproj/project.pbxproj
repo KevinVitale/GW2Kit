@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0102D3187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0102D2187BB33C000F0493 /* GW2MapRegionSpec.m */; };
+		0A0102D4187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0102D2187BB33C000F0493 /* GW2MapRegionSpec.m */; };
 		0A3174BA187675AE009A34BA /* libMantle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B618767529009A34BA /* libMantle-iOS.a */; };
 		0A3174DE187678A2009A34BA /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DD18767896009A34BA /* libExpecta.a */; };
 		0A3174DF187678A6009A34BA /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DC18767896009A34BA /* libExpecta-iOS.a */; };
@@ -150,6 +152,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A0102D2187BB33C000F0493 /* GW2MapRegionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapRegionSpec.m; path = Tests/GW2MapRegionSpec.m; sourceTree = SOURCE_ROOT; };
 		0A3174731876683F009A34BA /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		0A3174751876683F009A34BA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		0A3174761876683F009A34BA /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -524,6 +527,7 @@
 				0A5300FF1876079600D55261 /* GW2EventStateSpec.m */,
 				0ACBF62818789E8800FD1AA5 /* GW2EventLocationSpec.m */,
 				0A5300F71873A82700D55261 /* GW2MapContinentSpec.m */,
+				0A0102D2187BB33C000F0493 /* GW2MapRegionSpec.m */,
 				0A5301071876130500D55261 /* GW2ColorSpec.m */,
 			);
 			path = Specs;
@@ -760,6 +764,7 @@
 				0A5300F81873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
 				0ACBF62C1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */,
+				0A0102D3187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +778,7 @@
 				0A5300F91873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
 				0ACBF62D1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */,
+				0A0102D4187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

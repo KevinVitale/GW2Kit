@@ -91,14 +91,49 @@
  *
  */
 @interface GW2MapSubRegion : GW2Object
+/**
+ *  The recommened minimum character level for the subregion (aka, map).
+ */
 @property       (nonatomic, readonly) NSInteger minimumLevel;
+
+/**
+ *  The recommened maximum character level for the subregion (aka, map).
+ */
 @property       (nonatomic, readonly) NSInteger maximumLevel;
+
+/**
+ *  The map floor which the subregion (map) exists on within a continent.
+ */
 @property       (nonatomic, readonly) NSInteger floor;
+
+/**
+ *  The subregion (map) boundary .
+ */
 @property       (nonatomic, readonly) CGRect    mapRegionRect;
+
+/**
+ *  The subregion (map) boundary contained within its continent.
+ */
 @property       (nonatomic, readonly) CGRect    continentRect;
+
+/**
+ *  Points of interest.
+ */
 @property (copy, nonatomic, readonly) NSArray   *pointsOfInterest;
+
+/**
+ *  Tasks, also konw as "renown hearts".
+ */
 @property (copy, nonatomic, readonly) NSArray   *tasks;
+
+/**
+ *  Skill challenges.
+ */
 @property (copy, nonatomic, readonly) NSArray   *skillChallenges;
+
+/**
+ *  Sectors (named areas) within in the subregion (map).
+ */
 @property (copy, nonatomic, readonly) NSArray   *sectors;
 @end
 
@@ -118,7 +153,6 @@
 @protocol GW2MapSubRegionTask <GW2MapObject>
 @required
     @property       (nonatomic, readonly) NSInteger level;
-    @property (copy, nonatomic, readonly) NSString  *objective;
 @end
 
 /**
@@ -133,5 +167,4 @@
 @protocol GW2MapSubRegionSector <GW2MapObject>
 @required
     @property       (nonatomic, readonly) NSInteger level;
-    @property (copy, nonatomic, readonly) NSString  *name;
 @end
