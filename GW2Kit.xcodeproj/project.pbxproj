@@ -12,6 +12,8 @@
 		0A2DD19E187C890C009BBFE1 /* GW2Guild.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2DD19C187C890C009BBFE1 /* GW2Guild.h */; };
 		0A2DD19F187C890C009BBFE1 /* GW2Guild.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DD19D187C890C009BBFE1 /* GW2Guild.m */; };
 		0A2DD1A0187C890C009BBFE1 /* GW2Guild.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DD19D187C890C009BBFE1 /* GW2Guild.m */; };
+		0A2DD1A2187C8BA6009BBFE1 /* GW2GuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DD1A1187C8BA6009BBFE1 /* GW2GuildSpec.m */; };
+		0A2DD1A3187C8BA6009BBFE1 /* GW2GuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DD1A1187C8BA6009BBFE1 /* GW2GuildSpec.m */; };
 		0A3174BA187675AE009A34BA /* libMantle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B618767529009A34BA /* libMantle-iOS.a */; };
 		0A3174DE187678A2009A34BA /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DD18767896009A34BA /* libExpecta.a */; };
 		0A3174DF187678A6009A34BA /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DC18767896009A34BA /* libExpecta-iOS.a */; };
@@ -158,6 +160,7 @@
 		0A0102D2187BB33C000F0493 /* GW2MapRegionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapRegionSpec.m; path = Tests/GW2MapRegionSpec.m; sourceTree = SOURCE_ROOT; };
 		0A2DD19C187C890C009BBFE1 /* GW2Guild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Guild.h; sourceTree = "<group>"; };
 		0A2DD19D187C890C009BBFE1 /* GW2Guild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Guild.m; sourceTree = "<group>"; };
+		0A2DD1A1187C8BA6009BBFE1 /* GW2GuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2GuildSpec.m; path = Tests/GW2GuildSpec.m; sourceTree = SOURCE_ROOT; };
 		0A3174731876683F009A34BA /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		0A3174751876683F009A34BA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		0A3174761876683F009A34BA /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -536,6 +539,7 @@
 				0A5300F71873A82700D55261 /* GW2MapContinentSpec.m */,
 				0A0102D2187BB33C000F0493 /* GW2MapRegionSpec.m */,
 				0A5301071876130500D55261 /* GW2ColorSpec.m */,
+				0A2DD1A1187C8BA6009BBFE1 /* GW2GuildSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -767,6 +771,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5301001876079600D55261 /* GW2EventStateSpec.m in Sources */,
+				0A2DD1A2187C8BA6009BBFE1 /* GW2GuildSpec.m in Sources */,
 				0ACBF62918789E8800FD1AA5 /* GW2EventLocationSpec.m in Sources */,
 				0A5300A518735B2300D55261 /* GW2ObjectSpec.m in Sources */,
 				0A5300F81873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
@@ -781,6 +786,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5301011876079600D55261 /* GW2EventStateSpec.m in Sources */,
+				0A2DD1A3187C8BA6009BBFE1 /* GW2GuildSpec.m in Sources */,
 				0ACBF62A18789E8800FD1AA5 /* GW2EventLocationSpec.m in Sources */,
 				0A5300A618735B2300D55261 /* GW2ObjectSpec.m in Sources */,
 				0A5300F91873A82700D55261 /* GW2MapContinentSpec.m in Sources */,

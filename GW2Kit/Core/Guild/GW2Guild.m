@@ -16,7 +16,9 @@
         @"foregroundID" : @"foreground_id",
         @"backgroundColorID" : @"background_color_id",
         @"foregroundPrimaryColorID" : @"foreground_primary_color_id",
-        @"foregroundSecondaryColorID" : @"foreground_secondary_color_id"
+        @"foregroundSecondaryColorID" : @"foreground_secondary_color_id",
+        @"objectID" : NSNull.null,
+        @"name" : NSNull.null,
     };
 }
 @end
@@ -32,7 +34,7 @@
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];
     return [superJSONKeyPaths copy];
 }
-+ (NSValueTransformer *)locationJSONTransformer {
++ (NSValueTransformer *)emblemJSONTransformer {
     return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2GuildEmblem.class];
 }
 @end
