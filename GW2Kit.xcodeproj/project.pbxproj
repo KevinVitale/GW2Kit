@@ -19,6 +19,11 @@
 		0A2DD1AD187C9753009BBFE1 /* GW2WvWMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DD1AA187C9753009BBFE1 /* GW2WvWMatch.m */; };
 		0A3070E1187CFF0100950DB5 /* GW2WvWMatchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3070E0187CFF0100950DB5 /* GW2WvWMatchSpec.m */; };
 		0A3070E2187CFF0100950DB5 /* GW2WvWMatchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3070E0187CFF0100950DB5 /* GW2WvWMatchSpec.m */; };
+		0A3070E5187D0FC700950DB5 /* GW2WvWMatchUp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3070E3187D0FC700950DB5 /* GW2WvWMatchUp.h */; };
+		0A3070E6187D0FC700950DB5 /* GW2WvWMatchUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3070E4187D0FC700950DB5 /* GW2WvWMatchUp.m */; };
+		0A3070E7187D0FC700950DB5 /* GW2WvWMatchUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3070E4187D0FC700950DB5 /* GW2WvWMatchUp.m */; };
+		0A3070EC187D143400950DB5 /* GW2WvWMatchUpSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3070EB187D143400950DB5 /* GW2WvWMatchUpSpec.m */; };
+		0A3070ED187D143400950DB5 /* GW2WvWMatchUpSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3070EB187D143400950DB5 /* GW2WvWMatchUpSpec.m */; };
 		0A3174BA187675AE009A34BA /* libMantle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B618767529009A34BA /* libMantle-iOS.a */; };
 		0A3174DE187678A2009A34BA /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DD18767896009A34BA /* libExpecta.a */; };
 		0A3174DF187678A6009A34BA /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174DC18767896009A34BA /* libExpecta-iOS.a */; };
@@ -169,6 +174,9 @@
 		0A2DD1A9187C9753009BBFE1 /* GW2WvWMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWMatch.h; sourceTree = "<group>"; };
 		0A2DD1AA187C9753009BBFE1 /* GW2WvWMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatch.m; sourceTree = "<group>"; };
 		0A3070E0187CFF0100950DB5 /* GW2WvWMatchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2WvWMatchSpec.m; path = Tests/GW2WvWMatchSpec.m; sourceTree = SOURCE_ROOT; };
+		0A3070E3187D0FC700950DB5 /* GW2WvWMatchUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2WvWMatchUp.h; sourceTree = "<group>"; };
+		0A3070E4187D0FC700950DB5 /* GW2WvWMatchUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatchUp.m; sourceTree = "<group>"; };
+		0A3070EB187D143400950DB5 /* GW2WvWMatchUpSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2WvWMatchUpSpec.m; path = Tests/GW2WvWMatchUpSpec.m; sourceTree = SOURCE_ROOT; };
 		0A3174731876683F009A34BA /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		0A3174751876683F009A34BA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		0A3174761876683F009A34BA /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -464,6 +472,8 @@
 			children = (
 				0A2DD1A9187C9753009BBFE1 /* GW2WvWMatch.h */,
 				0A2DD1AA187C9753009BBFE1 /* GW2WvWMatch.m */,
+				0A3070E3187D0FC700950DB5 /* GW2WvWMatchUp.h */,
+				0A3070E4187D0FC700950DB5 /* GW2WvWMatchUp.m */,
 			);
 			path = WvW;
 			sourceTree = "<group>";
@@ -551,6 +561,7 @@
 				0A5301071876130500D55261 /* GW2ColorSpec.m */,
 				0A2DD1A1187C8BA6009BBFE1 /* GW2GuildSpec.m */,
 				0A3070E0187CFF0100950DB5 /* GW2WvWMatchSpec.m */,
+				0A3070EB187D143400950DB5 /* GW2WvWMatchUpSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -591,6 +602,7 @@
 				0ACBF6351878BF3100FD1AA5 /* GW2MapRegion.h in Headers */,
 				0A73CBFF1879A0BD00C6BD4A /* MTLValueTransformer+CoreGraphics.h in Headers */,
 				0A99F18018792A9D0031429A /* NSArray+CoreGraphics.h in Headers */,
+				0A3070E5187D0FC700950DB5 /* GW2WvWMatchUp.h in Headers */,
 				0A2DD19E187C890C009BBFE1 /* GW2Guild.h in Headers */,
 				0A53008C1873513900D55261 /* GW2Object.h in Headers */,
 				0A2DD1AB187C9753009BBFE1 /* GW2WvWMatch.h in Headers */,
@@ -791,6 +803,7 @@
 				0ACBF62C1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */,
 				0A0102D3187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,
+				0A3070EC187D143400950DB5 /* GW2WvWMatchUpSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +820,7 @@
 				0ACBF62D1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */,
 				0A0102D4187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,
+				0A3070ED187D143400950DB5 /* GW2WvWMatchUpSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +828,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3070E6187D0FC700950DB5 /* GW2WvWMatchUp.m in Sources */,
 				0A53010518760F8A00D55261 /* GW2Color.m in Sources */,
 				0A5300F51873A1FB00D55261 /* GW2MapContinent.m in Sources */,
 				0ACBF6261878961D00FD1AA5 /* GW2EventLocation.m in Sources */,
@@ -832,6 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3070E7187D0FC700950DB5 /* GW2WvWMatchUp.m in Sources */,
 				0A53010618760F8A00D55261 /* GW2Color.m in Sources */,
 				0A5300F61873A1FB00D55261 /* GW2MapContinent.m in Sources */,
 				0ACBF6271878961D00FD1AA5 /* GW2EventLocation.m in Sources */,
