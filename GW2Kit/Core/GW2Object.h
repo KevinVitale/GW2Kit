@@ -15,7 +15,7 @@
  *  @param objectID unique-identifier for all objects.
  *  @param name     string identifier for all objects.
  */
-@property (copy, nonatomic, readonly)       id objectID;
+@property (copy, nonatomic, readonly)    id objectID;
 @property (copy, nonatomic, readonly) NSString *name;
 
 /**
