@@ -23,7 +23,7 @@ describe(@"item", ^ {
     });
     
     it(@"initializes from JSON", ^ {
-        id<GW2Item> item = [NSClassFromString(@"GW2Item") objectWithID:nil
+        id<GW2Item> item = [NSClassFromString(@"_GW2Item") objectWithID:nil
                                                                   name:nil
                                                     fromJSONDictionary:itemDetailJSON
                                                                  error:nil];

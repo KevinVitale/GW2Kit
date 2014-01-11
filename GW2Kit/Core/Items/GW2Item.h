@@ -8,8 +8,6 @@
 
 #import "GW2Object.h"
 
-@class GW2ItemType;
-
 @protocol GW2ItemInfixUpgrade <NSObject>
 @required
 @property (copy, nonatomic, readonly) NSArray *attributes;
@@ -18,6 +16,16 @@
 @protocol GW2ItemInfixUpgradeAttribute <NSObject>
 @property (copy, nonatomic, readonly) NSString *attirbutes;
 @property       (nonatomic, readonly) NSInteger modifier;
+@end
+
+@protocol GW2ItemType <GW2Object>
+@property (copy, nonatomic, readonly) NSString  *type;
+@property (copy, nonatomic, readonly) NSString  *damageType;
+@property       (nonatomic, readonly) NSInteger minimumPower;
+@property       (nonatomic, readonly) NSInteger maximumPower;
+@property       (nonatomic, readonly) NSInteger defense;
+@property (copy, nonatomic, readonly) NSArray   *infusionSlots;
+@property (nonatomic, readonly) id<GW2ItemInfixUpgrade> infixUpgrade;
 @end
 
 @protocol GW2Item <GW2Object>
@@ -32,15 +40,5 @@
 @property       (nonatomic, readonly) NSInteger level;
 @property       (nonatomic, readonly) NSInteger vendorValue;
 @property       (nonatomic, readonly) NSInteger suffixItemID;
-@property       (nonatomic, readonly) GW2ItemType *itemType;
-@end
-
-@protocol GW2ItemType <GW2Object>
-@property (copy, nonatomic, readonly) NSString  *type;
-@property (copy, nonatomic, readonly) NSString  *damageType;
-@property       (nonatomic, readonly) NSInteger minimumPower;
-@property       (nonatomic, readonly) NSInteger maximumPower;
-@property       (nonatomic, readonly) NSInteger defense;
-@property (copy, nonatomic, readonly) NSArray   *infusionSlots;
-@property (nonatomic, readonly) id<GW2ItemInfixUpgrade> infixUpgrade;
+@property       (nonatomic, readonly) id<GW2ItemType> itemType;
 @end

@@ -9,7 +9,7 @@
 #import "GW2Item.h"
 #import "GW2Object+Private.h"
 
-@interface GW2Item : _GW2Object <GW2Item>
+@interface _GW2Item : _GW2Object <GW2Item>
 @property (copy, nonatomic, readonly) NSString  *description;
 @property (copy, nonatomic, readonly) NSString  *type;
 @property (copy, nonatomic, readonly) NSString  *rarity;
@@ -21,10 +21,10 @@
 @property       (nonatomic, readonly) NSInteger level;
 @property       (nonatomic, readonly) NSInteger vendorValue;
 @property       (nonatomic, readonly) NSInteger suffixItemID;
-@property       (nonatomic, readonly) GW2ItemType *itemType;
+@property       (nonatomic, readonly) id<GW2ItemType> itemType;
 @end
 
-@interface GW2ItemType : _GW2Object <GW2ItemType>
+@interface _GW2ItemType : _GW2Object <GW2ItemType>
 @property (copy, nonatomic, readonly) NSString  *type;
 @property (copy, nonatomic, readonly) NSString  *damageType;
 @property       (nonatomic, readonly) NSInteger minimumPower;
@@ -64,9 +64,9 @@
 @end
 //------------------------------------------------------------------------------
 
-@interface GW2Item ()
+@interface _GW2Item ()
 @end
-@implementation GW2Item
+@implementation _GW2Item
 + (NSValueTransformer *)objectIDJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithBlock:^id (id objectID) {
         id result;
