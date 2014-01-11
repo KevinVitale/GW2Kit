@@ -6,7 +6,6 @@
 //
 //
 
-#import "GW2Object.h"
 #import "GW2Object+Private.h"
 
 @interface _GW2Object ()

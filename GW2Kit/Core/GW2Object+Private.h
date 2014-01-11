@@ -7,8 +7,8 @@
 //
 
 #import "GW2Object.h"
-
 #import <Mantle/Mantle.h>
+
 /**
  *  Objects returned by the GW2 API which have an 'id' and a 'name'.
  *
