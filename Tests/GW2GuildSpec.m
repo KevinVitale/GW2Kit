@@ -33,15 +33,18 @@ describe(@"guild", ^ {
     });
     
     it(@"instantiates from guild JSON", ^ {
-        GW2Guild *guild = [GW2Guild objectWithID:nil
-                                            name:nil
-                              fromJSONDictionary:guildDictionary
-                                           error:nil];
+        id<GW2Guild> guild = [NSClassFromString(@"GW2Guild") objectWithID:nil
+                                                                     name:nil
+                                                       fromJSONDictionary:guildDictionary
+                                                                    error:nil];
         // Check object integrity
         expect(guild).toNot.beNil();
-        expect(guild.emblem).to.beKindOf(GW2GuildEmblem.class);
+        expect(guild.tag).equal(@"LA");
+        expect(guild.name).equal(@"Veterans Of Lions Arch");
+        expect(guild.objectID).equal(@"75FD83CF-0C45-4834-BC4C-097F93A487AF");
+        expect([guild.emblem conformsToProtocol:@protocol(GW2GuildEmblem)]).to.beTruthy();
         
-        NSDictionary *GuildJSON = [MTLJSONAdapter JSONDictionaryFromModel:guild];
+        NSDictionary *GuildJSON = [guild JSONRepresentation];
         expect(GuildJSON).equal(guildDictionary);
     });
 });

@@ -15,7 +15,7 @@
 SpecBegin(GW2WvWMatchUp)
 describe(@"wvw match ups", ^ {
     NSDictionary *__block matchesJSON;
-    GW2WvWMatchUp *__block matchUp;
+    id<GW2WvWMatchUp> __block matchUp;
     beforeAll(^ {
         // Pull the .json file from the bundle
         NSURL *matchDetailsURL = [[NSBundle bundleForClass:self.class] URLForResource:@"matches" withExtension:@"json"];
@@ -32,10 +32,10 @@ describe(@"wvw match ups", ^ {
     beforeEach(^ {
         NSArray *matchesArray = matchesJSON[@"wvw_matches"];
         expect(matchesArray.count).equal(17);
-        matchUp = [GW2WvWMatchUp objectWithID:nil
-                                         name:nil
-                           fromJSONDictionary:matchesArray.firstObject
-                                        error:nil];
+        matchUp = [NSClassFromString(@"GW2WvWMatchUp") objectWithID:nil
+                                                               name:nil
+                                                 fromJSONDictionary:matchesArray.firstObject
+                                                              error:nil];
     });
     
     it(@"instantiates matches from JSON", ^ {

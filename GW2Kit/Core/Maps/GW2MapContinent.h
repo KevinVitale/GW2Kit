@@ -11,7 +11,7 @@
 @import CoreGraphics;
 #endif
 
-@interface GW2MapContinent : GW2Object
+@protocol GW2MapContinent <GW2Object>
 @property (nonatomic, readonly) CGSize      size;
 @property (nonatomic, readonly) NSInteger   minZoom;
 @property (nonatomic, readonly) NSInteger   maxZoom;

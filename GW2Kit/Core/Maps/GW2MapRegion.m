@@ -8,8 +8,27 @@
 
 #import "GW2MapRegion.h"
 #import "MTLValueTransformer+CoreGraphics.h"
+#import "GW2Object+Private.h"
 
-@interface GW2MapObject : GW2Object
+@interface GW2MapRegion : _GW2Object <GW2MapRegion>
+@property       (nonatomic, readonly)   CGPoint labelCoordinate;
+@property (copy, nonatomic, readonly)   NSArray *subregions;
+@end
+
+@interface GW2MapSubRegion : _GW2Object
+@property       (nonatomic, readonly) NSInteger minimumLevel;
+@property       (nonatomic, readonly) NSInteger maximumLevel;
+@property       (nonatomic, readonly) NSInteger floor;
+@property       (nonatomic, readonly) CGRect    mapRegionRect;
+@property       (nonatomic, readonly) CGRect    continentRect;
+@property (copy, nonatomic, readonly) NSArray   *pointsOfInterest;
+@property (copy, nonatomic, readonly) NSArray   *tasks;
+@property (copy, nonatomic, readonly) NSArray   *skillChallenges;
+@property (copy, nonatomic, readonly) NSArray   *sectors;
+@end
+
+
+@interface GW2MapObject : _GW2Object
 @property        (nonatomic, readonly) CGPoint coordinate;
 @end
 @implementation GW2MapObject

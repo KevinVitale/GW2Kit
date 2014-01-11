@@ -7,9 +7,17 @@
 //
 
 #import "GW2Event.h"
-#import "GW2EventLocation.h"
+#import "GW2Object+Private.h"
 
-@implementation GW2Event
+@interface _GW2Event : _GW2Object <GW2Event>
+@property (nonatomic, readonly) NSInteger level;
+@property (nonatomic, readonly) NSInteger mapID;
+@property (copy, nonatomic, readonly) NSArray *flags;
+@property (nonatomic, readonly) id<GW2EventLocation> location;
+@end
+
+
+@implementation _GW2Event
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @
     {
@@ -18,6 +26,6 @@
     };
 }
 + (NSValueTransformer *)locationJSONTransformer {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2EventLocation.class];
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:NSClassFromString(@"_GW2EventLocation")];
 }
 @end

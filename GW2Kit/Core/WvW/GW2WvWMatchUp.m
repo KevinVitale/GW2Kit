@@ -7,6 +7,16 @@
 //
 
 #import "GW2WvWMatchUp.h"
+#import "GW2Object+Private.h"
+
+@interface GW2WvWMatchUp : _GW2Object <GW2WvWMatchUp>
+@property       (nonatomic, readonly) NSInteger redWorldID;
+@property       (nonatomic, readonly) NSInteger blueWorldID;
+@property       (nonatomic, readonly) NSInteger greenWorldID;
+@property (copy, nonatomic, readonly) NSDate    *startDate;
+@property (copy, nonatomic, readonly) NSDate    *endDate;
+@end
+
 
 @implementation GW2WvWMatchUp
 + (NSDateFormatter *)dateFormatter {

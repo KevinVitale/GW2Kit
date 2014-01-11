@@ -8,9 +8,21 @@
 
 #import "GW2EventLocation.h"
 #import "NSArray+CoreGraphics.h"
+#import "GW2Object+Private.h"
 #import "MTLValueTransformer+CoreGraphics.h"
 
-@implementation GW2EventLocation
+@interface _GW2EventLocation : _GW2Object <GW2EventLocation>
+@property (copy, nonatomic, readonly) NSString *type;
+@property (copy, nonatomic, readonly) NSArray *center;
+@property       (nonatomic, readonly) CGSize zRange;
+@property (copy, nonatomic, readonly) NSArray *points;
+@property       (nonatomic, readonly) CGFloat height;
+@property       (nonatomic, readonly) CGFloat radius;
+@property       (nonatomic, readonly) CGFloat rotation;
+@end
+
+
+@implementation _GW2EventLocation
 + (NSValueTransformer *)zRangeJSONTransformer {
     return MTLReversibleSizeTransformer(0);
 }

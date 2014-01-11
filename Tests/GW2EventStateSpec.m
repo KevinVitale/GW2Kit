@@ -11,6 +11,7 @@
 #import <Specta/Specta.h>
 
 #import "GW2EventState.h"
+#import <Mantle/Mantle.h>
 
 SpecBegin(GW2EventState)
 describe(@"event state", ^ {
@@ -34,10 +35,10 @@ describe(@"event state", ^ {
     });
     
     it(@"instantiates from JSON", ^ {
-        GW2EventState *eventState = [GW2EventState objectWithID:nil
-                                                           name:@"Stop the skritt burglar before it escapes with the treasure."
-                                             fromJSONDictionary:eventStatesArray.firstObject
-                                                          error:nil];   
+        id<GW2EventState> eventState = [NSClassFromString(@"_GW2EventState") objectWithID:nil
+                                                                                     name:@"Stop the skritt burglar before it escapes with the treasure."
+                                                                       fromJSONDictionary:eventStatesArray.firstObject
+                                                                                    error:nil];
         // Check object integrity
         expect(eventState).toNot.beNil();
         expect(eventState.state).equal(@"Warmup");
@@ -47,7 +48,7 @@ describe(@"event state", ^ {
         expect(eventState.name).equal(@"Stop the skritt burglar before it escapes with the treasure.");
         
         // Turn back into JSON
-        id eventStateJSON = [MTLJSONAdapter JSONDictionaryFromModel:eventState];
+        id eventStateJSON = [eventState JSONRepresentation];
         expect(eventStateJSON).equal(eventStatesArray.firstObject);
     });
 });

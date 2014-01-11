@@ -6,19 +6,16 @@
 //
 //
 
-#import <Mantle/Mantle.h>
-
-#if TARGET_OS_IPHONE
-@import CoreGraphics;
-#endif
-
 /**
- *  GW2Object Protocol
+ *  GW2Object, protocol adopted by all GW2Kit objects returned by the service.
  */
 @protocol GW2Object <NSObject>
-// Required Properties
 @required
-@property (copy, nonatomic, readonly) id objectID;
+/**
+ *  @param objectID unique-identifier for all objects.
+ *  @param name     string identifier for all objects.
+ */
+@property (copy, nonatomic, readonly)       id objectID;
 @property (copy, nonatomic, readonly) NSString *name;
 
 /**
@@ -43,40 +40,11 @@
                        name:(NSString *)name
          fromJSONDictionary:(NSDictionary *)JSONDictionary
                       error:(NSError **)error;
-@end
-//----------------------------------------------------------------------------//
-/**
- *  Objects returned by the GW2 API which have an 'id' and a 'name'.
- *
- *  This includes:
- *      - event_names
- *      - world_names
- *      - map_naes
- *
- *  The response looks like:
- *      {
- *          "name"  : " ... ",
- *          "id"    : " ... "
- *      }
- *
- *  The value of 'name' can be a string, in the case of events.
- *  The value of 'name' can be a number, in the case of world and maps.
- */
-@interface GW2Object : MTLModel <MTLJSONSerializing, GW2Object>
-/*
- *  @property objectID
- *  @property name;
- */
-@end
-//----------------------------------------------------------------------------//
 
-//----------------------------------------------------------------------------//
+
+@optional
 /**
- *  A protocol to adopot if the GW2Object subclass is guaranteed to to include
- *  a location point.
+ *  @return JSON Dictionary.
  */
-@protocol GW2MapObject <GW2Object>
-@required
-@property (nonatomic, readonly) CGPoint coordinate;
+- (NSDictionary *)JSONRepresentation;
 @end
-//----------------------------------------------------------------------------//

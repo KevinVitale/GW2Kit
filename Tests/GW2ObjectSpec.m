@@ -40,10 +40,10 @@ describe(@"named object", ^ {
     });
     
     it(@"works with event names", ^ {
-        GW2Object *nameObject = [GW2Object objectWithID:nil
-                                                   name:nil
-                                     fromJSONDictionary:[eventNamesJSON firstObject]
-                                                  error:nil];
+        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:nil
+                                                                             name:nil
+                                                               fromJSONDictionary:[eventNamesJSON firstObject]
+                                                                            error:nil];
         // Ensure our object was created
         expect(nameObject).toNot.beNil();
         
@@ -53,9 +53,10 @@ describe(@"named object", ^ {
     });
     
     it(@"works with map names", ^ {
-        GW2Object *nameObject = [MTLJSONAdapter modelOfClass:[GW2Object class]
-                                          fromJSONDictionary:[mapNamesJSON firstObject]
-                                                       error:nil];
+        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:nil
+                                                                             name:nil
+                                                               fromJSONDictionary:[mapNamesJSON firstObject]
+                                                                            error:nil];
         // Ensure our object was created
         expect(nameObject).toNot.beNil();
         
@@ -65,9 +66,10 @@ describe(@"named object", ^ {
     });
     
     it(@"works with world names", ^ {
-        GW2Object *nameObject = [MTLJSONAdapter modelOfClass:[GW2Object class]
-                                          fromJSONDictionary:[worldNamesJSON firstObject]
-                                                       error:nil];
+        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:nil
+                                                                             name:nil
+                                                               fromJSONDictionary:[worldNamesJSON firstObject]
+                                                                            error:nil];
         // Ensure our object was created
         expect(nameObject).toNot.beNil();
         
@@ -77,20 +79,20 @@ describe(@"named object", ^ {
     });
     
     it(@"works with class initializers", ^ {
-        GW2Object *nameObject = [GW2Object objectWithID:@10
-                                                   name:@"Kevin"
-                                     fromJSONDictionary:@{}
-                                                  error:nil];
+        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:@10
+                                                                             name:@"Kevin"
+                                                               fromJSONDictionary:@{}
+                                                                            error:nil];
         expect(nameObject).toNot.beNil();
         expect(nameObject.objectID).equal(@10);
         expect(nameObject.name).equal(@"Kevin");
     });
     
     it(@"class initializer doesn't override default values", ^ {
-        GW2Object *nameObject = [GW2Object objectWithID:@10
-                                                   name:@"Kevin"
-                                     fromJSONDictionary:@{@"id" : @20, @"name" : @"Owen"}
-                                                  error:nil];
+        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:@10
+                                                                             name:@"Kevin"
+                                                               fromJSONDictionary:@{@"id" : @20, @"name" : @"Owen"}
+                                                                            error:nil];
         expect(nameObject).toNot.beNil();
         expect(nameObject.objectID).equal(@20);
         expect(nameObject.name).equal(@"Owen");

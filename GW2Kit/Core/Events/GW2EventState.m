@@ -7,8 +7,15 @@
 //
 
 #import "GW2EventState.h"
+#import "GW2Object+Private.h"
 
-@implementation GW2EventState
+@interface _GW2EventState : _GW2Object <GW2EventState>
+@property (copy, nonatomic, readonly) NSString *state;
+@property (nonatomic, readonly) NSInteger mapID;
+@property (nonatomic, readonly) NSInteger worldID;
+@end
+
+@implementation _GW2EventState
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @
     {

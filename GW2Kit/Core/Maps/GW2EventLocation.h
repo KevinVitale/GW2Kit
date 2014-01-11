@@ -33,7 +33,7 @@
         ]
     }
  */
-@interface GW2EventLocation : GW2Object
+@protocol GW2EventLocation <GW2Object>
 /**
  *  Each event has a location. This location defines a geometric volume of 3D game
  *  space, in which the event takes place in the game. In simpler terms, an event 

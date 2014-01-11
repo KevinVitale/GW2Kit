@@ -69,16 +69,18 @@ describe(@"event details", ^ {
     });
     
     it(@"instantiates from JSON", ^ {
-        GW2Event *event = [GW2Event objectWithID:eventID
-                                            name:nil
-                              fromJSONDictionary:eventDetailsDictionary
-                                           error:nil];
+        id<GW2Event> event = [NSClassFromString(@"_GW2Event") objectWithID:eventID
+                                                                      name:nil
+                                                        fromJSONDictionary:eventDetailsDictionary
+                                                                     error:nil];
         expect(event).toNot.beNil();
         expect(event.objectID).equal(eventID);
         expect(event.location).toNot.beNil();
-        expect(event.location).to.beKindOf([GW2EventLocation class]);
+        expect(event.mapID).equal(19);
+        expect(event.flags.firstObject).equal(@"group_event");
+        expect([event.location conformsToProtocol:@protocol(GW2EventLocation)]).to.beTruthy();
         
-        id EventJSON = [MTLJSONAdapter JSONDictionaryFromModel:event];
+        id EventJSON = [event JSONRepresentation];
         expect([EventJSON hash]).equal(eventDetailsDictionary.hash);
     });
 });

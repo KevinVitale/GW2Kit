@@ -23,7 +23,7 @@
  *                Active.
  */
 
-@interface GW2EventState : GW2Object
+@protocol GW2EventState <GW2Object>
 
 /**
  *  Event state.

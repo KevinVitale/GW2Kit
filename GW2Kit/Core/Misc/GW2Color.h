@@ -7,11 +7,12 @@
 //
 
 #import "GW2Object.h"
+
 #if TARGET_OS_IPHONE
 @import CoreGraphics;
 #endif
 
-@interface GW2ColorMaterial : GW2Object
+@protocol GW2ColorMaterial <GW2Object>
 @property (nonatomic, readonly) NSInteger   brightness;
 @property (nonatomic, readonly) CGFloat     contrast;
 @property (nonatomic, readonly) NSInteger   hue;
@@ -20,9 +21,9 @@
 @property (copy, readonly, nonatomic) id    color;
 @end
 
-@interface GW2Color : GW2Object
+@protocol GW2Color <GW2Object>
 @property (copy, readonly, nonatomic) id color;
-@property (readonly, nonatomic) GW2ColorMaterial *cloth;
-@property (readonly, nonatomic) GW2ColorMaterial *leather;
-@property (readonly, nonatomic) GW2ColorMaterial *metal;
+@property (readonly, nonatomic) id<GW2ColorMaterial> cloth;
+@property (readonly, nonatomic) id<GW2ColorMaterial> leather;
+@property (readonly, nonatomic) id<GW2ColorMaterial> metal;
 @end

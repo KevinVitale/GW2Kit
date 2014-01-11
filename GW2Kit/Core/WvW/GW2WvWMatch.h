@@ -34,7 +34,7 @@
  *    - Green
  *    - Blue
  */
-@interface GW2WvWBattleground : GW2Object
+@protocol GW2WvWBattleground <GW2Object>
 @property (copy, nonatomic, readonly) NSArray *scores;
 @property (copy, nonatomic, readonly) NSArray *objectives;
 @property (copy, nonatomic, readonly) NSArray *bonuses;
@@ -43,7 +43,7 @@
 /**
  *  WvW match.
  */
-@interface GW2WvWMatch : GW2Object
+@protocol GW2WvWMatch <GW2Object>
 @property (copy, nonatomic, readonly) NSArray *scores;
 @property (copy, nonatomic, readonly) NSArray *battlegrounds;
 @end

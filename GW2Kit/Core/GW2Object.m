@@ -7,13 +7,14 @@
 //
 
 #import "GW2Object.h"
+#import "GW2Object+Private.h"
 
-@interface GW2Object ()
-@property (copy, nonatomic, readwrite) id objectID;
+@interface _GW2Object ()
+@property (copy, nonatomic, readwrite)    id objectID;
 @property (copy, nonatomic, readwrite) NSString *name;
 @end
 
-@implementation GW2Object
+@implementation _GW2Object
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{@"objectID" : @"id"};
 }
@@ -23,20 +24,30 @@
                       error:(NSError *__autoreleasing *)error {
     
     // This is the method we intend to wrap around.
-    id object = [MTLJSONAdapter modelOfClass:self.class
-                          fromJSONDictionary:JSONDictionary
-                                       error:error];
-    
-    // Check to see if 'objectID' was set via the JSONDictionary
-    if(![object valueForKey:@"objectID"]) {
-        [object setValue:objectID forKey:@"objectID"];
+    return ({
+        id object = [MTLJSONAdapter modelOfClass:self.class
+                              fromJSONDictionary:JSONDictionary
+                                           error:error];
+        
+        // Check to see if 'objectID' was set via the JSONDictionary
+        if(![object valueForKey:@"objectID"]) {
+            [object setValue:objectID forKey:@"objectID"];
+        }
+        // Check to see if 'name' was set via the JSONDictionary
+        if(![object valueForKey:@"name"]) {
+            [object setValue:name forKey:@"name"];
+        }
+        
+        // 'gcc' trick; make this is the last thing called
+        object;
+    });
+}
+
+- (NSDictionary *)JSONRepresentation {
+    if([self conformsToProtocol:@protocol(MTLJSONSerializing)] &&
+       [self isKindOfClass:[MTLModel class]]) {
+        return [MTLJSONAdapter JSONDictionaryFromModel:(MTLModel <MTLJSONSerializing> *)self];
     }
-    // Check to see if 'name' was set via the JSONDictionary
-    if(![object valueForKey:@"name"]) {
-        [object setValue:name forKey:@"name"];
-    }
-    
-    // Return
-    return object;
+    return nil;
 }
 @end

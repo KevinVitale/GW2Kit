@@ -8,8 +8,16 @@
 
 #import "GW2MapContinent.h"
 #import "MTLValueTransformer+CoreGraphics.h"
+#import "GW2Object+Private.h"
 
-@implementation GW2MapContinent
+@interface _GW2MapContinent : _GW2Object <GW2MapContinent>
+@property (nonatomic, readonly) CGSize      size;
+@property (nonatomic, readonly) NSInteger   minZoom;
+@property (nonatomic, readonly) NSInteger   maxZoom;
+@property (nonatomic, readonly) NSArray*    floors;
+@end
+
+@implementation _GW2MapContinent
 + (NSValueTransformer *)sizeJSONTransformer {
     return MTLReversibleSizeTransformer(0);
 }

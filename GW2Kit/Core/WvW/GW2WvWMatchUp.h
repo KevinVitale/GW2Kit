@@ -8,7 +8,7 @@
 
 #import "GW2Object.h"
 
-@interface GW2WvWMatchUp : GW2Object
+@protocol GW2WvWMatchUp <GW2Object>
 @property       (nonatomic, readonly) NSInteger redWorldID;
 @property       (nonatomic, readonly) NSInteger blueWorldID;
 @property       (nonatomic, readonly) NSInteger greenWorldID;

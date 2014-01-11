@@ -8,6 +8,21 @@
 
 #import "GW2Object.h"
 
+#if TARGET_OS_IPHONE
+@import CoreGraphics;
+#endif
+
+//----------------------------------------------------------------------------//
+/**
+ *  A protocol to adopot if the GW2Object subclass is guaranteed to to include
+ *  a location point.
+ */
+@protocol GW2MapObject <GW2Object>
+@required
+@property (nonatomic, readonly) CGPoint coordinate;
+@end
+//----------------------------------------------------------------------------//
+
 /**
  *  GW2MapRegion
  *  Represents a region on the map, such as:
@@ -25,7 +40,7 @@
  *      etc.
  *  (note: each sub-region is a map returned by map_names.json)
  */
-@interface GW2MapRegion : GW2Object
+@protocol GW2MapRegion <GW2Object>
 @property       (nonatomic, readonly)   CGPoint labelCoordinate;
 @property (copy, nonatomic, readonly)   NSArray *subregions;
 @end
@@ -90,7 +105,7 @@
             },
  *
  */
-@interface GW2MapSubRegion : GW2Object
+@protocol GW2MapSubRegion <GW2Object>
 /**
  *  The recommened minimum character level for the subregion (aka, map).
  */

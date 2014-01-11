@@ -27,10 +27,10 @@ describe(@"map continent", ^ {
     
     it(@"works with API response", ^ {
         id TyriaContinent = continentsJSON[@"continents"][@"1"];
-        GW2MapContinent *mapContinent = [GW2MapContinent objectWithID:@1
-                                                                 name:nil
-                                                   fromJSONDictionary:TyriaContinent
-                                                                error:nil];
+        id<GW2MapContinent> mapContinent = [NSClassFromString(@"_GW2MapContinent") objectWithID:@1
+                                                                                           name:nil
+                                                                             fromJSONDictionary:TyriaContinent
+                                                                                          error:nil];
         // Ensure our object was created from Tyria
         expect(mapContinent).toNot.beNil();
         expect(mapContinent.objectID).equal(@1);
@@ -38,15 +38,15 @@ describe(@"map continent", ^ {
         expect(CGSizeEqualToSize(mapContinent.size, CGSizeMake((CGFloat)32768, (CGFloat)32768))).to.beTruthy();
         
         // Make sure the JSON matches the original input
-        id TyriaJSON = [MTLJSONAdapter JSONDictionaryFromModel:mapContinent];
+        id TyriaJSON = [mapContinent JSONRepresentation];
         expect(TyriaJSON).equal(TyriaContinent);
         
         // Let's switch over to Heart of the Mists
         id HoMContinent = continentsJSON[@"continents"][@"2"];
-        mapContinent = [GW2MapContinent objectWithID:@2
-                                                name:nil
-                                  fromJSONDictionary:HoMContinent
-                                               error:nil];
+        mapContinent = [NSClassFromString(@"_GW2MapContinent") objectWithID:@2
+                                                                       name:nil
+                                                         fromJSONDictionary:HoMContinent
+                                                                      error:nil];
         
         // Ensure our object was created from HoM
         expect(mapContinent).toNot.beNil();
@@ -54,7 +54,7 @@ describe(@"map continent", ^ {
         expect(mapContinent.name).equal(@"Mists");
         
         // Make sure the JSON matches the original input
-        id HoMJSON = [MTLJSONAdapter JSONDictionaryFromModel:mapContinent];
+        id HoMJSON = [mapContinent JSONRepresentation];
         expect(HoMJSON).equal(HoMContinent);
     });
 });

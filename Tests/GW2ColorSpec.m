@@ -33,29 +33,45 @@ describe(@"color", ^ {
     });
     
     it(@"instantiates from color JSON", ^ {
-        GW2Color *color = [MTLJSONAdapter modelOfClass:[GW2Color class]
-                                    fromJSONDictionary:colorsDictionary[@"1"]
-                                                 error:nil];
+        id<GW2Color> color = [NSClassFromString(@"_GW2Color") objectWithID:@1
+                                                                      name:nil
+                                                        fromJSONDictionary:colorsDictionary[@"1"]
+                                                                     error:nil];
         // Check object integrity
         expect(color).toNot.beNil();
+        expect(color.name).equal(@"Dye Remover");
         expect(color.color).toNot.beNil();
+        expect(color.cloth).toNot.beNil();
+        expect(color.leather).toNot.beNil();
+        expect(color.metal).toNot.beNil();
+        
+#if TARGET_OS_IPHONE
+        Class colorClass = NSClassFromString(@"UIColor");
+#else
+        Class colorClass = NSClassFromString(@"NSColor");
+#endif
+        expect([color.color isKindOfClass:colorClass]).to.beTruthy();
+        expect([color.cloth conformsToProtocol:@protocol(GW2ColorMaterial)]).to.beTruthy();
+        expect(color.objectID).equal(1);
+
         
         // Are we able to construct the original JSON from our object?
-        id colorJSON = [MTLJSONAdapter JSONDictionaryFromModel:color];
+        id colorJSON = [color JSONRepresentation];
         NSDictionary *colorToCompare = colorsDictionary[@"1"];
         expect([colorJSON hash]).equal(colorToCompare.hash);
     });
     
     it(@"instantiates from color material JSON", ^ {
-        GW2ColorMaterial *colorMaterial = [MTLJSONAdapter modelOfClass:[GW2ColorMaterial class]
-                                                    fromJSONDictionary:colorsDictionary[@"1"][@"cloth"]
-                                                                 error:nil];
+        id<GW2ColorMaterial> colorMaterial = [NSClassFromString(@"_GW2ColorMaterial") objectWithID:nil
+                                                                                              name:nil
+                                                                                fromJSONDictionary:colorsDictionary[@"1"][@"cloth"]
+                                                                                             error:nil];
         // Check object integrity
         expect(colorMaterial).toNot.beNil();
         expect(colorMaterial.color).toNot.beNil();
         
         // Are we able to construct the original JSON from our object?
-        id colorMaterialJSON = [MTLJSONAdapter JSONDictionaryFromModel:colorMaterial];
+        id colorMaterialJSON = [colorMaterial JSONRepresentation];
         NSDictionary *colorMaterialToCompare = colorsDictionary[@"1"][@"cloth"];
         expect([colorMaterialJSON hash]).equal(colorMaterialToCompare.hash);
    });

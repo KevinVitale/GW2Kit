@@ -7,10 +7,9 @@
 //
 
 #import "GW2Object.h"
+#import "GW2EventLocation.h"
 
-@class GW2EventLocation;
-
-@interface GW2Event : GW2Object
+@protocol GW2Event <GW2Object>
 /**
  *  The event level.
  */
@@ -32,5 +31,5 @@
  *  The location (actually, volume boundary) of the event. 
  *  See 'GW2EventLocation' for details.
  */
-@property (nonatomic, readonly) GW2EventLocation *location;
+@property (nonatomic, readonly) id<GW2EventLocation> location;
 @end

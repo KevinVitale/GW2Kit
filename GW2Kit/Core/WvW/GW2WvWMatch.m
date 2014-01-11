@@ -7,8 +7,39 @@
 //
 
 #import "GW2WvWMatch.h"
+#import "GW2Object+Private.h"
 
-@interface _GW2WvWMatchObjective : GW2Object <GW2WvWMatchObjective>
+/**
+ *  There are four battleground which worlds fight over:
+ *    - RedHome
+ *    - GreenHome
+ *    - BlueHome
+ *    - Center
+ *
+ *  @note In the original API response, these 4 battlegrounds are 'type'. This
+ *          object converts 'type' as 'name'.
+ *
+ *  Each battleground has a set of objectives, and each objective is held
+ *  by a realm owner (or is neutral). The possible realm owners are:
+ *    - Red
+ *    - Green
+ *    - Blue
+ */
+@interface _GW2WvWBattleground : _GW2Object <GW2WvWBattleground>
+@property (copy, nonatomic, readonly) NSArray *scores;
+@property (copy, nonatomic, readonly) NSArray *objectives;
+@property (copy, nonatomic, readonly) NSArray *bonuses;
+@end
+
+/**
+ *  WvW match.
+ */
+@interface _GW2WvWMatch : _GW2Object <GW2WvWMatch>
+@property (copy, nonatomic, readonly) NSArray *scores;
+@property (copy, nonatomic, readonly) NSArray *battlegrounds;
+@end
+
+@interface _GW2WvWMatchObjective : _GW2Object <GW2WvWMatchObjective>
 @property (copy, nonatomic, readwrite) NSString *realmOwner;
 @property (copy, nonatomic, readwrite) NSString *guildID;
 @end
@@ -27,7 +58,7 @@
 }
 @end
 
-@interface _GW2WvWBattlegroundBonus : GW2Object <GW2WvWBattlegroundBonus>
+@interface _GW2WvWBattlegroundBonus : _GW2Object <GW2WvWBattlegroundBonus>
 @property (copy, nonatomic, readwrite) NSString *type;
 @property (copy, nonatomic, readwrite) NSString *realmOwner;
 @end
@@ -44,7 +75,7 @@
 @end
 
 
-@implementation GW2WvWBattleground
+@implementation _GW2WvWBattleground
 + (NSValueTransformer *)bonusesJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSArray *bonusesArray) {
         NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:bonusesArray.count];
@@ -95,13 +126,13 @@
 }
 @end
 
-@implementation GW2WvWMatch
+@implementation _GW2WvWMatch
 + (NSValueTransformer *)battlegroundsJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSArray *battlegroundsArray) {
         NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:battlegroundsArray.count];
         
         for(NSDictionary *battlegroundJSON in battlegroundsArray) {
-            GW2WvWBattleground *battleground = [GW2WvWBattleground objectWithID:nil
+            _GW2WvWBattleground *battleground = [_GW2WvWBattleground objectWithID:nil
                                                                            name:nil
                                                              fromJSONDictionary:battlegroundJSON
                                                                           error:nil];
@@ -111,7 +142,7 @@
     }
                                                          reverseBlock:^id (NSArray *battlegrounds) {
                                                              NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:battlegrounds.count];
-                                                             for(GW2WvWBattleground *battleground in battlegrounds) {
+                                                             for(_GW2WvWBattleground *battleground in battlegrounds) {
                                                                  [mutableArray addObject:[MTLJSONAdapter JSONDictionaryFromModel:battleground]];
                                                              }
                                                              return [mutableArray copy];

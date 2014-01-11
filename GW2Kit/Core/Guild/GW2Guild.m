@@ -7,6 +7,22 @@
 //
 
 #import "GW2Guild.h"
+#import "GW2Object+Private.h"
+
+@interface GW2GuildEmblem : _GW2Object <GW2GuildEmblem>
+@property       (nonatomic, readonly) NSInteger backgroundID;
+@property       (nonatomic, readonly) NSInteger foregroundID;
+@property       (nonatomic, readonly) NSInteger backgroundColorID;
+@property       (nonatomic, readonly) NSInteger foregroundPrimaryColorID;
+@property       (nonatomic, readonly) NSInteger foregroundSecondaryColorID;
+@property (copy, nonatomic, readonly) NSArray   *flags;
+@end
+
+@interface GW2Guild : _GW2Object
+@property (copy, nonatomic, readonly) NSString *tag;
+@property (nonatomic, readonly) GW2GuildEmblem *emblem;
+@end
+
 
 @implementation GW2GuildEmblem
 + (NSDictionary *)JSONKeyPathsByPropertyKey {

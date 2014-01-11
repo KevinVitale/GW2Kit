@@ -6,6 +6,7 @@
 //
 //
 
+#import "GW2Object+Private.h"
 #import "GW2Color.h"
 #if TARGET_OS_IPHONE
 @import UIKit.UIColor;
@@ -13,11 +14,23 @@
 @import AppKit;
 #endif
 
-@interface GW2Color ()
-
+@interface _GW2ColorMaterial : _GW2Object <GW2ColorMaterial>
+@property (nonatomic, readonly) NSInteger   brightness;
+@property (nonatomic, readonly) CGFloat     contrast;
+@property (nonatomic, readonly) NSInteger   hue;
+@property (nonatomic, readonly) CGFloat     saturation;
+@property (nonatomic, readonly) CGFloat     lightness;
+@property (copy, readonly, nonatomic) id    color;
 @end
 
-@implementation GW2Color
+@interface _GW2Color : _GW2Object <GW2Color>
+@property (copy, readonly, nonatomic) id color;
+@property (readonly, nonatomic) id<GW2ColorMaterial> cloth;
+@property (readonly, nonatomic) id<GW2ColorMaterial> leather;
+@property (readonly, nonatomic) id<GW2ColorMaterial> metal;
+@end
+
+@implementation _GW2Color
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @
     {
@@ -26,13 +39,13 @@
     };
 }
 + (NSValueTransformer *)clothJSONTransformer {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2ColorMaterial.class];
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:_GW2ColorMaterial.class];
 }
 + (NSValueTransformer *)leatherJSONTransformer {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2ColorMaterial.class];
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:_GW2ColorMaterial.class];
 }
 + (NSValueTransformer *)metalJSONTransformer {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GW2ColorMaterial.class];
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:_GW2ColorMaterial.class];
 }
 + (NSValueTransformer *)colorJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSArray *rgbArray) {
@@ -77,7 +90,7 @@
 @end
 
 
-@implementation GW2ColorMaterial
+@implementation _GW2ColorMaterial
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @
     {

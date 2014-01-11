@@ -15,7 +15,7 @@
 SpecBegin(GW2WvWMatch)
 describe(@"wvw match", ^ {
     NSDictionary *__block matchDetailsJSON;
-    GW2WvWMatch *__block match;
+    id<GW2WvWMatch> __block match;
     beforeAll(^ {
         // Pull the .json file from the bundle
         NSURL *matchDetailsURL = [[NSBundle bundleForClass:self.class] URLForResource:@"match_details" withExtension:@"json"];
@@ -30,10 +30,10 @@ describe(@"wvw match", ^ {
     });
     
     beforeEach(^ {
-        match = [GW2WvWMatch objectWithID:nil
-                                     name:nil
-                       fromJSONDictionary:matchDetailsJSON
-                                    error:nil];
+        match = [NSClassFromString(@"_GW2WvWMatch") objectWithID:nil
+                                                            name:nil
+                                              fromJSONDictionary:matchDetailsJSON
+                                                           error:nil];
     });
     
     it(@"instantiates from match details JSON", ^ {
@@ -42,11 +42,13 @@ describe(@"wvw match", ^ {
         expect(match.scores).to.beKindOf(NSArray.class);
         expect(match.scores).to.contain(69514);
         expect(match.battlegrounds.count).equal(4);
-        expect([match.battlegrounds valueForKey:@"class"]).to.contain(GW2WvWBattleground.class);
+        
+        NSArray *battlegrounds = [match.battlegrounds valueForKey:@"class"];
+        expect(battlegrounds).to.contain(NSClassFromString(@"_GW2WvWBattleground"));
     });
     
     it(@"instantiates battlegrounds from JSON", ^ {
-        GW2WvWBattleground *battleground = match.battlegrounds.firstObject;
+        id<GW2WvWBattleground> battleground = match.battlegrounds.firstObject;
         expect(battleground).toNot.beNil();
         
         expect(battleground.name).equal(@"RedHome");
