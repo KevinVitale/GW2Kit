@@ -15,6 +15,16 @@
 		0A08F1E7187F73E200AA7061 /* GW2ItemSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1E6187F73E200AA7061 /* GW2ItemSpec.m */; };
 		0A08F1E8187F73E200AA7061 /* GW2ItemSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1E6187F73E200AA7061 /* GW2ItemSpec.m */; };
 		0A08F1EA1880A32000AA7061 /* GW2Object+Private.h in Resources */ = {isa = PBXBuildFile; fileRef = 0A08F1E91880A32000AA7061 /* GW2Object+Private.h */; };
+		0A08F1ED1881E08E00AA7061 /* GW2ItemTypeWeapon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A08F1EB1881E08E00AA7061 /* GW2ItemTypeWeapon.h */; };
+		0A08F1EE1881E08E00AA7061 /* GW2ItemTypeWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1EC1881E08E00AA7061 /* GW2ItemTypeWeapon.m */; };
+		0A08F1EF1881E08E00AA7061 /* GW2ItemTypeWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1EC1881E08E00AA7061 /* GW2ItemTypeWeapon.m */; };
+		0A08F1F11881F22800AA7061 /* GW2Item+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A08F1F01881F22800AA7061 /* GW2Item+Private.h */; };
+		0A08F1F318822C6300AA7061 /* GW2Recipe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A08F1F218822C6300AA7061 /* GW2Recipe.h */; };
+		0A08F1F518822D5900AA7061 /* GW2Recipe+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A08F1F418822D5900AA7061 /* GW2Recipe+Private.h */; };
+		0A08F1F718822DB900AA7061 /* GW2Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1F618822DB900AA7061 /* GW2Recipe.m */; };
+		0A08F1F818822DB900AA7061 /* GW2Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1F618822DB900AA7061 /* GW2Recipe.m */; };
+		0A08F1FA18822E9C00AA7061 /* GW2RecipeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1F918822E9C00AA7061 /* GW2RecipeSpec.m */; };
+		0A08F1FB18822E9C00AA7061 /* GW2RecipeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F1F918822E9C00AA7061 /* GW2RecipeSpec.m */; };
 		0A2DD19E187C890C009BBFE1 /* GW2Guild.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2DD19C187C890C009BBFE1 /* GW2Guild.h */; };
 		0A2DD19F187C890C009BBFE1 /* GW2Guild.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DD19D187C890C009BBFE1 /* GW2Guild.m */; };
 		0A2DD1A0187C890C009BBFE1 /* GW2Guild.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DD19D187C890C009BBFE1 /* GW2Guild.m */; };
@@ -178,6 +188,13 @@
 		0A08F1E2187F3C1D00AA7061 /* GW2Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Item.m; sourceTree = "<group>"; };
 		0A08F1E6187F73E200AA7061 /* GW2ItemSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2ItemSpec.m; path = Tests/GW2ItemSpec.m; sourceTree = SOURCE_ROOT; };
 		0A08F1E91880A32000AA7061 /* GW2Object+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GW2Object+Private.h"; sourceTree = "<group>"; };
+		0A08F1EB1881E08E00AA7061 /* GW2ItemTypeWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2ItemTypeWeapon.h; sourceTree = "<group>"; };
+		0A08F1EC1881E08E00AA7061 /* GW2ItemTypeWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ItemTypeWeapon.m; sourceTree = "<group>"; };
+		0A08F1F01881F22800AA7061 /* GW2Item+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GW2Item+Private.h"; sourceTree = "<group>"; };
+		0A08F1F218822C6300AA7061 /* GW2Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Recipe.h; sourceTree = "<group>"; };
+		0A08F1F418822D5900AA7061 /* GW2Recipe+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GW2Recipe+Private.h"; sourceTree = "<group>"; };
+		0A08F1F618822DB900AA7061 /* GW2Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Recipe.m; sourceTree = "<group>"; };
+		0A08F1F918822E9C00AA7061 /* GW2RecipeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2RecipeSpec.m; path = Tests/GW2RecipeSpec.m; sourceTree = SOURCE_ROOT; };
 		0A2DD19C187C890C009BBFE1 /* GW2Guild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Guild.h; sourceTree = "<group>"; };
 		0A2DD19D187C890C009BBFE1 /* GW2Guild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Guild.m; sourceTree = "<group>"; };
 		0A2DD1A1187C8BA6009BBFE1 /* GW2GuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2GuildSpec.m; path = Tests/GW2GuildSpec.m; sourceTree = SOURCE_ROOT; };
@@ -418,6 +435,12 @@
 			children = (
 				0A08F1E1187F3C1D00AA7061 /* GW2Item.h */,
 				0A08F1E2187F3C1D00AA7061 /* GW2Item.m */,
+				0A08F1F01881F22800AA7061 /* GW2Item+Private.h */,
+				0A08F1EB1881E08E00AA7061 /* GW2ItemTypeWeapon.h */,
+				0A08F1EC1881E08E00AA7061 /* GW2ItemTypeWeapon.m */,
+				0A08F1F218822C6300AA7061 /* GW2Recipe.h */,
+				0A08F1F418822D5900AA7061 /* GW2Recipe+Private.h */,
+				0A08F1F618822DB900AA7061 /* GW2Recipe.m */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -576,6 +599,7 @@
 				0A3070E0187CFF0100950DB5 /* GW2WvWMatchSpec.m */,
 				0A3070EB187D143400950DB5 /* GW2WvWMatchUpSpec.m */,
 				0A08F1E6187F73E200AA7061 /* GW2ItemSpec.m */,
+				0A08F1F918822E9C00AA7061 /* GW2RecipeSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -621,11 +645,15 @@
 				0A53008C1873513900D55261 /* GW2Object.h in Headers */,
 				0A08F1E3187F3C1D00AA7061 /* GW2Item.h in Headers */,
 				0A2DD1AB187C9753009BBFE1 /* GW2WvWMatch.h in Headers */,
+				0A08F1ED1881E08E00AA7061 /* GW2ItemTypeWeapon.h in Headers */,
+				0A08F1F318822C6300AA7061 /* GW2Recipe.h in Headers */,
 				0A5300F41873A1FB00D55261 /* GW2MapContinent.h in Headers */,
 				0ACBF6251878961D00FD1AA5 /* GW2EventLocation.h in Headers */,
+				0A08F1F518822D5900AA7061 /* GW2Recipe+Private.h in Headers */,
 				0A5300FC187604A100D55261 /* GW2EventState.h in Headers */,
 				0ACBF6301878AFE300FD1AA5 /* GW2Event.h in Headers */,
 				0A53010418760F8A00D55261 /* GW2Color.h in Headers */,
+				0A08F1F11881F22800AA7061 /* GW2Item+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +847,7 @@
 				0A5300F81873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
 				0ACBF62C1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */,
+				0A08F1FA18822E9C00AA7061 /* GW2RecipeSpec.m in Sources */,
 				0A0102D3187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,
 				0A3070EC187D143400950DB5 /* GW2WvWMatchUpSpec.m in Sources */,
 			);
@@ -837,6 +866,7 @@
 				0A5300F91873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
 				0ACBF62D1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
 				0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */,
+				0A08F1FB18822E9C00AA7061 /* GW2RecipeSpec.m in Sources */,
 				0A0102D4187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,
 				0A3070ED187D143400950DB5 /* GW2WvWMatchUpSpec.m in Sources */,
 			);
@@ -855,7 +885,9 @@
 				0ACBF6361878BF3100FD1AA5 /* GW2MapRegion.m in Sources */,
 				0A2DD1AC187C9753009BBFE1 /* GW2WvWMatch.m in Sources */,
 				0A5300FD187604A100D55261 /* GW2EventState.m in Sources */,
+				0A08F1EE1881E08E00AA7061 /* GW2ItemTypeWeapon.m in Sources */,
 				0A99F18118792A9D0031429A /* NSArray+CoreGraphics.m in Sources */,
+				0A08F1F718822DB900AA7061 /* GW2Recipe.m in Sources */,
 				0A08F1E4187F3C1D00AA7061 /* GW2Item.m in Sources */,
 				0A2DD19F187C890C009BBFE1 /* GW2Guild.m in Sources */,
 				0ACBF6311878AFE300FD1AA5 /* GW2Event.m in Sources */,
@@ -875,7 +907,9 @@
 				0ACBF6371878BF3100FD1AA5 /* GW2MapRegion.m in Sources */,
 				0A2DD1AD187C9753009BBFE1 /* GW2WvWMatch.m in Sources */,
 				0A5300FE187604A100D55261 /* GW2EventState.m in Sources */,
+				0A08F1EF1881E08E00AA7061 /* GW2ItemTypeWeapon.m in Sources */,
 				0A99F18218792A9D0031429A /* NSArray+CoreGraphics.m in Sources */,
+				0A08F1F818822DB900AA7061 /* GW2Recipe.m in Sources */,
 				0A08F1E5187F3C1D00AA7061 /* GW2Item.m in Sources */,
 				0A2DD1A0187C890C009BBFE1 /* GW2Guild.m in Sources */,
 				0ACBF6321878AFE300FD1AA5 /* GW2Event.m in Sources */,
