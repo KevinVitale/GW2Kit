@@ -51,6 +51,8 @@
 		0A317507187684BD009A34BA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A31750218768158009A34BA /* XCTest.framework */; };
 		0A317509187685BD009A34BA /* Mantle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B718767529009A34BA /* Mantle.framework */; };
 		0A31750A187685C5009A34BA /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B718767529009A34BA /* Mantle.framework */; };
+		0A32679E189AFB2D00AF3E7F /* GW2MapsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */; };
+		0A32679F189AFB2D00AF3E7F /* GW2MapsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */; };
 		0A53008C1873513900D55261 /* GW2Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A53008A1873513900D55261 /* GW2Object.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A53008D1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
 		0A53008E1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
@@ -227,6 +229,7 @@
 		0A3174E118767A42009A34BA /* libSpecta-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-iOS.a"; path = "Vendor/Specta/libSpecta-iOS.a"; sourceTree = SOURCE_ROOT; };
 		0A3174E218767A42009A34BA /* libSpecta-OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-OSX.a"; path = "Vendor/Specta/libSpecta-OSX.a"; sourceTree = SOURCE_ROOT; };
 		0A31750218768158009A34BA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapsSpec.m; path = Tests/GW2MapsSpec.m; sourceTree = SOURCE_ROOT; };
 		0A3FFD561871FFB600A4D2A6 /* OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FFD711871FFCA00A4D2A6 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FFD85187204EB00A4D2A6 /* GW2MapTilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapTilePath.h; sourceTree = "<group>"; };
@@ -600,6 +603,7 @@
 				0A3070EB187D143400950DB5 /* GW2WvWMatchUpSpec.m */,
 				0A08F1E6187F73E200AA7061 /* GW2ItemSpec.m */,
 				0A08F1F918822E9C00AA7061 /* GW2RecipeSpec.m */,
+				0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -846,6 +850,7 @@
 				0A5300A518735B2300D55261 /* GW2ObjectSpec.m in Sources */,
 				0A5300F81873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
 				0ACBF62C1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
+				0A32679E189AFB2D00AF3E7F /* GW2MapsSpec.m in Sources */,
 				0A5301081876130500D55261 /* GW2ColorSpec.m in Sources */,
 				0A08F1FA18822E9C00AA7061 /* GW2RecipeSpec.m in Sources */,
 				0A0102D3187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,
@@ -865,6 +870,7 @@
 				0A5300A618735B2300D55261 /* GW2ObjectSpec.m in Sources */,
 				0A5300F91873A82700D55261 /* GW2MapContinentSpec.m in Sources */,
 				0ACBF62D1878AD2B00FD1AA5 /* GW2EventDetails.m in Sources */,
+				0A32679F189AFB2D00AF3E7F /* GW2MapsSpec.m in Sources */,
 				0A5301091876130500D55261 /* GW2ColorSpec.m in Sources */,
 				0A08F1FB18822E9C00AA7061 /* GW2RecipeSpec.m in Sources */,
 				0A0102D4187BB33C000F0493 /* GW2MapRegionSpec.m in Sources */,

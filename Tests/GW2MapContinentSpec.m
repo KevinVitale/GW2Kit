@@ -58,4 +58,31 @@ describe(@"map continent", ^ {
         expect(HoMJSON).equal(HoMContinent);
     });
 });
+
+describe(@"live example", ^{
+    NSDictionary *__block json;
+    beforeAll(^ {
+        NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://api.guildwars2.com/v1/continents.json"]];
+        json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil][@"continents"];
+        
+        expect(json).toNot.beNil();
+        expect(json.count).to.equal(2);
+    });
+    
+    it(@"works with live data", ^ {
+        NSInteger counter = 0;
+        NSMutableArray *continents = [NSMutableArray new];
+        for(id key in json) {
+            continents[counter] = [NSClassFromString(@"_GW2MapContinent") objectWithID:@(counter + 1)
+                                                                                  name:nil
+                                                                    fromJSONDictionary:json[key]
+                                                                                 error:nil];
+            counter++;
+        }
+        
+        expect(continents.count).to.equal(2);
+        expect([continents[0] name]).to.equal(@"Tyria");
+        expect([continents[1] name]).to.equal(@"Mists");
+    });
+});
 SpecEnd
