@@ -232,8 +232,6 @@
 		0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapsSpec.m; path = Tests/GW2MapsSpec.m; sourceTree = SOURCE_ROOT; };
 		0A3FFD561871FFB600A4D2A6 /* OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FFD711871FFCA00A4D2A6 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A3FFD85187204EB00A4D2A6 /* GW2MapTilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapTilePath.h; sourceTree = "<group>"; };
-		0A3FFD86187204EB00A4D2A6 /* GW2MapTilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapTilePath.m; sourceTree = "<group>"; };
 		0A53008A1873513900D55261 /* GW2Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Object.h; sourceTree = "<group>"; };
 		0A53008B1873513900D55261 /* GW2Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Object.m; sourceTree = "<group>"; };
 		0A5300A418735B2300D55261 /* GW2ObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2ObjectSpec.m; path = Tests/GW2ObjectSpec.m; sourceTree = SOURCE_ROOT; };
@@ -460,8 +458,6 @@
 		0A440060179CEAD400EF0A04 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				0A3FFD85187204EB00A4D2A6 /* GW2MapTilePath.h */,
-				0A3FFD86187204EB00A4D2A6 /* GW2MapTilePath.m */,
 				0A5300F21873A1FB00D55261 /* GW2MapContinent.h */,
 				0A5300F31873A1FB00D55261 /* GW2MapContinent.m */,
 				0ACBF6331878BF3100FD1AA5 /* GW2MapRegion.h */,
