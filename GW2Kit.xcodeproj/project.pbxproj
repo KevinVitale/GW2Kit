@@ -53,6 +53,9 @@
 		0A31750A187685C5009A34BA /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3174B718767529009A34BA /* Mantle.framework */; };
 		0A32679E189AFB2D00AF3E7F /* GW2MapsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */; };
 		0A32679F189AFB2D00AF3E7F /* GW2MapsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */; };
+		0A4E8862189D9D8300C3786F /* GW2MapBasic.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A4E8861189D9D8300C3786F /* GW2MapBasic.h */; };
+		0A4E8864189D9FB600C3786F /* GW2MapBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E8863189D9FB600C3786F /* GW2MapBasic.m */; };
+		0A4E8865189D9FB600C3786F /* GW2MapBasic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E8863189D9FB600C3786F /* GW2MapBasic.m */; };
 		0A53008C1873513900D55261 /* GW2Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A53008A1873513900D55261 /* GW2Object.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A53008D1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
 		0A53008E1873513900D55261 /* GW2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A53008B1873513900D55261 /* GW2Object.m */; };
@@ -232,6 +235,8 @@
 		0A32679D189AFB2D00AF3E7F /* GW2MapsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2MapsSpec.m; path = Tests/GW2MapsSpec.m; sourceTree = SOURCE_ROOT; };
 		0A3FFD561871FFB600A4D2A6 /* OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FFD711871FFCA00A4D2A6 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A4E8861189D9D8300C3786F /* GW2MapBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2MapBasic.h; sourceTree = "<group>"; };
+		0A4E8863189D9FB600C3786F /* GW2MapBasic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapBasic.m; sourceTree = "<group>"; };
 		0A53008A1873513900D55261 /* GW2Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2Object.h; sourceTree = "<group>"; };
 		0A53008B1873513900D55261 /* GW2Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2Object.m; sourceTree = "<group>"; };
 		0A5300A418735B2300D55261 /* GW2ObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2ObjectSpec.m; path = Tests/GW2ObjectSpec.m; sourceTree = SOURCE_ROOT; };
@@ -462,6 +467,8 @@
 				0A5300F31873A1FB00D55261 /* GW2MapContinent.m */,
 				0ACBF6331878BF3100FD1AA5 /* GW2MapRegion.h */,
 				0ACBF6341878BF3100FD1AA5 /* GW2MapRegion.m */,
+				0A4E8861189D9D8300C3786F /* GW2MapBasic.h */,
+				0A4E8863189D9FB600C3786F /* GW2MapBasic.m */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -648,6 +655,7 @@
 				0A08F1ED1881E08E00AA7061 /* GW2ItemTypeWeapon.h in Headers */,
 				0A08F1F318822C6300AA7061 /* GW2Recipe.h in Headers */,
 				0A5300F41873A1FB00D55261 /* GW2MapContinent.h in Headers */,
+				0A4E8862189D9D8300C3786F /* GW2MapBasic.h in Headers */,
 				0ACBF6251878961D00FD1AA5 /* GW2EventLocation.h in Headers */,
 				0A08F1F518822D5900AA7061 /* GW2Recipe+Private.h in Headers */,
 				0A5300FC187604A100D55261 /* GW2EventState.h in Headers */,
@@ -886,6 +894,7 @@
 				0A73CBFD1879A0BD00C6BD4A /* MTLValueTransformer+CoreGraphics.m in Sources */,
 				0ACBF6361878BF3100FD1AA5 /* GW2MapRegion.m in Sources */,
 				0A2DD1AC187C9753009BBFE1 /* GW2WvWMatch.m in Sources */,
+				0A4E8864189D9FB600C3786F /* GW2MapBasic.m in Sources */,
 				0A5300FD187604A100D55261 /* GW2EventState.m in Sources */,
 				0A08F1EE1881E08E00AA7061 /* GW2ItemTypeWeapon.m in Sources */,
 				0A99F18118792A9D0031429A /* NSArray+CoreGraphics.m in Sources */,
@@ -908,6 +917,7 @@
 				0A73CBFE1879A0BD00C6BD4A /* MTLValueTransformer+CoreGraphics.m in Sources */,
 				0ACBF6371878BF3100FD1AA5 /* GW2MapRegion.m in Sources */,
 				0A2DD1AD187C9753009BBFE1 /* GW2WvWMatch.m in Sources */,
+				0A4E8865189D9FB600C3786F /* GW2MapBasic.m in Sources */,
 				0A5300FE187604A100D55261 /* GW2EventState.m in Sources */,
 				0A08F1EF1881E08E00AA7061 /* GW2ItemTypeWeapon.m in Sources */,
 				0A99F18218792A9D0031429A /* NSArray+CoreGraphics.m in Sources */,
