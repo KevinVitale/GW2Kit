@@ -46,3 +46,7 @@ xcuserdata
 ######################
 .DS_Store*
 
+# CocoaPods #
+#############
+Tests/Podfile.lock
+Tests/Pods/
