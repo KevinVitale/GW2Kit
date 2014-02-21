@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:GW2Kit"
+      name = "GW2Kit">
+      <Group
+         location = "group:Categories"
+         name = "Categories">
+         <FileRef
+            location = "group:MTLValueTransformer+CoreGraphics.h">
+         </FileRef>
+         <FileRef
+            location = "group:MTLValueTransformer+CoreGraphics.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray+CoreGraphics.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray+CoreGraphics.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Core"
+         name = "Core">
+         <Group
+            location = "group:Events"
+            name = "Events">
+            <FileRef
+               location = "group:GW2Event.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Event.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2EventState.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2EventState.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Guild"
+            name = "Guild">
+            <FileRef
+               location = "group:GW2Guild.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Guild.m">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:GW2Object+Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:GW2Object.h">
+         </FileRef>
+         <FileRef
+            location = "group:GW2Object.m">
+         </FileRef>
+         <Group
+            location = "group:Items"
+            name = "Items">
+            <FileRef
+               location = "group:GW2Item+Private.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Item.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Item.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2ItemTypeWeapon.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2ItemTypeWeapon.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Recipe+Private.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Recipe.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Recipe.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Maps"
+            name = "Maps">
+            <FileRef
+               location = "group:GW2EventLocation.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2EventLocation.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2MapBasic.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2MapBasic.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2MapContinent.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2MapContinent.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2MapRegion.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2MapRegion.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Misc"
+            name = "Misc">
+            <FileRef
+               location = "group:GW2Color.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Color.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Stats"
+            name = "Stats">
+            <FileRef
+               location = "group:GW2StatusDaemon.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2StatusDaemon.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2StatusDetail.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2StatusDetail.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2StatusWvWMatches.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2StatusWvWMatches.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2StatusWvWRankings.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2StatusWvWRankings.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:WvW"
+            name = "WvW">
+            <FileRef
+               location = "group:GW2WvWMatch.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2WvWMatch.m">
+            </FileRef>
+            <FileRef
+               location = "group:GW2WvWMatchUp.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2WvWMatchUp.m">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:en.lproj"
+         name = "en.lproj">
+         <FileRef
+            location = "group:InfoPlist.strings">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:GW2Kit-Info.plist">
+      </FileRef>
+      <FileRef
+         location = "group:GW2Kit-Prefix.pch">
+      </FileRef>
+      <FileRef
+         location = "group:GW2Kit.h">
+      </FileRef>
+      <Group
+         location = "group:Spidy"
+         name = "Spidy">
+         <Group
+            location = "group:Models"
+            name = "Models">
+            <FileRef
+               location = "group:SPYClient.h">
+            </FileRef>
+            <FileRef
+               location = "group:SPYClient.m">
+            </FileRef>
+            <FileRef
+               location = "group:SPYItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:SPYItem.m">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Spidy.h">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "container:GW2Kit.xcodeproj">
+   </FileRef>
+</Workspace>
