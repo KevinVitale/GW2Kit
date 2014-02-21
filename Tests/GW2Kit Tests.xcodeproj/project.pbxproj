@@ -6,19 +6,9 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		0ABDF47118B6EF6A00819A77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABDF47018B6EF6A00819A77 /* XCTest.framework */; };
-		0ABDF48318B6EF7800819A77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABDF47018B6EF6A00819A77 /* XCTest.framework */; };
-		0ABDF48518B6EF7800819A77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABDF48418B6EF7800819A77 /* Foundation.framework */; };
-		0ABDF48718B6EF7800819A77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABDF48618B6EF7800819A77 /* UIKit.framework */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		0ABDF46D18B6EF6A00819A77 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ABDF47018B6EF6A00819A77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0ABDF48218B6EF7800819A77 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ABDF48418B6EF7800819A77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0ABDF48618B6EF7800819A77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,7 +16,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ABDF47118B6EF6A00819A77 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,9 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ABDF48318B6EF7800819A77 /* XCTest.framework in Frameworks */,
-				0ABDF48718B6EF7800819A77 /* UIKit.framework in Frameworks */,
-				0ABDF48518B6EF7800819A77 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +49,6 @@
 		0ABDF46F18B6EF6A00819A77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0ABDF47018B6EF6A00819A77 /* XCTest.framework */,
-				0ABDF48418B6EF7800819A77 /* Foundation.framework */,
-				0ABDF48618B6EF7800819A77 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -205,7 +188,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/OS X Tests/OS X Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "OS X Tests/OS X Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -217,7 +200,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/OS X Tests/OS X Tests-Info.plist";
+				INFOPLIST_FILE = "OS X Tests/OS X Tests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -251,14 +234,14 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/OS X Tests/OS X Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "OS X Tests/OS X Tests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/OS X Tests/OS X Tests-Info.plist";
+				INFOPLIST_FILE = "OS X Tests/OS X Tests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -293,7 +276,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/iOS Tests/iOS Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "iOS Tests/iOS Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -305,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
+				INFOPLIST_FILE = "iOS Tests/iOS Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,14 +323,14 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/iOS Tests/iOS Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "iOS Tests/iOS Tests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Tests/iOS Tests/iOS Tests-Info.plist";
+				INFOPLIST_FILE = "iOS Tests/iOS Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

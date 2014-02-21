@@ -197,6 +197,6 @@
       </Group>
    </Group>
    <FileRef
-      location = "container:GW2Kit Tests.xcodeproj">
+      location = "group:Tests/GW2Kit Tests.xcodeproj">
    </FileRef>
 </Workspace>
