@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ABDF49B18B7065D00819A77 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDF49A18B7065D00819A77 /* colors.json */; };
+		0ABDF49C18B7065D00819A77 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDF49A18B7065D00819A77 /* colors.json */; };
+		0ABDF49F18B7072E00819A77 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */; };
+		0ABDF4A018B7072E00819A77 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */; };
 		5D618E348CC94872A9630D9C /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC14C332B56F4063877200FB /* libPods-ios.a */; };
 		5F52BFFF459040249BB8ADC3 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B485799C3DD4352A125EBBC /* libPods-osx.a */; };
 /* End PBXBuildFile section */
@@ -14,6 +18,8 @@
 /* Begin PBXFileReference section */
 		0ABDF46D18B6EF6A00819A77 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDF48218B6EF7800819A77 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABDF49A18B7065D00819A77 /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ColorSpec.m; sourceTree = "<group>"; };
 		55B8ABD2F30846F283AA8E37 /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = "<group>"; };
 		6F4CD4DD37EE4BB88365C194 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = "<group>"; };
 		9B485799C3DD4352A125EBBC /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +49,8 @@
 		0ABDF41C18B6EC1F00819A77 = {
 			isa = PBXGroup;
 			children = (
+				0ABDF49D18B706FE00819A77 /* Tests */,
+				0ABDF49818B7061A00819A77 /* Fixtures */,
 				0ABDF46F18B6EF6A00819A77 /* Frameworks */,
 				0ABDF46E18B6EF6A00819A77 /* Products */,
 				6F4CD4DD37EE4BB88365C194 /* Pods-ios.xcconfig */,
@@ -66,6 +74,30 @@
 				9B485799C3DD4352A125EBBC /* libPods-osx.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0ABDF49818B7061A00819A77 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				0ABDF49918B7063900819A77 /* v1 */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		0ABDF49918B7063900819A77 /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				0ABDF49A18B7065D00819A77 /* colors.json */,
+			);
+			path = v1;
+			sourceTree = "<group>";
+		};
+		0ABDF49D18B706FE00819A77 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABDF49B18B7065D00819A77 /* colors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABDF49C18B7065D00819A77 /* colors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABDF49F18B7072E00819A77 /* GW2ColorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABDF4A018B7072E00819A77 /* GW2ColorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
