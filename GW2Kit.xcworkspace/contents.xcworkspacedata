@@ -169,19 +169,6 @@
             </FileRef>
          </Group>
       </Group>
-      <Group
-         location = "group:en.lproj"
-         name = "en.lproj">
-         <FileRef
-            location = "group:InfoPlist.strings">
-         </FileRef>
-      </Group>
-      <FileRef
-         location = "group:GW2Kit-Info.plist">
-      </FileRef>
-      <FileRef
-         location = "group:GW2Kit-Prefix.pch">
-      </FileRef>
       <FileRef
          location = "group:GW2Kit.h">
       </FileRef>
@@ -210,6 +197,6 @@
       </Group>
    </Group>
    <FileRef
-      location = "container:GW2Kit.xcodeproj">
+      location = "container:GW2Kit Tests.xcodeproj">
    </FileRef>
 </Workspace>

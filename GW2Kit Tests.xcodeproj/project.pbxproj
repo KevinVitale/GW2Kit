@@ -21,7 +21,7 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 			};
-			buildConfigurationList = 0ABDF42018B6EC1F00819A77 /* Build configuration list for PBXProject "GW2Kit" */;
+			buildConfigurationList = 0ABDF42018B6EC1F00819A77 /* Build configuration list for PBXProject "GW2Kit Tests" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -52,7 +52,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0ABDF42018B6EC1F00819A77 /* Build configuration list for PBXProject "GW2Kit" */ = {
+		0ABDF42018B6EC1F00819A77 /* Build configuration list for PBXProject "GW2Kit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ABDF42118B6EC1F00819A77 /* Debug */,
