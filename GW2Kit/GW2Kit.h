@@ -6,4 +6,4 @@
 //
 //
 
-#pragma mark - Maps API
+#import "GW2Color.h"

@@ -7,14 +7,20 @@ def import_test_pods
   pod 'Specta', '~> 0.2.1'
 end
 
+def import_gw2kit_pod
+  pod 'GW2Kit', :path => '../'
+end
+
 target :osx do
   platform :osx, '10.9'
   link_with 'OS X Tests'
   import_test_pods
+  import_gw2kit_pod
 end
 
 target :ios do
   platform :ios, '7.0'
   link_with 'iOS Tests'
   import_test_pods
+  import_gw2kit_pod
 end
