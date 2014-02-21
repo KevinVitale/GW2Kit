@@ -4,6 +4,9 @@
    <Group
       location = "group:GW2Kit"
       name = "GW2Kit">
+      <FileRef
+         location = "group:GW2Kit.h">
+      </FileRef>
       <Group
          location = "group:Categories"
          name = "Categories">
@@ -169,9 +172,6 @@
             </FileRef>
          </Group>
       </Group>
-      <FileRef
-         location = "group:GW2Kit.h">
-      </FileRef>
       <Group
          location = "group:Spidy"
          name = "Spidy">
