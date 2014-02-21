@@ -1,0 +1,20 @@
+xcodeproj 'GW2Kit Tests'
+workspace '../GW2Kit'
+inhibit_all_warnings!
+
+def import_test_pods
+  pod 'Expecta', '~> 0.2.1'
+  pod 'Specta', '~> 0.2.1'
+end
+
+target :osx do
+  platform :osx, '10.9'
+  link_with 'OS X Tests'
+  import_test_pods
+end
+
+target :ios do
+  platform :ios, '7.0'
+  link_with 'iOS Tests'
+  import_test_pods
+end
