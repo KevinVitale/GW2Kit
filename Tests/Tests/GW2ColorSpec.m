@@ -11,39 +11,53 @@
 #import <Specta/Specta.h>
 
 #import "GW2Color.h"
+#import <ReactiveCocoa.h>
 
 SpecBegin(GW2Color)
 describe(@"color", ^ {
-    NSDictionary *__block colorsDictionary;
+    NSArray *__block colors;
     beforeAll(^ {
-        // Pull the .json file from the bundle
-        NSURL *colorsURL = [[NSBundle bundleForClass:self.class] URLForResource:@"colors" withExtension:@"json"];
-        expect(colorsURL).toNot.beNil();
         
-        // Convert it to an NSObject
-        id colorsJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:colorsURL] options:0 error:nil];
+        colors = ({
+            // Pull the .json file from the bundle
+            NSURL *colorsURL =
+            [[NSBundle bundleForClass:self.class] URLForResource:@"colors"
+                                                   withExtension:@"json"];
+            
+            // Convert it to an NSObject
+            id colorsJSON = [NSJSONSerialization JSONObjectWithData:
+                             [NSData dataWithContentsOfURL:colorsURL]
+                                                            options:0
+                                                              error:nil];
+            
+            // Extract the array of colors
+            [[colorsJSON[@"colors"]
+              rac_sequence]
+             map:^id(RACTuple *value) {
+                 return
+                 [NSClassFromString(@"_GW2Color") objectWithID:@([[value first] integerValue])
+                                                          name:nil
+                                            fromJSONDictionary:value.second
+                                                         error:nil];
+             }].array;
+        });
         
-        // Verify a few basic things
-        expect(colorsJSON).toNot.beNil();
-        expect([colorsJSON class]).to.beSubclassOf([NSDictionary class]);
-        
-        // Extract the array of event states
-        colorsDictionary = colorsJSON[@"colors"];
-        expect(colorsDictionary.count).toNot.beNil();
+        expect(colors.count).toNot.beNil();
     });
     
     it(@"instantiates from color JSON", ^ {
-        id<GW2Color> color = [NSClassFromString(@"_GW2Color") objectWithID:@1
-                                                                      name:nil
-                                                        fromJSONDictionary:colorsDictionary[@"1"]
-                                                                     error:nil];
+        id<GW2Color> color = colors.firstObject;
         // Check object integrity
         expect(color).toNot.beNil();
-        expect(color.name).equal(@"Dye Remover");
+        expect(color.name).equal(@"Brandywine");
         expect(color.color).toNot.beNil();
         expect(color.cloth).toNot.beNil();
         expect(color.leather).toNot.beNil();
         expect(color.metal).toNot.beNil();
+        expect([color.cloth conformsToProtocol:@protocol(GW2ColorMaterial)]);
+        expect([color.leather conformsToProtocol:@protocol(GW2ColorMaterial)]);
+        expect([color.metal conformsToProtocol:@protocol(GW2ColorMaterial)]);
+        
         
 #if TARGET_OS_IPHONE
         Class colorClass = NSClassFromString(@"UIColor");
@@ -52,28 +66,7 @@ describe(@"color", ^ {
 #endif
         expect([color.color isKindOfClass:colorClass]).to.beTruthy();
         expect([color.cloth conformsToProtocol:@protocol(GW2ColorMaterial)]).to.beTruthy();
-        expect(color.objectID).equal(1);
-
-        
-        // Are we able to construct the original JSON from our object?
-        id colorJSON = [color JSONRepresentation];
-        NSDictionary *colorToCompare = colorsDictionary[@"1"];
-        expect([colorJSON hash]).equal(colorToCompare.hash);
+        expect(color.objectID).equal(441);
     });
-    
-    it(@"instantiates from color material JSON", ^ {
-        id<GW2ColorMaterial> colorMaterial = [NSClassFromString(@"_GW2ColorMaterial") objectWithID:nil
-                                                                                              name:nil
-                                                                                fromJSONDictionary:colorsDictionary[@"1"][@"cloth"]
-                                                                                             error:nil];
-        // Check object integrity
-        expect(colorMaterial).toNot.beNil();
-        expect(colorMaterial.color).toNot.beNil();
-        
-        // Are we able to construct the original JSON from our object?
-        id colorMaterialJSON = [colorMaterial JSONRepresentation];
-        NSDictionary *colorMaterialToCompare = colorsDictionary[@"1"][@"cloth"];
-        expect([colorMaterialJSON hash]).equal(colorMaterialToCompare.hash);
-   });
 });
 SpecEnd
