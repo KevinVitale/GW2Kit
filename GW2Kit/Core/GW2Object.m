@@ -14,6 +14,9 @@
 @end
 
 @implementation _GW2Object
+- (NSString *)debugDescription {
+    return self.JSONRepresentation.debugDescription;
+}
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{@"objectID" : @"id"};
 }
