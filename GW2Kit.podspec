@@ -16,9 +16,21 @@ Pod::Spec.new do |s|
   s.dependency 'ReactiveCocoa', '~> 2.2.4'
   s.dependency 'Mantle', '~> 1.3.1'
 
+  s.subspec 'Categories' do |cats|
+      cats.source_files = 'GW2Kit/Categories/*.{h,m}'
+  end
+  
   s.subspec 'Core' do |c|
-    c.source_files = 'GW2Kit/Core/GW2Object*.{h,m}'
+    c.source_files = 'GW2Kit/Core/GW2{Client,Object*}.{h,m}'
     c.private_header_files = 'GW2Kit/Core/*+Private.h'
+
+    c.subspec 'Maps' do |maps|
+      maps.source_files = 'GW2Kit/Core/Maps/GW2{EventLocation,*Map*}.{h,m}'
+    end
+
+    c.subspec 'Events' do |events|
+      events.source_files = 'GW2Kit/Core/Events/GW2Event*.{h,m}'
+    end
 
     c.subspec 'Misc' do |misc|
       misc.source_files = 'GW2Kit/Core/Misc/GW2Color.{h,m}'

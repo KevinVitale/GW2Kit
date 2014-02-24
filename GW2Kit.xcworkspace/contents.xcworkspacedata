@@ -11,6 +11,12 @@
          location = "group:Categories"
          name = "Categories">
          <FileRef
+            location = "group:CMDQueryStringSerialization.h">
+         </FileRef>
+         <FileRef
+            location = "group:CMDQueryStringSerialization.m">
+         </FileRef>
+         <FileRef
             location = "group:MTLValueTransformer+CoreGraphics.h">
          </FileRef>
          <FileRef
@@ -26,6 +32,21 @@
       <Group
          location = "group:Core"
          name = "Core">
+         <FileRef
+            location = "group:GW2Client.h">
+         </FileRef>
+         <FileRef
+            location = "group:GW2Client.m">
+         </FileRef>
+         <FileRef
+            location = "group:GW2Object+Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:GW2Object.h">
+         </FileRef>
+         <FileRef
+            location = "group:GW2Object.m">
+         </FileRef>
          <Group
             location = "group:Events"
             name = "Events">
@@ -52,15 +73,6 @@
                location = "group:GW2Guild.m">
             </FileRef>
          </Group>
-         <FileRef
-            location = "group:GW2Object+Private.h">
-         </FileRef>
-         <FileRef
-            location = "group:GW2Object.h">
-         </FileRef>
-         <FileRef
-            location = "group:GW2Object.m">
-         </FileRef>
          <Group
             location = "group:Items"
             name = "Items">
