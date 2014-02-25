@@ -20,10 +20,10 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{@"objectID" : @"id"};
 }
-+(instancetype)objectWithID:(id)objectID
-                       name:(NSString *)name
-         fromJSONDictionary:(NSDictionary *)JSONDictionary
-                      error:(NSError *__autoreleasing *)error {
++ (instancetype)objectWithID:(id)objectID
+                        name:(NSString *)name
+          fromJSONDictionary:(NSDictionary *)JSONDictionary
+                       error:(NSError *__autoreleasing *)error {
     
     // This is the method we intend to wrap around.
     return ({

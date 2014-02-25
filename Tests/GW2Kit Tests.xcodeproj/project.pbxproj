@@ -45,8 +45,8 @@
 		0A968ED018BAD733003DD27B /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A968EAF18BAD733003DD27B /* items.json */; };
 		0A968ED118BAD733003DD27B /* item_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A968EB018BAD733003DD27B /* item_details.json */; };
 		0A968ED218BAD733003DD27B /* item_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A968EB018BAD733003DD27B /* item_details.json */; };
-		0A968ED418BAE07B003DD27B /* GW2ClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A968ED318BAE07B003DD27B /* GW2ClientSpec.m */; };
-		0A968ED518BAE07B003DD27B /* GW2ClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A968ED318BAE07B003DD27B /* GW2ClientSpec.m */; };
+		0A97AC3718BC46A3008C53CA /* GW2ClientVersion1Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */; };
+		0A97AC3818BC46A3008C53CA /* GW2ClientVersion1Spec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */; };
 		0ABDF49B18B7065D00819A77 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDF49A18B7065D00819A77 /* colors.json */; };
 		0ABDF49C18B7065D00819A77 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDF49A18B7065D00819A77 /* colors.json */; };
 		0ABDF49F18B7072E00819A77 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */; };
@@ -75,7 +75,7 @@
 		0A968EAE18BAD733003DD27B /* build.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = build.json; sourceTree = "<group>"; };
 		0A968EAF18BAD733003DD27B /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		0A968EB018BAD733003DD27B /* item_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = item_details.json; sourceTree = "<group>"; };
-		0A968ED318BAE07B003DD27B /* GW2ClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientSpec.m; sourceTree = "<group>"; };
+		0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientVersion1Spec.m; sourceTree = "<group>"; };
 		0ABDF46D18B6EF6A00819A77 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDF48218B6EF7800819A77 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDF49A18B7065D00819A77 /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			children = (
 				0A3A55A618B94AF2009D9C0D /* GW2EventDetails.m */,
 				0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */,
-				0A968ED318BAE07B003DD27B /* GW2ClientSpec.m */,
+				0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -378,9 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A968ED418BAE07B003DD27B /* GW2ClientSpec.m in Sources */,
 				0A3A55A718B94AF2009D9C0D /* GW2EventDetails.m in Sources */,
 				0ABDF49F18B7072E00819A77 /* GW2ColorSpec.m in Sources */,
+				0A97AC3718BC46A3008C53CA /* GW2ClientVersion1Spec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A968ED518BAE07B003DD27B /* GW2ClientSpec.m in Sources */,
 				0A3A55A818B94AF2009D9C0D /* GW2EventDetails.m in Sources */,
 				0ABDF4A018B7072E00819A77 /* GW2ColorSpec.m in Sources */,
+				0A97AC3818BC46A3008C53CA /* GW2ClientVersion1Spec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

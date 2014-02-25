@@ -46,10 +46,10 @@
  *  @warning If the JSON dictionary contains values for either @p objectID or @p name,
  *        then the caller's provided values will be ignored.
  */
-+(instancetype)objectWithID:(id)objectID
-                       name:(NSString *)name
-         fromJSONDictionary:(NSDictionary *)JSONDictionary
-                      error:(NSError **)error;
++ (instancetype)objectWithID:(id)objectID
+                        name:(NSString *)name
+          fromJSONDictionary:(NSDictionary *)JSONDictionary
+                       error:(NSError **)error;
 
 
 @optional
