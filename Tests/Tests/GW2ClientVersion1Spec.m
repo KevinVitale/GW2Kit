@@ -256,5 +256,20 @@ describe(@"version 1 client", ^ {
              done();
          }];
     });
+    
+    it(@"fetches image", ^AsyncBlock {
+        [[client fetchImageWithSignature:@"B3DEEC72BBEF0C6FC6FEF835A0E275FCB1151BB7"
+                                  fileID:@"102439"]
+         subscribeNext:^(id image) {
+             NSLog(@"%@", image);
+         }
+         error:^(NSError *error) {
+             expect(error).to.beNil();
+             done();
+         }
+         completed:^{
+             done();
+         }];
+    });
 });
 SpecEnd

@@ -109,14 +109,9 @@
                                path:(NSString *)path
                          parameters:(NSDictionary *)parameters {
     path = ({
-        // Ignore calls to the render service
-        (([path rangeOfString:@"/file/"].location == NSNotFound) ?
-         ({
-            // If 'path' doesn't end in 'json', make it so!
-            ([path.lastPathComponent isEqualToString:@"json"] ?
-             path : [path stringByAppendingPathExtension:@"json"]);
-        })
-         : path);
+        // If 'path' doesn't end in 'json', make it so!
+        ([path.lastPathComponent isEqualToString:@"json"] ?
+         path : [path stringByAppendingPathExtension:@"json"]);
     });
     
     NSMutableURLRequest *request = ({
@@ -134,17 +129,10 @@
              @"\"https\" not found in request URL: '%@'\n%s",
              request.URL.absoluteString,
              __PRETTY_FUNCTION__);
-    NSAssert([request.URL.host rangeOfString:@"guildwars2.com"].location != NSNotFound,
-             @"\"guildwars2.com\" not found in request URL host: '%@'\n%s",
+    NSAssert([request.URL.host isEqualToString:@"api.guildwars2.com"],
+             @"\"api.guildwars2.com\" not found in request URL: '%@'\n%s",
              request.URL.absoluteString,
              __PRETTY_FUNCTION__);
-    
-    // Reset hostname, in case it was modified for a specific request
-    // Note: Some fetch requests, such as 'files' modifies 'hostname'
-    //       prior to constructing the NSURLRequest object.
-    self.hostname = ({
-        [NSString stringWithFormat:@"api.guildwars2.com/%@", self.version];
-    });
     
     [request setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
     [request setHTTPMethod:method];
@@ -582,9 +570,23 @@
     NSAssert(signature, @"\"signature\" cannot be 'nil'\n%s", signature, __PRETTY_FUNCTION__);
     NSAssert(fileID, @"\"fileID\" cannot be 'nil'", fileID, __PRETTY_FUNCTION__);
     
-    self.hostname = @"render.guildwars2.com";
-    return [self requestPath:[NSString stringWithFormat:@"/file/%@/%@", signature, fileID]
-                  parameters:nil
-                      method:@"GET"];
+    return
+    [[RACSignal startLazilyWithScheduler:[RACScheduler scheduler]
+                                  block:^(id<RACSubscriber> subscriber) {
+                                      NSURL *url =
+                                      [NSURL URLWithString:
+                                       [NSString stringWithFormat:@"https://render.guildwars2.com/file/%@/%@.png",
+                                        signature, fileID]];
+                                      
+                                      NSData *imageData = [NSData dataWithContentsOfURL:url];
+#if TARGET_OS_IPHONE
+                                      UIImage * image = [UIImage imageWithData:imageData];
+#else
+                                      NSImage * image = [[NSImage alloc] initWithData:imageData];
+#endif
+                                      [subscriber sendNext:image];
+                                      [subscriber sendCompleted];
+                                  }]
+    deliverOn:[RACScheduler mainThreadScheduler]];
 }
 @end
