@@ -32,6 +32,14 @@ Pod::Spec.new do |s|
       events.source_files = 'GW2Kit/Core/Events/GW2Event*.{h,m}'
     end
 
+    c.subspec 'Guild' do |guilds|
+      guilds.source_files = 'GW2Kit/Core/Guild/GW2Guild.{h,m}'
+    end
+
+    c.subspec 'WvW' do |wvw|
+      wvw.source_files = 'GW2Kit/Core/WvW/GW2WvW*.{h,m}'
+    end
+
     c.subspec 'Misc' do |misc|
       misc.source_files = 'GW2Kit/Core/Misc/GW2Color.{h,m}'
     end

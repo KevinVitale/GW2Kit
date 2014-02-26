@@ -23,6 +23,13 @@
 @end
 //----------------------------------------------------------------------------//
 
+@protocol GW2MapFloor <GW2Object>
+@required
+@property (nonatomic, readonly) CGSize  textureDimensions;
+@property (nonatomic, readonly) CGRect  clampedView;
+@property (nonatomic, readonly) NSArray *regions;
+@end
+
 /**
  *  GW2MapRegion
  *  Represents a region on the map, such as:

@@ -7,7 +7,7 @@
 //
 
 #import "GW2Client.h"
-#import "GW2EventState.h"
+#import "GW2Object.h"
 #import "CMDQueryStringSerialization.h"
 #import <ReactiveCocoa.h>
 #import <RACEXTScope.h>
@@ -182,7 +182,6 @@
           NSBlockOperation *operation =
           [NSBlockOperation blockOperationWithBlock:^{
               
-              // Construct our request (side effect: this signs the request)
               NSURLRequest *request = [self requestWithMethod:method
                                                          path:path
                                                    parameters:parameters];
@@ -367,33 +366,212 @@
      }];
 }
 
+#pragma mark - Guilds
+- (RACSignal *)fetchGuildWithID:(NSString *)guildID {
+    NSDictionary *parameters;
+    (guildID ? ({ parameters = @{@"guild_id" : guildID}; }) : nil);
+    return
+    [[self requestPath:@"guild_details"
+            parameters:parameters
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSDictionary *guildJSON = response[0];
+         return
+         [RACSignal return:
+          [NSClassFromString(@"_GW2Guild") objectWithID:nil
+                                                   name:nil
+                                     fromJSONDictionary:guildJSON
+                                                  error:nil]];
+     }];
+}
+
+- (RACSignal *)fetchGuildWithName:(NSString *)guildName {
+    NSDictionary *parameters;
+    (guildName ? ({ parameters = @{@"guild_name" : guildName}; }) : nil);
+    return
+    [[self requestPath:@"guild_details"
+            parameters:parameters
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSDictionary *guildJSON = response[0];
+         return
+         [RACSignal return:
+          [NSClassFromString(@"_GW2Guild") objectWithID:nil
+                                                   name:nil
+                                     fromJSONDictionary:guildJSON
+                                                  error:nil]];
+     }];
+}
+
 /*
- #pragma mark - Guilds
- - (RACSignal *)fetchGuildWithID:(NSString *)guildID;
- - (RACSignal *)fetchGuildWithName:(NSString *)guildName;
- 
  #pragma mark - Items
  - (RACSignal *)fetchItems;
  - (RACSignal *)fetchItemDetails:(NSString *)itemID;
  - (RACSignal *)fetchRecipes;
  - (RACSignal *)fetchRecipeDetails:(NSString *)recipeID;
- 
- #pragma mark - Map Information
- - (RACSignal *)fetchContinents;
- - (RACSignal *)fetchMaps;
- - (RACSignal *)fetchMap:(id)mapID;
- - (RACSignal *)fetchMapFloor:(id)floor inContinent:(id)continentID;
- 
- #pragma mark - WvW
- - (RACSignal *)fetchWvWMatches;
- - (RACSignal *)fetchWvWMatchDetails:(id)matchID;
- - (RACSignal *)fetchWvWObjectiveNames;
- 
- #pragma mark - Misc
- - (RACSignal *)fetchBuild;
- - (RACSignal *)fetchColors;
- - (RACSignal *)fetchFiles;
  */
+
+#pragma mark - Map Information
+- (RACSignal *)fetchContinents {
+    return
+    [[self requestPath:@"continents"
+            parameters:nil
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSDictionary *continents = response[0][@"continents"];
+         return
+         [RACSignal return:
+          [[continents.rac_sequence map:^id(RACTuple *continent) {
+             return
+             [NSClassFromString(@"_GW2MapContinent") objectWithID:continent[0]
+                                                             name:nil
+                                               fromJSONDictionary:continent[1]
+                                                            error:nil];
+         }]
+           array]
+          ];
+     }];
+}
+
+- (RACSignal *)fetchMaps {
+    return [self fetchMap:nil];
+}
+- (RACSignal *)fetchMap:(id)mapID {
+    NSDictionary *parameters;
+    (mapID ? ({ parameters = @{@"map_id" : mapID}; }) : nil);
+    return
+    [[self requestPath:@"maps"
+            parameters:parameters
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSDictionary *maps = response[0][@"maps"];
+         return
+         [RACSignal return:
+          [[maps.rac_sequence map:^id(RACTuple *map) {
+             return
+             [NSClassFromString(@"_GW2MapBasic") objectWithID:map[0]
+                                                         name:nil
+                                           fromJSONDictionary:map[1]
+                                                        error:nil];
+         }]
+           array]
+          ];
+     }];
+}
+- (RACSignal *)fetchMapFloor:(id)floor inContinent:(id)continentID {
+    
+    NSAssert(floor,         @"\"floor\" cannot be 'nil'\n%s", floor, __PRETTY_FUNCTION__);
+    NSAssert(continentID,   @"\"continentID\" cannot be 'nil'", continentID, __PRETTY_FUNCTION__);
+    
+    return
+    [[self requestPath:@"map_floor"
+            parameters:
+      @{@"floor" : floor,
+        @"continent_id" : continentID
+        }
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSDictionary *mapFloorJSON = response[0];
+         return
+         [RACSignal return:
+          [NSClassFromString(@"_GW2MapFloor") objectWithID:nil
+                                                      name:nil
+                                        fromJSONDictionary:mapFloorJSON
+                                                     error:nil]
+          ];
+     }];
+}
+
+#pragma mark - WvW
+- (RACSignal *)fetchWvWMatches {
+    return
+    [[self requestPath:@"wvw/matches"
+            parameters:nil
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSArray *matches = response[0][@"wvw_matches"];
+         return
+         [RACSignal return:
+          [[matches.rac_sequence map:^id(NSDictionary *match) {
+             return
+             [NSClassFromString(@"_GW2WvWMatchUp") objectWithID:nil
+                                                           name:nil
+                                             fromJSONDictionary:match
+                                                          error:nil];
+         }]
+           array]
+          ];
+     }];
+}
+- (RACSignal *)fetchWvWMatchDetails:(id)matchID {
+    NSAssert(matchID, @"\"matchID\" cannot be 'nil'\n%s", matchID, __PRETTY_FUNCTION__);
+    
+    return
+    [[self requestPath:@"wvw/match_details"
+            parameters:@{@"match_id" : matchID}
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSDictionary *matchJSON = response[0];
+         return
+         [RACSignal return:
+          [NSClassFromString(@"_GW2WvWMatch") objectWithID:matchJSON[@"match_id"]
+                                                      name:nil
+                                        fromJSONDictionary:matchJSON
+                                                     error:nil]
+          ];
+     }];
+}
+- (RACSignal *)fetchWvWObjectiveNames {
+    return
+    [[self requestPath:@"wvw/objective_names"
+            parameters:nil
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSArray *names = response[0];
+         return
+         [RACSignal return:
+          [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
+             return
+             [NSClassFromString(@"_GW2Object") objectWithID:nil
+                                                       name:nil
+                                         fromJSONDictionary:namesJSON
+                                                      error:nil];
+         }]
+           array]
+          ];
+     }];
+}
+
+#pragma mark - Misc
+- (RACSignal *)fetchBuild {
+    return [self requestPath:@"build"
+                  parameters:nil
+                      method:@"GET"];
+}
+- (RACSignal *)fetchColors {
+    return
+    [[self requestPath:@"colors"
+            parameters:nil
+                method:@"GET"]
+     flattenMap:^RACStream *(RACTuple *response) {
+         NSDictionary *colors = response[0][@"colors"];
+         return
+         [RACSignal return:
+          [[colors.rac_sequence map:^id(RACTuple *color) {
+             return
+             [NSClassFromString(@"_GW2Color") objectWithID:color[0]
+                                                      name:nil
+                                        fromJSONDictionary:color[1]
+                                                     error:nil];
+         }]
+           array]
+          ];
+     }];
+}
+- (RACSignal *)fetchFiles {
+    return nil;
+}
+
 
 #pragma mark - Services
 /* tile service */

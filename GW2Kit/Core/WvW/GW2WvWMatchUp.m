@@ -9,7 +9,7 @@
 #import "GW2WvWMatchUp.h"
 #import "GW2Object+Private.h"
 
-@interface GW2WvWMatchUp : _GW2Object <GW2WvWMatchUp>
+@interface _GW2WvWMatchUp : _GW2Object <GW2WvWMatchUp>
 @property       (nonatomic, readonly) NSInteger redWorldID;
 @property       (nonatomic, readonly) NSInteger blueWorldID;
 @property       (nonatomic, readonly) NSInteger greenWorldID;
@@ -18,7 +18,7 @@
 @end
 
 
-@implementation GW2WvWMatchUp
+@implementation _GW2WvWMatchUp
 + (NSDateFormatter *)dateFormatter {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];

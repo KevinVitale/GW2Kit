@@ -10,12 +10,18 @@
 #import "MTLValueTransformer+CoreGraphics.h"
 #import "GW2Object+Private.h"
 
-@interface GW2MapRegion : _GW2Object <GW2MapRegion>
+@interface _GW2MapFloor : _GW2Object <GW2MapFloor>
+@property (      nonatomic, readonly) CGSize  textureDimensions;
+@property (      nonatomic, readonly) CGRect  clampedView;
+@property (copy, nonatomic, readonly) NSArray *regions;
+@end
+
+@interface _GW2MapRegion : _GW2Object <GW2MapRegion>
 @property       (nonatomic, readonly)   CGPoint labelCoordinate;
 @property (copy, nonatomic, readonly)   NSArray *subregions;
 @end
 
-@interface GW2MapSubRegion : _GW2Object
+@interface _GW2MapSubRegion : _GW2Object
 @property       (nonatomic, readonly) NSInteger minimumLevel;
 @property       (nonatomic, readonly) NSInteger maximumLevel;
 @property       (nonatomic, readonly) NSInteger floor;
@@ -28,10 +34,10 @@
 @end
 
 
-@interface GW2MapObject : _GW2Object
+@interface _GW2MapObject : _GW2Object
 @property        (nonatomic, readonly) CGPoint coordinate;
 @end
-@implementation GW2MapObject
+@implementation _GW2MapObject
 + (NSValueTransformer *)coordinateJSONTransformer {
     return MTLReversiblePointTransformer(1);
 }
@@ -47,7 +53,7 @@
 }
 @end
 //------------------------------------------------------------------------------
-@interface _GW2MapSubRegionPOI : GW2MapObject <GW2MapSubRegionPointOfInterest>
+@interface _GW2MapSubRegionPOI : _GW2MapObject <GW2MapSubRegionPointOfInterest>
 @property       (nonatomic, readwrite) NSInteger floor;
 @property (copy, nonatomic, readwrite) NSString *type;
 @end
@@ -64,7 +70,7 @@
 }
 @end
 //------------------------------------------------------------------------------
-@interface _GW2MapSubRegionTask : GW2MapObject <GW2MapSubRegionTask>
+@interface _GW2MapSubRegionTask : _GW2MapObject <GW2MapSubRegionTask>
 @property       (nonatomic, readwrite) NSInteger level;
 @end
 @implementation _GW2MapSubRegionTask
@@ -81,7 +87,7 @@
 }
 @end
 //------------------------------------------------------------------------------
-@interface _GW2MapSubregionSkillChallenge : GW2MapObject <GW2MapSubRegionSkillChallenge>
+@interface _GW2MapSubregionSkillChallenge : _GW2MapObject <GW2MapSubRegionSkillChallenge>
 @end
 @implementation _GW2MapSubregionSkillChallenge
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -97,7 +103,7 @@
 }
 @end
 //------------------------------------------------------------------------------
-@interface _GW2MapSubRegionSector : GW2MapObject <GW2MapSubRegionSector>
+@interface _GW2MapSubRegionSector : _GW2MapObject <GW2MapSubRegionSector>
 @property       (nonatomic, readonly) NSInteger level;
 @end
 @implementation _GW2MapSubRegionSector
@@ -114,7 +120,50 @@
 @end
 //------------------------------------------------------------------------------
 
-@implementation GW2MapRegion
+@implementation _GW2MapFloor
++ (NSValueTransformer *)textureDimensionsJSONTransformer {
+    return MTLReversibleSizeTransformer(1);
+}
++ (NSValueTransformer *)clampedViewTransformer {
+    return MTLReversibleRectTransformer(0);
+}
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
+    NSDictionary *JSONKeyPaths = @
+    {
+        @"textureDimensions"    : @"texture_dims",
+        @"clampedView"          : @"clamped_view",
+        @"name"                 : NSNull.null,
+        @"objectID"             : NSNull.null,
+    };
+    
+    [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];
+    return [superJSONKeyPaths copy];
+}
+
++ (NSValueTransformer *)regionsJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSDictionary *regions) {
+        NSMutableArray *mutableRegionsArray = [NSMutableArray arrayWithCapacity:regions.count];
+        for(NSString *regionID in regions) {
+            _GW2MapRegion *region = [_GW2MapRegion objectWithID:@(regionID.integerValue)
+                                                           name:nil
+                                             fromJSONDictionary:regions[regionID]
+                                                          error:nil];
+            [mutableRegionsArray addObject:region];
+        }
+        return [mutableRegionsArray copy];
+    }
+                                                         reverseBlock:^id (NSArray *regionsArray) {
+                                                             NSMutableDictionary *regions = [NSMutableDictionary new];
+                                                             for(_GW2MapRegion *region in regionsArray) {
+                                                                 regions[[region.objectID stringValue]] = [MTLJSONAdapter JSONDictionaryFromModel:region];
+                                                             }
+                                                             return [regions copy];
+                                                         }];
+}
+@end
+
+@implementation _GW2MapRegion
 + (NSValueTransformer *)labelCoordinateJSONTransformer {
     return MTLReversiblePointTransformer(0);
 }
@@ -135,17 +184,17 @@
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSDictionary *subregions) {
         NSMutableArray *mutableSubregionsArray = [NSMutableArray arrayWithCapacity:subregions.count];
         for(NSString *subregionID in subregions) {
-            GW2MapSubRegion *subregion = [GW2MapSubRegion objectWithID:@(subregionID.integerValue)
-                                                                  name:nil
-                                                    fromJSONDictionary:subregions[subregionID]
-                                                                 error:nil];
+            _GW2MapSubRegion *subregion = [_GW2MapSubRegion objectWithID:@(subregionID.integerValue)
+                                                                    name:nil
+                                                      fromJSONDictionary:subregions[subregionID]
+                                                                   error:nil];
             [mutableSubregionsArray addObject:subregion];
         }
         return [mutableSubregionsArray copy];
     }
                                                          reverseBlock:^id (NSArray *subregionsArray) {
                                                              NSMutableDictionary *subregions = [NSMutableDictionary new];
-                                                             for(GW2MapSubRegion *subregion in subregionsArray) {
+                                                             for(_GW2MapSubRegion *subregion in subregionsArray) {
                                                                  subregions[[subregion.objectID stringValue]] = [MTLJSONAdapter JSONDictionaryFromModel:subregion];
                                                              }
                                                              return [subregions copy];
@@ -154,7 +203,7 @@
 @end
 
 
-@implementation GW2MapSubRegion
+@implementation _GW2MapSubRegion
 + (NSValueTransformer *)continentRectJSONTransformer {
     return MTLReversibleRectTransformer(0);
 }

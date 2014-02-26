@@ -18,7 +18,7 @@
 @property (copy, nonatomic, readonly) NSArray   *flags;
 @end
 
-@interface GW2Guild : _GW2Object
+@interface _GW2Guild : _GW2Object
 @property (copy, nonatomic, readonly) NSString *tag;
 @property (nonatomic, readonly) GW2GuildEmblem *emblem;
 @end
@@ -38,7 +38,7 @@
     };
 }
 @end
-@implementation GW2Guild
+@implementation _GW2Guild
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
