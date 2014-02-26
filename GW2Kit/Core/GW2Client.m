@@ -569,7 +569,9 @@
      }];
 }
 - (RACSignal *)fetchFiles {
-    return nil;
+    return [self requestPath:@"files"
+                  parameters:nil
+                      method:@"GET"];
 }
 
 
