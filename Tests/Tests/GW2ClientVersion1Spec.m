@@ -22,7 +22,6 @@ describe(@"version 1 client", ^ {
         expect(client.preferredLanguage).to.equal(@"en");
     });
     
-    /*
     it(@"fetches events", ^AsyncBlock {
         [[[client
            fetchEvents:@{@"world_id" : @"1015"}]
@@ -172,20 +171,6 @@ describe(@"version 1 client", ^ {
          }];
     });
     
-    it(@"fetches map floor", ^AsyncBlock {
-        [[client fetchMapFloor:@1 inContinent:@1]
-         subscribeNext:^(id mapFloor) {
-             NSLog(@"%@", mapFloor);
-         }
-         error:^(NSError *error) {
-             expect(error).to.beNil();
-             done();
-         }
-         completed:^{
-             done();
-         }];
-    });
-    
     it(@"fetches wvw match", ^AsyncBlock {
         [[client fetchWvWMatchDetails:@"1-4"]
          subscribeNext:^(id wvwMatch) {
@@ -241,7 +226,6 @@ describe(@"version 1 client", ^ {
              done();
          }];
     });
-          */
     
     it(@"fetches files", ^AsyncBlock {
         [[client fetchFiles]
@@ -270,6 +254,10 @@ describe(@"version 1 client", ^ {
          completed:^{
              done();
          }];
+    });
+    
+    afterAll(^ {
+        client = nil;
     });
 });
 SpecEnd
