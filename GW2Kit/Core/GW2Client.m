@@ -204,7 +204,13 @@
                   if(json[@"error"]) {
                       error = [NSError errorWithDomain:@"GW2APIErrorDomain"
                                                   code:[json[@"error"] integerValue]
-                                              userInfo:json];
+                                              userInfo:({
+                          json = [NSMutableDictionary dictionaryWithDictionary:json];
+                          json[NSURLErrorFailingURLStringErrorKey]  = request.URL.absoluteString;
+                          json[NSURLErrorFailingURLErrorKey]        = request.URL;
+                          json[@"HTTPMethod"]                       = request.HTTPMethod;
+                          [json copy];
+                      })];
                   }
                   
                   // Terminate with an error
@@ -213,7 +219,7 @@
               
               // Send the JSON and the connection's response
               else {
-                  [subscriber sendNext:RACTuplePack(json, request, response)];
+                  [subscriber sendNext:json];
                   [subscriber sendCompleted];
               }
           }];
@@ -252,8 +258,8 @@
     [[self requestPath:@"events"
             parameters:parameters
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSArray *events = response[0][@"events"];
+     flattenMap:^RACStream *(NSDictionary *result) {
+         NSArray *events = result[@"events"];
          return
          [RACSignal return:
           [[events.rac_sequence map:^id(NSDictionary *eventJSON) {
@@ -273,8 +279,7 @@
     [[self requestPath:@"event_names"
             parameters:nil
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSArray *names = response[0];
+     flattenMap:^RACStream *(NSArray *names) {
          return
          [RACSignal return:
           [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
@@ -294,8 +299,7 @@
     [[self requestPath:@"map_names"
             parameters:nil
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSArray *names = response[0];
+     flattenMap:^RACStream *(NSArray *names) {
          return
          [RACSignal return:
           [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
@@ -315,8 +319,7 @@
     [[self requestPath:@"world_names"
             parameters:nil
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSArray *names = response[0];
+     flattenMap:^RACStream *(NSArray *names) {
          return
          [RACSignal return:
           [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
@@ -338,8 +341,8 @@
     [[self requestPath:@"event_details"
             parameters:parameters
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSArray *events = response[0][@"events"];
+     flattenMap:^RACStream *(NSDictionary *response) {
+         NSArray *events = response[@"events"];
          return
          [RACSignal return:
           [[events.rac_sequence map:^id(RACTuple *event) {
@@ -362,8 +365,7 @@
     [[self requestPath:@"guild_details"
             parameters:parameters
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSDictionary *guildJSON = response[0];
+     flattenMap:^RACStream *(NSDictionary *guildJSON) {
          return
          [RACSignal return:
           [NSClassFromString(@"_GW2Guild") objectWithID:nil
@@ -380,8 +382,7 @@
     [[self requestPath:@"guild_details"
             parameters:parameters
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSDictionary *guildJSON = response[0];
+     flattenMap:^RACStream *(NSDictionary *guildJSON) {
          return
          [RACSignal return:
           [NSClassFromString(@"_GW2Guild") objectWithID:nil
@@ -405,8 +406,8 @@
     [[self requestPath:@"continents"
             parameters:nil
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSDictionary *continents = response[0][@"continents"];
+     flattenMap:^RACStream *(NSDictionary *response) {
+         NSDictionary *continents = response[@"continents"];
          return
          [RACSignal return:
           [[continents.rac_sequence map:^id(RACTuple *continent) {
@@ -431,8 +432,8 @@
     [[self requestPath:@"maps"
             parameters:parameters
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSDictionary *maps = response[0][@"maps"];
+     flattenMap:^RACStream *(NSDictionary *response) {
+         NSDictionary *maps = response[@"maps"];
          return
          [RACSignal return:
           [[maps.rac_sequence map:^id(RACTuple *map) {
@@ -458,8 +459,7 @@
         @"continent_id" : continentID
         }
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSDictionary *mapFloorJSON = response[0];
+     flattenMap:^RACStream *(NSDictionary *mapFloorJSON) {
          return
          [RACSignal return:
           [NSClassFromString(@"_GW2MapFloor") objectWithID:nil
@@ -476,8 +476,8 @@
     [[self requestPath:@"wvw/matches"
             parameters:nil
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSArray *matches = response[0][@"wvw_matches"];
+     flattenMap:^RACStream *(NSDictionary *response) {
+         NSArray *matches = response[@"wvw_matches"];
          return
          [RACSignal return:
           [[matches.rac_sequence map:^id(NSDictionary *match) {
@@ -498,8 +498,7 @@
     [[self requestPath:@"wvw/match_details"
             parameters:@{@"match_id" : matchID}
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSDictionary *matchJSON = response[0];
+     flattenMap:^RACStream *(NSDictionary *matchJSON) {
          return
          [RACSignal return:
           [NSClassFromString(@"_GW2WvWMatch") objectWithID:matchJSON[@"match_id"]
@@ -514,8 +513,7 @@
     [[self requestPath:@"wvw/objective_names"
             parameters:nil
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSArray *names = response[0];
+     flattenMap:^RACStream *(NSArray *names) {
          return
          [RACSignal return:
           [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
@@ -541,8 +539,8 @@
     [[self requestPath:@"colors"
             parameters:nil
                 method:@"GET"]
-     flattenMap:^RACStream *(RACTuple *response) {
-         NSDictionary *colors = response[0][@"colors"];
+     flattenMap:^RACStream *(NSDictionary *response) {
+         NSDictionary *colors = response[@"colors"];
          return
          [RACSignal return:
           [[colors.rac_sequence map:^id(RACTuple *color) {
