@@ -14,8 +14,13 @@
 @end
 
 @implementation _GW2Object
+- (NSString *)description {
+    return [[self.debugDescription stringByReplacingOccurrencesOfString:@"\n"
+                                                            withString:@"\r"]
+    stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+}
 - (NSString *)debugDescription {
-    return self.JSONRepresentation.debugDescription;
+    return self.JSONRepresentation.description;
 }
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{@"objectID" : @"id"};
