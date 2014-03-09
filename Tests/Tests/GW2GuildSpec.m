@@ -33,7 +33,7 @@ describe(@"guild", ^ {
     });
     
     it(@"instantiates from guild JSON", ^ {
-        id<GW2Guild> guild = [NSClassFromString(@"GW2Guild") objectWithID:nil
+        id<GW2Guild> guild = [NSClassFromString(@"_GW2Guild") objectWithID:nil
                                                                      name:nil
                                                        fromJSONDictionary:guildDictionary
                                                                     error:nil];

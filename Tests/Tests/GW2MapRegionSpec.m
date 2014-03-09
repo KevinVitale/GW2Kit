@@ -28,7 +28,7 @@ describe(@"map floor", ^ {
         
         ShiverpeakMountainsJSON = mapFloorJSON[@"regions"][@"1"];
         NSError *error;
-        mapRegion = [NSClassFromString(@"GW2MapRegion") objectWithID:@1
+        mapRegion = [NSClassFromString(@"_GW2MapRegion") objectWithID:@1
                                           name:nil
                             fromJSONDictionary:ShiverpeakMountainsJSON
                                          error:&error];

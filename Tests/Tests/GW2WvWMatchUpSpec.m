@@ -32,7 +32,7 @@ describe(@"wvw match ups", ^ {
     beforeEach(^ {
         NSArray *matchesArray = matchesJSON[@"wvw_matches"];
         expect(matchesArray.count).equal(17);
-        matchUp = [NSClassFromString(@"GW2WvWMatchUp") objectWithID:nil
+        matchUp = [NSClassFromString(@"_GW2WvWMatchUp") objectWithID:nil
                                                                name:nil
                                                  fromJSONDictionary:matchesArray.firstObject
                                                               error:nil];

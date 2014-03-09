@@ -35,7 +35,7 @@ describe(@"color", ^ {
               rac_sequence]
              map:^id(RACTuple *value) {
                  return
-                 [NSClassFromString(@"_GW2Color") objectWithID:@([[value first] integerValue])
+                 [NSClassFromString(@"_GW2Color") objectWithID:value[0]
                                                           name:nil
                                             fromJSONDictionary:value.second
                                                          error:nil];
@@ -66,7 +66,7 @@ describe(@"color", ^ {
 #endif
         expect([color.color isKindOfClass:colorClass]).to.beTruthy();
         expect([color.cloth conformsToProtocol:@protocol(GW2ColorMaterial)]).to.beTruthy();
-        expect(color.objectID).equal(441);
+        expect(color.objectID).equal(@"441");
     });
 });
 SpecEnd
