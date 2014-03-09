@@ -261,16 +261,14 @@
      flattenMap:^RACStream *(NSDictionary *result) {
          NSArray *events = result[@"events"];
          return
-         [RACSignal return:
-          [[events.rac_sequence map:^id(NSDictionary *eventJSON) {
+         [[events.rac_sequence map:^id(NSDictionary *eventJSON) {
              return
              [NSClassFromString(@"_GW2EventState") objectWithID:eventJSON[@"event_id"]
                                                            name:nil
                                              fromJSONDictionary:eventJSON
                                                           error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 
@@ -281,16 +279,14 @@
                 method:@"GET"]
      flattenMap:^RACStream *(NSArray *names) {
          return
-         [RACSignal return:
-          [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
+         [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
              return
              [NSClassFromString(@"_GW2Object") objectWithID:namesJSON[@"id"]
                                                        name:nil
                                          fromJSONDictionary:namesJSON
                                                       error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 
@@ -301,16 +297,14 @@
                 method:@"GET"]
      flattenMap:^RACStream *(NSArray *names) {
          return
-         [RACSignal return:
-          [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
+         [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
              return
              [NSClassFromString(@"_GW2Object") objectWithID:namesJSON[@"id"]
                                                        name:nil
                                          fromJSONDictionary:namesJSON
                                                       error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 
@@ -321,16 +315,14 @@
                 method:@"GET"]
      flattenMap:^RACStream *(NSArray *names) {
          return
-         [RACSignal return:
-          [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
+         [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
              return
              [NSClassFromString(@"_GW2Object") objectWithID:namesJSON[@"id"]
                                                        name:nil
                                          fromJSONDictionary:namesJSON
                                                       error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 
@@ -344,16 +336,14 @@
      flattenMap:^RACStream *(NSDictionary *response) {
          NSArray *events = response[@"events"];
          return
-         [RACSignal return:
-          [[events.rac_sequence map:^id(RACTuple *event) {
+         [[events.rac_sequence map:^id(RACTuple *event) {
              return
              [NSClassFromString(@"_GW2Event") objectWithID:event[0]
                                                       name:nil
                                         fromJSONDictionary:event[1]
                                                      error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 
@@ -409,16 +399,14 @@
      flattenMap:^RACStream *(NSDictionary *response) {
          NSDictionary *continents = response[@"continents"];
          return
-         [RACSignal return:
-          [[continents.rac_sequence map:^id(RACTuple *continent) {
+         [[continents.rac_sequence map:^id(RACTuple *continent) {
              return
              [NSClassFromString(@"_GW2MapContinent") objectWithID:continent[0]
                                                              name:nil
                                                fromJSONDictionary:continent[1]
                                                             error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 
@@ -435,7 +423,6 @@
      flattenMap:^RACStream *(NSDictionary *response) {
          NSDictionary *maps = response[@"maps"];
          return
-         [RACSignal return:
           [[maps.rac_sequence map:^id(RACTuple *map) {
              return
              [NSClassFromString(@"_GW2MapBasic") objectWithID:map[0]
@@ -443,8 +430,7 @@
                                            fromJSONDictionary:map[1]
                                                         error:nil];
          }]
-           array]
-          ];
+           signal];
      }];
 }
 - (RACSignal *)fetchMapFloor:(id)floor inContinent:(id)continentID {
@@ -479,16 +465,14 @@
      flattenMap:^RACStream *(NSDictionary *response) {
          NSArray *matches = response[@"wvw_matches"];
          return
-         [RACSignal return:
-          [[matches.rac_sequence map:^id(NSDictionary *match) {
+         [[matches.rac_sequence map:^id(NSDictionary *match) {
              return
              [NSClassFromString(@"_GW2WvWMatchUp") objectWithID:nil
                                                            name:nil
                                              fromJSONDictionary:match
                                                           error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 - (RACSignal *)fetchWvWMatchDetails:(id)matchID {
@@ -515,16 +499,14 @@
                 method:@"GET"]
      flattenMap:^RACStream *(NSArray *names) {
          return
-         [RACSignal return:
-          [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
+         [[names.rac_sequence map:^id(NSDictionary *namesJSON) {
              return
              [NSClassFromString(@"_GW2Object") objectWithID:nil
                                                        name:nil
                                          fromJSONDictionary:namesJSON
                                                       error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 
@@ -542,16 +524,14 @@
      flattenMap:^RACStream *(NSDictionary *response) {
          NSDictionary *colors = response[@"colors"];
          return
-         [RACSignal return:
-          [[colors.rac_sequence map:^id(RACTuple *color) {
+         [[colors.rac_sequence map:^id(RACTuple *color) {
              return
              [NSClassFromString(@"_GW2Color") objectWithID:color[0]
                                                       name:nil
                                         fromJSONDictionary:color[1]
                                                      error:nil];
          }]
-           array]
-          ];
+          signal];
      }];
 }
 - (RACSignal *)fetchFiles {
