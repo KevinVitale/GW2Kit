@@ -10,8 +10,7 @@
 #import <Expecta/Expecta.h>
 #import <Specta/Specta.h>
 
-#import "GW2Client.h"
-#import "GW2Object.h"
+#import <GW2Kit/GW2Kit.h> 
 #import <ReactiveCocoa.h>
 
 SpecBegin(GW2Client)
@@ -73,10 +72,8 @@ describe(@"version 1 client", ^ {
     
     it(@"fetches event details", ^AsyncBlock {
         [[client fetchEventDetails:nil]
-         subscribeNext:^(NSArray *events) {
-             for(id event in events) {
-                 NSLog(@"%@", event);
-             };
+         subscribeNext:^(id<GW2Event> event) {
+             NSLog(@"%@", event);
          }
          error:^(NSError *error) {
              expect(error).to.beNil();
