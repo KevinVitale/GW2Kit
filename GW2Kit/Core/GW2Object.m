@@ -9,7 +9,7 @@
 #import "GW2Object+Private.h"
 
 @interface _GW2Object ()
-@property (copy, nonatomic, readwrite)    id objectID;
+@property (copy, nonatomic, readwrite) NSString *objectID;
 @property (copy, nonatomic, readwrite) NSString *name;
 @end
 

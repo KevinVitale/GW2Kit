@@ -16,7 +16,7 @@
  *  @property objectID
  *  @discussion A unique-identifier for all objects.
  */
-@property (copy, nonatomic, readonly) id objectID;
+@property (copy, nonatomic, readonly) NSString *objectID;
 
 /**
  *  @property name
