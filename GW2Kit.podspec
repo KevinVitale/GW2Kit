@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.dependency 'ReactiveCocoa', '~> 2.2.4'
   s.dependency 'Mantle', '~> 1.3.1'
 
+  s.public_header_files = 'GW2Kit/GW2Kit.h'
   s.subspec 'Categories' do |cats|
       cats.source_files = 'GW2Kit/Categories/*.{h,m}'
   end
