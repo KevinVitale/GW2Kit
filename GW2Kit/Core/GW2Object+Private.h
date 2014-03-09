@@ -26,7 +26,7 @@
  *  The value of 'name' can be a string, in the case of events.
  *  The value of 'name' can be a number, in the case of world and maps.
  */
-@interface _GW2Object : MTLModel <MTLJSONSerializing, GW2Object>
+@interface _GW2Object : MTLModel <MTLManagedObjectSerializing, MTLJSONSerializing, GW2Object>
 /*
  *  @property objectID
  *  @property name;

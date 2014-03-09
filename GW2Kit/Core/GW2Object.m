@@ -52,4 +52,11 @@
     }
     return nil;
 }
+
++ (NSString *)managedObjectEntityName {
+    return @"GW2Object";
+}
++ (NSDictionary *)managedObjectKeysByPropertyKey {
+    return [self.class JSONKeyPathsByPropertyKey];
+}
 @end
