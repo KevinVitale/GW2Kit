@@ -156,7 +156,7 @@
                                                          reverseBlock:^id (NSArray *regionsArray) {
                                                              NSMutableDictionary *regions = [NSMutableDictionary new];
                                                              for(_GW2MapRegion *region in regionsArray) {
-                                                                 regions[[region.objectID stringValue]] = [MTLJSONAdapter JSONDictionaryFromModel:region];
+                                                                 regions[region.objectID] = [MTLJSONAdapter JSONDictionaryFromModel:region];
                                                              }
                                                              return [regions copy];
                                                          }];
@@ -195,7 +195,7 @@
                                                          reverseBlock:^id (NSArray *subregionsArray) {
                                                              NSMutableDictionary *subregions = [NSMutableDictionary new];
                                                              for(_GW2MapSubRegion *subregion in subregionsArray) {
-                                                                 subregions[[subregion.objectID stringValue]] = [MTLJSONAdapter JSONDictionaryFromModel:subregion];
+                                                                 subregions[subregion.objectID] = [MTLJSONAdapter JSONDictionaryFromModel:subregion];
                                                              }
                                                              return [subregions copy];
                                                          }];
