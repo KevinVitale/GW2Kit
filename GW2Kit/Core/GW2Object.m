@@ -57,6 +57,24 @@
     return @"GW2Object";
 }
 + (NSDictionary *)managedObjectKeysByPropertyKey {
-    return [self.class JSONKeyPathsByPropertyKey];
+    NSDictionary *keysByProperty = ({
+        NSMutableDictionary *dict = [[self.class JSONKeyPathsByPropertyKey] mutableCopy];
+        dict[@"uniqueID"] = dict[@"objectID"];
+        [dict removeObjectForKey:@"objectID"];
+        [dict copy];
+    });
+    return keysByProperty;
+    
 }
+@end
+
+
+@interface GW2Object : NSManagedObject
+@property (copy, nonatomic) NSString *uniqueID;
+@property (copy, nonatomic) NSString *name;
+@end
+
+@implementation GW2Object
+@dynamic uniqueID;
+@dynamic name;
 @end
