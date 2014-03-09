@@ -140,34 +140,6 @@
             </FileRef>
          </Group>
          <Group
-            location = "group:Stats"
-            name = "Stats">
-            <FileRef
-               location = "group:GW2StatusDaemon.h">
-            </FileRef>
-            <FileRef
-               location = "group:GW2StatusDaemon.m">
-            </FileRef>
-            <FileRef
-               location = "group:GW2StatusDetail.h">
-            </FileRef>
-            <FileRef
-               location = "group:GW2StatusDetail.m">
-            </FileRef>
-            <FileRef
-               location = "group:GW2StatusWvWMatches.h">
-            </FileRef>
-            <FileRef
-               location = "group:GW2StatusWvWMatches.m">
-            </FileRef>
-            <FileRef
-               location = "group:GW2StatusWvWRankings.h">
-            </FileRef>
-            <FileRef
-               location = "group:GW2StatusWvWRankings.m">
-            </FileRef>
-         </Group>
-         <Group
             location = "group:WvW"
             name = "WvW">
             <FileRef
