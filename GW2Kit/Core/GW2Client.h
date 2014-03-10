@@ -65,19 +65,14 @@
 
 #pragma mark - Events
 
-/**
- *  Fetches the list of events and their status that match the given filter.
- *
- *  @param parameters Optional filters when fetching events.
- *
- *  @discussion Valid filters are: @p world_id, @p map_id, and @p event_id.
- *
- *  @return A @p RACSignal that fetches events, then completes.
- *
- *  @throws If @p parameters contains an invalid key, a @p NSInvalidArgumentException
- *          is thrown.
- */
-- (RACSignal *)fetchEvents:(NSDictionary *)parameters;
+- (RACSignal *)fetchEventStates;
+- (RACSignal *)fetchEventStateForEventIDs:(NSArray *)eventIDs;
+- (RACSignal *)fetchEventStatesForMapIDs:(NSArray *)mapIDs;
+- (RACSignal *)fetchEventStatesForWorldIDs:(NSArray *)worldIDs;
+- (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID eventIDs:(NSArray *)eventIDs;
+- (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID mapID:(NSInteger)mapID;
+- (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID mapID:(NSInteger)mapID eventID:(NSArray *)eventIDs;
+
 - (RACSignal *)fetchEventNames;
 - (RACSignal *)fetchMapNames;
 - (RACSignal *)fetchWorldNames;

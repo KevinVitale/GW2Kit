@@ -245,6 +245,63 @@
 }
 
 #pragma mark - Events
+- (RACSignal *)fetchEventStates {
+    return
+    [[self requestPath:@"events"
+            parameters:nil
+                method:@"GET"]
+     flattenMap:^RACStream *(NSDictionary *result) {
+         NSArray *events = result[@"events"];
+         return
+         [[events.rac_sequence map:^id(NSDictionary *eventJSON) {
+             return
+             [NSClassFromString(@"_GW2EventState") objectWithID:eventJSON[@"event_id"]
+                                                           name:nil
+                                             fromJSONDictionary:eventJSON
+                                                          error:nil];
+         }]
+          signal];
+     }];
+}
+- (RACSignal *)fetchEventStateForEventIDs:(NSArray *)eventIDs {
+    return
+    [[eventIDs.rac_sequence signal] flattenMap:
+     ^RACStream *(NSString *eventID) {
+         return [self fetchEvents:@{@"event_id" : eventID}];
+     }];
+}
+- (RACSignal *)fetchEventStatesForMapIDs:(NSArray *)mapIDs {
+    return
+    [[mapIDs.rac_sequence signal] flattenMap:
+     ^RACStream *(id mapID) {
+         return [self fetchEvents:@{@"map_id" : mapID}];
+     }];
+}
+- (RACSignal *)fetchEventStatesForWorldIDs:(NSArray *)worldIDs {
+    return
+    [[worldIDs.rac_sequence signal] flattenMap:
+     ^RACStream *(id worldID) {
+         return [self fetchEvents:@{@"world_id" : worldID}];
+     }];
+}
+
+- (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID eventIDs:(NSArray *)eventIDs {
+    return [[eventIDs.rac_sequence signal] flattenMap:
+            ^RACStream *(NSString *eventID) {
+                return [self fetchEvents:@{@"world_id" : @(worldID), @"event_id" : eventID}];
+            }];
+}
+
+- (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID mapID:(NSInteger)mapID {
+    return [self fetchEvents:@{@"world_id" : @(worldID), @"map_id" : @(mapID)}];
+}
+- (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID mapID:(NSInteger)mapID eventID:(NSArray *)eventIDs {
+    return [[eventIDs.rac_sequence signal] flattenMap:
+            ^RACStream *(NSString *eventID) {
+                return [self fetchEvents:@{@"world_id" : @(worldID), @"map_id" : @(mapID), @"event_id" : eventID}];
+    }];
+}
+
 - (RACSignal *)fetchEvents:(NSDictionary *)parameters {
     NSSet *exceptedSet  = [NSSet setWithArray:@[@"world_id", @"map_id", @"event_id"]];
     NSSet *keySet       = [NSSet setWithArray:parameters.allKeys];

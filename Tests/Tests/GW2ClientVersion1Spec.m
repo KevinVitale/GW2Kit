@@ -21,21 +21,23 @@ describe(@"version 1 client", ^ {
         expect(client.preferredLanguage).to.equal(@"en");
     });
     
-    it(@"fetches events", ^AsyncBlock {
-        [[[client
-           fetchEvents:@{@"world_id" : @"1015"}]
-          logNext]
-         subscribeError:^(NSError *error) {
-             expect(error).to.beNil();
-             done();
-         }
-         completed:^{
-             done();
-         }];
+    describe(@"new event signals", ^{
+        it(@"all events", ^AsyncBlock {
+            [[[[client fetchEventStates]
+               take:5] logNext]
+             subscribeError:^(NSError *error) {
+                 expect(error).to.beNil();
+                 done();
+             }
+             completed:^{
+                 done();
+             }];
+        });
     });
     
+    
     it(@"fetches event names", ^AsyncBlock {
-        [[[client fetchEventNames]
+        [[[[client fetchEventNames] take:5]
           logNext]
          subscribeError:^(NSError *error) {
              expect(error).to.beNil();
@@ -71,7 +73,7 @@ describe(@"version 1 client", ^ {
     });
     
     it(@"fetches event details", ^AsyncBlock {
-        [[client fetchEventDetails:nil]
+        [[[client fetchEventDetails:nil] take:5]
          subscribeNext:^(id<GW2Event> event) {
              NSLog(@"%@", event);
          }

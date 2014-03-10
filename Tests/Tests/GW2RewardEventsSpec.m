@@ -58,23 +58,57 @@ describe(@"reward events", ^ {
         // Create our gw2 client (v1)
         client = [GW2ClientVersion1 clientWithPreferredLanguage:nil];
         expect(client.preferredLanguage).to.equal(@"en");
-        
-        setAsyncSpecTimeout(100);
     });
     
-    it(@"should do something", ^AsyncBlock {
-        
-        [[[[client fetchEvents:@{ @"event_id" : rewardEventIDList.firstObject, @"world_id" : @1015 }]
-           delay:1]
-          repeat]
-         subscribeNext:^(id<GW2EventState> eventState) {
-             NSLog(@"%@", eventState);
-         }
-         error:^(NSError *error) {
+    it(@"all event states for reward events on a specific world", ^AsyncBlock {
+        [[[[[client fetchEventStatesForWorldID:1015 eventIDs:rewardEventIDList]
+            filter:^BOOL(id<GW2EventState> eventState) {
+                return [[eventState state] isEqualToString:@"Warmup"];
+            }]
+           flattenMap:^RACStream *(id<GW2EventState> eventState) {
+               return [RACSignal combineLatest:
+                       @[[client fetchEventDetails:[eventState objectID]],
+                         [client fetchMap:@([eventState mapID])]]
+                                        reduce:^id(id<GW2Event> event, id<GW2Object> map) {
+                                            return @{@"state" : eventState, @"details" : event, @"map" : map};
+                                        }];
+           }]
+          logNext]
+         subscribeError:^(NSError *error) {
+             expect(error).to.beNil();
+             done();
          }
          completed:^{
+             done();
          }];
     });
+    
+    /*
+    it(@"all event states on a specific world & map", ^AsyncBlock {
+        
+        RACSignal *repeatingFetch =
+        [[[[[client fetchEventStatesForWorldID:1015 mapID:15]
+            flattenMap:^RACStream *(id<GW2EventState> eventState) {
+                return
+                [[client fetchEventDetails:[eventState objectID]]
+                 map:^id(id value) {
+                     return RACTuplePack((id)eventState, value);
+                 }];
+            }]
+           logNext]
+          delay:1]
+         repeat];
+        
+        [repeatingFetch
+         subscribeError:^(NSError *error) {
+             expect(error).to.beNil();
+             done();
+         }
+         completed:^{
+             done();
+         }];
+    });
+     */
     
 });
 SpecEnd

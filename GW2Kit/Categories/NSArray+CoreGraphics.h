@@ -11,6 +11,7 @@
 @interface NSArray (CoreGraphics)
 /*	Create a CGPoint from an NSArray.
  *
+ *  @dicussion
  *	The array format:
  *		@[ @20.1, @5.5 ]
  *
@@ -19,7 +20,7 @@
  *
  *	@param precision The decimal precision for both coordinate values.
  *
- *	@return A CGPoint (using 'double' values when compiled on 64-bit systems).
+ *	@return A @p CGPoint (using @em double values when compiled on 64-bit systems).
  */
 - (CGPoint)point:(NSInteger)precision;
 
