@@ -58,57 +58,64 @@ describe(@"reward events", ^ {
         // Create our gw2 client (v1)
         client = [GW2ClientVersion1 clientWithPreferredLanguage:nil];
         expect(client.preferredLanguage).to.equal(@"en");
+        setAsyncSpecTimeout(500);
     });
     
-    it(@"all event states for reward events on a specific world", ^AsyncBlock {
-        [[[[[client fetchEventStatesForWorldID:1015 eventIDs:rewardEventIDList]
-            filter:^BOOL(id<GW2EventState> eventState) {
-                return [[eventState state] isEqualToString:@"Warmup"];
-            }]
-           flattenMap:^RACStream *(id<GW2EventState> eventState) {
-               return [RACSignal combineLatest:
-                       @[[client fetchEventDetails:[eventState objectID]],
-                         [client fetchMap:@([eventState mapID])]]
-                                        reduce:^id(id<GW2Event> event, id<GW2Object> map) {
-                                            return @{@"state" : eventState, @"details" : event, @"map" : map};
-                                        }];
-           }]
-          logNext]
+    it(@"reward event state across all worlds", ^AsyncBlock {
+        
+        RACSignal *mapsAndWorldsSignal =
+        [RACSignal concat:
+         @[[client fetchMapNames],
+           [client fetchWorldNames],
+           [[client fetchEventNames]
+            filter:^BOOL(id<GW2Object> eventName) {
+                return [rewardEventIDList containsObject:[eventName objectID]];
+            }]]];
+        
+        mapsAndWorldsSignal =
+        [[mapsAndWorldsSignal collect]
+         flattenMap:^RACStream *(NSArray *value) {
+             return [RACSignal return:
+                     [value.rac_sequence foldLeftWithStart:[NSDictionary new]
+                                                    reduce:
+                      ^id(id accumulator, id value) {
+                          NSMutableDictionary *dictionary = [(NSDictionary *)accumulator mutableCopy];
+                          dictionary[[value objectID]] = value;
+                          return [dictionary copy];
+                      }]];
+         }];
+        
+        NSArray *statesWereInterestedIn = @[@"Warmup"];
+        
+        mapsAndWorldsSignal =
+        [mapsAndWorldsSignal flattenMap:
+         ^RACStream *(NSDictionary *mapsAndWorlds) {
+             return [[[client fetchEventStateForEventIDs:rewardEventIDList]
+                      filter:^BOOL(id<GW2EventState> eventState) {
+                          return [statesWereInterestedIn containsObject:[eventState state]];
+                      }]
+                     map:^id(id<GW2EventState> eventState) {
+                         NSString *map   = [(id<GW2Object>)mapsAndWorlds[[@([eventState mapID]) stringValue]] name];
+                         NSString *world = [(id<GW2Object>)mapsAndWorlds[[@([eventState worldID]) stringValue]] name];
+                         NSString *event = [(id<GW2Object>)mapsAndWorlds[[eventState objectID]] name];
+                         NSString *state = [(id<GW2EventState>)eventState state];
+                         return
+                         @{
+                           @"map"   : map,
+                           @"world" : world,
+                           @"event" : event,
+                           @"status": state
+                           };
+                     }];
+         }];
+        
+        [[mapsAndWorldsSignal logNext]
          subscribeError:^(NSError *error) {
              expect(error).to.beNil();
              done();
-         }
-         completed:^{
+         } completed:^{
              done();
          }];
     });
-    
-    /*
-    it(@"all event states on a specific world & map", ^AsyncBlock {
-        
-        RACSignal *repeatingFetch =
-        [[[[[client fetchEventStatesForWorldID:1015 mapID:15]
-            flattenMap:^RACStream *(id<GW2EventState> eventState) {
-                return
-                [[client fetchEventDetails:[eventState objectID]]
-                 map:^id(id value) {
-                     return RACTuplePack((id)eventState, value);
-                 }];
-            }]
-           logNext]
-          delay:1]
-         repeat];
-        
-        [repeatingFetch
-         subscribeError:^(NSError *error) {
-             expect(error).to.beNil();
-             done();
-         }
-         completed:^{
-             done();
-         }];
-    });
-     */
-    
 });
 SpecEnd
