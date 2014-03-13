@@ -83,10 +83,10 @@
 - (RACSignal *)fetchGuildWithName:(NSString *)guildName;
 
 #pragma mark - Items
-- (RACSignal *)fetchItems;
-- (RACSignal *)fetchItemDetails:(NSString *)itemID;
-- (RACSignal *)fetchRecipes;
-- (RACSignal *)fetchRecipeDetails:(NSString *)recipeID;
+- (RACSignal *)fetchItems;                                  // THROWS EXCEPTION
+- (RACSignal *)fetchItemDetails:(NSString *)itemID;         // THROWS EXCEPTION
+- (RACSignal *)fetchRecipes;                                // THROWS EXCEPTION
+- (RACSignal *)fetchRecipeDetails:(NSString *)recipeID;     // THROWS EXCEPTION
 
 #pragma mark - Map Information
 - (RACSignal *)fetchContinents;
