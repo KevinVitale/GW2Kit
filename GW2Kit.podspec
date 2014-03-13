@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GW2Kit"
-  s.version      = "0.0.1"
+  s.version      = "0.2.0"
   s.summary      = "iOS & OS X framework for Guild Wars 2 API"
   s.homepage     = "https://github.com/KevinVitale/GW2Kit"
   s.license      = 'Apache 2.0'
