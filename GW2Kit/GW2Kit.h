@@ -6,8 +6,22 @@
 //
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+
+#pragma mark - Base Object
+// -----------------------------------------------------------------------------
+//  GW2Object
+// -----------------------------------------------------------------------------
 #import "GW2Object.h"
+
+#pragma mark - Clients
+// -----------------------------------------------------------------------------
+//  GW2Clients
+// -----------------------------------------------------------------------------
 #import "GW2Client.h"
+
+
 #import "GW2Event.h"
 #import "GW2EventState.h"
 #import "GW2Guild.h"
