@@ -15,9 +15,9 @@
 
 SpecBegin(GW2Client)
 describe(@"version 1 client", ^ {
-    GW2ClientVersion1 * __block client;
+    id<GW2ClientV1> __block client;
     beforeAll(^ {
-        client = [GW2ClientVersion1 clientWithPreferredLanguage:nil];
+        client = GW2ClientV1(nil);
         expect(client.preferredLanguage).to.equal(@"en");
     });
     

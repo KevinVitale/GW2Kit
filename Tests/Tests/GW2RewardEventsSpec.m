@@ -18,7 +18,7 @@
 SpecBegin(GW2RewardEvents)
 describe(@"reward events", ^ {
     
-    GW2ClientVersion1 *__block client;
+    id<GW2ClientV1> __block client;
     
     NSArray *rewardEventIDList =
     @[@"6BD7C8B0-2605-4819-9AE6-EF2849098090", // "Defeat Rhendak the Crazed."
@@ -56,7 +56,7 @@ describe(@"reward events", ^ {
         
         
         // Create our gw2 client (v1)
-        client = [GW2ClientVersion1 clientWithPreferredLanguage:nil];
+        client = GW2ClientV1(nil);
         expect(client.preferredLanguage).to.equal(@"en");
         setAsyncSpecTimeout(500);
     });
