@@ -12,6 +12,7 @@
 @import CoreGraphics;
 #endif
 
+#pragma mark - Event Location
 /**
  *  GW2EventLocation describes the map location of an event, returned as part
  *  of the 'event_details.json' response.
@@ -33,6 +34,9 @@
         ]
     }
  */
+// -----------------------------------------------------------------------------
+//  GW2EventLocation
+// -----------------------------------------------------------------------------
 @protocol GW2EventLocation <GW2Object>
 /**
  *  Each event has a location. This location defines a geometric volume of 3D game

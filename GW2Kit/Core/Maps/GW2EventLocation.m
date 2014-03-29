@@ -11,6 +11,10 @@
 #import "GW2Object+Private.h"
 #import "MTLValueTransformer+CoreGraphics.h"
 
+#pragma mark - Event Location
+// -----------------------------------------------------------------------------
+//  Event Location
+// -----------------------------------------------------------------------------
 @interface _GW2EventLocation : _GW2Object <GW2EventLocation>
 @property (copy, nonatomic, readonly) NSString *type;
 @property (copy, nonatomic, readonly) NSArray *center;
@@ -22,39 +26,51 @@
 @end
 
 
+#pragma mark -
 @implementation _GW2EventLocation
+// -----------------------------------------------------------------------------
+//  zRangeJSONTransformer
+// -----------------------------------------------------------------------------
 + (NSValueTransformer *)zRangeJSONTransformer {
     return MTLReversibleSizeTransformer(0);
 }
 
+// -----------------------------------------------------------------------------
+//  pointsJSONTransformer
+// -----------------------------------------------------------------------------
 + (NSValueTransformer *)pointsJSONTransformer {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id (NSArray *pointsArray) {
-        NSMutableArray *mutableValueArray = [NSMutableArray arrayWithCapacity:pointsArray.count];
-        for(NSArray *pointArray in pointsArray) {
-            CGPoint point = [pointArray point:1];
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:
+            ^id (NSArray *pointsArray) {
+                NSMutableArray *mutableValueArray = [NSMutableArray arrayWithCapacity:pointsArray.count];
+                for(NSArray *pointArray in pointsArray) {
+                    CGPoint point = [pointArray point:1];
 #if TARGET_OS_IPHONE
-            NSValue *pointValue = [NSValue valueWithCGPoint:point];
+                    NSValue *pointValue = [NSValue valueWithCGPoint:point];
 #else
-            NSValue *pointValue = [NSValue valueWithPoint:point];
+                    NSValue *pointValue = [NSValue valueWithPoint:point];
 #endif
-            [mutableValueArray addObject:pointValue];
-        }
-        return [mutableValueArray copy];
-    }
-                                                         reverseBlock:^id (NSArray *valueArray) {
-                                                             NSMutableArray *mutablePointsArray = [NSMutableArray arrayWithCapacity:valueArray.count];
-                                                             for(NSValue *pointValue in valueArray) {
+                    [mutableValueArray addObject:pointValue];
+                }
+                return [mutableValueArray copy];
+            }
+                                                         reverseBlock:
+            ^id (NSArray *valueArray) {
+                NSMutableArray *mutablePointsArray = [NSMutableArray arrayWithCapacity:valueArray.count];
+                for(NSValue *pointValue in valueArray) {
 #if TARGET_OS_IPHONE
-                                                                 CGPoint point = [pointValue CGPointValue];
+                    CGPoint point = [pointValue CGPointValue];
 #else
-                                                                 CGPoint point = (CGPoint)[pointValue pointValue];
+                    CGPoint point = (CGPoint)[pointValue pointValue];
 #endif
-                                                                 [mutablePointsArray addObject:@[@(point.x), @(point.y)]];
-                                                             }
-                                                             return [mutablePointsArray copy];
-                                                         }];
+                    [mutablePointsArray addObject:@[@(point.x), @(point.y)]];
+                }
+                return [mutablePointsArray copy];
+            }];
 }
 
+// -----------------------------------------------------------------------------
+//  JSONKeyPathsByPropertyKey
+// -----------------------------------------------------------------------------
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
