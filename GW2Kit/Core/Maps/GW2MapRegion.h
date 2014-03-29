@@ -25,9 +25,9 @@
 
 @protocol GW2MapFloor <GW2Object>
 @required
-@property (nonatomic, readonly) CGSize  textureDimensions;
-@property (nonatomic, readonly) CGRect  clampedView;
-@property (nonatomic, readonly) NSArray *regions;
+@property (      nonatomic, readonly) CGSize  textureDimensions;
+@property (      nonatomic, readonly) CGRect  clampedView;
+@property (copy, nonatomic, readonly) NSArray *regions;
 @end
 
 /**
