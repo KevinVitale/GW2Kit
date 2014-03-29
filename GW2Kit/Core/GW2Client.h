@@ -9,7 +9,10 @@
 @import Foundation;
 @class RACSignal;
 
-
+#pragma mark - GW2RestAPI Protocol
+// -----------------------------------------------------------------------------
+//  GW2RestAPI
+// -----------------------------------------------------------------------------
 /**
  *  @protocol
  *  @abstract An interface to define objects as having characterics of a client
@@ -24,12 +27,15 @@
 @property (copy, readonly) NSString *version;
 @end
 
-
+#pragma mark - GW2Client, Protocol
+// -----------------------------------------------------------------------------
+//  GW2Client
+// -----------------------------------------------------------------------------
 /**
  *  @protocol GW2Client
  *  @dicsussion An interface for any client connecting to the GW2 APIs.
  */
-@protocol GW2Client <GW2RestAPI>
+@protocol GW2Client <GW2RestAPI, NSCopying>
 @required
 
 /**
@@ -41,30 +47,12 @@
 @property (copy, nonatomic, readonly) NSString *preferredLanguage;
 @end
 
-/**
- *  @class GW2Client
- *  @abstract A concrete class used to communicate with all GW2 APIs.
- */
-@interface GW2Client : NSObject <GW2Client>
-@end
 
-/**
- *  @class GW2ClientVersion1
- *  @abstract A GW2 API client which is automatically configured for version 1.
- */
-@interface GW2ClientVersion1 : GW2Client
-
-/**
- *  Instantiates a new GW2 client configured to use version 1 of the API.
- *
- *  @param languageCode Determines which language the responses are in.
- *
- *  @return A @p GW2Client configured for version 1 of the API.
- */
-+ (instancetype)clientWithPreferredLanguage:(NSString *)languageCode;
-
-#pragma mark - Events
-
+#pragma mark - GW2Client, Events
+// -----------------------------------------------------------------------------
+//  Events
+// -----------------------------------------------------------------------------
+@protocol GW2ClientEvents <NSObject>
 - (RACSignal *)fetchEventStates;
 - (RACSignal *)fetchEventStateForEventIDs:(NSArray *)eventIDs;
 - (RACSignal *)fetchEventStatesForMapIDs:(NSArray *)mapIDs;
@@ -72,41 +60,83 @@
 - (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID eventIDs:(NSArray *)eventIDs;
 - (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID mapID:(NSInteger)mapID;
 - (RACSignal *)fetchEventStatesForWorldID:(NSInteger)worldID mapID:(NSInteger)mapID eventID:(NSArray *)eventIDs;
-
 - (RACSignal *)fetchEventNames;
 - (RACSignal *)fetchMapNames;
 - (RACSignal *)fetchWorldNames;
 - (RACSignal *)fetchEventDetails:(NSString *)eventID;
+@end
 
-#pragma mark - Guilds
+#pragma mark - GW2Client, Guilds
+// -----------------------------------------------------------------------------
+//  Guilds
+// -----------------------------------------------------------------------------
+@protocol GW2ClientGuilds <NSObject>
 - (RACSignal *)fetchGuildWithID:(NSString *)guildID;
 - (RACSignal *)fetchGuildWithName:(NSString *)guildName;
+@end
 
-#pragma mark - Items
-- (RACSignal *)fetchItems;                                  // THROWS EXCEPTION
-- (RACSignal *)fetchItemDetails:(NSString *)itemID;         // THROWS EXCEPTION
-- (RACSignal *)fetchRecipes;                                // THROWS EXCEPTION
-- (RACSignal *)fetchRecipeDetails:(NSString *)recipeID;     // THROWS EXCEPTION
-
-#pragma mark - Map Information
+#pragma mark - GW2Client, Maps
+// -----------------------------------------------------------------------------
+//  Maps
+// -----------------------------------------------------------------------------
+@protocol GW2ClientMaps <NSObject>
 - (RACSignal *)fetchContinents;
+- (RACSignal *)fetchContinent:(NSString *)continentID;
 - (RACSignal *)fetchMaps;
 - (RACSignal *)fetchMap:(id)mapID;
 - (RACSignal *)fetchMapFloor:(id)floor inContinent:(id)continentID;
+@end
 
-#pragma mark - WvW
+#pragma mark - GW2Client, WvW
+// -----------------------------------------------------------------------------
+//  WvW
+// -----------------------------------------------------------------------------
+@protocol GW2ClientWvW <NSObject>
 - (RACSignal *)fetchWvWMatches;
 - (RACSignal *)fetchWvWMatchDetails:(id)matchID;
 - (RACSignal *)fetchWvWObjectiveNames;
+@end
 
-#pragma mark - Misc
+#pragma mark - GW2Client, Items
+// -----------------------------------------------------------------------------
+//  Items
+// -----------------------------------------------------------------------------
+@protocol GW2ClientItems <NSObject>
+/*
+ - (RACSignal *)fetchItems;                                  // THROWS EXCEPTION
+ - (RACSignal *)fetchItemDetails:(NSString *)itemID;         // THROWS EXCEPTION
+ - (RACSignal *)fetchRecipes;                                // THROWS EXCEPTION
+ - (RACSignal *)fetchRecipeDetails:(NSString *)recipeID;     // THROWS EXCEPTION
+ */
+@end
+
+#pragma mark - GW2Client, Misc
+// -----------------------------------------------------------------------------
+//  Misc
+// -----------------------------------------------------------------------------
+@protocol GW2ClientMisc <NSObject>
 - (RACSignal *)fetchBuild;
 - (RACSignal *)fetchColors;
 - (RACSignal *)fetchFiles;
+@end
 
-#pragma mark - Services
-/* tile service */
+#pragma mark - GW2Client, Files
+// -----------------------------------------------------------------------------
+//  Files
+// -----------------------------------------------------------------------------
+@protocol GW2ClientFiles <NSObject>
 - (RACSignal *)fetchImageWithSignature:(NSString *)signature
                                 fileID:(NSString *)fileID;
 @end
 
+#pragma mark - GW2Client, V1
+// -----------------------------------------------------------------------------
+//  Version 1
+// -----------------------------------------------------------------------------
+@protocol GW2ClientV1
+<GW2Client,         GW2ClientEvents,    GW2ClientFiles,     GW2ClientGuilds,
+GW2ClientItems,     GW2ClientMaps,      GW2ClientMisc,      GW2ClientWvW>
+@end
+
+#pragma mark -
+extern id<GW2ClientV1> GW2ClientV1(NSString *preferredLanguage);

@@ -13,7 +13,27 @@
 #import <RACEXTScope.h>
 
 
-@interface GW2Client ()
+#pragma mark - GW2Client Class
+// -----------------------------------------------------------------------------
+//  GW2Client
+// -----------------------------------------------------------------------------
+/**
+ *  @class GW2Client
+ *  @abstract A concrete class used to communicate with all GW2 APIs.
+ */
+@interface _GW2Client : NSObject <GW2Client>
+@end
+
+
+#pragma mark -
+// -----------------------------------------------------------------------------
+//  GW2Client Private
+// -----------------------------------------------------------------------------
+@interface _GW2Client ()
+
+// -----------------------------------------------------------------------------
+//  Properties
+// -----------------------------------------------------------------------------
 /**
  *  @property version
  *  @discussion The version of the API the client should use.
@@ -33,12 +53,9 @@
  */
 @property (copy, nonatomic, readwrite) NSString *hostname;
 
-/**
- *  @property queue
- *  @discussion The operation queue which the client makes asynchronous requests on.
- */
-@property (strong, nonatomic) NSOperationQueue *queue;
-
+// -----------------------------------------------------------------------------
+//  clientWithVersion:preferredLanguage:
+// -----------------------------------------------------------------------------
 /**
  *  Creates a new client capable of communicating with the GW2 APIs.
  *
@@ -50,6 +67,9 @@
 + (instancetype)clientWithVersion:(NSString *)version
                 preferredLanguage:(NSString *)languageCode;
 
+// -----------------------------------------------------------------------------
+//  requestPath:parameters:method
+// -----------------------------------------------------------------------------
 /**
  *  Creates a signal which performs an HTTP request, and sends
  *  the results of the network request at the given path, with
@@ -66,18 +86,27 @@
                     method:(NSString *)method;
 @end
 
-#pragma mark - Generic Client
-@implementation GW2Client
+#pragma mark - GW2Client
+// -----------------------------------------------------------------------------
+//  GW2Client
+// -----------------------------------------------------------------------------
+@implementation _GW2Client
 
 #pragma mark - Initialization
+// -----------------------------------------------------------------------------
+//  init
+// -----------------------------------------------------------------------------
 - (instancetype)init {
     self = super.init;
     if(self) {
-        self.queue = NSOperationQueue.new;
         self.preferredLanguage = @"en";
     }
     return self;
 }
+
+// -----------------------------------------------------------------------------
+//  initWithVersion:preferredLanguage:
+// -----------------------------------------------------------------------------
 - (instancetype)initWithVersion:(NSString *)version
               preferredLanguage:(NSString *)preferredLanguage {
     self = self.init;
@@ -90,6 +119,9 @@
     return self;
 }
 
+// -----------------------------------------------------------------------------
+//  clientWithVersion:preferredLanguage:
+// -----------------------------------------------------------------------------
 + (instancetype)clientWithVersion:(NSString *)version
                 preferredLanguage:(NSString *)languageCode {
     // Ensure arguments are valid
@@ -98,13 +130,29 @@
     // Create our client
     id<GW2Client>client = [[self.class alloc] initWithVersion:version
                                             preferredLanguage:languageCode];
-    ((GW2Client *)client).hostname = ({
+    ((_GW2Client *)client).hostname = ({
         [NSString stringWithFormat:@"api.guildwars2.com/%@", version];
     });
+    return (id)client;
+}
+
+#pragma mark - Copying
+// -----------------------------------------------------------------------------
+//  copyWithZone:
+// -----------------------------------------------------------------------------
+- (id<GW2Client>)copyWithZone:(NSZone *)zone {
+    id<GW2Client> client = [[self.class allocWithZone:zone] initWithVersion:self.version
+                                                          preferredLanguage:self.preferredLanguage];
+    ((_GW2Client *)client).hostname = self.hostname;
+    
     return client;
 }
 
+
 #pragma mark - Requests
+// -----------------------------------------------------------------------------
+//  requestWithMethod:path:parameters:
+// -----------------------------------------------------------------------------
 - (NSURLRequest *)requestWithMethod:(NSString *)method
                                path:(NSString *)path
                          parameters:(NSDictionary *)parameters {
@@ -158,87 +206,101 @@
     return [request copy];
 }
 
+// -----------------------------------------------------------------------------
+//  requestPath:parameters:method:
+// -----------------------------------------------------------------------------
 - (RACSignal *)requestPath:(NSString *)path
                 parameters:(NSDictionary *)parameters
                     method:(NSString *)method {
-    @weakify(self);
     return
-    [[RACSignal createSignal:
-      ^RACDisposable *(id<RACSubscriber> subscriber) {
-          @strongify(self);
-          
-          NSBlockOperation *operation =
-          [NSBlockOperation blockOperationWithBlock:^{
+    [RACSignal createSignal:
+     ^RACDisposable *(id<RACSubscriber> subscriber) {
+         NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+         queue.name = @"com.gw2kit.client.request";
+         
+         // Create our request
+         NSURLRequest *request = [self requestWithMethod:method
+                                                    path:path
+                                              parameters:parameters];
+         
+         // Send our request
+         [NSURLConnection sendAsynchronousRequest:request
+                                            queue:queue
+                                completionHandler:
+          // Connection callback
+          ^(NSURLResponse *response, NSData *data, NSError *error) {
               
-              NSURLRequest *request = [self requestWithMethod:method
-                                                         path:path
-                                                   parameters:parameters];
-              NSURLResponse *response;
-              NSError *error;
-              
-              NSData *result =
-              [NSURLConnection sendSynchronousRequest:request
-                                    returningResponse:&response
-                                                error:&error];
-              
-              
-              // Always try to parse the result as JSON
-              id json;
-              if(result) {
-                  json = [NSJSONSerialization JSONObjectWithData:result
-                                                         options:0
-                                                           error:&error];
-                  
-              }
-              
-              // Check for errors
-              if(error || ({
-                  id error;
-                  if([json respondsToSelector:@selector(objectForKeyedSubscript:)]) {
-                      error = json[@"error"];
-                  }
-                  error;
-              })) {
-                  
-                  // If the response was, itself, an error, convert it.
-                  if(json[@"error"]) {
-                      error = [NSError errorWithDomain:@"GW2APIErrorDomain"
-                                                  code:[json[@"error"] integerValue]
-                                              userInfo:({
-                          json = [NSMutableDictionary dictionaryWithDictionary:json];
-                          json[NSURLErrorFailingURLStringErrorKey]  = request.URL.absoluteString;
-                          json[NSURLErrorFailingURLErrorKey]        = request.URL;
-                          json[@"HTTPMethod"]                       = request.HTTPMethod;
-                          [json copy];
-                      })];
-                  }
-                  
-                  // Terminate with an error
+              // No data means error!
+              if (data == nil) {
                   [subscriber sendError:error];
               }
-              
-              // Send the JSON and the connection's response
               else {
+                  
+                  // Convert 'data' to JSON
+                  id json =
+                  [NSJSONSerialization JSONObjectWithData:data
+                                                  options:NSJSONReadingMutableContainers
+                                                    error:&error];
+                  
+                  
+                  // Check for errors (both parsing JSON, or service response)
+                  if(error ||
+                     ({
+                      if([json respondsToSelector:@selector(objectForKeyedSubscript:)]) {
+                          error = json[@"error"];
+                      }
+                      error;
+                  })) {
+                      
+                      // If the response was, itself, an error, convert it.
+                      if(json[@"error"]) {
+                          error = [NSError errorWithDomain:@"GW2APIErrorDomain"
+                                                      code:[json[@"error"] integerValue]
+                                                  userInfo:({
+                              
+                              // 'json' will become the error's 'userInfo'
+                              json = [NSMutableDictionary dictionaryWithDictionary:json];
+                              json[NSURLErrorFailingURLStringErrorKey]  = request.URL.absoluteString;
+                              json[NSURLErrorFailingURLErrorKey]        = request.URL;
+                              json[@"HTTPMethod"]                       = request.HTTPMethod;
+                              [json copy];
+                          })];
+                      }
+                      
+                      // Terminate with an error
+                      [subscriber sendError:error];
+                  }
+                  
                   [subscriber sendNext:json];
                   [subscriber sendCompleted];
               }
           }];
-          
-          // Queue the network request
-          [self.queue addOperation:operation];
-          
-          // Return a cancellable operation as the 'disposable'.
-          return
-          [RACDisposable disposableWithBlock:^{
-              [operation cancel];
-          }];
-      }]
-     deliverOn:RACScheduler.mainThreadScheduler];
+         
+         return [RACDisposable disposableWithBlock:^{
+             // It's not clear if this will actually cancel the connection,
+             // but we can at least prevent _some_ unnecessary work --
+             // without writing all the code for a proper delegate, which
+             // doesn't really belong in RAC.
+             queue.suspended = YES;
+             [queue cancelAllOperations];
+         }];
+     }];
 }
 @end
 
-#pragma mark - Version 1 Client
+#pragma mark - GW2Client, Version 1
+// -----------------------------------------------------------------------------
+//  Version 1
+// -----------------------------------------------------------------------------
+/**
+ *  @class GW2ClientVersion1
+ *  @abstract A GW2 API client which is automatically configured for version 1.
+ */
+@interface      GW2ClientVersion1 : _GW2Client @end
 @implementation GW2ClientVersion1
+// -----------------------------------------------------------------------------
+//  clientWithPreferredLanguage:
+// -----------------------------------------------------------------------------
 + (instancetype)clientWithPreferredLanguage:(NSString *)languageCode {
     return [self clientWithVersion:@"v1"
                  preferredLanguage:languageCode];
@@ -299,7 +361,7 @@
     return [[eventIDs.rac_sequence signal] flattenMap:
             ^RACStream *(NSString *eventID) {
                 return [self fetchEvents:@{@"world_id" : @(worldID), @"map_id" : @(mapID), @"event_id" : eventID}];
-    }];
+            }];
 }
 
 - (RACSignal *)fetchEvents:(NSDictionary *)parameters {
@@ -466,6 +528,11 @@
           signal];
      }];
 }
+- (RACSignal *)fetchContinent:(NSString *)continentID {
+    return [[self fetchContinents] filter:^BOOL(id<GW2Object> value) {
+        return [[value objectID] isEqualToString:continentID];
+    }];
+}
 
 - (RACSignal *)fetchMaps {
     return [self fetchMap:nil];
@@ -480,20 +547,20 @@
      flattenMap:^RACStream *(NSDictionary *response) {
          NSDictionary *maps = response[@"maps"];
          return
-          [[maps.rac_sequence map:^id(RACTuple *map) {
+         [[maps.rac_sequence map:^id(RACTuple *map) {
              return
              [NSClassFromString(@"_GW2MapBasic") objectWithID:map[0]
                                                          name:nil
                                            fromJSONDictionary:map[1]
                                                         error:nil];
          }]
-           signal];
+          signal];
      }];
 }
 - (RACSignal *)fetchMapFloor:(id)floor inContinent:(id)continentID {
     
-    NSAssert(floor,         @"\"floor\" cannot be 'nil'\n%s", floor, __PRETTY_FUNCTION__);
-    NSAssert(continentID,   @"\"continentID\" cannot be 'nil'", continentID, __PRETTY_FUNCTION__);
+    NSAssert(floor,         @"\"floor\" cannot be 'nil'\n%s", __PRETTY_FUNCTION__);
+    NSAssert(continentID,   @"\"continentID\" cannot be 'nil'", __PRETTY_FUNCTION__);
     
     return
     [[self requestPath:@"map_floor"
@@ -533,7 +600,7 @@
      }];
 }
 - (RACSignal *)fetchWvWMatchDetails:(id)matchID {
-    NSAssert(matchID, @"\"matchID\" cannot be 'nil'\n%s", matchID, __PRETTY_FUNCTION__);
+    NSAssert(matchID, @"\"matchID\" cannot be 'nil'\n%s", __PRETTY_FUNCTION__);
     
     return
     [[self requestPath:@"wvw/match_details"
@@ -602,26 +669,31 @@
 /* tile service */
 - (RACSignal *)fetchImageWithSignature:(NSString *)signature
                                 fileID:(NSString *)fileID {
-    NSAssert(signature, @"\"signature\" cannot be 'nil'\n%s", signature, __PRETTY_FUNCTION__);
-    NSAssert(fileID, @"\"fileID\" cannot be 'nil'", fileID, __PRETTY_FUNCTION__);
+    NSAssert(signature, @"\"signature\" cannot be 'nil'\n%s", __PRETTY_FUNCTION__);
+    NSAssert(fileID, @"\"fileID\" cannot be 'nil'", __PRETTY_FUNCTION__);
     
     return
     [[RACSignal startLazilyWithScheduler:[RACScheduler scheduler]
-                                  block:^(id<RACSubscriber> subscriber) {
-                                      NSURL *url =
-                                      [NSURL URLWithString:
-                                       [NSString stringWithFormat:@"https://render.guildwars2.com/file/%@/%@.png",
-                                        signature, fileID]];
-                                      
-                                      NSData *imageData = [NSData dataWithContentsOfURL:url];
+                                   block:^(id<RACSubscriber> subscriber) {
+                                       NSURL *url =
+                                       [NSURL URLWithString:
+                                        [NSString stringWithFormat:@"https://render.guildwars2.com/file/%@/%@.png",
+                                         signature, fileID]];
+                                       
+                                       NSData *imageData = [NSData dataWithContentsOfURL:url];
 #if TARGET_OS_IPHONE
-                                      UIImage * image = [UIImage imageWithData:imageData];
+                                       UIImage * image = [UIImage imageWithData:imageData];
 #else
-                                      NSImage * image = [[NSImage alloc] initWithData:imageData];
+                                       NSImage * image = [[NSImage alloc] initWithData:imageData];
 #endif
-                                      [subscriber sendNext:image];
-                                      [subscriber sendCompleted];
-                                  }]
-    deliverOn:[RACScheduler mainThreadScheduler]];
+                                       [subscriber sendNext:image];
+                                       [subscriber sendCompleted];
+                                   }]
+     deliverOn:[RACScheduler mainThreadScheduler]];
 }
 @end
+
+id<GW2ClientV1> GW2ClientV1(NSString *preferredLanguage) {
+    // Ensure arguments are valid
+    return [GW2ClientVersion1 clientWithPreferredLanguage:preferredLanguage];
+};
