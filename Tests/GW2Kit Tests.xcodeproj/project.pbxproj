@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A081DC318CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 0A081DC218CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m */; };
-		0A081DC418CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m in Resources */ = {isa = PBXBuildFile; fileRef = 0A081DC218CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m */; };
+		0A09C36E18E7A0FD00AAC175 /* GW2SharedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09C36D18E7A0FD00AAC175 /* GW2SharedSpec.m */; };
+		0A09C36F18E7A0FD00AAC175 /* GW2SharedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09C36D18E7A0FD00AAC175 /* GW2SharedSpec.m */; };
 		0A3A55A718B94AF2009D9C0D /* GW2EventDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A55A618B94AF2009D9C0D /* GW2EventDetails.m */; };
 		0A3A55A818B94AF2009D9C0D /* GW2EventDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A55A618B94AF2009D9C0D /* GW2EventDetails.m */; };
 		0A3A55AA18B94C38009D9C0D /* event_details.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A55A918B94C38009D9C0D /* event_details.json */; };
@@ -78,7 +78,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A081DC218CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientVersion1EventStatesSpec.m; sourceTree = "<group>"; };
+		0A09C36D18E7A0FD00AAC175 /* GW2SharedSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2SharedSpec.m; sourceTree = "<group>"; };
+		0A09C37018E7A13400AAC175 /* GW2SharedSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2SharedSpec.h; sourceTree = "<group>"; };
 		0A3A55A618B94AF2009D9C0D /* GW2EventDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventDetails.m; sourceTree = "<group>"; };
 		0A3A55A918B94C38009D9C0D /* event_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = event_details.json; sourceTree = "<group>"; };
 		0A752AA718CCCEAD0092452D /* GW2RewardEventsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2RewardEventsSpec.m; sourceTree = "<group>"; };
@@ -214,6 +215,8 @@
 		0ABDF49D18B706FE00819A77 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0A09C37018E7A13400AAC175 /* GW2SharedSpec.h */,
+				0A09C36D18E7A0FD00AAC175 /* GW2SharedSpec.m */,
 				0A81D65118CC1ABE00D5373D /* GW2MapContinentSpec.m */,
 				0A81D65318CC1ABE00D5373D /* GW2MapRegionSpec.m */,
 				0A81D65418CC1ABE00D5373D /* GW2ObjectSpec.m */,
@@ -226,7 +229,6 @@
 				0A3A55A618B94AF2009D9C0D /* GW2EventDetails.m */,
 				0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */,
 				0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */,
-				0A081DC218CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m */,
 				0A752AA718CCCEAD0092452D /* GW2RewardEventsSpec.m */,
 			);
 			path = Tests;
@@ -306,7 +308,6 @@
 			files = (
 				0A968EB518BAD733003DD27B /* objective_names.json in Resources */,
 				0A968EB118BAD733003DD27B /* match_details.json in Resources */,
-				0A081DC318CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m in Resources */,
 				0A968ECB18BAD733003DD27B /* maps.json in Resources */,
 				0A968EC918BAD733003DD27B /* events.json in Resources */,
 				0A968EB318BAD733003DD27B /* matches.json in Resources */,
@@ -333,7 +334,6 @@
 			files = (
 				0A968EB618BAD733003DD27B /* objective_names.json in Resources */,
 				0A968EB218BAD733003DD27B /* match_details.json in Resources */,
-				0A081DC418CFF51E00E6E792 /* GW2ClientVersion1EventStatesSpec.m in Resources */,
 				0A968ECC18BAD733003DD27B /* maps.json in Resources */,
 				0A968ECA18BAD733003DD27B /* events.json in Resources */,
 				0A968EB418BAD733003DD27B /* matches.json in Resources */,
@@ -436,6 +436,7 @@
 				0A752AA818CCCEAD0092452D /* GW2RewardEventsSpec.m in Sources */,
 				0A81D66618CC1ABE00D5373D /* GW2GuildSpec.m in Sources */,
 				0A81D65C18CC1ABE00D5373D /* GW2MapContinentSpec.m in Sources */,
+				0A09C36E18E7A0FD00AAC175 /* GW2SharedSpec.m in Sources */,
 				0A81D66A18CC1ABE00D5373D /* GW2MapsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +457,7 @@
 				0A752AA918CCCEAD0092452D /* GW2RewardEventsSpec.m in Sources */,
 				0A81D66718CC1ABE00D5373D /* GW2GuildSpec.m in Sources */,
 				0A81D65D18CC1ABE00D5373D /* GW2MapContinentSpec.m in Sources */,
+				0A09C36F18E7A0FD00AAC175 /* GW2SharedSpec.m in Sources */,
 				0A81D66B18CC1ABE00D5373D /* GW2MapsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

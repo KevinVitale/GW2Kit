@@ -6,22 +6,18 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
 
+#import "GW2SharedSpec.h"
 #import "GW2MapContinent.h"
 
 SpecBegin(GW2MapContinent)
 
-id __block continentsJSON;
-
 describe(@"map continent", ^ {
+    id __block continentsJSON;
+
     beforeAll(^ {
-        NSURL *mapContinentURL = [[NSBundle bundleForClass:self.class] URLForResource:@"continents" withExtension:@"json"];
-        expect(mapContinentURL).toNot.beNil();
-        continentsJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:mapContinentURL] options:0 error:nil];
-        expect(continentsJSON).toNot.beNil();
+        continentsJSON = GW2SpecLoadJSONFixture(@"continents");
+        expect([continentsJSON count]).to.beGreaterThan(0);
         expect([continentsJSON class]).to.beSubclassOf([NSDictionary class]);
     });
     

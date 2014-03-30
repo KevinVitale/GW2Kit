@@ -6,10 +6,7 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import "GW2MapRegion.h"
 
 SpecBegin(GW2MapRegion)
@@ -20,19 +17,14 @@ id<GW2MapRegion> __block mapRegion;
 
 describe(@"map floor", ^ {
     beforeAll(^ {
-        NSURL *mapContinentURL = [[NSBundle bundleForClass:self.class] URLForResource:@"map_floor" withExtension:@"json"];
-        expect(mapContinentURL).toNot.beNil();
-        mapFloorJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:mapContinentURL] options:0 error:nil];
-        expect(mapFloorJSON).toNot.beNil();
-        expect([mapFloorJSON class]).to.beSubclassOf([NSDictionary class]);
-        
+        mapFloorJSON            = GW2SpecLoadJSONFixture(@"map_floor");
         ShiverpeakMountainsJSON = mapFloorJSON[@"regions"][@"1"];
         NSError *error;
         mapRegion = [NSClassFromString(@"_GW2MapRegion") objectWithID:@1
                                           name:nil
                             fromJSONDictionary:ShiverpeakMountainsJSON
                                          error:&error];
-        NSLog(@"%@", error);
+        expect(error).to.beNil();
     });
     
     it(@"map region with API response", ^ {

@@ -6,10 +6,7 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import <GW2Kit/GW2Kit.h> 
 #import <ReactiveCocoa.h>
 

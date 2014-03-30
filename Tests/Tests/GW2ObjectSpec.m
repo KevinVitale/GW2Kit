@@ -6,10 +6,7 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import "GW2Object.h"
 
 SpecBegin(GW2Object)
@@ -20,30 +17,25 @@ id __block worldNamesJSON;
 
 describe(@"named object", ^ {
     beforeAll(^ {
-        NSURL *eventNamesURL = [[NSBundle bundleForClass:self.class] URLForResource:@"event_names" withExtension:@"json"];
-        expect(eventNamesURL).toNot.beNil();
-        eventNamesJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:eventNamesURL] options:0 error:nil];
-        expect(eventNamesJSON).toNot.beNil();
+        eventNamesJSON = GW2SpecLoadJSONFixture(@"event_names");
+        expect([eventNamesJSON count]).to.beGreaterThan(0);
         expect([eventNamesJSON class]).to.beSubclassOf([NSArray class]);
         
-        NSURL *mapNamesURL = [[NSBundle bundleForClass:self.class] URLForResource:@"map_names" withExtension:@"json"];
-        expect(mapNamesURL).toNot.beNil();
-        mapNamesJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:mapNamesURL] options:0 error:nil];
-        expect(mapNamesJSON).toNot.beNil();
+        mapNamesJSON = GW2SpecLoadJSONFixture(@"map_names");
+        expect([mapNamesJSON count]).to.beGreaterThan(0);
         expect([mapNamesJSON class]).to.beSubclassOf([NSArray class]);
         
-        NSURL *worldNamesURL = [[NSBundle bundleForClass:self.class] URLForResource:@"world_names" withExtension:@"json"];
-        expect(worldNamesURL).toNot.beNil();
-        worldNamesJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:worldNamesURL] options:0 error:nil];
-        expect(worldNamesJSON).toNot.beNil();
+        worldNamesJSON = GW2SpecLoadJSONFixture(@"world_names");
+        expect([worldNamesJSON count]).to.beGreaterThan(0);
         expect([worldNamesJSON class]).to.beSubclassOf([NSArray class]);
     });
     
     it(@"works with event names", ^ {
-        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:nil
-                                                                             name:nil
-                                                               fromJSONDictionary:[eventNamesJSON firstObject]
-                                                                            error:nil];
+        id<GW2Object> nameObject =
+        [NSClassFromString(@"_GW2Object") objectWithID:nil
+                                                  name:nil
+                                    fromJSONDictionary:[eventNamesJSON firstObject]
+                                                 error:nil];
         // Ensure our object was created
         expect(nameObject).toNot.beNil();
         
@@ -53,10 +45,11 @@ describe(@"named object", ^ {
     });
     
     it(@"works with map names", ^ {
-        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:nil
-                                                                             name:nil
-                                                               fromJSONDictionary:[mapNamesJSON firstObject]
-                                                                            error:nil];
+        id<GW2Object> nameObject =
+        [NSClassFromString(@"_GW2Object") objectWithID:nil
+                                                  name:nil
+                                    fromJSONDictionary:[mapNamesJSON firstObject]
+                                                 error:nil];
         // Ensure our object was created
         expect(nameObject).toNot.beNil();
         
@@ -66,10 +59,11 @@ describe(@"named object", ^ {
     });
     
     it(@"works with world names", ^ {
-        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:nil
-                                                                             name:nil
-                                                               fromJSONDictionary:[worldNamesJSON firstObject]
-                                                                            error:nil];
+        id<GW2Object> nameObject =
+        [NSClassFromString(@"_GW2Object") objectWithID:nil
+                                                  name:nil
+                                    fromJSONDictionary:[worldNamesJSON firstObject]
+                                                 error:nil];
         // Ensure our object was created
         expect(nameObject).toNot.beNil();
         
@@ -89,10 +83,11 @@ describe(@"named object", ^ {
     });
     
     it(@"class initializer doesn't override default values", ^ {
-        id<GW2Object> nameObject = [NSClassFromString(@"_GW2Object") objectWithID:@10
-                                                                             name:@"Kevin"
-                                                               fromJSONDictionary:@{@"id" : @20, @"name" : @"Owen"}
-                                                                            error:nil];
+        id<GW2Object> nameObject =
+        [NSClassFromString(@"_GW2Object") objectWithID:@10
+                                                  name:@"Kevin"
+                                    fromJSONDictionary:@{@"id" : @20, @"name" : @"Owen"}
+                                                 error:nil];
         expect(nameObject).toNot.beNil();
         expect(nameObject.objectID).equal(@20);
         expect(nameObject.name).equal(@"Owen");

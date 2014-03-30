@@ -6,12 +6,8 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import "GW2EventLocation.h"
-#import <Mantle/Mantle.h>
 
 SpecBegin(GW2EventLocation)
 describe(@"map location", ^ {
@@ -58,10 +54,11 @@ describe(@"map location", ^ {
     });
     
     it(@"instantiates from JSON", ^ {
-        id<GW2EventLocation> location = [NSClassFromString(@"_GW2EventLocation") objectWithID:nil
-                                                                                         name:nil
-                                                                           fromJSONDictionary:locationDictionary
-                                                                                        error:nil];
+        id<GW2EventLocation> location =
+        [NSClassFromString(@"_GW2EventLocation") objectWithID:nil
+                                                         name:nil
+                                           fromJSONDictionary:locationDictionary
+                                                        error:nil];
         expect(location).toNot.beNil();
         expect(location.type).equal(@"poly");
         

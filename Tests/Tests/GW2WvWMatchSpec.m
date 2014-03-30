@@ -6,10 +6,7 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import "GW2WvWMatch.h"
 
 SpecBegin(GW2WvWMatch)
@@ -17,15 +14,11 @@ describe(@"wvw match", ^ {
     NSDictionary *__block matchDetailsJSON;
     id<GW2WvWMatch> __block match;
     beforeAll(^ {
-        // Pull the .json file from the bundle
-        NSURL *matchDetailsURL = [[NSBundle bundleForClass:self.class] URLForResource:@"match_details" withExtension:@"json"];
-        expect(matchDetailsURL).toNot.beNil();
-        
         // Convert it to an NSObject
-        matchDetailsJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:matchDetailsURL] options:0 error:nil];
+        matchDetailsJSON = GW2SpecLoadJSONFixture(@"match_details");
         
         // Verify a few basic things
-        expect(matchDetailsJSON).toNot.beNil();
+        expect([matchDetailsJSON count]).to.beGreaterThan(0);
         expect([matchDetailsJSON class]).to.beSubclassOf([NSDictionary class]);
     });
     

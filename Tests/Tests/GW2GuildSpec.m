@@ -6,30 +6,16 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import "GW2Guild.h"
 
 SpecBegin(GW2Guild)
 describe(@"guild", ^ {
     NSDictionary *__block guildDictionary;
     beforeAll(^ {
-        // Pull the .json file from the bundle
-        NSURL *guildURL = [[NSBundle bundleForClass:self.class] URLForResource:@"guild_details" withExtension:@"json"];
-        expect(guildURL).toNot.beNil();
-        
         // Convert it to an NSObject
-        id guildJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:guildURL] options:0 error:nil];
-        
-        // Verify a few basic things
-        expect(guildJSON).toNot.beNil();
-        expect([guildJSON class]).to.beSubclassOf([NSDictionary class]);
-        
-        // Extract the array of event states
-        guildDictionary = guildJSON;
-        expect(guildDictionary.count).toNot.beNil();
+        guildDictionary = GW2SpecLoadJSONFixture(@"guild_details");
+        expect(guildDictionary.count).to.beGreaterThan(0);
     });
     
     it(@"instantiates from guild JSON", ^ {

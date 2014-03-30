@@ -6,39 +6,25 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import "GW2EventState.h"
-#import <Mantle/Mantle.h>
 
 SpecBegin(GW2EventState)
 describe(@"event state", ^ {
     NSArray *__block eventStatesArray;
     
     beforeAll(^ {
-        // Pull the .json file from the bundle
-        NSURL *eventsURL = [[NSBundle bundleForClass:self.class] URLForResource:@"events" withExtension:@"json"];
-        expect(eventsURL).toNot.beNil();
-        
-        // Convert it to an NSObject
-        id eventsJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:eventsURL] options:0 error:nil];
-        
-        // Verify a few basic things
-        expect(eventsJSON).toNot.beNil();
-        expect([eventsJSON class]).to.beSubclassOf([NSDictionary class]);
-        
         // Extract the array of event states
-        eventStatesArray = eventsJSON[@"events"];
-        expect(eventStatesArray.count).toNot.beNil();
+        eventStatesArray = GW2SpecLoadJSONFixture(@"events")[@"events"];
+        expect(eventStatesArray.count).to.beGreaterThan(0);
     });
     
     it(@"instantiates from JSON", ^ {
-        id<GW2EventState> eventState = [NSClassFromString(@"_GW2EventState") objectWithID:nil
-                                                                                     name:@"Stop the skritt burglar before it escapes with the treasure."
-                                                                       fromJSONDictionary:eventStatesArray.firstObject
-                                                                                    error:nil];
+        id<GW2EventState> eventState =
+        [NSClassFromString(@"_GW2EventState") objectWithID:nil
+                                                      name:@"Stop the skritt burglar before it escapes with the treasure."
+                                        fromJSONDictionary:eventStatesArray.firstObject
+                                                     error:nil];
         // Check object integrity
         expect(eventState).toNot.beNil();
         expect(eventState.state).equal(@"Warmup");

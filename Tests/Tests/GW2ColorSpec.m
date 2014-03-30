@@ -6,10 +6,7 @@
 //
 //
 
-#define EXP_SHORTHAND
-#import <Expecta/Expecta.h>
-#import <Specta/Specta.h>
-
+#import "GW2SharedSpec.h"
 #import "GW2Color.h"
 #import <ReactiveCocoa.h>
 
@@ -19,20 +16,12 @@ describe(@"color", ^ {
     beforeAll(^ {
         
         colors = ({
-            // Pull the .json file from the bundle
-            NSURL *colorsURL =
-            [[NSBundle bundleForClass:self.class] URLForResource:@"colors"
-                                                   withExtension:@"json"];
-            
             // Convert it to an NSObject
-            id colorsJSON = [NSJSONSerialization JSONObjectWithData:
-                             [NSData dataWithContentsOfURL:colorsURL]
-                                                            options:0
-                                                              error:nil];
+            id colorsJSON = GW2SpecLoadJSONFixture(@"colors")[@"colors"];
+            
             
             // Extract the array of colors
-            [[colorsJSON[@"colors"]
-              rac_sequence]
+            [[colorsJSON rac_sequence]
              map:^id(RACTuple *value) {
                  return
                  [NSClassFromString(@"_GW2Color") objectWithID:value[0]
