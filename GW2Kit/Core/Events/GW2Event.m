@@ -7,6 +7,7 @@
 //
 
 #import "GW2Event.h"
+#import "GW2EventLocation.h"
 #import "GW2Object+Private.h"
 
 @interface _GW2Event : _GW2Object <GW2Event>

@@ -7,28 +7,39 @@
 //
 
 #import "GW2Object.h"
-#import "GW2EventLocation.h"
 
+@protocol GW2EventLocation;
+
+#pragma mark - GW2 Event
+// -----------------------------------------------------------------------------
+//  GW2Event
+// -----------------------------------------------------------------------------
 @protocol GW2Event <GW2Object>
 /**
- *  The event level.
+ *  @property   level
+ *  @discussion The event level.
  */
 @property (nonatomic, readonly) NSInteger level;
 
 /**
- *  The associated map where the event takes place.
+ *  @property   mapID
+ *  @discussion The associated map where the event takes place.
  */
 @property (nonatomic, readonly) NSInteger mapID;
 
 /**
- *  Additional event flags. Possible values are:
- *    - group_event
- *    - map_wide
+ *  @property   flags
+ *  @discussion Optional event flags.
+ *
+ *  @note Additional event flags. Possible values are:
+ *          @p group_event,
+ *          @p map_wide
  */
 @property (copy, nonatomic, readonly) NSArray *flags;
 
 /**
- *  The location (actually, volume boundary) of the event. 
+ *  @property   location
+ *  @discussion The location (actually, volume boundary) of the event.
  *  See 'GW2EventLocation' for details.
  */
 @property (nonatomic, readonly) id<GW2EventLocation> location;
