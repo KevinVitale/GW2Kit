@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GW2Kit"
-  s.version      = "0.2.0"
+  s.version      = "0.1.1"
   s.summary      = "iOS & OS X framework for Guild Wars 2 API"
   s.homepage     = "https://github.com/KevinVitale/GW2Kit"
   s.license      = 'Apache 2.0'
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.osx.deployment_target = '10.9'
 
-  s.dependency 'ReactiveCocoa', '~> 2.2.4'
-  s.dependency 'Mantle', '~> 1.3.1'
+  s.dependency 'ReactiveCocoa', '~> 2.3'
+  s.dependency 'Mantle', '~> 1.4.1'
 
   s.public_header_files = 'GW2Kit/GW2Kit.h'
   s.subspec 'Categories' do |cats|
