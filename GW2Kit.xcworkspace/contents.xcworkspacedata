@@ -48,6 +48,13 @@
             location = "group:GW2Object.m">
          </FileRef>
          <Group
+            location = "group:Wardrobe"
+            name = "Wardrobe">
+            <FileRef
+               location = "group:GW2Skin.h">
+            </FileRef>
+         </Group>
+         <Group
             location = "group:Events"
             name = "Events">
             <FileRef
