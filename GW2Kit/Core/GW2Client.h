@@ -22,7 +22,7 @@
 @required
 /**
  *  @property   version
- *  @disccions  The version of the API. For example, \"v1\", \"v2", etc.
+ *  @discussion  The version of the API. For example, \"v1\", \"v2", etc.
  */
 @property (copy, readonly) NSString *version;
 @end
