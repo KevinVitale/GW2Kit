@@ -106,4 +106,3 @@
  *  'GW2Color' --->                                 /v1/colors.json
  */
 #import "GW2Color.h"
-s
