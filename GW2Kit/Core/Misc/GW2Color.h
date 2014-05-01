@@ -6,32 +6,24 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "GW2Object.h"
 
-@class RKMapping;
+#if TARGET_OS_IPHONE
+@import CoreGraphics;
+#endif
 
-@interface GW2ColorMaterial : NSObject
-@property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSNumber *brightness;
-@property (copy, nonatomic) NSNumber *contrast;
-@property (copy, nonatomic) NSNumber *hue;
-@property (copy, nonatomic) NSNumber *saturation;
-@property (copy, nonatomic) NSNumber *lightness;
-@property (copy, nonatomic) NSArray  *rgb;
-
-- (id)color;
-//- (id)shiftColor:(id)color;
-+ (RKMapping *)mappingObject;
+@protocol GW2ColorMaterial <GW2Object>
+@property (nonatomic, readonly) NSInteger   brightness;
+@property (nonatomic, readonly) CGFloat     contrast;
+@property (nonatomic, readonly) NSInteger   hue;
+@property (nonatomic, readonly) CGFloat     saturation;
+@property (nonatomic, readonly) CGFloat     lightness;
+@property (copy, readonly, nonatomic) id    color;
 @end
 
-
-@interface GW2Color : NSObject
-@property (copy, readonly, nonatomic) NSString *id;
-@property (copy, readonly, nonatomic) NSString *name;
-@property (copy, readonly, nonatomic) NSArray  *base_rgb;
-@property (strong, readonly, nonatomic) GW2ColorMaterial *clothMaterial;
-@property (strong, readonly, nonatomic) GW2ColorMaterial *leatherMaterial;
-@property (strong, readonly, nonatomic) GW2ColorMaterial *metalMaterial;
-
-+ (RKMapping *)mappingObject;
+@protocol GW2Color <GW2Object>
+@property (copy, readonly, nonatomic) id color;
+@property (readonly, nonatomic) id<GW2ColorMaterial> cloth;
+@property (readonly, nonatomic) id<GW2ColorMaterial> leather;
+@property (readonly, nonatomic) id<GW2ColorMaterial> metal;
 @end

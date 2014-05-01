@@ -6,19 +6,44 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "GW2Object.h"
 
-@class RKObjectMapping;
+@protocol GW2WvWMatchObjective <GW2Object>
+@property (copy, nonatomic, readonly) NSString *realmOwner;
+@property (copy, nonatomic, readonly) NSString *guildID;
+@end
 
-@interface GW2WvWMatch : NSObject
+@protocol GW2WvWBattlegroundBonus <NSObject>
+@property (copy, nonatomic, readonly) NSString *type;
+@property (copy, nonatomic, readonly) NSString *realmOwner;
+@end
 
-@property (copy, nonatomic) NSString *matchID;
-@property (copy, nonatomic) NSString *redWorldID;
-@property (copy, nonatomic) NSString *blueWorldID;
-@property (copy, nonatomic) NSString *greenWorldID;
-@property (copy, nonatomic) NSDate   *startTime;
-@property (copy, nonatomic) NSDate   *endTime;
+/**
+ *  There are four battleground which worlds fight over:
+ *    - RedHome
+ *    - GreenHome
+ *    - BlueHome
+ *    - Center
+ *
+ *  @note In the original API response, these 4 battlegrounds are 'type'. This
+ *          object converts 'type' as 'name'.
+ *
+ *  Each battleground has a set of objectives, and each objective is held
+ *  by a realm owner (or is neutral). The possible realm owners are:
+ *    - Red
+ *    - Green
+ *    - Blue
+ */
+@protocol GW2WvWBattleground <GW2Object>
+@property (copy, nonatomic, readonly) NSArray *scores;
+@property (copy, nonatomic, readonly) NSArray *objectives;
+@property (copy, nonatomic, readonly) NSArray *bonuses;
+@end
 
-+ (RKObjectMapping *)mappingObject;
-
+/**
+ *  WvW match.
+ */
+@protocol GW2WvWMatch <GW2Object>
+@property (copy, nonatomic, readonly) NSArray *scores;
+@property (copy, nonatomic, readonly) NSArray *battlegrounds;
 @end
