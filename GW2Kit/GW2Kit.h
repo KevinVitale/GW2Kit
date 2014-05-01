@@ -43,10 +43,8 @@
 // -----------------------------------------------------------------------------
 /*
  *  'GW2Event'      --->                            /v1/event_details.json
- *  'GW2EventState' --->                            /v1/events.json
  */
 #import "GW2Event.h"
-#import "GW2EventState.h"
 
 #pragma mark - Guilds
 // -----------------------------------------------------------------------------
