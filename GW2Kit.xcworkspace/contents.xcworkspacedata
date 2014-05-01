@@ -53,6 +53,9 @@
             <FileRef
                location = "group:GW2Skin.h">
             </FileRef>
+            <FileRef
+               location = "group:GW2Skin.m">
+            </FileRef>
          </Group>
          <Group
             location = "group:Events"
@@ -62,12 +65,6 @@
             </FileRef>
             <FileRef
                location = "group:GW2Event.m">
-            </FileRef>
-            <FileRef
-               location = "group:GW2EventState.h">
-            </FileRef>
-            <FileRef
-               location = "group:GW2EventState.m">
             </FileRef>
          </Group>
          <Group
@@ -139,6 +136,12 @@
          <Group
             location = "group:Misc"
             name = "Misc">
+            <FileRef
+               location = "group:GW2IconFile.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2IconFile.m">
+            </FileRef>
             <FileRef
                location = "group:GW2Color.h">
             </FileRef>
