@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
     end
 
     c.subspec 'Misc' do |misc|
-      misc.source_files = 'GW2Kit/Core/Misc/GW2Color.{h,m}'
+      misc.source_files = 'GW2Kit/Core/Misc/GW2*.{h,m}'
     end
   end
 end
