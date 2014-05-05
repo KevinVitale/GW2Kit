@@ -125,7 +125,7 @@ describe(@"version 1 client", ^ {
     });
     
     it(@"fetches maps", ^AsyncBlock {
-        [[client fetchMaps]
+        [[[client fetchMaps] take:5]
          subscribeNext:^(id maps) {
              NSLog(@"%@", maps);
          }
@@ -139,7 +139,8 @@ describe(@"version 1 client", ^ {
     });
     
     it(@"fetches map floor", ^AsyncBlock {
-        [[client fetchMapFloor:@1 inContinent:@1]
+        [[[client fetchMapFloor:@1 inContinent:@1]
+          take:1]
          subscribeNext:^(id mapFloor) {
              NSLog(@"%@", mapFloor);
          }
@@ -195,7 +196,7 @@ describe(@"version 1 client", ^ {
     });
     
     it(@"fetches colors", ^AsyncBlock {
-        [[client fetchColors]
+        [[[client fetchColors] take:5]
          subscribeNext:^(id colors) {
              NSLog(@"%@", colors);
          }
