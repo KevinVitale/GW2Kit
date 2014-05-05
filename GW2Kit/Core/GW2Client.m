@@ -646,6 +646,23 @@
                                   fileID:[iconFile iconFileID]];
 }
 
+- fetchSkin:(NSString *)skinID {
+    NSAssert(skinID, @"\"skinID\" cannot be 'nil'\n%s", __PRETTY_FUNCTION__);
+    
+    return
+    [[self requestPath:@"skin_details"
+           parameters:@{@"skin_id" : skinID}
+               method:@"GET"]
+    flattenMap:^RACStream *(NSDictionary *skinJSON) {
+        return
+        [RACSignal return:({
+            [NSClassFromString(@"_GW2Skin") objectWithID:skinID
+                                                    name:nil
+                                      fromJSONDictionary:skinJSON
+                                                   error:nil];
+        })];
+    }];
+}
 // -----------------------------------------------------------------------------
 //  fetchImageWithSignature:fileID:
 // -----------------------------------------------------------------------------

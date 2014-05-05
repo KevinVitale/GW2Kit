@@ -41,6 +41,10 @@ Pod::Spec.new do |s|
       wvw.source_files = 'GW2Kit/Core/WvW/GW2WvW*.{h,m}'
     end
 
+    c.subspec 'Wardobe' do |wardrobe|
+      wardrobe.source_files = 'GW2Kit/Core/Wardrobe/GW2*.{h,m}'
+    end
+
     c.subspec 'Misc' do |misc|
       misc.source_files = 'GW2Kit/Core/Misc/GW2*.{h,m}'
     end

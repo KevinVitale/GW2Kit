@@ -18,6 +18,7 @@ describe(@"version 1 client", ^ {
         expect(client.preferredLanguage).to.equal(@"en");
     });
     
+    /*
     it(@"fetches event names", ^AsyncBlock {
         [[[[client fetchEventNames] take:5]
           logNext]
@@ -213,6 +214,21 @@ describe(@"version 1 client", ^ {
         [[client fetchFiles]
          subscribeNext:^(id files) {
              NSLog(@"%@", files);
+         }
+         error:^(NSError *error) {
+             expect(error).to.beNil();
+             done();
+         }
+         completed:^{
+             done();
+         }];
+    });
+     */
+    
+    it(@"fetches skin", ^AsyncBlock {
+        [[client fetchSkin:@"1340"]
+         subscribeNext:^(id<GW2Skin> skin) {
+             NSLog(@"%@", skin);
          }
          error:^(NSError *error) {
              expect(error).to.beNil();

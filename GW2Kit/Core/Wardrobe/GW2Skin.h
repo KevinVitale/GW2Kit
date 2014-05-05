@@ -7,6 +7,7 @@
 //
 
 #import "GW2Object.h"
+#import "GW2IconFile.h"
 
 #pragma mark - Skin Type
 // -----------------------------------------------------------------------------
@@ -16,18 +17,26 @@
  *  @protocol   GW2SkinType
  *  @discussion The skin's type (@em "armor", or @em "weapon").
  */
-@protocol GW2SkinType <GW2Object>
+@protocol GW2ArmorSkin <NSObject>
 @required
 
 /**
- *  @property   type
+ *  @property   slot
+ *  @discussion The slot of armor piece.
  */
-@property (copy, nonatomic, readonly) NSString *type;
+@property (copy, nonatomic, readonly) NSString *slot;
 
 /**
  *  @property   weight
+ *  @discussion The armor's weight class: \"Light\", \"Medium\", \"Heavy\".
  */
 @property (copy, nonatomic, readonly) NSString *weight;
+@end
+
+@protocol GW2WeaponSkin <NSObject>
+@required
+@property (copy, nonatomic, readonly) NSString *type;
+@property (copy, nonatomic, readonly) NSString *element;
 @end
 
 #pragma mark - Skin
@@ -40,7 +49,10 @@
  */
 @protocol GW2Skin <GW2Object, GW2IconFile>
 @required
-@property (copy, nonatomic, readonly) id<GW2SkinType> skinType;
-@property (copy, nonatomic, readonly)         NSArray *flags;
-@property (copy, nonatomic, readonly)         NSArray *restrictions;
+@property (copy, nonatomic, readonly)   NSString    *type;
+@property (copy, nonatomic, readonly)   NSString    *optionalDescription;
+@property (copy, nonatomic, readonly)   NSArray     *flags;
+@property (copy, nonatomic, readonly)   NSArray     *restrictions;
+@property (strong, nonatomic, readonly) id<GW2ArmorSkin>    armor;
+@property (strong, nonatomic, readonly) id<GW2WeaponSkin>   weapon;
 @end

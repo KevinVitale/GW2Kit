@@ -11,10 +11,10 @@
 #import "GW2Object+Private.h"
 
 @interface _GW2Event : _GW2Object <GW2Event>
-@property (nonatomic, readonly) NSInteger level;
-@property (nonatomic, readonly) NSInteger mapID;
-@property (copy, nonatomic, readonly) NSArray *flags;
-@property (nonatomic, readonly) id<GW2EventLocation> location;
+@property (assign, nonatomic)            NSInteger level;
+@property (assign, nonatomic)            NSInteger mapID;
+@property (copy,   nonatomic)              NSArray *flags;
+@property (strong, nonatomic) id<GW2EventLocation> location;
 @end
 
 

@@ -301,13 +301,18 @@
 - (RACSignal *)fetchImageForIconFile:(id<GW2IconFile>)iconFile;
 @end
 
+@protocol GW2Wardrobe <NSObject>
+- (RACSignal *)fetchSkin:(NSString *)skinID;
+@end
+
 #pragma mark - GW2Client, V1
 // -----------------------------------------------------------------------------
 //  Version 1
 // -----------------------------------------------------------------------------
 @protocol GW2ClientV1
 <GW2Client,         GW2ClientEvents,    GW2ClientFiles,     GW2ClientGuilds,
-GW2ClientItems,     GW2ClientMaps,      GW2ClientMisc,      GW2ClientWvW>
+GW2ClientItems,     GW2ClientMaps,      GW2ClientMisc,      GW2ClientWvW,
+GW2Wardrobe>
 @end
 
 #pragma mark -
