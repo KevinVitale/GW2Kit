@@ -303,6 +303,7 @@
 
 @protocol GW2Wardrobe <NSObject>
 - (RACSignal *)fetchSkin:(NSString *)skinID;
+- (RACSignal *)fetchSkins:(NSArray *)skinIDs;
 @end
 
 #pragma mark - GW2Client, V1

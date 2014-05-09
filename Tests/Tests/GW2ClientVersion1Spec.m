@@ -18,7 +18,6 @@ describe(@"version 1 client", ^ {
         expect(client.preferredLanguage).to.equal(@"en");
     });
     
-    /*
     it(@"fetches event names", ^AsyncBlock {
         [[[[client fetchEventNames] take:5]
           logNext]
@@ -223,10 +222,22 @@ describe(@"version 1 client", ^ {
              done();
          }];
     });
-     */
     
-    it(@"fetches skin", ^AsyncBlock {
-        [[client fetchSkin:@"1340"]
+    it(@"fetches skins", ^AsyncBlock {
+        NSArray *skinIDs = ({
+            NSData *skinsJSON = ({
+                NSString *skinsURL = @"https://api.guildwars2.com/v1/skins.json";
+                [NSData dataWithContentsOfURL:[NSURL URLWithString:skinsURL]];
+            });
+            
+            NSDictionary *response =
+            [NSJSONSerialization JSONObjectWithData:skinsJSON
+                                            options:0
+                                              error:nil];
+            response[@"skins"];
+        });
+        
+        [[[client fetchSkins:skinIDs] take:5]
          subscribeNext:^(id<GW2Skin> skin) {
              NSLog(@"%@", skin);
          }

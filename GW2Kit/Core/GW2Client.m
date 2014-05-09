@@ -639,6 +639,47 @@
 }
 
 // -----------------------------------------------------------------------------
+//  fetchSkin:
+// -----------------------------------------------------------------------------
+- fetchSkin:(NSString *)skinID {
+    NSAssert(skinID, @"\"skinID\" cannot be 'nil'\n%s", __PRETTY_FUNCTION__);
+    
+    // Fetches a single
+    RACSignal* (^fetchSkin)(NSString *) = ^(NSString *skinID) {
+        return [self requestPath:@"skin_details"
+                      parameters:@{@"skin_id" : skinID}
+                          method:@"GET"];
+    };
+    
+    // Returns a id<GW2Skin> instance
+    id (^convertJSON)(NSDictionary *) = ^(NSDictionary *skinJSON) {
+        return
+        [NSClassFromString(@"_GW2Skin") objectWithID:skinID
+                                                name:nil
+                                  fromJSONDictionary:skinJSON
+                                               error:nil];
+    };
+    
+    // 1) Fetch the skin JSON;
+    // 2) convert it;
+    // 3) return a signal w/id<GW2Skin> instance
+    return [fetchSkin(skinID) flattenMap:
+            ^RACStream *(NSDictionary *skinJSON) {
+                return [RACSignal return:convertJSON(skinJSON)];
+            }];
+}
+
+// -----------------------------------------------------------------------------
+//  fetchSkins:
+// -----------------------------------------------------------------------------
+- fetchSkins:(NSArray *)skinIDs {
+    RACSignal *skinsSignal = skinIDs.rac_sequence.signal;
+    return [skinsSignal flattenMap:^RACStream *(NSString *skinID) {
+        return [[self fetchSkin:skinID] retry];
+    }];
+}
+
+// -----------------------------------------------------------------------------
 //  fetchImageForIconFile:
 // -----------------------------------------------------------------------------
 - (RACSignal *)fetchImageForIconFile:(id<GW2IconFile>)iconFile {
@@ -646,23 +687,6 @@
                                   fileID:[iconFile iconFileID]];
 }
 
-- fetchSkin:(NSString *)skinID {
-    NSAssert(skinID, @"\"skinID\" cannot be 'nil'\n%s", __PRETTY_FUNCTION__);
-    
-    return
-    [[self requestPath:@"skin_details"
-           parameters:@{@"skin_id" : skinID}
-               method:@"GET"]
-    flattenMap:^RACStream *(NSDictionary *skinJSON) {
-        return
-        [RACSignal return:({
-            [NSClassFromString(@"_GW2Skin") objectWithID:skinID
-                                                    name:nil
-                                      fromJSONDictionary:skinJSON
-                                                   error:nil];
-        })];
-    }];
-}
 // -----------------------------------------------------------------------------
 //  fetchImageWithSignature:fileID:
 // -----------------------------------------------------------------------------
