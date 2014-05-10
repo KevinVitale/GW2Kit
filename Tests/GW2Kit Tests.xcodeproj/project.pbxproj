@@ -162,6 +162,20 @@
 			path = wvw;
 			sourceTree = "<group>";
 		};
+		0AB238DC191ED36300DD52B0 /* Client Specs */ = {
+			isa = PBXGroup;
+			children = (
+				0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */,
+				0AEFBF85191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m */,
+				0AAECEF4191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m */,
+				0A185586191ECEFB00EEFDC0 /* GW2ClientV1Spec_WvW.m */,
+				0AAECEF1191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m */,
+				0AEFBF8B191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m */,
+				0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */,
+			);
+			name = "Client Specs";
+			sourceTree = "<group>";
+		};
 		0ABDF41C18B6EC1F00819A77 = {
 			isa = PBXGroup;
 			children = (
@@ -238,13 +252,7 @@
 				0A81D65B18CC1ABE00D5373D /* GW2WvWMatchUpSpec.m */,
 				0A3A55A618B94AF2009D9C0D /* GW2EventDetails.m */,
 				0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */,
-				0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */,
-				0AEFBF85191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m */,
-				0AAECEF4191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m */,
-				0A185586191ECEFB00EEFDC0 /* GW2ClientV1Spec_WvW.m */,
-				0AAECEF1191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m */,
-				0AEFBF8B191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m */,
-				0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */,
+				0AB238DC191ED36300DD52B0 /* Client Specs */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
