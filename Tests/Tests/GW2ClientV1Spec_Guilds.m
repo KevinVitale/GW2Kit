@@ -1,15 +1,15 @@
 //
-//  GW2ColorSpec.m
-//  GW2Kit
+//  GW2ClientV1Spec_Events.m
+//  GW2Kit Tests
 //
-//  Created by Kevin Vitale on 1/2/14.
+//  Created by Kevin Vitale on 5/10/14.
 //
 //
 
 #import "GW2SharedSpec.h"
 
-SpecBegin(GW2Client)
-describe(@"version 1 client", ^ {
+SpecBegin(GW2ClientV1_Guilds)
+describe(@"client guilds", ^ {
     id<GW2ClientV1> __block client;
     
     // -----------------------------------------------------------------------------
@@ -21,12 +21,14 @@ describe(@"version 1 client", ^ {
     });
     
     // -----------------------------------------------------------------------------
-    //  fetches world names
+    //  fetches guild details
     // -----------------------------------------------------------------------------
-    it(@"fetches world names", ^AsyncBlock {
-        [[[client fetchWorldNames]
-          logNext]
-         subscribeError:^(NSError *error) {
+    it(@"fetches guild by name", ^AsyncBlock {
+        [[client fetchGuildWithName:@"New Tyrian Order"]
+         subscribeNext:^(id guild) {
+             NSLog(@"%@", guild);
+         }
+         error:^(NSError *error) {
              expect(error).to.beNil();
              done();
          }
@@ -36,12 +38,12 @@ describe(@"version 1 client", ^ {
     });
     
     // -----------------------------------------------------------------------------
-    //  fetches files
+    //  fetches guid details
     // -----------------------------------------------------------------------------
-    it(@"fetches files", ^AsyncBlock {
-        [[client fetchFiles]
-         subscribeNext:^(id files) {
-             NSLog(@"%@", files);
+    it(@"fetches guild by id", ^AsyncBlock {
+        [[client fetchGuildWithID:@"6E68F577-CB39-4E1D-ADED-B7C5C39E2315"]
+         subscribeNext:^(id guild) {
+             NSLog(@"%@", guild);
          }
          error:^(NSError *error) {
              expect(error).to.beNil();

@@ -1,15 +1,15 @@
 //
-//  GW2ColorSpec.m
-//  GW2Kit
+//  GW2ClientV1Spec_Events.m
+//  GW2Kit Tests
 //
-//  Created by Kevin Vitale on 1/2/14.
+//  Created by Kevin Vitale on 5/10/14.
 //
 //
 
 #import "GW2SharedSpec.h"
 
-SpecBegin(GW2Client)
-describe(@"version 1 client", ^ {
+SpecBegin(GW2ClientV1_WvW)
+describe(@"client wvw", ^ {
     id<GW2ClientV1> __block client;
     
     // -----------------------------------------------------------------------------
@@ -21,27 +21,12 @@ describe(@"version 1 client", ^ {
     });
     
     // -----------------------------------------------------------------------------
-    //  fetches world names
+    //  fetches WvW match
     // -----------------------------------------------------------------------------
-    it(@"fetches world names", ^AsyncBlock {
-        [[[client fetchWorldNames]
-          logNext]
-         subscribeError:^(NSError *error) {
-             expect(error).to.beNil();
-             done();
-         }
-         completed:^{
-             done();
-         }];
-    });
-    
-    // -----------------------------------------------------------------------------
-    //  fetches files
-    // -----------------------------------------------------------------------------
-    it(@"fetches files", ^AsyncBlock {
-        [[client fetchFiles]
-         subscribeNext:^(id files) {
-             NSLog(@"%@", files);
+    it(@"fetches wvw match", ^AsyncBlock {
+        [[client fetchWvWMatchDetails:@"1-4"]
+         subscribeNext:^(id wvwMatch) {
+             NSLog(@"%@", wvwMatch);
          }
          error:^(NSError *error) {
              expect(error).to.beNil();
@@ -51,6 +36,41 @@ describe(@"version 1 client", ^ {
              done();
          }];
     });
+    
+    // -----------------------------------------------------------------------------
+    //  fetches WvW match ups
+    // -----------------------------------------------------------------------------
+    it(@"fetches wvw match ups", ^AsyncBlock {
+        [[client fetchWvWMatches]
+         subscribeNext:^(id wvwMatch) {
+             NSLog(@"%@", wvwMatch);
+         }
+         error:^(NSError *error) {
+             expect(error).to.beNil();
+             done();
+         }
+         completed:^{
+             done();
+         }];
+    });
+    
+    // -----------------------------------------------------------------------------
+    //  fetches WvW objectives names
+    // -----------------------------------------------------------------------------
+    it(@"fetches wvw objectives names", ^AsyncBlock {
+        [[client fetchWvWObjectiveNames]
+         subscribeNext:^(id names) {
+             NSLog(@"%@", names);
+         }
+         error:^(NSError *error) {
+             expect(error).to.beNil();
+             done();
+         }
+         completed:^{
+             done();
+         }];
+    });
+
     
     // -----------------------------------------------------------------------------
     //  after

@@ -8,5 +8,7 @@
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
 #import <Specta/Specta.h>
+#import <GW2Kit/GW2Kit.h>
+#import <ReactiveCocoa.h>
 
 extern id GW2SpecLoadJSONFixture(NSString *file);

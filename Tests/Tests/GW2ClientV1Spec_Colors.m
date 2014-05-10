@@ -1,15 +1,15 @@
 //
-//  GW2ColorSpec.m
-//  GW2Kit
+//  GW2ClientV1Spec_Events.m
+//  GW2Kit Tests
 //
-//  Created by Kevin Vitale on 1/2/14.
+//  Created by Kevin Vitale on 5/10/14.
 //
 //
 
 #import "GW2SharedSpec.h"
 
-SpecBegin(GW2Client)
-describe(@"version 1 client", ^ {
+SpecBegin(GW2ClientV1_Maps)
+describe(@"client maps", ^ {
     id<GW2ClientV1> __block client;
     
     // -----------------------------------------------------------------------------
@@ -21,27 +21,12 @@ describe(@"version 1 client", ^ {
     });
     
     // -----------------------------------------------------------------------------
-    //  fetches world names
+    //  fetches colors
     // -----------------------------------------------------------------------------
-    it(@"fetches world names", ^AsyncBlock {
-        [[[client fetchWorldNames]
-          logNext]
-         subscribeError:^(NSError *error) {
-             expect(error).to.beNil();
-             done();
-         }
-         completed:^{
-             done();
-         }];
-    });
-    
-    // -----------------------------------------------------------------------------
-    //  fetches files
-    // -----------------------------------------------------------------------------
-    it(@"fetches files", ^AsyncBlock {
-        [[client fetchFiles]
-         subscribeNext:^(id files) {
-             NSLog(@"%@", files);
+    it(@"fetches colors", ^AsyncBlock {
+        [[[client fetchColors] take:5]
+         subscribeNext:^(id colors) {
+             NSLog(@"%@", colors);
          }
          error:^(NSError *error) {
              expect(error).to.beNil();
