@@ -34,7 +34,7 @@ describe(@"wvw match ups", ^ {
     it(@"instantiates matches from JSON", ^ {
         // Check object integrity
         expect(matchUp).toNot.beNil();
-        expect(matchUp.objectID).equal(@"2-1");
+        expect(matchUp.id).equal(@"2-1");
         expect(matchUp.greenWorldID).equal(2012);
         expect(matchUp.blueWorldID).equal(2010);
         expect(matchUp.redWorldID).equal(2201);

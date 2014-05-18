@@ -42,7 +42,7 @@
         @"defaultFloor"      : @"default_floor",
         @"minLevel"          : @"min_level",
         @"maxLevel"          : @"max_level",
-        @"objectID"          : NSNull.null,
+        propertyID           : NSNull.null,
         @"name"              : @"map_name",
         @"frame"             : @"map_rect",
         @"regionID"          : @"region_id",

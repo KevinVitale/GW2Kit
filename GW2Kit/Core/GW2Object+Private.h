@@ -9,13 +9,15 @@
 #import "GW2Object.h"
 #import <Mantle/Mantle.h>
 
+extern NSString *const propertyID;
+
 /**
  *  Objects returned by the GW2 API which have an 'id' and a 'name'.
  *
  *  This includes:
  *      - event_names
  *      - world_names
- *      - map_naes
+ *      - map_names
  *
  *  The response looks like:
  *      {
@@ -28,7 +30,7 @@
  */
 @interface _GW2Object : MTLModel <MTLManagedObjectSerializing, MTLJSONSerializing, GW2Object>
 /*
- *  @property objectID
+ *  @property 'propertyID'
  *  @property name;
  */
 @end

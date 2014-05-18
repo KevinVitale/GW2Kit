@@ -11,4 +11,5 @@
 #import <GW2Kit/GW2Kit.h>
 #import <ReactiveCocoa.h>
 
-extern id GW2SpecLoadJSONFixture(NSString *file);
+extern NSURL*   GW2URLForResourceFile(NSString *file, NSString *extension);
+extern id       GW2SpecLoadJSONFixture(NSString *file);

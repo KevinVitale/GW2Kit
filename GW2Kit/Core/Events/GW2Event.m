@@ -23,7 +23,7 @@
     return @
     {
         @"mapID"    : @"map_id",
-        @"objectID" : NSNull.null
+        propertyID  : NSNull.null
     };
 }
 + (NSValueTransformer *)locationJSONTransformer {

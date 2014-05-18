@@ -31,7 +31,7 @@ describe(@"map floor", ^ {
         
         // Ensure our object was created from Tyria
         expect(mapRegion).toNot.beNil();
-        expect(mapRegion.objectID).equal(@1);
+        expect(mapRegion.id).equal(@1);
         expect(mapRegion.name).equal(@"Shiverpeak Mountains");
         
         expect(mapRegion.subregions.count).equal(11);
@@ -50,7 +50,7 @@ describe(@"map floor", ^ {
         expect([pointOfInterest conformsToProtocol:@protocol(GW2MapSubRegionPointOfInterest)]).to.beTruthy();
         expect([(id<GW2MapSubRegionPointOfInterest>)pointOfInterest type]).equal(@"landmark");
         expect([(id<GW2MapSubRegionPointOfInterest>)pointOfInterest floor]).equal(1);
-        expect([(id<GW2MapSubRegionPointOfInterest>)pointOfInterest objectID]).equal(1486);
+        expect([(id<GW2MapSubRegionPointOfInterest>)pointOfInterest id]).equal(1486);
         expect(CGPointEqualToPoint([pointOfInterest coordinate], CGPointMake((CGFloat)19760.9, (CGFloat)15379.5))).to.beTruthy();
         
         id poiJSON = [pointOfInterest JSONRepresentation];
@@ -60,14 +60,14 @@ describe(@"map floor", ^ {
         expect(task).toNot.beNil();
         expect([task name]).equal(@"Help Explorer Brokkar sabotage dredge munitions.");
         expect([task level]).equal(49);
-        expect([task objectID]).equal(7);
+        expect([task id]).equal(7);
         
         id TaskJSON = [task JSONRepresentation];
         expect(TaskJSON).toNot.beNil();
         
         id sector = subregion.sectors.firstObject;
         expect([sector level]).equal(42);
-        expect([sector objectID]).equal(532);
+        expect([sector id]).equal(532);
         expect([sector name]).equal(@"Wyrmblood Lake");
         expect([sector conformsToProtocol:@protocol(GW2MapSubRegionSector)]).to.beTruthy();
         expect(sector).toNot.beNil();

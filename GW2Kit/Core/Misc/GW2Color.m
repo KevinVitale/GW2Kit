@@ -35,7 +35,7 @@
     return @
     {
         @"color"    : @"base_rgb",
-        @"objectID" : NSNull.null,
+        propertyID  : NSNull.null,
     };
 }
 + (NSValueTransformer *)clothJSONTransformer {
@@ -95,7 +95,7 @@
     return @
     {
         @"color"    : @"rgb",
-        @"objectID" : NSNull.null,
+        propertyID  : NSNull.null,
         @"name"     : NSNull.null
     };
 }

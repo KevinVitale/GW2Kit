@@ -29,7 +29,7 @@ describe(@"map continent", ^ {
                                                                                           error:nil];
         // Ensure our object was created from Tyria
         expect(mapContinent).toNot.beNil();
-        expect(mapContinent.objectID).equal(@1);
+        expect(mapContinent.id).equal(@1);
         expect(mapContinent.name).equal(@"Tyria");
         expect(CGSizeEqualToSize(mapContinent.size, CGSizeMake((CGFloat)32768, (CGFloat)32768))).to.beTruthy();
         
@@ -46,7 +46,7 @@ describe(@"map continent", ^ {
         
         // Ensure our object was created from HoM
         expect(mapContinent).toNot.beNil();
-        expect(mapContinent.objectID).equal(@2);
+        expect(mapContinent.id).equal(@2);
         expect(mapContinent.name).equal(@"Mists");
         
         // Make sure the JSON matches the original input

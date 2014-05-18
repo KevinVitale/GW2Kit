@@ -43,7 +43,7 @@
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID"     : @"wvw_match_id",
+        propertyID      : @"wvw_match_id",
         @"redWorldID"   : @"red_world_id",
         @"blueWorldID"  : @"blue_world_id",
         @"greenWorldID" : @"green_world_id",

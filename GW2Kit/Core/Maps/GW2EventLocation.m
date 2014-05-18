@@ -77,7 +77,7 @@
     {
         @"zRange"   : @"z_range",
         @"name"     : NSNull.null,
-        @"objectID" : NSNull.null
+        propertyID  : NSNull.null
     };
     
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];

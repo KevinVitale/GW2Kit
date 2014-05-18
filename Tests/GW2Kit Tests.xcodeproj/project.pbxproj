@@ -23,8 +23,8 @@
 		0A81D66318CC1ABE00D5373D /* GW2ObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65418CC1ABE00D5373D /* GW2ObjectSpec.m */; };
 		0A81D66418CC1ABE00D5373D /* GW2WvWMatchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65518CC1ABE00D5373D /* GW2WvWMatchSpec.m */; };
 		0A81D66518CC1ABE00D5373D /* GW2WvWMatchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65518CC1ABE00D5373D /* GW2WvWMatchSpec.m */; };
-		0A81D66618CC1ABE00D5373D /* GW2GuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65618CC1ABE00D5373D /* GW2GuildSpec.m */; };
-		0A81D66718CC1ABE00D5373D /* GW2GuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65618CC1ABE00D5373D /* GW2GuildSpec.m */; };
+		0A81D66618CC1ABE00D5373D /* GW2CoreDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65618CC1ABE00D5373D /* GW2CoreDataSpec.m */; };
+		0A81D66718CC1ABE00D5373D /* GW2CoreDataSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65618CC1ABE00D5373D /* GW2CoreDataSpec.m */; };
 		0A81D66818CC1ABE00D5373D /* GW2EventLocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65718CC1ABE00D5373D /* GW2EventLocationSpec.m */; };
 		0A81D66918CC1ABE00D5373D /* GW2EventLocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65718CC1ABE00D5373D /* GW2EventLocationSpec.m */; };
 		0A81D66A18CC1ABE00D5373D /* GW2MapsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A81D65818CC1ABE00D5373D /* GW2MapsSpec.m */; };
@@ -73,6 +73,10 @@
 		0AAECEF6191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAECEF4191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m */; };
 		0AB238DA191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */; };
 		0AB238DB191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */; };
+		0AB238F81920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */; };
+		0AB238F91920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */; };
+		0ABC3694192814F600AAF895 /* GW2Kit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC3692192814F600AAF895 /* GW2Kit.xcdatamodeld */; };
+		0ABC3695192814F600AAF895 /* GW2Kit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC3692192814F600AAF895 /* GW2Kit.xcdatamodeld */; };
 		0ABDF49B18B7065D00819A77 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDF49A18B7065D00819A77 /* colors.json */; };
 		0ABDF49C18B7065D00819A77 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDF49A18B7065D00819A77 /* colors.json */; };
 		0ABDF49F18B7072E00819A77 /* GW2ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */; };
@@ -81,6 +85,8 @@
 		0AEFBF87191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFBF85191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m */; };
 		0AEFBF8C191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFBF8B191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m */; };
 		0AEFBF8D191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFBF8B191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m */; };
+		0AFC2D52192810F100B9B81A /* GW2GuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC2D51192810F100B9B81A /* GW2GuildSpec.m */; };
+		0AFC2D53192810F100B9B81A /* GW2GuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC2D51192810F100B9B81A /* GW2GuildSpec.m */; };
 		5D618E348CC94872A9630D9C /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC14C332B56F4063877200FB /* libPods-ios.a */; };
 		5F52BFFF459040249BB8ADC3 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B485799C3DD4352A125EBBC /* libPods-osx.a */; };
 /* End PBXBuildFile section */
@@ -95,7 +101,7 @@
 		0A81D65318CC1ABE00D5373D /* GW2MapRegionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapRegionSpec.m; sourceTree = "<group>"; };
 		0A81D65418CC1ABE00D5373D /* GW2ObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ObjectSpec.m; sourceTree = "<group>"; };
 		0A81D65518CC1ABE00D5373D /* GW2WvWMatchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatchSpec.m; sourceTree = "<group>"; };
-		0A81D65618CC1ABE00D5373D /* GW2GuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2GuildSpec.m; sourceTree = "<group>"; };
+		0A81D65618CC1ABE00D5373D /* GW2CoreDataSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2CoreDataSpec.m; sourceTree = "<group>"; };
 		0A81D65718CC1ABE00D5373D /* GW2EventLocationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2EventLocationSpec.m; sourceTree = "<group>"; };
 		0A81D65818CC1ABE00D5373D /* GW2MapsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2MapsSpec.m; sourceTree = "<group>"; };
 		0A81D65B18CC1ABE00D5373D /* GW2WvWMatchUpSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2WvWMatchUpSpec.m; sourceTree = "<group>"; };
@@ -120,12 +126,15 @@
 		0AAECEF1191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Guilds.m; sourceTree = "<group>"; };
 		0AAECEF4191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Wardrobe.m; sourceTree = "<group>"; };
 		0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Colors.m; sourceTree = "<group>"; };
+		0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Items.m; sourceTree = "<group>"; };
+		0ABC3693192814F600AAF895 /* GW2Kit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GW2Kit.xcdatamodel; sourceTree = "<group>"; };
 		0ABDF46D18B6EF6A00819A77 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDF48218B6EF7800819A77 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDF49A18B7065D00819A77 /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
 		0ABDF49E18B7072E00819A77 /* GW2ColorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ColorSpec.m; sourceTree = "<group>"; };
 		0AEFBF85191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Events.m; sourceTree = "<group>"; };
 		0AEFBF8B191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Maps.m; sourceTree = "<group>"; };
+		0AFC2D51192810F100B9B81A /* GW2GuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2GuildSpec.m; sourceTree = "<group>"; };
 		55B8ABD2F30846F283AA8E37 /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = "<group>"; };
 		6F4CD4DD37EE4BB88365C194 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = "<group>"; };
 		9B485799C3DD4352A125EBBC /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,8 +181,17 @@
 				0AAECEF1191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m */,
 				0AEFBF8B191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m */,
 				0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */,
+				0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */,
 			);
 			name = "Client Specs";
+			sourceTree = "<group>";
+		};
+		0ABC3691192814E700AAF895 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC3692192814F600AAF895 /* GW2Kit.xcdatamodeld */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		0ABDF41C18B6EC1F00819A77 = {
@@ -181,6 +199,7 @@
 			children = (
 				0ABDF49D18B706FE00819A77 /* Tests */,
 				0ABDF49818B7061A00819A77 /* Fixtures */,
+				0ABC3691192814E700AAF895 /* Resources */,
 				0ABDF46F18B6EF6A00819A77 /* Frameworks */,
 				0ABDF46E18B6EF6A00819A77 /* Products */,
 				6F4CD4DD37EE4BB88365C194 /* Pods-ios.xcconfig */,
@@ -246,7 +265,8 @@
 				0A81D65318CC1ABE00D5373D /* GW2MapRegionSpec.m */,
 				0A81D65418CC1ABE00D5373D /* GW2ObjectSpec.m */,
 				0A81D65518CC1ABE00D5373D /* GW2WvWMatchSpec.m */,
-				0A81D65618CC1ABE00D5373D /* GW2GuildSpec.m */,
+				0A81D65618CC1ABE00D5373D /* GW2CoreDataSpec.m */,
+				0AFC2D51192810F100B9B81A /* GW2GuildSpec.m */,
 				0A81D65718CC1ABE00D5373D /* GW2EventLocationSpec.m */,
 				0A81D65818CC1ABE00D5373D /* GW2MapsSpec.m */,
 				0A81D65B18CC1ABE00D5373D /* GW2WvWMatchUpSpec.m */,
@@ -458,21 +478,24 @@
 			files = (
 				0A81D66418CC1ABE00D5373D /* GW2WvWMatchSpec.m in Sources */,
 				0A3A55A718B94AF2009D9C0D /* GW2EventDetails.m in Sources */,
+				0ABC3694192814F600AAF895 /* GW2Kit.xcdatamodeld in Sources */,
 				0AEFBF8C191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m in Sources */,
 				0A81D67018CC1ABE00D5373D /* GW2WvWMatchUpSpec.m in Sources */,
 				0A185587191ECEFB00EEFDC0 /* GW2ClientV1Spec_WvW.m in Sources */,
 				0AB238DA191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */,
 				0A81D66818CC1ABE00D5373D /* GW2EventLocationSpec.m in Sources */,
 				0AEFBF86191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m in Sources */,
+				0AB238F81920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */,
 				0AAECEF5191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m in Sources */,
 				0A81D66018CC1ABE00D5373D /* GW2MapRegionSpec.m in Sources */,
 				0A81D66218CC1ABE00D5373D /* GW2ObjectSpec.m in Sources */,
 				0ABDF49F18B7072E00819A77 /* GW2ColorSpec.m in Sources */,
 				0A97AC3718BC46A3008C53CA /* GW2ClientVersion1Spec.m in Sources */,
 				0AAECEF2191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m in Sources */,
-				0A81D66618CC1ABE00D5373D /* GW2GuildSpec.m in Sources */,
+				0A81D66618CC1ABE00D5373D /* GW2CoreDataSpec.m in Sources */,
 				0A81D65C18CC1ABE00D5373D /* GW2MapContinentSpec.m in Sources */,
 				0A09C36E18E7A0FD00AAC175 /* GW2SharedSpec.m in Sources */,
+				0AFC2D52192810F100B9B81A /* GW2GuildSpec.m in Sources */,
 				0A81D66A18CC1ABE00D5373D /* GW2MapsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,21 +506,24 @@
 			files = (
 				0A81D66518CC1ABE00D5373D /* GW2WvWMatchSpec.m in Sources */,
 				0A3A55A818B94AF2009D9C0D /* GW2EventDetails.m in Sources */,
+				0ABC3695192814F600AAF895 /* GW2Kit.xcdatamodeld in Sources */,
 				0AEFBF8D191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m in Sources */,
 				0A81D67118CC1ABE00D5373D /* GW2WvWMatchUpSpec.m in Sources */,
 				0A185588191ECEFB00EEFDC0 /* GW2ClientV1Spec_WvW.m in Sources */,
 				0AB238DB191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */,
 				0A81D66918CC1ABE00D5373D /* GW2EventLocationSpec.m in Sources */,
 				0AEFBF87191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m in Sources */,
+				0AB238F91920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */,
 				0AAECEF6191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m in Sources */,
 				0A81D66118CC1ABE00D5373D /* GW2MapRegionSpec.m in Sources */,
 				0A81D66318CC1ABE00D5373D /* GW2ObjectSpec.m in Sources */,
 				0ABDF4A018B7072E00819A77 /* GW2ColorSpec.m in Sources */,
 				0A97AC3818BC46A3008C53CA /* GW2ClientVersion1Spec.m in Sources */,
 				0AAECEF3191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m in Sources */,
-				0A81D66718CC1ABE00D5373D /* GW2GuildSpec.m in Sources */,
+				0A81D66718CC1ABE00D5373D /* GW2CoreDataSpec.m in Sources */,
 				0A81D65D18CC1ABE00D5373D /* GW2MapContinentSpec.m in Sources */,
 				0A09C36F18E7A0FD00AAC175 /* GW2SharedSpec.m in Sources */,
+				0AFC2D53192810F100B9B81A /* GW2GuildSpec.m in Sources */,
 				0A81D66B18CC1ABE00D5373D /* GW2MapsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,6 +757,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0ABC3692192814F600AAF895 /* GW2Kit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0ABC3693192814F600AAF895 /* GW2Kit.xcdatamodel */,
+			);
+			currentVersion = 0ABC3693192814F600AAF895 /* GW2Kit.xcdatamodel */;
+			path = GW2Kit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0ABDF41D18B6EC1F00819A77 /* Project object */;
 }

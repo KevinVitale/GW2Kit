@@ -62,7 +62,7 @@
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID"  : @"poi_id",
+        propertyID  : @"poi_id",
     };
     
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];
@@ -78,7 +78,7 @@
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID" : @"task_id",
+        propertyID  : @"task_id",
         @"name"     : @"objective"
     };
     
@@ -94,7 +94,7 @@
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID" : NSNull.null,
+        propertyID  : NSNull.null,
         @"name"     : NSNull.null
     };
     
@@ -111,7 +111,7 @@
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID" : @"sector_id",
+        propertyID  : @"sector_id",
     };
     
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];
@@ -134,7 +134,7 @@
         @"textureDimensions"    : @"texture_dims",
         @"clampedView"          : @"clamped_view",
         @"name"                 : NSNull.null,
-        @"objectID"             : NSNull.null,
+        propertyID              : NSNull.null,
     };
     
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];
@@ -156,7 +156,7 @@
                                                          reverseBlock:^id (NSArray *regionsArray) {
                                                              NSMutableDictionary *regions = [NSMutableDictionary new];
                                                              for(_GW2MapRegion *region in regionsArray) {
-                                                                 regions[region.objectID] = [MTLJSONAdapter JSONDictionaryFromModel:region];
+                                                                 regions[[region valueForKey:propertyID]] = [MTLJSONAdapter JSONDictionaryFromModel:region];
                                                              }
                                                              return [regions copy];
                                                          }];
@@ -174,7 +174,7 @@
     {
         @"labelCoordinate"  : @"label_coord",
         @"subregions"       : @"maps",
-        @"objectID"         : NSNull.null
+        propertyID          : NSNull.null
     };
     
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];
@@ -195,7 +195,7 @@
                                                          reverseBlock:^id (NSArray *subregionsArray) {
                                                              NSMutableDictionary *subregions = [NSMutableDictionary new];
                                                              for(_GW2MapSubRegion *subregion in subregionsArray) {
-                                                                 subregions[subregion.objectID] = [MTLJSONAdapter JSONDictionaryFromModel:subregion];
+                                                                 subregions[[subregion valueForKey:propertyID]] = [MTLJSONAdapter JSONDictionaryFromModel:subregion];
                                                              }
                                                              return [subregions copy];
                                                          }];
@@ -303,7 +303,7 @@
         @"floor"            : @"default_floor",
         @"pointsOfInterest" : @"points_of_interest",
         @"skillChallenges"  : @"skill_challenges",
-        @"objectID"         : NSNull.null
+        propertyID          : NSNull.null
     };
     
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];

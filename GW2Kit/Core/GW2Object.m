@@ -8,23 +8,49 @@
 
 #import "GW2Object+Private.h"
 
+NSString *const propertyID = @"id";
+
+#pragma mark - GW2 Object, API Response
+// -----------------------------------------------------------------------------
+//  _GW2Object
+// -----------------------------------------------------------------------------
 @interface _GW2Object ()
-@property (copy, nonatomic, readwrite) NSString *objectID;
+@property (copy, nonatomic, readwrite) NSString *id;
 @property (copy, nonatomic, readwrite) NSString *name;
 @end
 
+#pragma mark - GW2Object
+// -----------------------------------------------------------------------------
+//  _GW2Object
+// -----------------------------------------------------------------------------
 @implementation _GW2Object
+
+// -----------------------------------------------------------------------------
+//  description
+// -----------------------------------------------------------------------------
 - (NSString *)description {
     return [[self.debugDescription stringByReplacingOccurrencesOfString:@"\n"
                                                             withString:@"\r"]
     stringByReplacingOccurrencesOfString:@"\"" withString:@""];
 }
+
+// -----------------------------------------------------------------------------
+//  debugDescription
+// -----------------------------------------------------------------------------
 - (NSString *)debugDescription {
     return self.JSONRepresentation.description;
 }
+
+// -----------------------------------------------------------------------------
+//  JSONKeyPathsByPropertyKey
+// -----------------------------------------------------------------------------
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{@"objectID" : @"id"};
+    return @{propertyID : @"id"};
 }
+
+// -----------------------------------------------------------------------------
+//  objectWithID:name:fromJSONDictionary:error:
+// -----------------------------------------------------------------------------
 + (instancetype)objectWithID:(id)objectID
                         name:(NSString *)name
           fromJSONDictionary:(NSDictionary *)JSONDictionary
@@ -37,8 +63,8 @@
                                            error:error];
         
         // Check to see if 'objectID' was set via the JSONDictionary
-        if(![object valueForKey:@"objectID"]) {
-            [object setValue:objectID forKey:@"objectID"];
+        if(![object valueForKey:propertyID]) {
+            [object setValue:objectID forKey:propertyID];
         }
         // Check to see if 'name' was set via the JSONDictionary
         if(![object valueForKey:@"name"]) {
@@ -50,6 +76,9 @@
     });
 }
 
+// -----------------------------------------------------------------------------
+//  JSONRepresentation
+// -----------------------------------------------------------------------------
 - (NSDictionary *)JSONRepresentation {
     if([self conformsToProtocol:@protocol(MTLJSONSerializing)] &&
        [self isKindOfClass:[MTLModel class]]) {
@@ -58,28 +87,41 @@
     return nil;
 }
 
+// -----------------------------------------------------------------------------
+//  managedObjectEntityName
+// -----------------------------------------------------------------------------
 + (NSString *)managedObjectEntityName {
     return @"GW2Object";
 }
+
+// -----------------------------------------------------------------------------
+//  managedObjectKeysByPropertyKey
+// -----------------------------------------------------------------------------
 + (NSDictionary *)managedObjectKeysByPropertyKey {
     NSDictionary *keysByProperty = ({
-        NSMutableDictionary *dict = [[self.class JSONKeyPathsByPropertyKey] mutableCopy];
-        dict[@"uniqueID"] = dict[@"objectID"];
-        [dict removeObjectForKey:@"objectID"];
+        NSMutableDictionary *dict = [@{} mutableCopy];
+        dict[propertyID]    = propertyID;
+        dict[@"name"]       = @"name";
         [dict copy];
     });
     return keysByProperty;
-    
 }
 @end
 
 
+#pragma mark - GW2 Object, Core Data
+// -----------------------------------------------------------------------------
+//  GW2Object
+// -----------------------------------------------------------------------------
 @interface GW2Object : NSManagedObject
-@property (copy, nonatomic) NSString *uniqueID;
+@property (copy, nonatomic) NSString *id;
 @property (copy, nonatomic) NSString *name;
 @end
 
+// -----------------------------------------------------------------------------
+//  GW2Object
+// -----------------------------------------------------------------------------
 @implementation GW2Object
-@dynamic uniqueID;
+@dynamic id;
 @dynamic name;
 @end

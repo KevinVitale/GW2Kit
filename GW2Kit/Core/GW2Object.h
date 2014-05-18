@@ -6,20 +6,24 @@
 //
 //
 
+#pragma mark - GW2 Object
+// -----------------------------------------------------------------------------
+//  GW2Object
+// -----------------------------------------------------------------------------
 /**
- *  @protocol GW2Object
+ *  @protocol   GW2Object
  *  @discussion Adopted by all GW2Kit objects returned by the service.
  */
 @protocol GW2Object <NSObject>
 @required
 /**
- *  @property objectID
+ *  @property   objectID
  *  @discussion A unique-identifier for all objects.
  */
-@property (copy, nonatomic, readonly) NSString *objectID;
+@property (copy, nonatomic, readonly) NSString *id;
 
 /**
- *  @property name
+ *  @property   name
  *  @discussion A string identifier for all objects.
  */
 @property (copy, nonatomic, readonly) NSString *name;
@@ -50,7 +54,6 @@
                         name:(NSString *)name
           fromJSONDictionary:(NSDictionary *)JSONDictionary
                        error:(NSError **)error;
-
 
 @optional
 /**

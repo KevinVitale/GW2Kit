@@ -27,7 +27,7 @@ describe(@"guild", ^ {
         expect(guild).toNot.beNil();
         expect(guild.tag).equal(@"LA");
         expect(guild.name).equal(@"Veterans Of Lions Arch");
-        expect(guild.objectID).equal(@"75FD83CF-0C45-4834-BC4C-097F93A487AF");
+        expect(guild.id).equal(@"75FD83CF-0C45-4834-BC4C-097F93A487AF");
         expect([guild.emblem conformsToProtocol:@protocol(GW2GuildEmblem)]).to.beTruthy();
         
         NSDictionary *GuildJSON = [guild JSONRepresentation];

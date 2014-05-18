@@ -29,7 +29,7 @@
         @"size"     : @"continent_dims",
         @"minZoom"  : @"min_zoom",
         @"maxZoom"  : @"max_zoom",
-        @"objectID" : NSNull.null
+        propertyID  : NSNull.null
     };
     
     [superJSONKeyPaths addEntriesFromDictionary:JSONKeyPaths];

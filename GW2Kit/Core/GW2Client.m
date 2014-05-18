@@ -8,6 +8,7 @@
 
 #import "GW2Client.h"
 #import "GW2Object.h"
+#import "GW2Object+Private.h"
 #import "GW2IconFile.h"
 #import "CMDQueryStringSerialization.h"
 #import <ReactiveCocoa.h>
@@ -471,7 +472,7 @@
     return
     [[self fetchContinents]
      filter:^BOOL(id<GW2Object> value) {
-         return [[value objectID] isEqualToString:continentID];
+         return [[(NSObject *)value valueForKey:propertyID] isEqualToString:continentID];
      }];
 }
 

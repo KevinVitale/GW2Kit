@@ -55,7 +55,7 @@ describe(@"color", ^ {
 #endif
         expect([color.color isKindOfClass:colorClass]).to.beTruthy();
         expect([color.cloth conformsToProtocol:@protocol(GW2ColorMaterial)]).to.beTruthy();
-        expect(color.objectID).equal(@"441");
+        expect(color.id).equal(@"441");
     });
 });
 SpecEnd

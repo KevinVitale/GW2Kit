@@ -71,7 +71,7 @@ describe(@"event details", ^ {
                                                         fromJSONDictionary:eventDetailsDictionary
                                                                      error:nil];
         expect(event).toNot.beNil();
-        expect(event.objectID).equal(eventID);
+        expect(event.id).equal(eventID);
         expect(event.location).toNot.beNil();
         expect(event.mapID).equal(19);
         expect(event.flags.firstObject).equal(@"group_event");

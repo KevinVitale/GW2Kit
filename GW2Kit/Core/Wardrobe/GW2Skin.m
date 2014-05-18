@@ -29,7 +29,7 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return
     @{
-      @"objectID" : NSNull.null,
+      propertyID  : NSNull.null,
       @"name"     : NSNull.null,
       @"slot"     : @"type",
       @"weight"   : @"weight_class",
@@ -56,9 +56,9 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return
     @{
-      @"objectID" : NSNull.null,
-      @"name"     : NSNull.null,
-      @"element"     : @"damage_type",
+      propertyID    : NSNull.null,
+      @"name"       : NSNull.null,
+      @"element"    : @"damage_type",
       };
 }
 
@@ -94,7 +94,7 @@
     
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID"             : @"skin_id",
+        propertyID              : @"skin_id",
         @"iconFileID"           : @"icon_file_id",
         @"iconFileSignature"    : @"icon_file_signature",
         @"optionalDescription"  : @"description",

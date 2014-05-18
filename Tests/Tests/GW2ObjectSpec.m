@@ -41,7 +41,7 @@ describe(@"named object", ^ {
         
         // Ensure the 'name' & 'objectID' match expected values
         expect(nameObject.name).to.equal(@"Aid those affected by Scarlet's attack on Divinity's Reach by donating to Ho-Ho-Tron.");
-        expect(nameObject.objectID).to.equal(@"AD31D52F-C650-473D-8637-5792868828D7");
+        expect(nameObject.id).to.equal(@"AD31D52F-C650-473D-8637-5792868828D7");
     });
     
     it(@"works with map names", ^ {
@@ -55,7 +55,7 @@ describe(@"named object", ^ {
         
         // Ensure the 'name' & 'objectID' match expected values
         expect(nameObject.name).to.equal(@"Lion's Arch");
-        expect(nameObject.objectID).to.equal(@"50");
+        expect(nameObject.id).to.equal(@"50");
     });
     
     it(@"works with world names", ^ {
@@ -69,7 +69,7 @@ describe(@"named object", ^ {
         
         // Ensure the 'name' & 'objectID' match expected values
         expect(nameObject.name).to.equal(@"Jade Sea [FR]");
-        expect(nameObject.objectID).to.equal(@"2101");
+        expect(nameObject.id).to.equal(@"2101");
     });
     
     it(@"works with class initializers", ^ {
@@ -78,7 +78,7 @@ describe(@"named object", ^ {
                                                                fromJSONDictionary:@{}
                                                                             error:nil];
         expect(nameObject).toNot.beNil();
-        expect(nameObject.objectID).equal(@10);
+        expect(nameObject.id).equal(@10);
         expect(nameObject.name).equal(@"Kevin");
     });
     
@@ -89,7 +89,7 @@ describe(@"named object", ^ {
                                     fromJSONDictionary:@{@"id" : @20, @"name" : @"Owen"}
                                                  error:nil];
         expect(nameObject).toNot.beNil();
-        expect(nameObject.objectID).equal(@20);
+        expect(nameObject.id).equal(@20);
         expect(nameObject.name).equal(@"Owen");
     });
 });

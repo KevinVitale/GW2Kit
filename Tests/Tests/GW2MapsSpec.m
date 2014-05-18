@@ -27,7 +27,7 @@ describe(@"maps", ^ {
                                                                          error:&error];
         expect(error).to.beNil();
         expect(map).toNot.beNil();
-        expect([map objectID]).to.equal(15);
+        expect([map id]).to.equal(15);
         expect([map name]).to.equal(@"Queensdale");
         expect([map continentName]).to.equal(@"Tyria");
         expect([map continentID]).to.equal(1);

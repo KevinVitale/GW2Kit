@@ -104,6 +104,12 @@
             <FileRef
                location = "group:GW2Recipe.m">
             </FileRef>
+            <FileRef
+               location = "group:GW2Coin.h">
+            </FileRef>
+            <FileRef
+               location = "group:GW2Coin.m">
+            </FileRef>
          </Group>
          <Group
             location = "group:Maps"

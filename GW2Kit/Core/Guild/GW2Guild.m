@@ -33,7 +33,7 @@
         @"backgroundColorID" : @"background_color_id",
         @"foregroundPrimaryColorID" : @"foreground_primary_color_id",
         @"foregroundSecondaryColorID" : @"foreground_secondary_color_id",
-        @"objectID" : NSNull.null,
+        propertyID  : NSNull.null,
         @"name" : NSNull.null,
     };
 }
@@ -43,7 +43,7 @@
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID"   : @"guild_id",
+        propertyID  : @"guild_id",
         @"name"     : @"guild_name",
     };
     

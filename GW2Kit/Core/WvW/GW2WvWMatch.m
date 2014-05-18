@@ -69,7 +69,7 @@
     {
         @"realmOwner" : @"owner",
         @"name"       : NSNull.null,
-        @"objectID"   : NSNull.null,
+        propertyID    : NSNull.null,
     };
 }
 @end
@@ -152,7 +152,7 @@
     NSMutableDictionary *superJSONKeyPaths = [NSMutableDictionary dictionaryWithDictionary:[super JSONKeyPathsByPropertyKey]];
     NSDictionary *JSONKeyPaths = @
     {
-        @"objectID"         : @"match_id",
+        propertyID          : @"match_id",
         @"battlegrounds"    : @"maps",
         @"name"             : NSNull.null
     };
