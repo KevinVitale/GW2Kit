@@ -71,10 +71,10 @@
 		0AAECEF3191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAECEF1191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m */; };
 		0AAECEF5191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAECEF4191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m */; };
 		0AAECEF6191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAECEF4191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m */; };
-		0AB238DA191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */; };
-		0AB238DB191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */; };
-		0AB238F81920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */; };
-		0AB238F91920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */; };
+		0AB238DA191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m */; };
+		0AB238DB191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m */; };
+		0AB238F81920070C00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Colors.m */; };
+		0AB238F91920070C00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Colors.m */; };
 		0ABC3694192814F600AAF895 /* GW2Kit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC3692192814F600AAF895 /* GW2Kit.xcdatamodeld */; };
 		0ABC3695192814F600AAF895 /* GW2Kit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC3692192814F600AAF895 /* GW2Kit.xcdatamodeld */; };
 		0ABDF49B18B7065D00819A77 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDF49A18B7065D00819A77 /* colors.json */; };
@@ -125,8 +125,8 @@
 		0A97AC3618BC46A3008C53CA /* GW2ClientVersion1Spec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientVersion1Spec.m; sourceTree = "<group>"; };
 		0AAECEF1191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Guilds.m; sourceTree = "<group>"; };
 		0AAECEF4191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Wardrobe.m; sourceTree = "<group>"; };
-		0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Colors.m; sourceTree = "<group>"; };
-		0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Items.m; sourceTree = "<group>"; };
+		0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Items.m; sourceTree = "<group>"; };
+		0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2ClientV1Spec_Colors.m; sourceTree = "<group>"; };
 		0ABC3693192814F600AAF895 /* GW2Kit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GW2Kit.xcdatamodel; sourceTree = "<group>"; };
 		0ABDF46D18B6EF6A00819A77 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDF48218B6EF7800819A77 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,8 +180,8 @@
 				0A185586191ECEFB00EEFDC0 /* GW2ClientV1Spec_WvW.m */,
 				0AAECEF1191ECFCD003A4D46 /* GW2ClientV1Spec_Guilds.m */,
 				0AEFBF8B191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m */,
-				0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m */,
-				0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Items.m */,
+				0AB238D9191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m */,
+				0AB238F71920070C00DD52B0 /* GW2ClientV1Spec_Colors.m */,
 			);
 			name = "Client Specs";
 			sourceTree = "<group>";
@@ -482,10 +482,10 @@
 				0AEFBF8C191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m in Sources */,
 				0A81D67018CC1ABE00D5373D /* GW2WvWMatchUpSpec.m in Sources */,
 				0A185587191ECEFB00EEFDC0 /* GW2ClientV1Spec_WvW.m in Sources */,
-				0AB238DA191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */,
+				0AB238DA191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */,
 				0A81D66818CC1ABE00D5373D /* GW2EventLocationSpec.m in Sources */,
 				0AEFBF86191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m in Sources */,
-				0AB238F81920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */,
+				0AB238F81920070C00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */,
 				0AAECEF5191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m in Sources */,
 				0A81D66018CC1ABE00D5373D /* GW2MapRegionSpec.m in Sources */,
 				0A81D66218CC1ABE00D5373D /* GW2ObjectSpec.m in Sources */,
@@ -510,10 +510,10 @@
 				0AEFBF8D191ECE2300E10C13 /* GW2ClientV1Spec_Maps.m in Sources */,
 				0A81D67118CC1ABE00D5373D /* GW2WvWMatchUpSpec.m in Sources */,
 				0A185588191ECEFB00EEFDC0 /* GW2ClientV1Spec_WvW.m in Sources */,
-				0AB238DB191ED2BF00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */,
+				0AB238DB191ED2BF00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */,
 				0A81D66918CC1ABE00D5373D /* GW2EventLocationSpec.m in Sources */,
 				0AEFBF87191ECD4C00E10C13 /* GW2ClientV1Spec_Events.m in Sources */,
-				0AB238F91920070C00DD52B0 /* GW2ClientV1Spec_Items.m in Sources */,
+				0AB238F91920070C00DD52B0 /* GW2ClientV1Spec_Colors.m in Sources */,
 				0AAECEF6191ED06B003A4D46 /* GW2ClientV1Spec_Wardrobe.m in Sources */,
 				0A81D66118CC1ABE00D5373D /* GW2MapRegionSpec.m in Sources */,
 				0A81D66318CC1ABE00D5373D /* GW2ObjectSpec.m in Sources */,
