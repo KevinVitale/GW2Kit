@@ -1,0 +1,1 @@
+../../../../GW2Kit/Core/Misc/GW2IconFile.h

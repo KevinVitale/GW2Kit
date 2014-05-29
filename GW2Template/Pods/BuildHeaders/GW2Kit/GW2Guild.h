@@ -1,0 +1,1 @@
+../../../../GW2Kit/Core/Guild/GW2Guild.h
