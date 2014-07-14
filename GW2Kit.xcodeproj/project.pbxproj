@@ -6,20 +6,235 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0AB844F3197478C4000AFC3D /* GW2Kit-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB844F2197478C4000AFC3D /* GW2Kit-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AB8451D19747C1E000AFC3D /* GW2Kit-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB8451C19747C1E000AFC3D /* GW2Kit-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AB8452319747C1E000AFC3D /* GW2Kit-OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB8451819747C1E000AFC3D /* GW2Kit-OSX.framework */; };
+		0AB8452A19747C1E000AFC3D /* GW2Kit_OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8452919747C1E000AFC3D /* GW2Kit_OSXTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AB8452419747C1E000AFC3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB844E21974782C000AFC3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB8451719747C1E000AFC3D;
+			remoteInfo = "GW2Kit-OSX";
+		};
+		0AB8453119747C1F000AFC3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB844E21974782C000AFC3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB8451719747C1E000AFC3D;
+			remoteInfo = "GW2Kit-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AB844ED197478C4000AFC3D /* GW2Kit-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "GW2Kit-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB844F1197478C4000AFC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AB844F2197478C4000AFC3D /* GW2Kit-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GW2Kit-iOS.h"; sourceTree = "<group>"; };
+		0AB8451819747C1E000AFC3D /* GW2Kit-OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "GW2Kit-OSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB8451B19747C1E000AFC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AB8451C19747C1E000AFC3D /* GW2Kit-OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GW2Kit-OSX.h"; sourceTree = "<group>"; };
+		0AB8452219747C1E000AFC3D /* GW2Kit-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GW2Kit-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB8452819747C1E000AFC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AB8452919747C1E000AFC3D /* GW2Kit_OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2Kit_OSXTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AB844E9197478C4000AFC3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AB8451419747C1E000AFC3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AB8451F19747C1E000AFC3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB8452319747C1E000AFC3D /* GW2Kit-OSX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		0AB844E11974782C000AFC3D = {
 			isa = PBXGroup;
 			children = (
+				0AB844EF197478C4000AFC3D /* GW2Kit-iOS */,
+				0AB8451919747C1E000AFC3D /* GW2Kit-OSX */,
+				0AB8452619747C1E000AFC3D /* GW2Kit-OSXTests */,
+				0AB844EE197478C4000AFC3D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		0AB844EE197478C4000AFC3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AB844ED197478C4000AFC3D /* GW2Kit-iOS.framework */,
+				0AB8451819747C1E000AFC3D /* GW2Kit-OSX.framework */,
+				0AB8452219747C1E000AFC3D /* GW2Kit-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AB844EF197478C4000AFC3D /* GW2Kit-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0AB844F2197478C4000AFC3D /* GW2Kit-iOS.h */,
+				0AB844F0197478C4000AFC3D /* Supporting Files */,
+			);
+			path = "GW2Kit-iOS";
+			sourceTree = "<group>";
+		};
+		0AB844F0197478C4000AFC3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AB844F1197478C4000AFC3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AB8451919747C1E000AFC3D /* GW2Kit-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8451C19747C1E000AFC3D /* GW2Kit-OSX.h */,
+				0AB8451A19747C1E000AFC3D /* Supporting Files */,
+			);
+			path = "GW2Kit-OSX";
+			sourceTree = "<group>";
+		};
+		0AB8451A19747C1E000AFC3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8451B19747C1E000AFC3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AB8452619747C1E000AFC3D /* GW2Kit-OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8452919747C1E000AFC3D /* GW2Kit_OSXTests.m */,
+				0AB8452719747C1E000AFC3D /* Supporting Files */,
+			);
+			path = "GW2Kit-OSXTests";
+			sourceTree = "<group>";
+		};
+		0AB8452719747C1E000AFC3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8452819747C1E000AFC3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AB844EA197478C4000AFC3D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB844F3197478C4000AFC3D /* GW2Kit-iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AB8451519747C1E000AFC3D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB8451D19747C1E000AFC3D /* GW2Kit-OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AB844EC197478C4000AFC3D /* GW2Kit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AB84505197478C4000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-iOS" */;
+			buildPhases = (
+				0AB844E8197478C4000AFC3D /* Sources */,
+				0AB844E9197478C4000AFC3D /* Frameworks */,
+				0AB844EA197478C4000AFC3D /* Headers */,
+				0AB844EB197478C4000AFC3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GW2Kit-iOS";
+			productName = "GW2Kit-iOS";
+			productReference = 0AB844ED197478C4000AFC3D /* GW2Kit-iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0AB8451719747C1E000AFC3D /* GW2Kit-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AB8452B19747C1E000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-OSX" */;
+			buildPhases = (
+				0AB8451319747C1E000AFC3D /* Sources */,
+				0AB8451419747C1E000AFC3D /* Frameworks */,
+				0AB8451519747C1E000AFC3D /* Headers */,
+				0AB8451619747C1E000AFC3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GW2Kit-OSX";
+			productName = "GW2Kit-OSX";
+			productReference = 0AB8451819747C1E000AFC3D /* GW2Kit-OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0AB8452119747C1E000AFC3D /* GW2Kit-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AB8452E19747C1E000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-OSXTests" */;
+			buildPhases = (
+				0AB8451E19747C1E000AFC3D /* Sources */,
+				0AB8451F19747C1E000AFC3D /* Frameworks */,
+				0AB8452019747C1E000AFC3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AB8452519747C1E000AFC3D /* PBXTargetDependency */,
+				0AB8453219747C1F000AFC3D /* PBXTargetDependency */,
+			);
+			name = "GW2Kit-OSXTests";
+			productName = "GW2Kit-OSXTests";
+			productReference = 0AB8452219747C1E000AFC3D /* GW2Kit-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0AB844E21974782C000AFC3D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
+				TargetAttributes = {
+					0AB844EC197478C4000AFC3D = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					0AB8451719747C1E000AFC3D = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					0AB8452119747C1E000AFC3D = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 0AB8451719747C1E000AFC3D;
+					};
+				};
 			};
 			buildConfigurationList = 0AB844E51974782C000AFC3D /* Build configuration list for PBXProject "GW2Kit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -29,12 +244,78 @@
 				en,
 			);
 			mainGroup = 0AB844E11974782C000AFC3D;
+			productRefGroup = 0AB844EE197478C4000AFC3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				0AB844EC197478C4000AFC3D /* GW2Kit-iOS */,
+				0AB8451719747C1E000AFC3D /* GW2Kit-OSX */,
+				0AB8452119747C1E000AFC3D /* GW2Kit-OSXTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AB844EB197478C4000AFC3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AB8451619747C1E000AFC3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AB8452019747C1E000AFC3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AB844E8197478C4000AFC3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AB8451319747C1E000AFC3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AB8451E19747C1E000AFC3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB8452A19747C1E000AFC3D /* GW2Kit_OSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AB8452519747C1E000AFC3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB8451719747C1E000AFC3D /* GW2Kit-OSX */;
+			targetProxy = 0AB8452419747C1E000AFC3D /* PBXContainerItemProxy */;
+		};
+		0AB8453219747C1F000AFC3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB8451719747C1E000AFC3D /* GW2Kit-OSX */;
+			targetProxy = 0AB8453119747C1F000AFC3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0AB844E61974782C000AFC3D /* Debug */ = {
@@ -49,6 +330,300 @@
 			};
 			name = Release;
 		};
+		0AB84501197478C4000AFC3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GW2Kit-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0AB84502197478C4000AFC3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GW2Kit-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0AB8452C19747C1E000AFC3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GW2Kit-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0AB8452D19747C1E000AFC3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GW2Kit-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0AB8452F19747C1E000AFC3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GW2Kit-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0AB8453019747C1E000AFC3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GW2Kit-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -60,6 +635,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0AB84505197478C4000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AB84501197478C4000AFC3D /* Debug */,
+				0AB84502197478C4000AFC3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0AB8452B19747C1E000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AB8452C19747C1E000AFC3D /* Debug */,
+				0AB8452D19747C1E000AFC3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0AB8452E19747C1E000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AB8452F19747C1E000AFC3D /* Debug */,
+				0AB8453019747C1E000AFC3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
