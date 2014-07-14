@@ -1,1 +1,0 @@
-../../../../GW2Kit/Core/Misc/GW2Color.h

@@ -1,1 +1,0 @@
-../../../../GW2Kit/Categories/MTLValueTransformer+CoreGraphics.h

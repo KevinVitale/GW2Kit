@@ -1,8 +1,0 @@
-{
-    "events": [
-               { "world_id": 1001, "map_id": 39, "event_id": "2875FBFE-668E-438A-8CE7-A4BCF2EF0175", "state": "Warmup" },
-               { "world_id": 1001, "map_id": 39, "event_id": "E0D7E88D-4FF6-42FA-AFFC-0DF4111C2CCD", "state": "Active" },
-               { "world_id": 1001, "map_id": 39, "event_id": "831DC6FB-5F63-4B0C-96A5-FE2037EBEE7F", "state": "Active" },
-               { "world_id": 1001, "map_id": 39, "event_id": "C6EFB827-EABC-4100-A6FE-97C7D9275CEC", "state": "Active" },
-               ]
-}

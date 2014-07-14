@@ -196,10 +196,4 @@
          </FileRef>
       </Group>
    </Group>
-   <FileRef
-      location = "group:Tests/GW2Kit Tests.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Tests/Pods/Pods.xcodeproj">
-   </FileRef>
 </Workspace>

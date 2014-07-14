@@ -1,1 +1,0 @@
-../../../../GW2Kit/Core/GW2Client.h

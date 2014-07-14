@@ -1,1 +1,0 @@
-../../../../GW2Kit/Core/Wardrobe/GW2Skin.h
