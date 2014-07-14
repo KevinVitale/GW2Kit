@@ -28,6 +28,13 @@
 			remoteGlobalIDString = 0AB8451719747C1E000AFC3D;
 			remoteInfo = "GW2Kit-OSX";
 		};
+		0AB8453F19747E11000AFC3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB844E21974782C000AFC3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB8451719747C1E000AFC3D;
+			remoteInfo = "GW2Kit-OSX";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -210,6 +217,7 @@
 			dependencies = (
 				0AB8452519747C1E000AFC3D /* PBXTargetDependency */,
 				0AB8453219747C1F000AFC3D /* PBXTargetDependency */,
+				0AB8454019747E11000AFC3D /* PBXTargetDependency */,
 			);
 			name = "GW2Kit-OSXTests";
 			productName = "GW2Kit-OSXTests";
@@ -314,6 +322,11 @@
 			isa = PBXTargetDependency;
 			target = 0AB8451719747C1E000AFC3D /* GW2Kit-OSX */;
 			targetProxy = 0AB8453119747C1F000AFC3D /* PBXContainerItemProxy */;
+		};
+		0AB8454019747E11000AFC3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB8451719747C1E000AFC3D /* GW2Kit-OSX */;
+			targetProxy = 0AB8453F19747E11000AFC3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -643,6 +656,7 @@
 				0AB84502197478C4000AFC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AB8452B19747C1E000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-OSX" */ = {
 			isa = XCConfigurationList;
@@ -651,6 +665,7 @@
 				0AB8452D19747C1E000AFC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AB8452E19747C1E000AFC3D /* Build configuration list for PBXNativeTarget "GW2Kit-OSXTests" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +674,7 @@
 				0AB8453019747C1E000AFC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
