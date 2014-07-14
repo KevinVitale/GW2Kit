@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F821A37A-BE52-406C-A470-58F2F32D7676</string>
+	<string>AF25E5C9-BA25-4EC8-91E0-82C3A176DD17</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GW2Kit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>ssh://github.com/KevinVitale/GW2Kit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GW2Kit.xcworkspace</string>
+	<string>GW2Kit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>57023F0D-B4F1-466A-B77B-D97E5264E1B7</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/KevinVitale/GW2Kit.git</string>
