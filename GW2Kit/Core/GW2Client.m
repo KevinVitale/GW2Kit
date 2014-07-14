@@ -642,7 +642,7 @@
 // -----------------------------------------------------------------------------
 //  fetchSkin:
 // -----------------------------------------------------------------------------
-- fetchSkin:(NSString *)skinID {
+- (RACSignal *)fetchSkin:(NSString *)skinID {
     NSAssert(skinID, @"\"skinID\" cannot be 'nil'\n%s", __PRETTY_FUNCTION__);
     
     // Fetches a single
@@ -673,7 +673,7 @@
 // -----------------------------------------------------------------------------
 //  fetchSkins:
 // -----------------------------------------------------------------------------
-- fetchSkins:(NSArray *)skinIDs {
+- (RACSignal *)fetchSkins:(NSArray *)skinIDs {
     RACSignal *skinsSignal = skinIDs.rac_sequence.signal;
     return [skinsSignal flattenMap:^RACStream *(NSString *skinID) {
         return [[self fetchSkin:skinID] retry];
