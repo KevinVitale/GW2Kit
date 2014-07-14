@@ -14,14 +14,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     id<GW2ClientV1> client = GW2ClientV1(nil);
     
-    // Get all the event names, then for each one, get their details...
-    [[[[client fetchEventNames]
-        flattenMap:^RACStream *(id<GW2Object> eventName) {
-            return [[client fetchEventDetails:[eventName id]] retry];
-        }] logNext]
-     subscribeCompleted:^{
-         NSLog(@"Done");
-     }];
+    [[[[client fetchMaps] flattenMap:^RACStream *(id<GW2MapBasic> map) {
+        return [client fetchMapFloor:@([map defaultFloor]).stringValue
+                         inContinent:@([map continentID]).stringValue];
+    }]
+      logNext] subscribeCompleted:^{
+        NSLog(@"Done");
+    }];
     
     NSWindow *window = self.window;
     
