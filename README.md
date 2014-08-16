@@ -2,7 +2,7 @@
 
 ## ABANDONMENT NOTICE
 
-ArenaNet has let there APIs die on the vine. After almost 18 months of waiting (and counting), I've lost all interest in this project. Apparently there *is* a version 2 coming "soon". If it ever does, this project will get rebooted.
+ArenaNet has let there APIs die on the vine. After almost 12 months of waiting (and counting), I've lost all interest in this project. Apparently there *is* a version 2 coming "soon". If it ever does, this project will get rebooted.
 
 ### What is GW2Kit?
 
