@@ -1,5 +1,11 @@
 # GW2Kit
 
+## ABANDONMENT NOTICE
+
+ArenaNet has let there APIs die on the vine. After almost 18 months of waiting (and counting), I've lost all interest in this project. Apparently there *is* a version 2 coming "soon". If it ever does, this project will get rebooted.
+
+### What is GW2Kit?
+
 GW2Kit is a Objective-C framework that provides access to the offical Guild Wars 2 API (`api.guildwars2.com`). It is has support for both iOS and OS X.
 
 ### Introduction
